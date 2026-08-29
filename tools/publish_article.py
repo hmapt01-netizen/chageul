@@ -1,5 +1,5 @@
 ﻿# -*- coding: utf-8 -*-
-import os, sys, re, json
+import os, sys, re, json, requests
 
 def submit_google_indexing(url, root_dir):
     key_path = os.path.join(root_dir, 'service_account.json')
@@ -9,7 +9,6 @@ def submit_google_indexing(url, root_dir):
     try:
         from google.oauth2 import service_account
         from google.auth.transport.requests import Request
-        import requests
 
         creds = service_account.Credentials.from_service_account_file(
             key_path, scopes=['https://www.googleapis.com/auth/indexing']
@@ -37,6 +36,30 @@ def submit_google_indexing(url, root_dir):
             return False
     except Exception as e:
         print(f"[ERROR] Google Indexing API error: {e}")
+        return False
+
+def submit_indexnow(url):
+    try:
+        payload = {
+            'host': 'chageul.com',
+            'key': '9f8e438914b14e369238c92a2a015386',
+            'keyLocation': 'https://chageul.com/9f8e438914b14e369238c92a2a015386.txt',
+            'urlList': [url, 'https://chageul.com/index.html']
+        }
+        res = requests.post(
+            'https://api.indexnow.org/indexnow',
+            json=payload,
+            headers={'Content-Type': 'application/json; charset=utf-8'},
+            timeout=10
+        )
+        if res.status_code in [200, 202]:
+            print(f"[OK] IndexNow API: {res.status_code} (Bing, Naver, Yandex, Yahoo pinged!)")
+            return True
+        else:
+            print(f"[WARN] IndexNow returned {res.status_code}")
+            return False
+    except Exception as e:
+        print(f"[ERROR] IndexNow error: {e}")
         return False
 
 def get_registry_map(features_path):
@@ -178,8 +201,11 @@ def publish_post(title, cat, date, slug, thumb, desc, body_html, faqs=None, refs
         pf.write(rendered)
     print(f"[OK] Generated {post_file}")
 
-    # Fire Google Indexing API automatically
+    # 1. Fire Google Indexing API
     submit_google_indexing(og_url, root_dir)
+
+    # 2. Fire IndexNow API (Bing, Naver, Yandex, Yahoo)
+    submit_indexnow(og_url)
 
 if __name__ == '__main__':
     title = "2026 토요타 라브4 하이브리드 E-Four, 5,820만 원 출고액과 실연비 20km/L 제원 유지비 실체"
