@@ -1,4 +1,4 @@
-﻿/**
+﻿﻿﻿/**
  * 🚗 차를 쓰다 (CHAGEUL) 통합 기능 & 실시간 라이브 검색 및 인기글 TOP 10 랭킹 엔진
  */
 
@@ -7,6 +7,15 @@ var ABACUS_NS = window.ABACUS_NS || "chageul_auto";
 
 // 📚 차를 쓰다 94대 칼럼 공식 레지스트리
 const CHAGEUL_POSTS_REGISTRY = [
+    {
+        "slug": "2026-toyota-rav4-hybrid-e-four-specs-price.html",
+        "slugKey": "2026_toyota_rav4_hybrid_e_four_specs_price",
+        "title": "2026 토요타 라브4 하이브리드 E-F...",
+        "fullTitle": "2026 토요타 라브4 하이브리드 E-Four, 5,820만 원 출고액과 실연비 20km/L 제원 유지비 실체",
+        "thumb": "images/posts/2026-toyota-rav4-hybrid/thumb.jpg",
+        "cat": "신차소식",
+        "baseWeight": 202
+    },
     {
         "slug": "used-ev-maintenance-cost.html",
         "slugKey": "used_ev_maintenance_cost",

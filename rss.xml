@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>차를 쓰다</title>
@@ -6,7 +6,15 @@
     <description>프리미엄 자동차 &amp; 모빌리티 전문 매거진 - 차를 쓰다</description>
     <language>ko</language>
     <atom:link href="https://chageul.com/rss.xml" rel="self" type="application/rss+xml"/>
-    <item>
+        <item>
+      <title><![CDATA[2026 토요타 라브4 하이브리드 E-Four, 5,820만 원 출고액과 실연비 20km/L 제원 유지비 실체]]></title>
+      <link>https://chageul.com/entry/2026-toyota-rav4-hybrid-e-four-specs-price.html</link>
+      <guid isPermaLink="true">https://chageul.com/entry/2026-toyota-rav4-hybrid-e-four-specs-price.html</guid>
+      <description><![CDATA[고장 없는 10년 30만km 내구성, 사륜구동임에도 리터당 20km를 넘나드는 경이로운 실연비. 2026 토요타 라브4 하이브리드 LIMITED E-Four 5,820만 원 출고액과 10년 15만km 유지비 시뮬레이션 및 테슬라 모델 Y 비교 분석.]]></description>
+      <category>신차소식</category>
+      <pubDate>Sat, 29 Aug 2026 20:10:00 +0900</pubDate>
+    </item>
+<item>
       <title><![CDATA[중고 전기차 5년 타면 정말 1,400만원 아낄까? 아이오닉5·EV6 유지비 비교]]></title>
       <link>https://chageul.com/entry/used-ev-maintenance-cost.html</link>
       <description><![CDATA["결론부터 말씀드리면, 연 2만km 이상 주행하고 집에 심야 완속 충전 여건이 갖춰진 운전자라면 중고 아이오닉5·EV6 전환 시 5년 만에 1,400만 원 상당의 현금 절감 이득을 실제로 거두게 됩니다."중고 전기차 거래량이 1년 만에 두 배 이상 늘었습니다. 최근 미국-이란 갈등 여파로 휘발유 시세가 L당 1,700원대로 오르면서, 매달 기름값 35만 원 부담을 견디다 못한 운전자들이 감가가 반영된 알짜 중고 전기차로 대거 이동하고 있기 때문입니다. 그렇다면 실제 유지비 계산은 어떨까요? 대표 내연기관 SUV인 싼타페 가솔린 2.5T와 비교했을 때, 초기 차량 시세 차이를 몇 년 만에 상쇄하고 본전을 뽑을 수 있는지 연간 주행거리별 데이터로 명확히 따져봤습니다.📑 목차 (Table of Content..]]></description>
