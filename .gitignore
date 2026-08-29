@@ -1,0 +1,8 @@
+# Local scripts with credentials
+upload.ps1
+upload.bat
+*.token
+
+# OS generated files
+Thumbs.db
+.DS_Store
