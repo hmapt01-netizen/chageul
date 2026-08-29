@@ -1,4 +1,4 @@
-﻿﻿﻿/**
+﻿﻿﻿﻿﻿﻿﻿﻿/**
  * 🚗 차를 쓰다 (CHAGEUL) 통합 기능 & 실시간 라이브 검색 및 인기글 TOP 10 랭킹 엔진
  */
 
@@ -7,6 +7,17 @@ var ABACUS_NS = window.ABACUS_NS || "chageul_auto";
 
 // 📚 차를 쓰다 94대 칼럼 공식 레지스트리
 const CHAGEUL_POSTS_REGISTRY = [
+    {
+        "title": "“하이브리드 장인마저 전기차로?” 2026 8세대 렉서스 ES 풀체인지, 5,140mm K9급 차체와 478km 항속 실출고가 실체",
+        "fullTitle": "“하이브리드 장인마저 전기차로?” 2026 8세대 렉서스 ES 풀체인지, 5,140mm K9급 차체와 478km 항속 실출고가 실체",
+        "slug": "2026-lexus-es-fullchange-ev-specs-price.html",
+        "date": "2026. 8. 29.",
+        "cat": "신차소식",
+        "summary": "37년 만의 8세대 풀체인지. 5,140mm K9급 대형 차체와 후륜 멀티링크 첫 적용, 74.7kWh 배터리 상온 478km 인증. 2026 렉서스 ES 350e·500e 전기차 7천만 원대 예상 출고액 및 제네시스 G80·BMW i5 비교 분석.",
+        "thumb": "images/posts/2026-lexus-es-fullchange-ev/thumb.jpg",
+        "slugKey": "2026_lexus_es_fullchange_ev_specs_price",
+        "baseWeight": 204
+    },
     {
         "slug": "2026-toyota-rav4-hybrid-e-four-specs-price.html",
         "slugKey": "2026_toyota_rav4_hybrid_e_four_specs_price",
@@ -903,7 +914,8 @@ function initDynamicPopularRanking() {
                 if (!isNaN(localHits)) liveHits = localHits;
             } catch(e) {}
             
-            const totalScore = post.baseWeight + (liveHits * 3);
+            const baseW = (typeof post.baseWeight === "number" && !isNaN(post.baseWeight)) ? post.baseWeight : 100;
+            const totalScore = baseW + (liveHits * 3);
             return {
                 ...post,
                 score: totalScore,
@@ -915,17 +927,59 @@ function initDynamicPopularRanking() {
     rankedPosts.sort((a, b) => b.score - a.score);
     const top10 = rankedPosts.slice(0, 10);
 
-    // 3) 사이드바 위젯 렌더링
+        // 3) PC 상단 히어로 인기글 TOP 10 동적 렌더링
+    const heroList = document.getElementById('mainHeroPopularList');
+    if (heroList) {
+        let html = '';
+        top10.forEach((item, idx) => {
+            const rankNum = idx + 1;
+            const rankColor = rankNum <= 3 ? '#c26908' : (rankNum <= 5 ? '#ea580c' : '#94a3b8');
+            html += `
+                <li style="display:flex; align-items:center; gap:10px; padding:3px 0; border-bottom:1px solid #f8fafc;">
+                    <span style="font-size:0.95rem; font-weight:900; color:${rankColor}; width:20px; text-align:center; flex-shrink:0;">${rankNum}</span>
+                    <a href="${item.linkUrl}" style="font-size:0.88rem; font-weight:${rankNum <= 3 ? '700' : '650'}; color:${rankNum <= 3 ? '#1e293b' : '#334155'}; text-decoration:none; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; flex:1;" title="${item.fullTitle}">${item.fullTitle}</a>
+                </li>
+            `;
+        });
+        heroList.innerHTML = html;
+    }
+
+    // 4) 모바일 메인 피드 인기글 TOP 5 동적 렌더링
+    const mobTop5Container = document.getElementById('mobilePopularTop5List');
+    if (mobTop5Container) {
+        let html = '';
+        top10.slice(0, 5).forEach((item, idx) => {
+            const rankNum = idx + 1;
+            const rankColor = rankNum <= 3 ? '#c26908' : '#94a3b8';
+            html += `
+                <div style="display:flex; justify-content:space-between; align-items:center; padding:11px 0; border-bottom:1px solid #f1f5f9; cursor:pointer;" onclick="location.href='${item.linkUrl}'">
+                    <div style="flex:1; padding-right:12px; min-width:0;">
+                        <h4 style="font-size:0.90rem; font-weight:800; color:#111827; margin:0 0 4px 0; line-height:1.35; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">
+                            ${item.fullTitle}
+                        </h4>
+                        <div style="display:flex; align-items:center; font-size:0.75rem;">
+                            <span style="font-weight:800; color:${rankColor}; margin-right:8px;">TOP ${rankNum}</span>
+                            <span style="color:#64748b;">${item.cat || '신차소식'}</span>
+                        </div>
+                    </div>
+                    <img src="${item.thumb}" alt="${item.fullTitle}" style="width:60px; height:60px; border-radius:10px; object-fit:cover; flex-shrink:0;">
+                </div>
+            `;
+        });
+        mobTop5Container.innerHTML = html;
+    }
+
+    // 5) 본문 페이지 사이드바 위젯 렌더링
     const sidebarLists = document.querySelectorAll('.popular-list, #popularPostsWidgetList');
     sidebarLists.forEach(listEl => {
         let html = '';
         top10.forEach((item, idx) => {
             const rankNum = idx + 1;
-            const rankColor = rankNum <= 5 ? '#c26908' : '#94a3b8';
+            const rankColor = rankNum <= 3 ? '#c26908' : (rankNum <= 5 ? '#ea580c' : '#94a3b8');
             html += `
                 <li class="popular-item" style="display:flex; align-items:center; gap:10px; padding:7px 0; border-bottom:1px solid #f8fafc;">
                     <span class="popular-rank" style="font-size:0.95rem; font-weight:900; color:${rankColor}; width:20px; text-align:center; flex-shrink:0;">${rankNum}</span>
-                    <a href="${item.linkUrl}" class="popular-link" style="font-size:0.86rem; font-weight:650; color:#334155; text-decoration:none; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; flex:1;" title="${item.fullTitle}">${item.title}</a>
+                    <a href="${item.linkUrl}" class="popular-link" style="font-size:0.86rem; font-weight:${rankNum <= 3 ? '700' : '650'}; color:${rankNum <= 3 ? '#1e293b' : '#334155'}; text-decoration:none; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; flex:1;" title="${item.fullTitle}">${item.fullTitle}</a>
                 </li>
             `;
         });
@@ -974,7 +1028,39 @@ function scrollToComments() {
 // 4. 자동 초기화
 document.addEventListener('DOMContentLoaded', () => {
     initDynamicPopularRanking();
+    initAutoExpiringBadges();
 });
+
+// 🕒 3일 후 자동 소멸 스마트 최신 뱃지 시스템 (3-Day Auto-Expiring Badges)
+function initAutoExpiringBadges() {
+    const DAYS_LIMIT = 3;
+    const now = new Date();
+    
+    // PC 그리드 및 모바일 피드의 모든 날짜 영역 탐색
+    const metaDateElements = document.querySelectorAll('.clean-card .article-item div[style*="font-size:0.76rem"], .clean-card div[style*="font-size:0.76rem"], .feed-item-date');
+
+    metaDateElements.forEach(el => {
+        const text = el.textContent || '';
+        const match = text.match(/(\d{4})[.\s년]+(\d{1,2})[.\s월]+(\d{1,2})/);
+        if (!match) return;
+
+        const rawDate = `${match[1]}-${String(match[2]).padStart(2, '0')}-${String(match[3]).padStart(2, '0')}T00:00:00+09:00`;
+        const postDate = new Date(rawDate);
+        const diffTime = now.getTime() - postDate.getTime();
+        const diffDays = diffTime / (1000 * 60 * 60 * 24);
+        
+        const baseDateStr = `${postDate.getFullYear()}. ${postDate.getMonth()+1}. ${postDate.getDate()}.`;
+
+        if (diffDays >= 0 && diffDays <= DAYS_LIMIT) {
+            // 3일 이내 작성된 글: (최신) 뱃지 자동 부착
+            el.innerHTML = `<span>${baseDateStr}</span> <span class="badge-cat-new" style="color:#e11d48; font-weight:800; font-size:0.76rem; margin-left:4px;">(최신)</span>`;
+        } else {
+            // 3일 지난 글: (최신) 뱃지 100% 자동 소멸
+            el.innerHTML = `<span>${baseDateStr}</span>`;
+        }
+    });
+}
+
 
 
 // 🔗 모바일 OS 공유창 & 클립보드 복사 토스트 완벽 지원
