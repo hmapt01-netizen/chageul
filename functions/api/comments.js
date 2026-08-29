@@ -1,5 +1,5 @@
-﻿/**
- * 🍯 꿀단지 공식 Cloudflare Workers KV 실시간 댓글 서버리스 API (/api/comments)
+/**
+ * 🚗 차를 쓰다 공식 Cloudflare Workers KV 실시간 댓글 서버리스 API (/api/comments)
  * - Cloudflare Pages Functions & KV Database 100% 네이티브 연동
  * - 전 세계 어디서나 0.001초 광속 실시간 동기화
  */
@@ -21,7 +21,7 @@ export async function onRequest(context) {
     }
 
     // KV 네임스페이스 바인딩 확인
-    const kv = env.HONEYJAR_COMMENTS_KV || env.COMMENTS_KV;
+    const kv = env.CHAGEUL_COMMENTS_KV || env.COMMENTS_KV || env.HONEYJAR_COMMENTS_KV;
 
     try {
         // 1. [GET] 댓글 목록 조회
