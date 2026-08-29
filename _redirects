@@ -1,3 +1,2 @@
 # 🚀 차를 쓰다 (CHAGEUL) 구글 서치콘솔 SEO 100% 보존 리다이렉트 룰
 /posts/*    /entry/:splat    301
-/entry/*    /entry/:splat.html    200
