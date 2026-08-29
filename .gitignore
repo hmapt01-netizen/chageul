@@ -6,3 +6,6 @@ upload.bat
 # OS generated files
 Thumbs.db
 .DS_Store
+
+service_account.json
+*.json.key

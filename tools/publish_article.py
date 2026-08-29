@@ -1,6 +1,44 @@
 ﻿# -*- coding: utf-8 -*-
 import os, sys, re, json
 
+def submit_google_indexing(url, root_dir):
+    key_path = os.path.join(root_dir, 'service_account.json')
+    if not os.path.exists(key_path):
+        print("[WARN] service_account.json not found, skipping Google Indexing API.")
+        return False
+    try:
+        from google.oauth2 import service_account
+        from google.auth.transport.requests import Request
+        import requests
+
+        creds = service_account.Credentials.from_service_account_file(
+            key_path, scopes=['https://www.googleapis.com/auth/indexing']
+        )
+        creds.refresh(Request())
+        headers = {
+            'Authorization': f'Bearer {creds.token}',
+            'Content-Type': 'application/json'
+        }
+        payload = {
+            'url': url,
+            'type': 'URL_UPDATED'
+        }
+        res = requests.post(
+            'https://indexing.googleapis.com/v3/urlNotifications:publish',
+            headers=headers,
+            json=payload,
+            timeout=10
+        )
+        if res.status_code == 200:
+            print(f"[OK] Google Indexing API: 200 OK ({url})")
+            return True
+        else:
+            print(f"[WARN] Google Indexing API returned {res.status_code}: {res.text}")
+            return False
+    except Exception as e:
+        print(f"[ERROR] Google Indexing API error: {e}")
+        return False
+
 def get_registry_map(features_path):
     with open(features_path, 'r', encoding='utf-8') as f:
         text = f.read()
@@ -16,12 +54,10 @@ def get_registry_map(features_path):
 def build_related_articles_html(current_slug, cat, features_path, custom_related_slug=None):
     reg_map = get_registry_map(features_path)
 
-    # 1. If custom_related_slug is provided and exists in registry
     target_post = None
     if custom_related_slug and custom_related_slug in reg_map:
         target_post = reg_map[custom_related_slug]
     
-    # 2. If not, pick the best matching post (e.g. same category or top popular)
     if not target_post:
         for slug, item in reg_map.items():
             if slug != current_slug and item.get('thumb'):
@@ -35,8 +71,6 @@ def build_related_articles_html(current_slug, cat, features_path, custom_related
     p_title = target_post.get('fullTitle', target_post.get('title', ''))
     p_cat = target_post.get('cat', cat)
     p_thumb = target_post.get('thumb', '')
-    
-    # Short summary
     p_desc = f'"{p_title}"에 대한 상세 분석 및 핵심 제원, 유지비 가이드'
 
     return f'''
@@ -143,6 +177,9 @@ def publish_post(title, cat, date, slug, thumb, desc, body_html, faqs=None, refs
     with open(post_file, 'w', encoding='utf-8-sig') as pf:
         pf.write(rendered)
     print(f"[OK] Generated {post_file}")
+
+    # Fire Google Indexing API automatically
+    submit_google_indexing(og_url, root_dir)
 
 if __name__ == '__main__':
     title = "2026 토요타 라브4 하이브리드 E-Four, 5,820만 원 출고액과 실연비 20km/L 제원 유지비 실체"
