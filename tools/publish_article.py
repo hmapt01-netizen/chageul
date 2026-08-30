@@ -262,22 +262,22 @@ def update_index_html(index_path, title, cat, date, slug, thumb, desc):
         short_desc = (p_desc[:80] + '...') if len(p_desc) > 80 else p_desc
         badge_html = '<span class="feed-item-badge" style="color:#e11d48; font-weight:800; font-size:0.76rem; margin-left:4px;">(최신)</span>' if idx == 0 else ''
 
-        m_card = f'''                <!-- Mobile Feed Card {idx+1}: {p_title} -->
+                m_card = f'''                <!-- Mobile Feed Card {idx+1}: {p_title} -->
                 <article class="tistory-feed-item feed-visible" data-category="{p_cat}" onclick="location.href=\'entry/{p_slug}\'" style="cursor:pointer;">
-                    <div class="feed-item-content">
+                    <a href="entry/{p_slug}" class="feed-item-thumb-link" tabindex="-1" aria-hidden="true">
+                        <img src="{p_thumb}" alt="{p_title}" class="feed-item-thumb" {"fetchpriority=\"high\"" if idx < 2 else "loading=\"lazy\""} decoding="async">
+                    </a>
+                    <div class="feed-item-body">
                         <span class="feed-item-cat">{p_cat}</span>
                         <h3 class="feed-item-title">
                             <a href="entry/{p_slug}">{p_title}</a>
                         </h3>
-                        <p class="feed-item-desc" style="display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; margin:4px 0 6px 0; font-size:0.84rem; color:#64748b; line-height:1.5;">{short_desc}</p>
+                        <p class="feed-item-summary" style="display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; margin:4px 0 6px 0; font-size:0.84rem; color:#64748b; line-height:1.5;">{short_desc}</p>
                         <div class="feed-item-meta" style="font-size:0.76rem; color:#94a3b8;">
                             <span class="feed-item-date">{p_date}</span>
                             {badge_html}
                         </div>
                     </div>
-                    <a href="entry/{p_slug}" class="feed-item-thumb-link" tabindex="-1" aria-hidden="true">
-                        <img src="{p_thumb}" alt="{p_title}" class="feed-item-thumb" {"fetchpriority=\"high\"" if idx < 2 else "loading=\"lazy\""} decoding="async">
-                    </a>
                 </article>'''
         mobile_feed_html.append(m_card)
 
