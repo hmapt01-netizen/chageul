@@ -1137,38 +1137,8 @@ function scrollToComments() {
 document.addEventListener('DOMContentLoaded', () => {
     renderEditorPickCard();
     initDynamicPopularRanking();
-    initAutoExpiringBadges();
-});
-
-// 🕒 3일 후 자동 소멸 스마트 최신 뱃지 시스템 (3-Day Auto-Expiring Badges)
-function initAutoExpiringBadges() {
-    const DAYS_LIMIT = 3;
-    const now = new Date();
-    
-    // PC 그리드 및 모바일 피드의 모든 날짜 영역 탐색
-    const metaDateElements = document.querySelectorAll('.clean-card .article-item div[style*="font-size:0.76rem"], .clean-card div[style*="font-size:0.76rem"], .feed-item-date');
-
-    metaDateElements.forEach(el => {
-        const text = el.textContent || '';
-        const match = text.match(/(\d{4})[.\s년]+(\d{1,2})[.\s월]+(\d{1,2})/);
-        if (!match) return;
-
-        const rawDate = `${match[1]}-${String(match[2]).padStart(2, '0')}-${String(match[3]).padStart(2, '0')}T00:00:00+09:00`;
-        const postDate = new Date(rawDate);
-        const diffTime = now.getTime() - postDate.getTime();
-        const diffDays = diffTime / (1000 * 60 * 60 * 24);
-        
-        const baseDateStr = `${postDate.getFullYear()}. ${postDate.getMonth()+1}. ${postDate.getDate()}.`;
-
-        if (diffDays >= 0 && diffDays <= DAYS_LIMIT) {
-            // 3일 이내 작성된 글: 단 1개의 (최신) 뱃지만 부착 (중복 제거)
-            el.innerHTML = `<span>${baseDateStr}</span> <span class="badge-cat-new" style="color:#e11d48; font-weight:800; font-size:0.76rem; margin-left:4px;">(최신)</span>`;
-        } else {
-            // 3일 지난 글: (최신) 뱃지 100% 자동 소멸
-            el.innerHTML = `<span>${baseDateStr}</span>`;
-        }
     });
-}
+
 
 
 
