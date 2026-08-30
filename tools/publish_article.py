@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+﻿# -*- coding: utf-8 -*-
 import os, sys, json, re, datetime
 
 def update_registry(features_path, post_obj):
@@ -196,3 +196,42 @@ def update_sitemap_and_rss(sitemap_path, rss_path, title, cat, slug, desc):
             with open(rss_path, 'w', encoding='utf-8-sig') as f:
                 f.write(r_text)
             print(f"[OK] Updated rss.xml for {slug}")
+
+def submit_google_indexing(url):
+    key_path = os.path.join(os.path.dirname(__file__), 'google_indexing_service_account.json')
+    if not os.path.exists(key_path):
+        key_path = os.path.join(r'C:\Users\lim\.gemini\antigravity', 'google_indexing_service_account.json')
+    if not os.path.exists(key_path):
+        print("[INFO] Service account key not found. Skipping Google Indexing API.")
+        return False
+    try:
+        from google.oauth2 import service_account
+        import googleapiclient.discovery
+        SCOPES = ["https://www.googleapis.com/auth/indexing"]
+        credentials = service_account.Credentials.from_service_account_file(key_path, scopes=SCOPES)
+        service = googleapiclient.discovery.build('indexing', 'v3', credentials=credentials)
+        content = {"url": url, "type": "URL_UPDATED"}
+        response = service.urlNotifications().publish(body=content).execute()
+        print(f"[OK] Google Indexing API: 200 OK ({url})")
+        return True
+    except Exception as e:
+        print(f"[WARN] Google Indexing API: {e}")
+        return False
+
+def submit_indexnow(url):
+    try:
+        import requests
+        api_url = "https://api.indexnow.org/indexnow"
+        headers = {"Content-Type": "application/json; charset=utf-8"}
+        payload = {
+            "host": "chageul.com",
+            "key": "a1b2c3d4e5f6g7h8i9j0",
+            "keyLocation": "https://chageul.com/a1b2c3d4e5f6g7h8i9j0.txt",
+            "urlList": [url]
+        }
+        resp = requests.post(api_url, json=payload, headers=headers, timeout=5)
+        print(f"[OK] IndexNow API: {resp.status_code} (Bing, Naver, Yandex pinged!)")
+        return True
+    except Exception as e:
+        print(f"[WARN] IndexNow API: {e}")
+        return False
