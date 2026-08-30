@@ -1161,7 +1161,7 @@ function initAutoExpiringBadges() {
         const baseDateStr = `${postDate.getFullYear()}. ${postDate.getMonth()+1}. ${postDate.getDate()}.`;
 
         if (diffDays >= 0 && diffDays <= DAYS_LIMIT) {
-            // 3일 이내 작성된 글: (최신) 뱃지 자동 부착
+            // 3일 이내 작성된 글: 단 1개의 (최신) 뱃지만 부착 (중복 제거)
             el.innerHTML = `<span>${baseDateStr}</span> <span class="badge-cat-new" style="color:#e11d48; font-weight:800; font-size:0.76rem; margin-left:4px;">(최신)</span>`;
         } else {
             // 3일 지난 글: (최신) 뱃지 100% 자동 소멸
