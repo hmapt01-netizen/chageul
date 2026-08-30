@@ -198,11 +198,28 @@ def update_sitemap_and_rss(sitemap_path, rss_path, title, cat, slug, desc):
             print(f"[OK] Updated rss.xml for {slug}")
 
 def submit_google_indexing(url, root_dir=None):
-    key_path = os.path.join(os.path.dirname(__file__), 'google_indexing_service_account.json')
+    if not root_dir:
+        root_dir = os.path.dirname(os.path.dirname(__file__))
+    key_path = os.path.join(root_dir, 'service_account.json')
+    if not os.path.exists(key_path):
+        key_path = os.path.join(root_dir, 'google_indexing_service_account.json')
     if not os.path.exists(key_path):
         key_path = os.path.join(r'C:\Users\lim\.gemini\antigravity', 'google_indexing_service_account.json')
     if not os.path.exists(key_path):
         print("[INFO] Service account key not found. Skipping Google Indexing API.")
+        return False
+    try:
+        from google.oauth2 import service_account
+        import googleapiclient.discovery
+        SCOPES = ["https://www.googleapis.com/auth/indexing"]
+        credentials = service_account.Credentials.from_service_account_file(key_path, scopes=SCOPES)
+        service = googleapiclient.discovery.build('indexing', 'v3', credentials=credentials)
+        content = {"url": url, "type": "URL_UPDATED"}
+        response = service.urlNotifications().publish(body=content).execute()
+        print(f"[OK] Google Indexing API: 200 OK ({url})")
+        return True
+    except Exception as e:
+        print(f"[WARN] Google Indexing API: {e}")
         return False
     try:
         from google.oauth2 import service_account
