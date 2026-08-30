@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+﻿﻿# -*- coding: utf-8 -*-
 import os, sys, json, re, datetime
 
 def update_registry(features_path, post_obj):
@@ -197,7 +197,7 @@ def update_sitemap_and_rss(sitemap_path, rss_path, title, cat, slug, desc):
                 f.write(r_text)
             print(f"[OK] Updated rss.xml for {slug}")
 
-def submit_google_indexing(url):
+def submit_google_indexing(url, root_dir=None):
     key_path = os.path.join(os.path.dirname(__file__), 'google_indexing_service_account.json')
     if not os.path.exists(key_path):
         key_path = os.path.join(r'C:\Users\lim\.gemini\antigravity', 'google_indexing_service_account.json')
