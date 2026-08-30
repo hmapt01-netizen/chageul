@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿/**
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿/**
  * 🚗 차를 쓰다 (CHAGEUL) 통합 기능 & 실시간 라이브 검색 및 인기글 TOP 10 랭킹 엔진
  */
 
@@ -39,7 +39,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "images/posts/2026-toyota-rav4-hybrid/thumb.jpg",
         "cat": "신차소식",
         "baseWeight": 202,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "고장 없는 10년 30만km 내구성, 사륜구동임에도 리터당 20km를 넘나드는 경이로운 실연비. 2026 토요타 라브4 하이브리드 LIMITED E-Four 5,820만 원 출고액과 10년 15만km 유지비 시뮬레이션 및 테슬라 모델 Y 비교 분석.",
+        "date": "2026. 8. 29."
     },
     {
         "slug": "used-ev-maintenance-cost.html",
@@ -49,7 +51,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2F0DbP4%2FdJMcahyBbPp%2FAAAAAAAAAAAAAAAAAAAAABEASfsT1Ah5DbzM7TTFXv5aIBtRk42iXZkYxBV6n3tn%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DMOVRcWGoJQ7wQT9jY6SAWDvU15w%253D",
         "cat": "포커스",
         "baseWeight": 200,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"결론부터 말씀드리면, 연 2만km 이상 주행하고 집에 심야 완속 충전 여건이 갖춰진 운전자라면 중고 아이오닉5·EV6 전환 시 5년 만에 1,400만 원 상당의 현금 절감 이득을 실제로 거두게 됩니다.\"중고 전기차 거래량이 1년 만에 두 배 이상 늘었습니다. 최근 미국-이란 갈등 여파로 휘발유 시세가 L당 1,700원대로 오르면서, 매달 기름값 35만 원",
+        "date": "2026. 8. 3."
     },
     {
         "slug": "benz-gla-ev-price-specs-residual-value.html",
@@ -59,7 +63,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fna7TL%2FdJMcaaM0Zsp%2FAAAAAAAAAAAAAAAAAAAAAHM8VosoPyQZsfISdgbQXetpd7r5SInOkk-3yqDhlAEO%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D5YWoyI5kPYWL2j4qZCFtKqEhDcE%253D",
         "cat": "신차소식",
         "baseWeight": 198,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"800V 고전압 아키텍처와 107L 프렁크를 갖춘 벤츠 3세대 GLA, 연 1만 5천km 이상 운행 시 NMC 트림이 입증하는 실유지비 이점\" 글로벌 프리미엄 자동차 시장이 순수 전동화 플랫폼 단일화와 고효율 배터리 아키텍처의 균형을 모색하는 가운데, 메르세데스-벤츠가 기존 EQA 차명을 정리하고 3세대 GLA 순수 전기 SUV 라인업을 통합 공개했습니다",
+        "date": "2026. 8. 2."
     },
     {
         "slug": "genesis-gv60-magma-track-taxi-price-specs.html",
@@ -69,7 +75,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fdfl39k%2FdJMcab6ciPU%2FAAAAAAAAAAAAAAAAAAAAAEAXk3yi4AL3udxD_9cHXPIJG7sKzH1hKnrtiRmExUXO%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D592CA0SzYErSRlGdB9zzCJl0JUs%253D",
         "cat": "신차소식",
         "baseWeight": 196,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"1회 탑승 120유로(약 19.8만 원)... 독일 뉘르부르크링 서킷에서 입증된 650마력 전동화 플래그십, 내 돈 주고 타볼 가치가 있을까?\"\"제네시스가 택시로 나온다고?\" 최근 자동차 커뮤니티를 떠들썩하게 만든 뉴스 헤드라인을 보고 아마 고개를 갸웃하신 분들이 많으셨을 겁니다. 1억 원에 육박하는 럭셔리 전기차를 사서 길거리 손님을 실어 나르는 도로",
+        "date": "2026. 8. 1."
     },
     {
         "slug": "2027-renault-espace-e-tech-hybrid-review.html",
@@ -79,7 +87,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FZXGoD%2FdJMcaf8u1RJ%2FAAAAAAAAAAAAAAAAAAAAAB86KZnaLzS7MDc5TaEDBV5M_tk5q1QnQO4TFg0EiKYl%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DnpT1vi2RoEeEy11a0j2MURnhSFY%253D",
         "cat": "신차소식",
         "baseWeight": 194,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"1,199cc 파워트레인으로 200마력과 복합 21.0km/L를 달성한 프랑스의 7인승 전동화 플래그십 아키텍처\"글로벌 자동차 산업이 파워트레인의 효율적 전동화와 기동성의 균형을 모색하는 가운데, 서유럽 패밀리카 시장을 대표해 온 르노 에스파스가 6세대 하이브리드 아키텍처로 체질 개선을 완성했습니다.국산 중형 및 준대형 패밀리 하이브리드 차량의 실구입 비",
+        "date": "2026. 7. 31."
     },
     {
         "slug": "volvo-es90-ev-sedan-price-specs.html",
@@ -89,7 +99,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fbx9kAI%2FdJMcafgtGxW%2FAAAAAAAAAAAAAAAAAAAAABiSHQQ68pUAFb3ZCrsapVEhGiDJnx-pAg01T1UpQmia%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3Dd8F5rgQcoO%252F5GSpKXp6A%252BTp3Tfs%253D",
         "cat": "신차소식",
         "baseWeight": 192,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"해외보다 5,000만 원 싸다? 중국 청두 생산과 8% 수입 관세가 불러온 글로벌 수입 전기 세단 시장의 거대한 지각변동\" 글로벌 모빌리티 산업에서 전기차 캐즘(수요 일시적 정체)과 국가별 대중국 통상 장벽이 격화되는 가운데, 2026년 7월 22일 볼보자동차코리아가 순수 전기 플래그십 세단 'ES90'의 국내 공식 출격을 단행했습니다. 스웨덴 본사가 아",
+        "date": "2026. 7. 30."
     },
     {
         "slug": "2026-hyundai-ioniq9-specs-price-ev9-comparison.html",
@@ -99,7 +111,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FIHyEk%2FdJMcabZspTX%2FAAAAAAAAAAAAAAAAAAAAADAlm_kE1UFd3rYITLPZO2gMT1P7IVyMRu860tAv1tLC%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D7eQo%252FSVcSgCHsbi4y%252BzEafg9CfA%253D",
         "cat": "신차소식",
         "baseWeight": 190,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"출시 초반 둥근 루프라인을 둘러싼 '장의차 같다는 뼈아픈 조롱'과 전동시트 결함 소음에도 불구하고, 상반기 누적 7,239대 완판 실적을 올리며 국내 대형 전기 SUV 시장의 판도를 완전히 재편하고 있습니다.\"신차 공개 직후 시각적 디자인에 대한 매서운 평가와 초기 조립 마감 소음이 잇따랐던 플래그십 전동화 차종이 시장 실적에서는 파죽지세의 성장세를 나타",
+        "date": "2026. 7. 29."
     },
     {
         "slug": "2027-kgm-torres-aisin-8at-facelift.html",
@@ -109,7 +123,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FHgnum%2FdJMcaa0sTMq%2FAAAAAAAAAAAAAAAAAAAAAINXrq9_giGpQXMd6JAonHTXVpsyD1lA9sF2sFh2WrNX%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DLSomSRe55lNS5oGb3FFyy5oVayE%253D",
         "cat": "신차소식",
         "baseWeight": 188,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"변속기 하나 교체했을 뿐인데 차의 주행 체급이 완전히 달라졌습니다. 2,905만 원이라는 파격적인 몸값으로 준중형 SUV 시장의 수혜를 노립니다.\"KG모빌리티가 주력 준중형 SUV 토레스의 부분변경 모델인 2027년형 뉴 토레스를 공식 출시하며 국내 모빌리티 시장에 강렬한 메시지를 던졌습니다. 기존 모델의 흥행 요소였던 정통 오프로더 스타일의 독창적인 디",
+        "date": "2026. 7. 28."
     },
     {
         "slug": "xiaomi-su7-yu7-korea-launch-2028.html",
@@ -119,7 +135,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FMKsVU%2FdJMcagfjddu%2FAAAAAAAAAAAAAAAAAAAAAMgF0DBQH_w0nhfELPQv1txKTMPkF3WmR6lVtvz9AgMh%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DEsmpR4QnAQzvss3mBcwC0p2hqCw%253D",
         "cat": "신차소식",
         "baseWeight": 186,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"보조배터리와 로봇청소기를 만들던 전자 기업이 수십 년 역사의 자동차 제조 장벽을 허물고 690마력 전기 세단으로 한국 땅을 밟습니다.\"중국을 대표하는 IT 가전 기업 샤오미가 2028년 1월 국내 공식 론칭을 목표로 주요 자동차 딜러사 대상 순회 미팅을 시작하며 본격적인 한국 시장 진출 신호탄을 쏘아 올렸습니다. BYD, 지커, 샤오펑, 체리에 이어 국내",
+        "date": "2026. 7. 28."
     },
     {
         "slug": "bmw-7-series-black-trim-2026.html",
@@ -129,7 +147,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fbb0iWy%2FdJMcaccTmiO%2FAAAAAAAAAAAAAAAAAAAAAJe0t9OPQfibr4oY5IfgeJBnRAz_Bh56qdIIh0gI6UNq%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DGdsB4aINaCciUxclxZwHIc0p4yg%253D",
         "cat": "신차소식",
         "baseWeight": 184,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"실버 크롬의 시대는 지나갔습니다. 플래그십 럭셔리의 새로운 정의는 다크 포스입니다.\"— 수입 대형 세단 시장의 디자인 패러다임 변화 중 — BMW 코리아가 플래그십 대형 세단 7시리즈 라인업에 차체 전반을 감싸는 다크 익스테리어 요소를 집대성한 '7시리즈 블랙 트림' 및 'M 스포츠 프로'를 공식 선보였습니다. 이번 신형 라인업은 기존 7시리즈 고유의 우",
+        "date": "2026. 7. 27."
     },
     {
         "slug": "2027-hyundai-casper-ev-delivery-delay.html",
@@ -139,7 +159,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FqBuAq%2FdJMcafAIaBI%2FAAAAAAAAAAAAAAAAAAAAAKyaD_v-YFTQaFvaRe1tyqmdBunfVq1z2BRRsumZiHGR%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DB7MjaRwpPhxufoCI37W2DyPCUDY%253D",
         "cat": "신차소식",
         "baseWeight": 182,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"신차를 계약하고 군대 간 아들이 전역할 때까지 차를 못 받는다?\" 보조금 반영 2000만 원대 가성비로 주목받은 도심형 EV가 때아닌 28개월 극단적 납기 대기 악재를 맞았습니다. 현대자동차가 엔트리 트림 고객 선호 편의사양을 대폭 표준화한 2027년형 캐스퍼와 캐스퍼 일렉트릭을 시장에 전격 출시했습니다. 이번 2027년형 변경은 상품성 고도화와 함께 지",
+        "date": "2026. 7. 26."
     },
     {
         "slug": "highway-phantom-traffic-jam.html",
@@ -149,7 +171,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FcTZWYL%2FdJMcadbHRgf%2FAAAAAAAAAAAAAAAAAAAAABSray-nVlA1R7sqfLgpzJc8gWgugJRurKHFjrd_PATr%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DSYOBJ0jYR9v99Ig0f84mmeD56Ak%253D",
         "cat": "포커스",
         "baseWeight": 180,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"본격적인 여름 휴가철, 전방에 돌발 사고나 공사 구간이 전혀 없는데도 고속도로가 멈춰 서는 현상의 진짜 원인은 앞차와의 간격을 좁혀 뇌에 시각적 압박을 가하고 급제동을 반복하는 운전 습관에 있습니다.\" 본격적인 7~8월 여름 휴가철을 맞아 바다와 산으로 피서를 떠나던 중, 고속도로 한복판에서 사고나 도로 공사가 전혀 없음에도 차선 전체가 일순간 멈춰 서는",
+        "date": "2026. 7. 25."
     },
     {
         "slug": "grandeur-1-6-hybrid-price-value.html",
@@ -159,7 +183,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Frlcfw%2FdJMb99UJ0RM%2FAAAAAAAAAAAAAAAAAAAAAPmlV5uvGEZfjYMtfBvEGrVX3oXyC_z-Sl1qcP4vczRo%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DjcLtsbtg6CQEZZDXW2wMye8mWVo%253D",
         "cat": "신차소식",
         "baseWeight": 178,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "신형 그랜저를 구매 목록에 올렸을 때 제일 먼저 마주치는 현실은 가격표의 격차입니다. 2.5 가솔린 기본형이 3,798만 원인데 반해, 1.6 터보 하이브리드는 4,833만 원부터 시작합니다. 약 500만 원에서 1,000만 원까지 올라가는 이 가격표를 보며 '과연 이만한 돈을 더 보탤 만한 가치가 있을까?' 하는 의문이 드는 것은 너무나 당연합니다. 제",
+        "date": "2026. 7. 24."
     },
     {
         "slug": "hyundai-ioniq5-660000km-battery-health-test.html",
@@ -169,7 +195,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbfK7Uf%2FdJMcabEYSwb%2FAAAAAAAAAAAAAAAAAAAAADGmBafT_D_xSXOg6bCgzaojtgM81eI1Z5zkRl92JZNk%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DLWQPAg5GYo7U6wZV1tMDBR3jHks%253D",
         "cat": "포커스",
         "baseWeight": 176,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "“66만km를 달리고도 배터리 잔존 수명이 87.7%에 달한다는 실측 데이터는, 전기차 수명에 대한 시장의 오랜 고정관념을 뒤흔드는 파격적인 분기점이 되고 있습니다.”현대 아이오닉 5 N (전면 고성능 에어로다이내믹 디자인) /사진=현대자동차 전기차 구매를 희망하는 소비자들이 선뜻 계약서에 서명하지 못하고 주저하게 만드는 가장 결정적인 원인은 배터리 수명에",
+        "date": "2026. 7. 23."
     },
     {
         "slug": "hyundai-autonomous-driving-tech-shift-2026.html",
@@ -179,7 +207,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FdiLGuu%2FdJMcacRn5BN%2FAAAAAAAAAAAAAAAAAAAAAAQTnJuhRT0k6fvBLDKcnNeSEWHdlF8h1nnbaSkp10JP%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DIwslbr7u8RsBKIyT0Prdt4XppmM%253D",
         "cat": "포커스",
         "baseWeight": 174,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"수조 원 쏟아부었는데 독자 개발 포기?\" 2026 현대차그룹 자율주행 대변혁 선언2026 미국 라스베이거스 도심 실도로 테스트 중인 현대 모셔널 아이오닉5 완전 자율주행 로보택시 (출처: 모셔널 공식 뉴스룸) 글로벌 모빌리티 생태계를 흔드는 대표적인 화두는 단연 자율주행 기술의 주도권입니다. 이는 내연기관에서 전기차로 패러다임이 이동하는 차원을 넘어 완성",
+        "date": "2026. 7. 22."
     },
     {
         "slug": "hyundai-hmgma-georgia-factory-conflict.html",
@@ -189,7 +219,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FdMV7eV%2FdJMcacKJNaP%2FAAAAAAAAAAAAAAAAAAAAANgX3wnbxQeu4WL-nJ9_oLZZAIZEaLKR2S-PeVz26_5e%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DJxg8BGmV697VC4NSt0YsY0%252BmN1Q%253D",
         "cat": "포커스",
         "baseWeight": 172,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"수조 원 규모의 보조금 지원을 약속받고 지어진 현대차 조지아 공장, 하지만 가동 이면에서 들려오는 목소리는 전혀 다른 방향으로 전개되고 있습니다.\"현대자동차 HMGMA (조지아 메타플랜트 아메리카 공장 메인 게이트 전경) /사진=현대자동차 현대자동차그룹이 미국 조지아주에 세운 전기차 전용 생산 기지 '메타플랜트 아메리카(HMGMA)'를 둘러싸고 복잡한 내",
+        "date": "2026. 7. 21."
     },
     {
         "slug": "volvo-ex30-price-cut.html",
@@ -199,7 +231,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fb48Gou%2FdJMcagfdr2g%2FAAAAAAAAAAAAAAAAAAAAAGmH67dU8d0t7top4CLcnad22Xn6K15TSeWd05He90qM%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DxruXJFa8ymgG3xCxjRd7Kv6THQQ%253D",
         "cat": "신차소식",
         "baseWeight": 170,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"보조금 받으면 3,670만원대 진입\"볼보 EX30의 파격적인 비용 다이어트 선언이 불러온 국내 친환경차 시장의 거시적 판도 변화와 전략 분석2027 볼보 EX30 전면 전체 레이아웃 (출처: 볼보자동차)글로벌 완성차 제조사들이 인플레이션과 전기차 수요 정체기(캐즘)를 극복하기 위해 대대적인 가격 조정에 나서고 있습니다. 이러한 상황에서 볼보자동차코리아의",
+        "date": "2026. 7. 20."
     },
     {
         "slug": "staria-electric-11-seater-benefits.html",
@@ -209,7 +243,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbeMqgv%2FdJMcahSEk0D%2FAAAAAAAAAAAAAAAAAAAAANDSydwAN8R4MFLQ72oGqmxSeeGF5xlj8bYSgAuZp_jG%2Fimg.webp%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DPlAEjBBr2T3uCcyVCSe5%252BSBwN%252BY%253D",
         "cat": "신차소식",
         "baseWeight": 168,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"1,000만 원 이상의 가격 차이, 사업자라면 무조건 눈 뒤집히는 11인승 전기 승합차의 실체\"2026 현대 스타리아 일렉트릭 (전측면 외관 디자인) /사진=현대자동차국내 다인승 패밀리카 및 의전차 시장에서 절대적 강자로 군림해 온 기아 카니발의 독주 체제에 심상치 않은 변화의 기류가 감지되고 있습니다. 현대자동차가 친환경 대형 MPV 시장 공략을 위해",
+        "date": "2026. 7. 19."
     },
     {
         "slug": "avante-8th-generation-unveiled.html",
@@ -219,7 +255,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FmS4jH%2FdJMcajpl1wZ%2FAAAAAAAAAAAAAAAAAAAAAFAp8q7jqR4peY_lDe0wClvAF1L-q7kvNdkewY2jysBy%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DxwSs5a%252B5Fl64SWVeLXSH%252B4YtT9k%253D",
         "cat": "신차소식",
         "baseWeight": 166,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"아방이라는 이름 떼야 하는 거 아닙니까? 차급의 정체성을 붕괴시키는 파격적 체급 확장과 안드로이드 OS 탑재.\"현대자동차 아반떼 (2026 부산모빌리티쇼 언론발표회 무대에 공식 공개된 디 올 뉴 아반떼) /사진=현대자동차대한민국 준중형 자동차 생태계의 대표 주자인 아반떼가 완전한 변혁의 시대로 들어섰습니다. 현대자동차는 2026 부산모빌리티쇼 현장에서 8",
+        "date": "2026. 7. 18."
     },
     {
         "slug": "why-drivers-return-to-gasoline-cars.html",
@@ -229,7 +267,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FNtPya%2FdJMcacRlluW%2FAAAAAAAAAAAAAAAAAAAAAPBULU5tHFbFUK51f5rXKpWhJuuPfAw_wPBEcHlSfUII%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DKV9kwyp%252BIG0vmCuE4r91FAnWMX4%253D",
         "cat": "포커스",
         "baseWeight": 164,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"연비 이면에 숨겨진 비용 격차를 수학적으로 계산해 보면,1년에 1만km 미만을 운행할 시 하이브리드는 오히려 손해입니다.\"2026 현대 그랜저 가솔린 모델의 세련된 외장 전면 디자인 (출처: 현대자동차)친환경에 대한 사회적 관심과 우수한 연료 효율성을 바탕으로 하이브리드 자동차의 인기가 날로 고공행진을 거듭하고 있습니다. 유류비 절감 혜택과 특유의 정숙성",
+        "date": "2026. 7. 17."
     },
     {
         "slug": "volkswagen-crisis-restructuring-2026.html",
@@ -239,7 +279,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbaDAmM%2FdJMcadvSVqT%2FAAAAAAAAAAAAAAAAAAAAAJLrSiI9KoNcUq6cSrFgDOLYgGoXt9UVyCcHzpjzGVoY%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DDhpwXTnmAaF41IaDuEoQn9Audew%253D",
         "cat": "포커스",
         "baseWeight": 162,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"유럽 자동차의 자존심이자 세계 국민차로 통하던 폭스바겐이 창사 89년 만에 대규모 공장 폐쇄와 10만 명 감원이라는 극단적인 생존 카드에 직면했습니다.\"폭스바겐 공식 쇼룸 전경 및 전시 공간 /사진=인사이트노트유럽 모빌리티 산업의 왕좌를 20년 넘게 지켜온 독일 폭스바겐 그룹이 전례 없는 초강수 구조조정 계획을 검토하고 있는 것으로 확인되었습니다. 외신",
+        "date": "2026. 7. 16."
     },
     {
         "slug": "2027-renault-scenic-lfp-battery.html",
@@ -249,7 +291,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FAgJXs%2FdJMcabZh1gW%2FAAAAAAAAAAAAAAAAAAAAAAxtVqCkgR7ycF2C9811PmYJZl4zYhd1-O0tPfiVm29l%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D2LW%252Ft%252BYZ1F5kE56AkkrheNXhh1Y%253D",
         "cat": "신차소식",
         "baseWeight": 160,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"중국산 저가 공세에 맞서기 위한 르노의 배터리 체질 개선이 본격화되었습니다.\"2027 르노 세닉 E-Tech 일렉트릭 전면 3/4 쿼터 레이아웃 (출처: 르노 글로벌 미디어 센터)르노자동차가 준중형 순수 전기 SUV 세닉 E-테크 일렉트릭의 부분변경 모델 출시를 준비하며 글로벌 공급망 다각화 전략에 속도를 내고 있습니다. 이 모델은 지난 2025년 8월",
+        "date": "2026. 7. 15."
     },
     {
         "slug": "byd-sealion-6-phev-suv.html",
@@ -259,7 +303,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FecZlQv%2FdJMcacqluwk%2FAAAAAAAAAAAAAAAAAAAAAAd9a-IbIBpDtau9lym90S6-nd6WHHCDVQjQOTfWTjj_%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D0E1R9LFdl4WfPoF2DID8dB%252Bz%252B8o%253D",
         "cat": "신차소식",
         "baseWeight": 158,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"너 같으면 사겠냐?\"라는 날 선 비난을 비웃듯, BYD 브랜드는 6월 한 달간 4,652대를 판매하며 수입차 등록 4위에 안착했습니다. 이 거센 흐름 위에 3,750만원이라는 파격적인 출시가로 상륙한 씨라이언 6의 시장 안착 전략을 심층 분석합니다.BYD 씨라이언 6 (그레이 외관 디자인) /사진=BYD최근 국내 주요 자동차 온라인 커뮤니티는 중국계 제조",
+        "date": "2026. 7. 14."
     },
     {
         "slug": "2026-hyundai-grandeur-hybrid-delivery.html",
@@ -269,7 +315,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FlYo0O%2FdJMcajbMrQT%2FAAAAAAAAAAAAAAAAAAAAAPzIUXConPqx7Mim6EQEBfu-sBxZgVd3YQZr5et4CdLB%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DTu5c33i%252FvfrBa7H4Bi2vjAI8zZI%253D",
         "cat": "신차소식",
         "baseWeight": 156,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"시동 진동 51% 줄였다?\"2026 현대자동차 더 뉴 그랜저 (테크 팝업 스토어 차량 전시 전경) /사진=현대자동차최근 유지비 고정 지출을 통제하기 위해 신형 그랜저 하이브리드 본계약을 마치고 출고를 대기 중인 중장년 세대 사이에서 기술적 정숙성이 뜨거운 감자로 부상하고 있습니다. 가솔린 대형 세단의 감가 요인 및 정차 상황에서의 에너지 유실을 억제하려는",
+        "date": "2026. 7. 13."
     },
     {
         "slug": "kia-seltos-hybrid-review-2026.html",
@@ -279,7 +327,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FzZcwH%2FdJMcabERkdt%2FAAAAAAAAAAAAAAAAAAAAALFH_FOUKpO4xt-pOAu5YHVIE4WB348j8xH-mJXG-Neg%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DxwSrCopgcB8GlB6obGTBXdq7jus%253D",
         "cat": "신차소식",
         "baseWeight": 154,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"글로벌 시장을 향해 던진 진짜 SUV(A Real SUV)의 강력한 캠페인 선언. 기아의 디 올 뉴 셀토스가 30인치 파노라믹 디스플레이와 19.5km/L의 압도적 연비를 탑재하고 나선 비하인드와 국내형 e-AWD 누락에 담긴 거시적 시장 역학 관계를 집중적으로 들여다봅니다.\" 기아 디 올 뉴 셀토스 X-line (전측면 외관) /사진=기아최근 글로벌 소",
+        "date": "2026. 7. 12."
     },
     {
         "slug": "kia-k4-sportswagon-review.html",
@@ -289,7 +339,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fz354W%2FdJMcaic1k4W%2FAAAAAAAAAAAAAAAAAAAAAEazFMBPzxymBKeJVDRIemr_R-w5I_5xfQ-ne5v1D1bs%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D70%252Bk4WXIdMpIB31QPnPeE2t9blc%253D",
         "cat": "신차소식",
         "baseWeight": 152,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"세단의 날렵한 승차감에 SUV급 광활한 트렁크가 결합된다면 어떨까요?\"기아가 전격 공개한 K4 스포츠왜건은 왜건은 짐차라는 전통적인 편견을 깨부수며 글로벌 모빌리티 시장에서 실용주의적 대안으로 떠오르고 있습니다.2026 기아 K4 스포츠왜건 (우측 전측면 외관) /사진=기아가정용 패밀리카 선택을 앞에 둔 수많은 소비자들의 고민은 늘 복잡하기 마련입니다.",
+        "date": "2026. 7. 12."
     },
     {
         "slug": "2027-volkswagen-atlas-reveal.html",
@@ -299,7 +351,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FKu6ZD%2FdJMcaa0gsfv%2FAAAAAAAAAAAAAAAAAAAAAFxuAfGuNSpaifO1eXyB-sAp30cQDjd_mI9XvSnhbOgV%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DPwgAEFw%252B16UkUUBPpjaNCie0f9M%253D",
         "cat": "신차소식",
         "baseWeight": 150,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"\"팰리세이드 위협할까?\" 2027 폭스바겐 아틀라스 풀체인지 공개\"사진: 2027 폭스바겐 아틀라스 R-Line 모델의 새크라멘토 그린 외장 및 전면 더블 스택 LED 헤드라이트 디자인 / 출처: 폭스바겐 공식글로벌 대형 패밀리 SUV 시장에서 독보적인 판매량을 기록 중인 현대 팰리세이드의 위상을 흔들기 위해 폭스바겐이 풀체인지급 2세대 신형 모델을 전격",
+        "date": "2026. 7. 11."
     },
     {
         "slug": "tesla-fsd-lite-korea-model-y-used.html",
@@ -309,7 +363,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbFlYFQ%2FdJMcabx4FPa%2FAAAAAAAAAAAAAAAAAAAAADVa4FeHMlEfoNW9rS-4CF_vRM01ARunxvbfQCQyKGKT%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DflNS1%252FBTdZnfcHyArQtY9ZtQT1U%253D",
         "cat": "포커스",
         "baseWeight": 148,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"미국도 안 풀렸는데 한국이 먼저? 테슬라 FSD 라이트 기습 배포의 내막\"글로벌 전기차 시장의 주도권을 쥔 테슬라가 자사의 차세대 자율주행 소프트웨어인 'FSD v14 라이트' 버전을 한국 시장에 기습 배포하여 업계의 비상한 관심을 모으고 있습니다. 이번 소프트웨어 배포는 북미 정식 출시 이후의 안정화 단계를 거쳐 올해 3분기 말이나 되어야 국내에 도입될",
+        "date": "2026. 7. 10."
     },
     {
         "slug": "genesis-gv70-ev-family-suv.html",
@@ -319,7 +375,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FGEtG9%2FdJMcado4mNW%2FAAAAAAAAAAAAAAAAAAAAANWPexL9Vv8Xn5Nb60k9DHugiWohgU55mh_af8gbnVOk%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DWZo1j3yXG%252Ffz59V7s72NElg960Q%253D",
         "cat": "신차소식",
         "baseWeight": 146,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"\"아내 눈치 안 보고 당당하게 계약서 쓰고 왔습니다.\"\"최근 국내 자동차 커뮤니티와 3040 가장들 사이에서 아내의 동의 장벽을 가볍게 뛰어넘으며 패밀리카로 급부상한 프리미엄 전기 SUV의 생생한 계약 후기가 연일 큰 화제를 모으고 있습니다. 글로벌 완성차 메이커들이 연이은 가격 조정과 파격 프로모션 경쟁을 벌이는 흐름 속에서도, 7,000만 원대 예산",
+        "date": "2026. 7. 9."
     },
     {
         "slug": "toyota-camry-hybrid-price-comparison.html",
@@ -329,7 +387,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FcEAnAb%2FdJMcajpet0n%2FAAAAAAAAAAAAAAAAAAAAANYjkkIPEcZb22BnrKvtUFUAkyJaLu00wusqn3lVZRNc%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DYgp10Lz5ya2CdWJ%252BYHYRPORcfAo%253D",
         "cat": "신차소식",
         "baseWeight": 144,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"\"국산 준대형 강자를 위협하는 수입 하이브리드의 대담한 도약, 2026 토요타 캠리 9세대가 제시하는 패밀리카 시장의 거시적 경제성을 분석합니다.\"\" 최근 국내 자동차 시장에서 패밀리카 선택의 무게중심이 급격히 이동하고 있습니다. 오랜 시간 준대형 세단 시장을 독점하다시피 한 국산 베스트셀러 모델의 강력한 입지 틈새로 고효율과 실리를 무장한 수입 모델이",
+        "date": "2026. 7. 8."
     },
     {
         "slug": "zeekr-7x-korea-launch-success.html",
@@ -339,7 +399,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FVTQSP%2FdJMcafgc4fp%2FAAAAAAAAAAAAAAAAAAAAAI5MTTfMIHrxFneSUM7HAU3z2Cq2lr9Sq9Qwlwd9OzP6%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DCKHcP9cDffLIZ4vITS2aYTO5WDk%253D",
         "cat": "신차소식",
         "baseWeight": 142,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"중국 프리미엄의 국내 상륙, 단순한 저가 공세가 아닌 압도적 스펙의 가성비 재평가로 전기차 시장을 뒤흔들다\"지리자동차그룹의 프리미엄 전기차 브랜드인 지커가 국내 중형 전기 SUV 시장의 문을 두드리며 예상을 뛰어넘는 초반 흥행을 보여주고 있습니다. 지난 6월 초 국내 출시 가격 유출과 동시에 시작된 공식 사전예약은 당초 \"중국산 전기차를 누가 수천만 원에",
+        "date": "2026. 7. 7."
     },
     {
         "slug": "kia-niro-facelift-2027.html",
@@ -349,7 +411,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FcgDEC3%2FdJMcad3DTRH%2FAAAAAAAAAAAAAAAAAAAAANQF45x04nh0aPAHazD5bdRK2XmytvL05bgqZG6wFXBq%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DdSlZPkXvjTfhRsPNapTVA%252BalMLc%253D",
         "cat": "신차소식",
         "baseWeight": 140,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"아는 사람만 아는 명차?\"글로벌 완성차 시장에서 높은 실용성과 합리적인 경제성으로 두터운 마니아층을 형성했으나, 개성 넘치는 외장 디자인 장벽 탓에 대중적 주목을 한 몸에 받지 못했던 친환경 차량이 있습니다. 바로 기아의 친환경 소형 SUV 니로 하이브리드로, 과거 독특하고 밋밋한 형상 탓에 다소 투박하다는 평가 속에서도 실속파 소비자들 사이에서는 아는",
+        "date": "2026. 7. 6."
     },
     {
         "slug": "hyundai-us-hybrid-success-hmgma.html",
@@ -359,7 +423,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbxUd5g%2FdJMcafga51u%2FAAAAAAAAAAAAAAAAAAAAAOudZQzJK8XSo8ez2NQ-TLArN2JJu9BEmWlig_x1IJiZ%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D4u%252F7O7aZL446Gjn%252BQfYrRtnSTUE%253D",
         "cat": "포커스",
         "baseWeight": 138,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"\"비웃을 땐 언제고?\"\" 과거 글로벌 완성차 산업이 일제히 순수 전기 차량으로의 전격적인 세대교체를 선포했을 당시, 하이브리드라는 버퍼 포트폴리오를 우직하게 유지하던 현대자동차그룹은 시대에 뒤처진다는 외신들의 조롱 섞인 비웃음을 견뎌야 했습니다. 하지만 2026년 하반기에 접어들며 전기 차량의 높은 단가 장벽과 충전기 설치 지체 현상이 맞물리는 글로벌 캐",
+        "date": "2026. 7. 4."
     },
     {
         "slug": "polestar-3-korea-launch-price.html",
@@ -369,7 +435,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FsDj3m%2FdJMcafAqNq8%2FAAAAAAAAAAAAAAAAAAAAAOdJ1mvUCkqw2gl2hXQEO4LxImodj0XLMXTJWHV9yu8K%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DlFVuISI5WXT40O2UHWdDD6siUpc%253D",
         "cat": "신차소식",
         "baseWeight": 136,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"\"진짜 전세계 최저가?\"\" 유럽 시장에서 대규모 공개 행사를 치렀던 당시만 하더라도 이 신형 차량이 국내에 진입하게 된다면 최소 1억원을 상회하는 금액표를 제시할 것이라는 의견이 대다수를 차지했습니다. 하지만 국내 런칭과 동시에 드러난 금액 구성표는 수많은 자동차 마니아들의 고정관념을 무너뜨리는 전략적인 단가 포지셔닝을 채택하며 파란을 예고했습니다. 스웨",
+        "date": "2026. 7. 3."
     },
     {
         "slug": "2026-kia-ev9-light-price-sales.html",
@@ -379,7 +447,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FvIV3I%2FdJMcaiDUg2S%2FAAAAAAAAAAAAAAAAAAAAAEv48vn7Gd7p7sOi6oXS5jBvMH6AAYbiXznPIkPbEIXB%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DGYm37726K75%252BlWmBT1iQNRZccwM%253D",
         "cat": "신차소식",
         "baseWeight": 134,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"국내 판매 351대 그친 플래그십, 미국서는 481.5% 급증한 비결은 무엇일까\"글로벌 자동차 산업이 전기차 대중화의 캐즘 구간을 관통하는 가운데 국내 플래그십 전기 SUV 시장은 고가 장벽으로 인해 부진을 면치 못하고 있습니다. 실제로 한때 큰 기대 속에 출시되었던 기아의 대형 전기 SUV인 EV9은 높은 출고가 책정 탓에 국내 내수 시장에서 정체기를",
+        "date": "2026. 7. 2."
     },
     {
         "slug": "byd-sealion-6-vs-kia-sportage-hybrid.html",
@@ -389,7 +459,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FnmAO7%2FdJMcagMTFBD%2FAAAAAAAAAAAAAAAAAAAAADLYCLxJGNy3bqlhjP3CIKeClEDr0peccS4PIrQDHQaV%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D61UDbXnF7WAGnl0J%252Fpt7EpfmUHs%253D",
         "cat": "신차소식",
         "baseWeight": 132,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"중국 국적이라는 마음의 벽을 지우면 당장 사고 싶은 가성비\"국내 준중형 SUV 시장의 절대강자로 군림하며 계약 후 신차 출고만을 손꼽아 기다리던 기아 스포티지 하이브리드 예비 차주들 사이에서 이례적인 고민과 밤샘 갈등이 관측되고 있습니다. 글의 핵심 요지는 대개 유사하여, 브랜드의 생산 국가가 중국이라는 태생적 한계만 지워진다면 망설임 없이 선택지를 바꿀",
+        "date": "2026. 7. 1."
     },
     {
         "slug": "tesla-cybercab-epa-conformity.html",
@@ -399,7 +471,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fbx2L8Q%2FdJMcaiRoME9%2FAAAAAAAAAAAAAAAAAAAAADGXtGSbGtKOmmhnpJyNZhtNLbUHdxj_C0cIaq44cX5F%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DSGQpcxQUMQuFhDT2Pzbu8SNqU2g%253D",
         "cat": "신차소식",
         "baseWeight": 130,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"운전대와 페달이 아예 배제된 자동차, 마침내 미국 도로 주행의 최종 관문을 통과하다.\"글로벌 자동차 산업의 패러다임이 인간 중심의 운전 영역에서 완전 기계 제어의 무인 영역으로 완전히 전환되는 임계점에 도달하였습니다. 수많은 회의론과 규제적 법률 장벽에도 불구하고 테슬라의 목적 기반 무인 자율주행 모빌리티인 사이버캡(2026년형)이 2026년 5월 26일",
+        "date": "2026. 6. 30."
     },
     {
         "slug": "polestar-4-us-ban.html",
@@ -409,7 +483,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FXv7to%2FdJMcaff6zPC%2FAAAAAAAAAAAAAAAAAAAAAD8fijez5IXVRtdJhqdgeRI1GPykCCCXmw0vc_C6sF56%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DoF6T%252FfTHTrv6QvOtlQZ7qyOsZQk%253D",
         "cat": "포커스",
         "baseWeight": 128,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"한국 부산에서 생산되지만 미국 수출은 전면 차단?글로벌 지정학적 장벽에 부딪힌 폴스타 4의 위기\"최근 글로벌 전기차 시장과 통상 전선에 국내 완성차 제조 생태계를 뒤흔들 만한 충격적인 지정학적 규제가 전면화되면서 큰 파장이 일고 있습니다. 미국 사우스캐롤라이나주 공장에서 조립되는 폴스타 3는 물론, 한국 부산의 르노코리아 공장에서 생산하여 북미 시장으로",
+        "date": "2026. 6. 29."
     },
     {
         "slug": "2026-ferrari-luce-ev-china-sellout.html",
@@ -419,7 +495,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FdFVgVJ%2FdJMcag0hjcv%2FAAAAAAAAAAAAAAAAAAAAAGVrQ8A5si49_0AciNgcH88Rm6KxyEct0tpRLRHdOBVX%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D%252FQHLv4T0Rt5AzVN2QuqUz525qJE%253D",
         "cat": "포커스",
         "baseWeight": 126,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"디자인 논란 극복하고 완판 신화 쓴 페라리 루체, K-기술 동맹의 심장을 품다\"글로벌 초고가 럭셔리 자동차 시장의 패러다임이 전동화로 급속하게 전환되는 가운데, 이탈리아의 상징 페라리가 내놓은 첫 순수 전기차 루체(Luce)가 중국 시장에서 파란을 일으키고 있습니다. 초도 배정 물량인 88대가 판매 시작과 동시에 완판되는 대기록을 세우며, 일각의 우려를",
+        "date": "2026. 6. 28."
     },
     {
         "slug": "byd-sealion6-dmi-price.html",
@@ -429,7 +507,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FchS7Ve%2FdJMcajbAKrL%2FAAAAAAAAAAAAAAAAAAAAALC4PZaEgOb_AWHzBn3YYdNsTtlkpMSWm9R4Je8EMci3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DZ6%252BOakXmqK%252Fikw%252Bl3HqneJSPdW0%253D",
         "cat": "신차소식",
         "baseWeight": 124,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"3,750만 원에 플러그인 하이브리드를?\"글로벌 친환경 자동차 시장의 성장을 주도해 온 하이브리드 아키텍처가 새로운 국면을 맞이하고 있습니다. 충전 성능과 배터리 고용량화를 결합한 플러그인 하이브리드 시스템이 합리적인 단가를 무기로 시장에 진입하고 있기 때문입니다. 특히 세계 전동화 세그먼트에서 지배적인 점유율을 지닌 BYD가 대한민국 시장에 전격 출사표",
+        "date": "2026. 6. 27."
     },
     {
         "slug": "2026-hyundai-avante-cn8-reveal.html",
@@ -439,7 +519,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FdEJ6eM%2FdJMcaaZ5kgH%2FAAAAAAAAAAAAAAAAAAAAAC_DktkPnZgS2fHW_jI2NS_2mhCPanXoCxT7f9HmN3iU%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3Dvv9zkcAbwNT8NSwuVd3d60RgJDM%253D",
         "cat": "신차소식",
         "baseWeight": 122,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\" 1.6 가솔린 엔진 전면 폐기? 준중형 체급의 한계를 돌파한 초격차 모빌리티의 등장 \" 현대자동차가 부산 벡스코에서 개최된 '2026 부산모빌리티쇼'를 통해 국민 준중형 세단인 아반떼의 8세대 완전변경 모델 '디 올 뉴 아반떼'를 세계 최초로 전격 공개했습니다. 기아 K3의 공식 단종으로 국내 준중형 세단 세그먼트의 강력한 독점 지위를 확보한 현대자동차",
+        "date": "2026. 6. 26."
     },
     {
         "slug": "bmw-7-series-black-trim.html",
@@ -449,7 +531,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbyPllg%2FdJMcabSbWR6%2FAAAAAAAAAAAAAAAAAAAAAIjF5gFTSDglHEBsyUreNXLh7hT2ERMJkmovBGGQ0ltJ%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DKxueXOFjsMmYnjtExzbMO%252Bs4pk4%253D",
         "cat": "신차소식",
         "baseWeight": 120,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"\"올 블랙의 압도적 존재감?\"\" 국내 수입 플래그십 대형 세단 시장에서 독보적인 기세를 이어가고 있는 BMW 7시리즈가 새로운 스타일 패키지를 구비했습니다. 차량 전반의 화려한 크롬 장식을 걷어내고 세련된 유광 블랙 하이글로스 포인트를 조밀하게 적용하여 한층 젊고 역동적인 매력을 뽐내는 라인업입니다. 공식 통계에 따르면, BMW 7시리즈는 지난 2025년",
+        "date": "2026. 6. 26."
     },
     {
         "slug": "FSD.html",
@@ -459,7 +543,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2F2nvGJ%2FdJMcaalqJAJ%2FAAAAAAAAAAAAAAAAAAAAAAjDbPUUJlB33n8LkZZSWwiXKF-Rp2ANwve63MOiFJNm%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DOa5y5C3lFZ2zLAT5SwG4iosYM%252F8%253D",
         "cat": "포커스",
         "baseWeight": 118,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"\"미국선 이미 병원 이송?\"\" 최근 글로벌 모빌리티 산업에서 인공지능 자율주행 기술은 운전 편의성을 제공하는 주행 보조의 성격을 넘어, 도로 위 돌발 위험을 스스로 차단하는 예방 안전의 강력한 대안으로 거듭나고 있습니다. 특히 인간 운전자의 제어 한계나 갑작스러운 오조작을 시스템이 능동적으로 보완해 대형 연쇄 사고를 방지한 실사례들이 속속 보고되며 큰 이",
+        "date": "2026. 6. 25."
     },
     {
         "slug": "E-Tech.html",
@@ -469,7 +555,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FMoG1H%2FdJMcaaTiyhh%2FAAAAAAAAAAAAAAAAAAAAAKnRtkLmD3EqNCL9dXnPaTEu3t0P7iJLyz5H2HLtyZPe%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3Dx3EKxrWw1LIj7Xpv70cKIi8ILiM%253D",
         "cat": "신차소식",
         "baseWeight": 116,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"구글 제미나이 AI 통합?\"프랑스 르노자동차가 브랜드의 정체성을 대표하는 준중형 전기 해치백인 '신형 메간 E-Tech 일렉트릭'의 부분변경 모델을 공개하며 글로벌 전기차 시장의 시선을 단번에 사로잡았습니다. 2026년 6월 22일 공식 발표된 이번 부분변경은 외부 디자인의 단순한 조형적 보강에 머무르지 않고, 배터리 화학 조성의 근본적인 변화와 대화형",
+        "date": "2026. 6. 23."
     },
     {
         "slug": "N-e-Shift.html",
@@ -479,7 +567,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbuwuR3%2FdJMcaf748SH%2FAAAAAAAAAAAAAAAAAAAAAF4ruZmJLs6CFSufZCeBuA5XYsD3kWqSLK6PHLpiSUiM%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DBYlorHP3nTvyT3ygrUVCi1trejA%253D",
         "cat": "신차소식",
         "baseWeight": 114,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"포르쉐·BMW도 베꼈다?\"글로벌 전기차 고성능 부문에서 운전의 감성을 소프트웨어로 복원하려는 기술적 시도가 2026년 들어 패러다임의 중대한 전환점을 맞이하고 있습니다. 과거 현대자동차가 고성능 브랜드 N 라인업을 통해 가상 변속 및 주행 사운드 시스템을 처음 선보였을 당시에 유럽의 전통적인 스포츠카 명가들은 이를 '인위적인 잔재주'에 불과하다며 냉소적인",
+        "date": "2026. 6. 23."
     },
     {
         "slug": "2026-기아-EV3-롱레인지.html",
@@ -489,7 +579,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FcmOQTh%2FdJMcaicL1LB%2FAAAAAAAAAAAAAAAAAAAAAAp3XWh_H1b2fRJV0cBkXjO6Y2MuawIpEp4dPHIjG7_H%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DEdzP2aLT2irOVH%252Bu0ZI6lkfxOfg%253D",
         "cat": "신차소식",
         "baseWeight": 112,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "┌\"내 딸 첫차로딱이네!\"┘ 기아 EV3 모델의 트림별 가격표와 실구매가 혜택 및 경쟁차 제원을 한 번에 정리했습니다. 최근 모빌리티 시장에서 실속파 소비자들을 중심으로 기아의 소형 전기 크로스오버인 기아 EV3에 대한 관심이 뜨겁습니다. 컴팩트 SUV 시장의 베스트셀러인 셀토스 하이브리드나 코나 일렉트릭과의 실질적인 가치 비교가 본격화되는 분위기입니다.",
+        "date": "2026. 6. 23."
     },
     {
         "slug": "보보금-조기-소진.html",
@@ -499,7 +591,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fd2mjml%2FdJMcaaloSkJ%2FAAAAAAAAAAAAAAAAAAAAAJkLuLs_adImJv1CvF4kcTpvsnzS4h7ITwKJ65h7qRn0%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3Dnt%252FWBJpmw6nR7AYs0xLRXbi2goI%253D",
         "cat": "신차소식",
         "baseWeight": 110,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "8월 조기 고갈 위기에 직면한 전기차 보조금 대란과 모빌리티 산업 변화친환경 모빌리티 보급을 향해 질주하던 국가 정책 기조가 예산 소진이라는 거대한 재정적 암초를 만나며 새로운 전환점을 맞이하고 있습니다. 2026년 상반기 동안 폭발적인 전기차 등록 대수 급증세가 이어짐에 따라, 당초 정부가 설계했던 국고 보조금 예산이 이르면 오는 8월이면 완전히 고갈될",
+        "date": "2026. 6. 22."
     },
     {
         "slug": "2026-BMW-신형-iX3.html",
@@ -509,7 +603,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FPDtMf%2FdJMcadWKMCp%2FAAAAAAAAAAAAAAAAAAAAAFiQtHgDH_qD38yp5Hs-oXm5i6DTS21_8VVYb6FzPreX%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DMCB35T9S5xg11sBs94lJLjfByss%253D",
         "cat": "신차소식",
         "baseWeight": 108,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "중국 EVE 배터리 탑재와 통풍 시트 완전 누락 논란사진: 오직 순수 전동화 전용 플랫폼으로 개발된 2세대 신형 BMW iX3 오피셜 외관 디자인글로벌 프리미엄 전기차 시장의 주도권을 되찾기 위한 독일 자동차 산업의 거대한 비전인 '노이어 클라세'가 드디어 첫 양산차의 형상으로 공식 데뷔를 알렸습니다. 오직 순수 전기 주행만을 위해 뼈대부터 완전히 다시 설",
+        "date": "2026. 6. 22."
     },
     {
         "slug": "결함-아닌-부족함입니다.html",
@@ -519,7 +615,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FBbyMh%2FdJMcacDBvxN%2FAAAAAAAAAAAAAAAAAAAAAEaO77nDgJS0RBSdxC0Aeakqk5FNzn5YGV6Sp-bBPck-%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DgTRwmw9bAOUrwNtVOZHX47A7Bro%253D",
         "cat": "신차소식",
         "baseWeight": 106,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "완벽주의를 고수하던 제조 강국의 심장부에서 미국산 표준이라는 낯선 타협안이 날아들었습니다.글로벌 모빌리티 산업을 선도하는 제조 거인들이 자국 내 최고 권위의 품질 기준 대신 해외 현지 공장의 규격을 수용해 달라는 이색적인 선언을 발표하며 자동차 업계에 거대한 파장을 몰고 왔습니다. 수십 년 동안 전 세계 소비자들에게 '무결점 제조 공학'의 대명사로 각인되었",
+        "date": "2026. 6. 22."
     },
     {
         "slug": "하이브리드-전성시대.html",
@@ -529,7 +627,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbiLoGW%2FdJMcafNR7q2%2FAAAAAAAAAAAAAAAAAAAAAAZcd7eQcOAF41Sj3umdnooig2XZ5ome5Y3VKG4Oas-s%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DE9cqsLl8pQlUx6gfkVJ8tUTpuOE%253D",
         "cat": "신차소식",
         "baseWeight": 104,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "┌\"연비만 보고 샀다가 후회합니다\"내 주행 환경에 맞는 하이브리드 아키텍처 선택 가이드┘대하이브리드 시대 도래와 시장 점유율 데이터국내 친환경차 시장의 무게중심이 배터리 기반의 순수 전기차에서 내연기관과 모터가 공존하는 하이브리드로 완벽하게 기울고 있습니다. 전기차 보급 속도가 주춤하는 캐즘 단계에 직면한 가운데 디젤 파워트레인의 완전한 종말이 겹치면서 소",
+        "date": "2026. 6. 21."
     },
     {
         "slug": "자동차도-한일전-이다.html",
@@ -539,7 +639,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fdambay%2FdJMcaalnVoH%2FAAAAAAAAAAAAAAAAAAAAACgj80pgkvHfE0XY3yIqY02QVW2vRt3rhV8YYZK6yLCQ%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DehRMvnwBNP%252Bu1F4Iqbg6VWSDMIY%253D",
         "cat": "신차소식",
         "baseWeight": 102,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"가격 인상으로 좁혀진 500만원대 틈새, 마침내 맞닥뜨린 그랜저와 렉서스의 한일전 패권 경쟁\" 국내 준대형 세단 시장의 영원한 베스트셀러인 현대 그랜저 하이브리드와 수입 하이브리드 세그먼트의 부동의 왕좌를 지키는 렉서스 ES300h의 경쟁이 새로운 국면을 맞이했습니다. 2026년 7월 1일 자로 시행되는 개별소비세 인하 정책의 일몰과 환원 조치는 국산차의",
+        "date": "2026. 6. 21."
     },
     {
         "slug": "2026-BMW-iX3-50-xDrive.html",
@@ -549,7 +651,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FJDFae%2FdJMcafUBkba%2FAAAAAAAAAAAAAAAAAAAAAInSfhAxWfhbMNUubtdVM9TdH53cQQdxqcm_V3t92qcG%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D0QEBKpOhKEuLTv%252BcS43kB1rwkuU%253D",
         "cat": "신차소식",
         "baseWeight": 100,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "국내 공식 인증 611km 주행거리 성능과 최초의 800V 초급속 충전으로 무장한 신형 iX3의 등장 글로벌 전동화 시장이 급격한 성장 정체기를 뜻하는 캐즘 구역을 관통하면서 제조사들의 생존 전략은 단순한 저가형 공세에서 고부가가치 하드웨어 경쟁으로 빠르게 전환되는 형국입니다. 이러한 매크로적 트렌드 변화 속에서 BMW 코리아는 차세대 전동화 아키텍처인 노",
+        "date": "2026. 6. 20."
     },
     {
         "slug": "2027-볼보-EX30의-파격-가격-인하.html",
@@ -559,7 +663,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FletHa%2FdJMcafG4AMf%2FAAAAAAAAAAAAAAAAAAAAAPjemoISuL6WWtCHt93uBroD_xLCyotnqmqSkwzK8-cP%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D9igpF0vAzjZlnsl9e9cBpy7TNA0%253D",
         "cat": "신차소식",
         "baseWeight": 98,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "기존 대비 최대 761만 원 공식 가격 영구 인하 단행, 수입 프리미엄 컴팩트 전기차 시장의 새로운 스탠더드 수립 글로벌 친환경차 시장의 성장세 둔화 흐름 속에서 볼보자동차가 파격적인 가격 카드를 제시했습니다. 수입 전기 SUV 진입 장벽을 완전히 허물어버리는 2027년식 볼보 EX30의 공식 연식변경 모델은 국내 소비자들에게 큰 반향을 일으키고 있습니다.",
+        "date": "2026. 6. 20."
     },
     {
         "slug": "FSD-글로벌-개방.html",
@@ -569,7 +675,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FkL7Wu%2FdJMcajikZvc%2FAAAAAAAAAAAAAAAAAAAAAJoEwxBbQ7-Dpw6lzNU36Ao98nouingoSftXl1M-tUmr%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3Ddn2%252FbEU2WUu6m5p8P30fnV6QkLU%253D",
         "cat": "신차소식",
         "baseWeight": 96,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "국민의 생명과 안전을 구하는 혁신 기술의 조속한 개인가, 내수 기업을 보호하기 위한 규제 빗장인가 글로벌 미래 모빌리티 시장의 패권을 쥐고 흔드는 테슬라가 최근 대만 차량안전인증센터(VSCC)에 완전자율주행(FSD Supervised) 승인 신청을 공식 접수하며 아시아 시장 공략에 박차를 가하고 있습니다. 미국과 캐나다 등 북미 전역과 중국 시장에 이어 일",
+        "date": "2026. 6. 19."
     },
     {
         "slug": "2026-현대-아반떼-풀체인지.html",
@@ -579,7 +687,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fvixut%2FdJMcaiXX8jp%2FAAAAAAAAAAAAAAAAAAAAADoM6JLBozY_FizmP_WjkkZ6ATcoFEQsb1MORraqbFNy%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DEBSJ0A04TKhQgFtAIEZK5lowfS0%253D",
         "cat": "신차소식",
         "baseWeight": 94,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "국민 세단의 상징인 아반떼가 3,000만 원 시대를 돌파할 것인가! 현대자동차가 대한민국을 대표하는 핵심 준중형 세단인 아반떼의 차세대 풀체인지 모델을 드디어 공식적으로 오는 2026년 6월 26일 부산모빌리티쇼에서 공개합니다. 새로운 플랫폼과 첨단 인포테인먼트가 접목될 예정이나 최근 일선 영업점 자료를 통해 유출된 가격 인상설로 인해 벌써 시장과 예비 구",
+        "date": "2026. 6. 19."
     },
     {
         "slug": "갤럭시-크루저-700.html",
@@ -589,7 +699,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FrqZ6A%2FdJMcacKktNo%2FAAAAAAAAAAAAAAAAAAAAAL2SaHHmqCRm3nnA1zERtPqGG6zyKXkJiKUau0QhNtRB%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DU%252FyI66tm3jxZMlxcMyztfILqKk0%253D",
         "cat": "신차소식",
         "baseWeight": 92,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "3개 전기모터 탑재와 게걸음(크랩워크) 알고리즘이 완성한 하이엔드 오프로더 글로벌 모빌리티 시장이 전동화 과도기를 거치는 가운데, 내연기관의 전유물로 여겨졌던 정통 하드코어 오프로더 영역에서도 친환경 파워트레인을 결합한 파괴적 혁신이 목격되고 있습니다. 볼보(Volvo), 지커(Zeekr), 폴스타(Polestar), 로터스(Lotus) 등 프리미엄 글로벌",
+        "date": "2026. 6. 18."
     },
     {
         "slug": "뷰익-일렉트라-E7.html",
@@ -599,7 +711,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FGsGxm%2FdJMcaf1gq7e%2FAAAAAAAAAAAAAAAAAAAAAMI99Pc5LVMEJB8V3Ukkm7tY60sB5Ycxp5q3FvGMlTyl%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3Do0ulaYDt%252Fpc4wkVO0wqZNHNiR6s%253D",
         "cat": "신차소식",
         "baseWeight": 90,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "국산 중형 SUV 양강 생태계를 뒤흔드는 초장거리 PHEV의 상륙과 예비 오너들의 이탈 조짐 국내 친환경 패밀리카 시장을 견고하게 분점하고 있던 현대 싼타페와 기아 쏘렌토 하이브리드 진영에 전에 없던 거대한 지각변동이 감지되고 있습니다. 인천 부평에 있는 한국GM 본사 근처 도로에서 정체불명의 위장막을 두르고 부평구청 발행 임시번호판을 부착한 채 기밀 로드",
+        "date": "2026. 6. 18."
     },
     {
         "slug": "라브4-출시.html",
@@ -609,7 +723,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FdhvPwL%2FdJMcaijpS9x%2FAAAAAAAAAAAAAAAAAAAAAC1KyeNttcaVmfHKQVajCGODzval9eobpjr2jLVy3kQ6%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DF9opQGWUFMllmn85pTC3S4BfqsU%253D",
         "cat": "신차소식",
         "baseWeight": 88,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"전기차 캐즘을 정면 돌파할 77km의 EV 순수 주행 인증 팩트\" 대한민국 친환경 준중형 및 중형 SUV 시장의 실구매 장벽이 날로 가파르게 상승하는 가운데, 글로벌 전동화의 선구자인 토요타가 한층 완숙해진 기술력을 투영한 6세대 올 뉴 RAV4 모델을 국내 시장에 정식으로 선보였습니다. 이번 완전변경 모델은 하이브리드(HEV)와 플러그인 하이브리드(PH",
+        "date": "2026. 6. 17."
     },
     {
         "slug": "2026-폭스바겐-ID5.html",
@@ -619,7 +735,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbeGOdv%2FdJMcaalkW1J%2FAAAAAAAAAAAAAAAAAAAAAO_PxvErcqYX73k6ouMjWYdjFCgSn2YrepPT1da2GKO8%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D82c2VOgwI6GrsHrX9XMtRVYsaeA%253D",
         "cat": "신차소식",
         "baseWeight": 86,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"국산차 가격에 독일 SUV?\" 폭스바겐 ID.5가 마주한 현실 국산 전기차 가격 부담이 커지고 인기 하이브리드 SUV 가격까지 5천만 원대를 넘어서는 가운데, 최근 자동차 시장에서는 수입 전기 SUV의 파격적인 가격 정책 하나가 화제를 모으고 있습니다. 폭스바겐코리아가 상품성은 대폭 높이고 실구매 장벽은 크게 낮춘 2026년형 ID.5의 본격적인 고객 인",
+        "date": "2026. 6. 17."
     },
     {
         "slug": "카니발-하이루프-출시.html",
@@ -629,7 +747,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fbbzr2M%2FdJMcadbeO4E%2FAAAAAAAAAAAAAAAAAAAAAI9vDJDbVjtWcoVTM7THp7ygn2PVpfCkqktSsalBNA3e%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3Dig%252B4vR%252F%252BKDX4vo7CNCxRhkOeUzw%253D",
         "cat": "신차소식",
         "baseWeight": 84,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "글로벌 자동차 산업에서 모빌리티의 공간성은 더 이상 단순한 적재 용량의 크기를 의미하지 않습니다. 자동차가 단순한 이동 수단을 넘어 생활 밀착형 휴식 공간, 즉 '제3의 거주 공간'으로 거듭나면서 실내 전고를 극대화하는 하이루프 디자인은 대형 RV와 미니밴 시장의 거부할 수 없는 트렌드로 자리 잡아 가고 있습니다. 이러한 시장 구조 변화의 흐름 속에서 기아",
+        "date": "2026. 6. 16."
     },
     {
         "slug": "현대-싼타페-EREV해외생산.html",
@@ -639,7 +759,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FnLbac%2FdJMcaaMpQWw%2FAAAAAAAAAAAAAAAAAAAAAN2tZORUXAm4GxTUteFUIV46LFKZYDtkB1-76a9JTkn_%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D%252FLSVyhNOc1aPHnDdsd8u0gcrsuY%253D",
         "cat": "신차소식",
         "baseWeight": 82,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "배터리 슬림화와 가솔린 발전을 통한 글로벌 관세 패널티 및 유휴 설비 리스크의 유연한 방어 글로벌 친환경 모빌리티 패권 구도가 지정학적 관세 무역 전쟁과 인프라 병목 현상이라는 심각한 이중 위기를 마주하면서, 해외 거점을 사수하려는 기성의 완성차 대기업들과 가격 파괴력을 앞세워 영토 확장을 전개하는 신흥 제조사들 사이의 정면 승부가 가속화되고 있습니다. 특",
+        "date": "2026. 6. 15."
     },
     {
         "slug": "은퇴-자동차.html",
@@ -649,7 +771,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FVQ5US%2FdJMcaaFHmk6%2FAAAAAAAAAAAAAAAAAAAAAB_VQdYdSX5Xo6aRliR6nwRJRlD5QMmOO1Gz0GPE42I-%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DZMF73cpDAlFgmCrtfa%252B4iwxrbps%253D",
         "cat": "신차소식",
         "baseWeight": 80,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "체면보다 실리를 쫓는 도로 위 재테크, 모델별 핵심 사양과 특징을 차종별로 일목요연하게 분석 대한민국 인구 통계학적 변곡점에서 베이비부머로 대변되는 50대와 60대 장년층의 은퇴가 본격화되면서, 국내 완성차 내수 시장의 수요 지형도 전례 없는 질적 변화를 직면하고 있습니다. 과거 고도성장기 사회적 명함이자 지위의 상징으로 여겨졌던 내연기관 대형 세단 및 값",
+        "date": "2026. 6. 14."
     },
     {
         "slug": "유럽의-비웃음과-정면승부.html",
@@ -659,7 +783,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbwPDBN%2FdJMcagsjAvD%2FAAAAAAAAAAAAAAAAAAAAAMRptTGXhQMLABQHyHFeBUqqRfgA5Td0uD93MjQYuc1o%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3Dr2SCR38FGTq4TX7wAVxk7h5So9Y%253D",
         "cat": "신차소식",
         "baseWeight": 78,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "돈으로 살 수 없는 역사와 감성의 장벽, 유럽의 룰로 유럽의 심장부에서 기술 주권을 증명하다 글로벌 모빌리티 산업에서 브랜드의 고유한 품격과 경제적 무형자산 가치를 완성하는 최종 관문은 오랜 역사 속에서 검증받은 모터스포츠 서사입니다. 2015년 11월 출범 이후 누적 150만 대 판매라는 초고속 양적 성장을 일궈낸 현대자동차그룹의 럭셔리 브랜드 제네시스는",
+        "date": "2026. 6. 13."
     },
     {
         "slug": "캐스퍼-일렉트릭-수출-쏠림.html",
@@ -669,7 +795,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FblqKUX%2FdJMcabq1RRp%2FAAAAAAAAAAAAAAAAAAAAAMGwkqME_k22WTMI0XuUJi9QjkPrUTmGG1wa4SWc58lS%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3Dk0N2f4oQuXvpL9F5kxDK8yHCC7Q%253D",
         "cat": "신차소식",
         "baseWeight": 76,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "글로벌 시장의 폭발적 반응에 가려진 내수 시장의 장기 출고 대기와 구조적 병목의 실체 대한민국 친환경차 및 소형 모빌리티 시장에서 최근 가장 화두로 떠오른 현대자동차의 캐스퍼 일렉트릭은 이례적으로 극심한 인도 지연 문제를 겪으며 예비 차주들의 기다림을 무한히 연장하고 있습니다. 국고 보조금 혜택과 도심 주행에 최적화된 우수한 기계적 스펙을 무기로 사전 예약",
+        "date": "2026. 6. 13."
     },
     {
         "slug": "캐스퍼-일렉트릭.html",
@@ -679,7 +807,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FcnJ4qf%2FdJMcaar7bZK%2FAAAAAAAAAAAAAAAAAAAAANWRVJnWifCgzuROUjYvlHtKnrVANCkgKIfDOWw5q2Qz%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D5C6jIrlemFZl1KxyuWBsv3PAsu8%253D",
         "cat": "신차소식",
         "baseWeight": 74,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "중국산 LFP를 넘어선 고신뢰성 삼원계 배터리, 경차 고유의 특권과 세법 감면 한도의 완벽한 결합 글로벌 에너지 패러다임의 변화와 장기화된 고물가 기조는 현대인들의 이동 수단 선택 방식을 근본적으로 재정의하고 있습니다. 고가의 대형 전기차들이 충전 인프라 부족과 보조금 축소라는 한계에 부딪히며 캐즘(Chasm) 현상을 겪는 와중에도, 뛰어난 가성비와 현실적",
+        "date": "2026. 6. 12."
     },
     {
         "slug": "코나-풀체인지.html",
@@ -689,7 +819,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FkHUKL%2FdJMcaiKmAr3%2FAAAAAAAAAAAAAAAAAAAAAEO8CtYHh8mHQGs-mCNUxQffbmCNy3C418dIRe5HyKL0%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DRgLYb55bsir2IH54xKwmN4SWbGg%253D",
         "cat": "신차소식",
         "baseWeight": 72,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "현대자동차는 극도의 판매 부진을 타개하기 위해 현행 2세대 코나의 부분변경을 전면 생략하고, 수년 앞당겨진 3세대 완전변경으로 직행하는 전례 없는 결단을 선포했습니다. 소형 SUV 시장의 패권을 선점하기 위한 완성차 업계의 주도권 경쟁이 극단적인 전략 변화를 낳고 있습니다. 현대자동차가 판매 부진의 늪에 빠진 코나의 세대교체 템포를 유례없는 수준으로 단축하",
+        "date": "2026. 6. 11."
     },
     {
         "slug": "폴스타4-연식변경.html",
@@ -699,7 +831,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FLQXjz%2FdJMcagFSeeB%2FAAAAAAAAAAAAAAAAAAAAAPbqg9LXXxwcBCZwtP_Vl4C8QCLeNRE3LPnBJwG0YK_z%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3Dc4vyeSbe7DYYicXRVUwtY2ldzQs%253D",
         "cat": "신차소식",
         "baseWeight": 70,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "잘 팔리는 모델이 먼저 가격을 인하한 것은 이례적입니다. 이는 시장 방어를 위한 선제적 재편입니다. 글로벌 전기차 시장의 수요 정체기 속에서 수입 프리미엄 전기차 부문 판매 1위를 기록 중인 폴스타 4가 2027년형 연식변경과 함께 선제적인 가격 재조정이라는 파격적인 카드를 꺼내 들었습니다. 일반적으로 연식변경 마케팅 전략이 원가 상승분을 반영하여 판매 가",
+        "date": "2026. 6. 11."
     },
     {
         "slug": "중국산벤츠논란.html",
@@ -709,7 +843,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FlNdap%2FdJMb9901sw8%2FAAAAAAAAAAAAAAAAAAAAACklU57mHIUtN3PV497jygYvVA5BetwWl19qKkqyijFu%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D419VLt4VzzpfYIJLT4dAqDaa4NY%253D",
         "cat": "신차소식",
         "baseWeight": 68,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "중국 자본 15% 규제선 돌파, 앨라배마 터스컬루사 공장을 덮친 거대한 미국 안보법의 쓰나미 미국 의회가 중국 자본과 긴밀하게 얽힌 글로벌 완성차 제조사들을 겨냥해 전례 없는 수준의 초강수 제재 조치를 추진하고 있습니다. 미국 하원을 중심으로 논의가 심화되고 있는 2026년 자동차 현대화법(Motor Vehicle Modernization Act of 20",
+        "date": "2026. 6. 10."
     },
     {
         "slug": "아이오닉9.html",
@@ -719,7 +855,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbxlG8X%2FdJMcahrcSa7%2FAAAAAAAAAAAAAAAAAAAAAKq2nZ1mMQ8dYf51YrNnuZaueZWGz4Ifn4guEsqRajee%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DYq%252BX%252Bj64wzuFBNpL3VV%252Bu8%252BjjjI%253D",
         "cat": "신차소식",
         "baseWeight": 66,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "“유럽의 전통적인 프리미엄 럭셔리 브랜드가 닦아 놓은 대형 전기 SUV 세그먼트에 균열이 발생했습니다. 현대차 아이오닉 9은 까다로운 독일 매체의 검증 기준을 충족하며 완성도와 가성비를 모두 사수했습니다. 그러나 글로벌 리콜과 국내 프로모션이라는 상반된 시그널은 예비 구매자들이 반드시 짚고 넘어가야 할 양면성입니다.” 📋 목차 및 프레임워크1. 역설의 성과",
+        "date": "2026. 6. 9."
     },
     {
         "slug": "2026-신형-그랜저-풀옵션-벤츠-E클래스-E200.html",
@@ -729,7 +867,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fc9dB9I%2FdJMcadvrhkW%2FAAAAAAAAAAAAAAAAAAAAAKmGBTscc4GGTZq0qbGpUyHZSjOr_dq8W197nZf03Gf8%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DESval7%252FFbwx4vnUxG2F7UqYvxkk%253D",
         "cat": "신차소식",
         "baseWeight": 64,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"이제 6,000만 원대의 예산으로 국산 최고급 세단과 수입 프리미엄 세단을 동시에 고민할 수 있게 되었습니다.\"그동안 국산 세단과 수입 세단은 가격 차이가 뚜렷해서 고민할 필요가 거의 없었습니다. 하지만 2026년 6월을 기점으로 이 경계가 무너지고 있습니다.메르세데스-벤츠가 대표 인기 세단인 E클래스 기본형 모델에 대대적인 할인을 적용하기 시작했기 때문",
+        "date": "2026. 6. 8."
     },
     {
         "slug": "2026-아우디-A3.html",
@@ -739,7 +879,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fbj7fES%2FdJMcafz69uq%2FAAAAAAAAAAAAAAAAAAAAANAIVYvLTcWb0XMrl-7Pc_nK2Xhd5CB9mt2tiJabniru%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DljMRyuvrqQUd%252BCsLgB7ThkVQhPI%253D",
         "cat": "신차소식",
         "baseWeight": 62,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"국산차 가격 상승의 모순이 수입차 대중화를 앞당기고 있습니다.\"견고하게 쌓아 올려졌던 수입차와 국산차 간의 심리적 가격 장벽이 2026년 6월을 기점으로 완전히 무너져 내리고 있습니다.독일 프리미엄 브랜드 아우디가 자사의 대표 엔트리 세단 A3 라인업에 1,000만 원 이상의 전례 없는 폭탄 할인을 단행했기 때문입니다.대중 브랜드인 쏘나타와 동일한 가격",
+        "date": "2026. 6. 7."
     },
     {
         "slug": "한국용-지커-7X.html",
@@ -749,7 +891,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FexK9cx%2FdJMcabYNxFK%2FAAAAAAAAAAAAAAAAAAAAAMokfvAG6GuQihbdmhsou22MlV4ME1SXewwYdyXY4W65%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DXiJ2gCNWat0410AbmRGyGe0yPTM%253D",
         "cat": "신차소식",
         "baseWeight": 60,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "중국 지리자동차그룹의 전기차 전용 아키텍처인 SEA 플랫폼을 적용한 프리미엄 전동화 브랜드 지커(Zeekr)가 한국 시장 진출을 공식 선언하며 중형 SUV 지커 7X의 세부 구성을 공표했습니다. 국내 승용차 시장의 전동화 침투율이 정체 상태에 봉착한 시점에서, 수려한 곡선의 유럽형 외관 마감과 대형 차급에 준하는 2,900mm의 휠베이스 공간성을 무기로 내",
+        "date": "2026. 6. 6."
     },
     {
         "slug": "모델Y-국내판매-1위.html",
@@ -759,7 +903,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbsDLqO%2FdJMcabqWd38%2FAAAAAAAAAAAAAAAAAAAAADBuKR54NFna0VBlosdmqkWkeXD-7yKRArjN3B4IniVZ%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D9r6j4BFBWUCj%252FNKcelh55gTrvvY%253D",
         "cat": "신차소식",
         "baseWeight": 58,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "수입 단일 모델이 국산 국민차의 성벽을 어떻게 무너뜨렸을까?가죽과 통풍시트를 모두 덜어내며 4천만 원대를 노리는 테슬라의 파격 공세를 해부합니다. 대한민국 자동차 유통 시장이 수입 승용차 개방 시점인 1987년 이래 약 40년 만에 가장 극적인 지각 변동을 마주하게 되었습니다. 그동안 국내 완성차 대기업들의 두터운 내수 영토로 군림하던 국민 베스트셀링 카",
+        "date": "2026. 6. 5."
     },
     {
         "slug": "혼다-철수-할인.html",
@@ -769,7 +915,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2F2mX4s%2FdJMcabkbKWl%2FAAAAAAAAAAAAAAAAAAAAAFesfD659RIKPdVhLCkRYXnlm797wuYJHlvH-02xJLh8%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DiuB%252FHYIrKPz2hR2BqegP%252F6PmQBY%253D",
         "cat": "신차소식",
         "baseWeight": 56,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "어코드 30% 땡처리 할인은 왜 일어날 수 없을까?고환율과 사전예약제가 만들어낸 차가운 현실을 분석합니다.국내 수입 자동차 시장의 조용한 강자로 군림해 온 일본 완성차 브랜드들이 전동화 재편 흐름과 글로벌 매크로 지표 변동성 앞에서 중대한 결단의 기로에 서게 되었습니다. 수년간 수입차 판매 5위권 안팎을 안정적으로 유지하며 무고장과 뛰어난 내구성을 강점으로",
+        "date": "2026. 6. 5."
     },
     {
         "slug": "스팅어-부활.html",
@@ -779,7 +927,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FblBnD2%2FdJMcaiQ4ZiI%2FAAAAAAAAAAAAAAAAAAAAAJwKmUcwrT_rMnoaRYUKYLqz0co5tKIK1a_o_7L37AQm%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DO1lqBdD0P662F6RikVnk7rZKEAw%253D",
         "cat": "신차소식",
         "baseWeight": 54,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "전기차 캐즘의 터널을 돌파하는 새로운 감성 솔루션... 기아 80주년의 헤리티지와 밀라노 디자인 위크에서 포착한 디지털 그랜드 투어러의 파격적 아키텍처 비평글로벌 전기차 시장의 수요 둔화(캐즘) 국면이 장기화됨에 따라 완성차 제조사들은 단순한 효율 향상을 넘어서는 근본적인 돌파구를 모색하고 있습니다. 기계적인 전동화 규격 조율에 머물렀던 초기 단계를 지나,",
+        "date": "2026. 6. 4."
     },
     {
         "slug": "모델-x-중고.html",
@@ -789,7 +939,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbobRht%2FdJMcaaS4rYl%2FAAAAAAAAAAAAAAAAAAAAALORAomSZ9z3yx2Cfkm3VfA2brrmQrdcgne4yNEKEI_J%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3Dkdbfpjlqwq6cgq9r6WcY0q3%252BQDM%253D",
         "cat": "신차소식",
         "baseWeight": 52,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"복수 차량 보유가 지닌 경제적 역설의 종식... 테슬라 코리아의 신규 신차 발주 차단 조치와 프리미엄 중고 모델 X의 강력한 잔존 가치 원천 분석\" 사진: 테슬라 글로벌 뉴스룸국내외 프리미엄 모빌리티 오너들 사이에서 오랜 통념이었던 '1인 다차 보유'의 효율성에 대한 합리적인 재평가가 급속도로 이루어지고 있습니다. 수억 원에 달하는 고급 휘발유 세단과 세",
+        "date": "2026. 6. 4."
     },
     {
         "slug": "EV9-라이트-스탠다드.html",
@@ -799,7 +951,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FKoIaM%2FdJMcadoDABR%2FAAAAAAAAAAAAAAAAAAAAAAWlV2IS-oLnxM3C2rwzHf5wZElarK9oTFxJoItrdtjW%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D5NYV0qf%252F1K5rsUHJPZwew9YGUww%253D",
         "cat": "신차소식",
         "baseWeight": 50,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"\"8천만 원대 플래그십의 고무줄 장벽을 끊다... 실구매가 5천만 원대 후반에 안착하는 기아의 전략적 대중화 카드의 공격력\"\"사진: 기아 코리아 공식 보도 자료전 세계 전동화 모빌리티 시장이 일시적인 수요 정체기인 '캐즘(Chasm)' 구간을 통과함에 따라, 글로벌 완성차 브랜드들의 판매 생존 전략 역시 급변하고 있습니다. 과거 고용량 배터리와 화려한 첨",
+        "date": "2026. 6. 4."
     },
     {
         "slug": "테슬라-모델-y-스탠다드.html",
@@ -809,7 +963,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2F3p1yb%2FdJMcaar0J59%2FAAAAAAAAAAAAAAAAAAAAAIO_ZCV-XzNEKLzZpf1gO7X0sTLSVMS5eAlYxZGKQLaF%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D9Ue5col5x2oelNW6bfwCLxjIj%252Fw%253D",
         "cat": "신차소식",
         "baseWeight": 48,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"\"과감한 옵션 다이어트와 제원의 변화. 국내 출시를 앞둔 모델 Y 스탠다드가 그리는 테슬라의 플랫폼 청사진을 분석합니다.\"\"사진: 테슬라 글로벌 뉴스룸글로벌 전기차(EV) 시장을 지배하던 '프리미엄'의 시대가 저물고, 생존을 위한 처절한 원가 절감과 플랫폼 장악 경쟁이 본격화되고 있습니다. 한국 에너지공단의 인증 절차를 막 통과하며 출시가 임박한 테슬라",
+        "date": "2026. 6. 3."
     },
     {
         "slug": "벤츠-e200-익스클루시브.html",
@@ -819,7 +975,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbFfKFP%2FdJMcaiQ36hz%2FAAAAAAAAAAAAAAAAAAAAAF_YqzyFq_ayGXaACCVIa89LG1ix5sQklJH7T9UQlp5U%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D12QLSywXs1MZmeN1buDpKq%252BnyjY%253D",
         "cat": "신차소식",
         "baseWeight": 46,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"\"굳이 비싼 E 300이나 딱딱한 AMG 라인을 고집할 이유가 없다.\"\"사진: 벤츠 코리아 공식최근 글로벌 프리미엄 자동차 시장을 관통하는 가장 흥미로운 현상은 '안락한 승차감으로의 회귀'입니다. 고성능과 스포티함을 강조하는 브랜드들의 획일화된 하드코어 세팅에 지친 오너들이 본질적인 편안함을 갈구하기 시작한 것입니다. 이러한 글로벌 시장 트렌드의 중심에",
+        "date": "2026. 6. 3."
     },
     {
         "slug": "미니-컨트리맨-딜러-에디션.html",
@@ -829,7 +987,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Ftwtt7%2FdJMcadoDiyz%2FAAAAAAAAAAAAAAAAAAAAAAuA5uaV48BS4Muq864dHew8lyY-dNQDBzXTOXgitKAR%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3Dm1vrqf0Kp57EFakimdJBBWDhtXw%253D",
         "cat": "신차소식",
         "baseWeight": 44,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"딜러별 고유 옵션과 국내 최초 색상을 도입해 소장 가치를 극대화한 컴팩트 SUV가 출격했습니다.\" 사진: MINI 코리아 공식글로벌 컴팩트 세그먼트의 아이콘인 MINI 코리아가 출시한 ‘더 MINI 컨트리맨 S ALL4 딜러 테일러드 에디션’ 4종이 국내 수입 SUV 시장에서 많은 관심을 모으고 있습니다. 이번 한정판 라인업은 MINI의 새로운 브랜드 방",
+        "date": "2026. 6. 3."
     },
     {
         "slug": "스펙만-프리미엄인-중국산의-공습-지커-7X.html",
@@ -839,7 +999,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2F5l5wN%2FdJMcafUncOR%2FAAAAAAAAAAAAAAAAAAAAAEzkwZ7_T3YcOK3n_HV9oKsipsePwkHm0BAxzV7IJwHu%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DagSp0cTlEBAz8lXbQkYB4cvw7RA%253D",
         "cat": "신차소식",
         "baseWeight": 42,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"스펙만 프리미엄인 중국산의 공습, 한국 전기차 보조금 장벽과 고환율의 아킬레스건을 노출하다\"사진: 지커 공식 뉴스룸글로벌 모빌리티 환경이 내연기관의 쇠퇴와 배터리 기반의 전동화로 급전환을 맞이한 이래, 대한민국 수입 전기차 생태계는 역사상 전례 없는 지각변동을 예고하고 있습니다. 화려한 외관 테마와 막강한 하드웨어 스펙을 장전하고 한국 상륙을 공언해온 지",
+        "date": "2026. 6. 2."
     },
     {
         "slug": "웨이모-오하이-무인택시.html",
@@ -849,7 +1011,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2Fmjxf6%2FdJMcacXB7Uq%2FAAAAAAAAAAAAAAAAAAAAAFe1X_s88jELlQ--ZFO7KBNj70-LJcD-Em_oCUzn2CHW%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DL9K2bdToSlyU7b%252FbLwhcO7f0e3I%253D",
         "cat": "신차소식",
         "baseWeight": 40,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"2027년 미·중 안보 관세 장벽 속에서 탄생한 분할 조립 물류... 자율주행의 주도권을 선점하기 위한 웨이모 오하이의 담대한 여정\"글로벌 모빌리티 역사에서 무인 이동 수단의 패권은 단순한 주행 소스 코드의 성능을 넘어, 지정학적 제조 질서와 자국 보호주의 법망의 빈틈을 파고드는 영리한 공급망 구조화 능력에 의해 분할되고 있습니다. 이러한 거시적 소용돌이",
+        "date": "2026. 6. 2."
     },
     {
         "slug": "신형-그랜저-vs-기아-K8-정면승부.html",
@@ -859,7 +1023,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FqNaXB%2FdJMcagTgxp1%2FAAAAAAAAAAAAAAAAAAAAAEpUctEKjk2PE9mlZUxifY0vR46FtGffq3OwJKo6SP0Y%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DuwkOakqLhTj6yDCAdI0tLT8VOvo%253D",
         "cat": "신차소식",
         "baseWeight": 38,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"신형 그랜저와 K8의 풀옵션 격차 무려 700만 원 이상... 이 정도의 엄청난 차값을 얹어줄 만큼 신형이 돈값 할 수 있을까요?\" ai 생성국내 준대형 세단 시장을 흔드는 지각 변동의 핵심은 단연 가격 장벽의 이동입니다. 이번 현대 그랜저 페이스리프트 모델은 고급화 전략을 표방하며 다양한 편의 장비를 기본화했으나, 동시에 예비 바이어들이 쉽게 수긍하기",
+        "date": "2026. 6. 1."
     },
     {
         "slug": "그랜저-페이스리프트-이돈이면.html",
@@ -869,7 +1035,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FCBtk4%2FdJMcabdhNnD%2FAAAAAAAAAAAAAAAAAAAAALLOMKRfguzLtiinh5LW3osH3qf1opm-2dkWHLuRvPC4%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DsvrAw%252FhXjHuhUFtLtLymfah6lRI%253D",
         "cat": "신차소식",
         "baseWeight": 36,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"\"가격의 도약이 가져온 준대형 시장의 지각변동은, 국산 플래그십의 독점적 해자가 글로벌 프리미엄 브랜드의 할인 장벽 앞에서 시험받는 계기가 되었습니다.\"\"사진: 현대자동차 공식글로벌 자동차 산업의 공급망 다변화와 전장 제어 기술의 고도화 흐름 속에서, 현대자동차는 내수 시장의 중추를 담당하는 대표 플래그십 세단 그랜저(GN7)의 페이스리프트 모델을 시장에",
+        "date": "2026. 6. 1."
     },
     {
         "slug": "BYD-돌핀-G-DM-i.html",
@@ -879,7 +1047,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FC4tDx%2FdJMcajbf3c9%2FAAAAAAAAAAAAAAAAAAAAAGSVfOevxW-j5Tu2_xlNKVhkf6TClnsVmUE4MNTFsw5l%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DESx06QzoqgJ2hp%252FM%252FDxvgApb57A%253D",
         "cat": "신차소식",
         "baseWeight": 34,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"\"유럽 내 직접 생산과 R&D 결합은 보호무역 규제를 무력화하는 아시아 완성차 제조사들의 가장 정교한 우회 전술입니다.\"\"최근 글로벌 자동차 산업의 판도는 국가 간 보호무역 장벽의 강화와 친환경 모빌리티 대전환의 고조라는 복합적인 구조적 갈등 속에서 재편되고 있습니다. 특히 유럽연합(EU) 이사회가 역내 공급망 보호를 명분 삼아 해외 제조 전기차에 고율의",
+        "date": "2026. 5. 31."
     },
     {
         "slug": "뇌이징도-한계가-있다.html",
@@ -889,7 +1059,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FCd8aw%2FdJMcaayJKUI%2FAAAAAAAAAAAAAAAAAAAAAObEsgqIoEAgIX-brfenxy-8g9rbs9LDYwQw7KQVfE-F%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DqOx3A1EhLUUoWgl3FRFxDdItTSo%253D",
         "cat": "신차소식",
         "baseWeight": 32,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"설명이 필요하다면 그것은 이미 실패한 디자인이다. 뇌이징 마케팅 이면에 감춰진 제조사들의 기술적 모순과 원가절감의 경제학을 추적하다.\" 최근 도로 위나 자동차 온라인 전시실을 둘러본 국내 소비자들 사이에서는 이구동성으로 낯섦과 불쾌감이 섞인 한탄이 흘러나오고 있습니다. 벤츠의 전기 세단 라인업이나 재규어의 혁신 콘셉트카, 심지어 최고 프리미엄을 상징하던",
+        "date": "2026. 5. 30."
     },
     {
         "slug": "르노-필랑트.html",
@@ -899,7 +1071,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FwONNg%2FdJMcaiXKHhQ%2FAAAAAAAAAAAAAAAAAAAAAEMW8wCxKj2NkcomrBU38gZHPMEFFlUGM0ZY0f72qh9f%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DZl%252BITUwHL9an6S3m8ISNBRBsFWk%253D",
         "cat": "신차소식",
         "baseWeight": 30,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "중국 지리자동차 협업 플랫폼에 대한 시장의 의구심을 극복하고, 실제 도로 주행 환경에서 차주들이 입증해낸 르노 필랑트 E-Tech 하이브리드의 진짜 완성도는 무엇인가. 글로벌 모빌리티 시장에서 하이브리드 모델의 위상이 그 어느 때보다 높게 평가받고 있는 가운데, 르노코리아의 오로라 프로젝트 두 번째 신차인 '필랑트(Filante) 하이브리드'가 국내 도로",
+        "date": "2026. 5. 30."
     },
     {
         "slug": "지커7x-국내-인증-완료.html",
@@ -909,7 +1083,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FD7AL0%2FdJMcadIRzT2%2FAAAAAAAAAAAAAAAAAAAAABapZVb4hoqKU2ZVO0HoiGpVrxH4kZq46EJ_vhP2QKFw%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DG%252B%252F%252B4EOEQpBgkb3WL9cWyCIBbqU%253D",
         "cat": "신차소식",
         "baseWeight": 28,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "스펙만 프리미엄인 중국산의 공습, 한국 전기차 보조금 장벽과 고환율의 아킬레스건을 노출하다 사진: 지커 공식 뉴스룸글로벌 모빌리티 환경이 내연기관의 쇠퇴와 배터리 기반의 전동화로 급전환을 맞이한 이래, 대한민국 수입 전기차 생태계는 역사상 전례 없는 지각변동을 예고하고 있습니다. 화려한 외관 테마와 막강한 하드웨어 스펙을 장전하고 유라시아 대륙의 장벽을 공",
+        "date": "2026. 5. 29."
     },
     {
         "slug": "토요타-랜드크루저-FJ-글로벌-런칭.html",
@@ -919,7 +1095,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbjKKpg%2FdJMcadozH31%2FAAAAAAAAAAAAAAAAAAAAAMGNV7gd5RoknvJQ4sz1i0INiTnSG8Fq7Y8ClF6xKqpd%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DuiBi%252BLdsAfboSbSkzAh9Klgl12g%253D",
         "cat": "신차소식",
         "baseWeight": 26,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "400만 엔으로 정복하는 험로\" J240 플랫폼 도입과 글로벌 다변화 전략의 서막 2026년 글로벌 모빌리티 산업에서 오프로드 세그먼트는 하이엔드 럭셔리화와 거대한 차체 크기 경쟁으로 인해 대다수 소비자가 진입하기 어려운 고단가 장벽을 형성하고 있었습니다. 각국의 환경 규제 준수를 위한 급격한 하이브리드 파워트레인 도입과 ADAS 시스템의 기본화는 차량 제",
+        "date": "2026. 5. 29."
     },
     {
         "slug": "토요타-시에나-캠핑.html",
@@ -929,7 +1107,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbGxSxf%2FdJMcagyS4q1%2FAAAAAAAAAAAAAAAAAAAAAOPMpxWMb8YuficDpRk5AuKxygxxzLmNOrCFkT5Cg-HX%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DPAjLja4kyti8GOtdn8vsJk%252Fwh%252BE%253D",
         "cat": "신차소식",
         "baseWeight": 24,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "인생의 가장 찬란한 절정의 순간에 선택하게 되는, 토요타 시에나가 제시하는 패밀리 미니밴의 본질.\"인생의 가장 찬란한 전성기이자 절정의 순간에 비로소 선택하게 되는 차가 바로 미니밴이다.\" 자동차 업계와 주요 커뮤니티에서 많은 가장들의 마음을 움직인 공감 한 줄입니다. 어린 자녀들이 부모의 품 안에서 재롱을 피우고, 연로하신 부모님과 삼대(三代)가 건강한",
+        "date": "2026. 5. 28."
     },
     {
         "slug": "하반기-수입-전기-suv.html",
@@ -939,7 +1119,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FcgMJHk%2FdJMcaiwIpem%2FAAAAAAAAAAAAAAAAAAAAAF8_tUcf1eE37B8T51p7a9F1aV2hszAFq_K1E68sbkos%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DKCIOtkVex95stx7fGcu28cHYiy4%253D",
         "cat": "신차소식",
         "baseWeight": 22,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"BMW 차세대 노이어 클라쎄와 벤츠의 전기차 전용 플랫폼(MB.EA) 등 차세대 설계 기술 대공습 속에서 펼쳐지는 수입 친환경 SUV 시장의 주도권 전쟁\"2026년 상반기 대한민국 친환경 모빌리티 시장은 글로벌 완성차 브랜드들의 판매 불균형 현상과 급변하는 소비자 심리로 인해 전례 없는 패러다임 변화를 겪었습니다. 특히 테슬라의 주도권 아래 보급형 모델이",
+        "date": "2026. 5. 28."
     },
     {
         "slug": "충전기-뒷돈.html",
@@ -949,7 +1131,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbBPniX%2FdJMcahLlSvc%2FAAAAAAAAAAAAAAAAAAAAAHfF0d_n_azymM2DXkJOLes4W8vK4JsNUNHBO1Qep0NR%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DVfiChpXPjHTGDTa6OeXwVO7egLA%253D",
         "cat": "신차소식",
         "baseWeight": 20,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"입주자대표회의의 불투명한 발전기금 요구와 CPO 위탁 업체의 출혈 마케팅 비용이 주민들의 매달 전기세 고지서 단가(kWh)로 고스란히 전가되는 시장 왜곡의 민낯\" 친환경 전기차 시대로의 이행이 대대적으로 가속화되는 흐름 속에서, 실제 사용자들이 매일 마주하는 생활 밀착형 인프라인 충전 요금 체계에 예기치 못한 부작용과 요율 급등 시비가 거세게 불거지고 있",
+        "date": "2026. 5. 28."
     },
     {
         "slug": "페라리-루체.html",
@@ -959,7 +1143,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FsxLqi%2FdJMcahR4CbQ%2FAAAAAAAAAAAAAAAAAAAAAK2YqXJcKW8OO2zvaGq2u_0PYdpUrHtd_Zw6BAEzFoG3%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3DqrY6eSLEdhPRW2qmPXRdGaepRpM%253D",
         "cat": "신차소식",
         "baseWeight": 18,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "\"\"엠블럼이라도 떼어내라\" 전임 수장의 이례적인 독설과 하루 만에 8.37% 폭락한 주가, 페라리 최초의 전기차가 던진 파장\"백 년에 가까운 세월 동안 내연기관 특유의 고동감과 우렁찬 배기음으로 세계 완성차 시장을 호령해 온 이탈리아의 상징 페라리가 브랜드 최초의 순수 전기 하이퍼카 '루체(Luce)'를 전격 공개하며 모빌리티 패러다임의 극적인 전환을 선언",
+        "date": "2026. 5. 28."
     },
     {
         "slug": "샤오펑-p7.html",
@@ -969,7 +1155,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2FbVDGbl%2FdJMcaak5FvA%2FAAAAAAAAAAAAAAAAAAAAAP1v__ncypLsX-DneMro25zYDTgDjNdbBw2r6M-OWLZW%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D%252FjMbIc73rVqKs7TC1WsTQFejH00%253D",
         "cat": "신차소식",
         "baseWeight": 16,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "┌독일차였으면 1억 넘었을 옵션들,중국 기준 4,900만 원대부터 전부 들어가 있습니다.┘| 6분 37초 만에 1만 대 — 중국 시장이 먼저 증명했다샤오펑 P7은 2025년 8월 중국에서 공식 출시됐습니다. 사전 예약 오픈 6분 37초 만에 1만 대가 채워졌습니다. 중국 전기차 시장에서도 이례적인 속도입니다. 직접적인 경쟁상대인 샤오미 SU7 Pro의 대기",
+        "date": "2026. 5. 25."
     },
     {
         "slug": "현대-베르나-한국-미출시-이유-—-1660만원짜리-가성비-세단-왜-안방엔-없나.html",
@@ -979,7 +1167,9 @@ const CHAGEUL_POSTS_REGISTRY = [
         "thumb": "https://img1.daumcdn.net/thumb/R800x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdna%2F9jB31%2FdJMcagldo2B%2FAAAAAAAAAAAAAAAAAAAAAJvPpAzE48xs_dlP5I4WOZHAnKOjKTNtm1aTKzf8YAqh%2Fimg.jpg%3Fcredential%3DyqXZFxpELC7KVnFOS48ylbz2pIh7yKj8%26expires%3D1788188399%26allow_ip%3D%26allow_referer%3D%26signature%3D7lBzSZRsiehxCjRF9K7HCMEgqf0%253D",
         "cat": "신차소식",
         "baseWeight": 14,
-        "isEditorPick": false
+        "isEditorPick": false,
+        "summary": "┌인도에서 연간 6만대 팔리는 현대차가정작 한국에는 없는 이유, 알고 보면 좀 씁쓸합니다.┘엑센트가 사라진 자리, 베르나가 있었다2019년, 현대자동차는 국내 소형 세단 엑센트를 조용히 단종시켰습니다. 이후 한국 시장에서 1,000~2,000만원대 소형 세단 라인업은 사실상 비어버렸어요.그런데 같은 시기, 해외에서는 엑센트의 후속 격 모델이 승승장구하고 있",
+        "date": "2026. 5. 16."
     }
 ];
 

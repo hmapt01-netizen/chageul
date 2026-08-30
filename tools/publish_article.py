@@ -1,4 +1,4 @@
-﻿# -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 import os, sys, json, re, datetime
 
 def update_registry(features_path, post_obj):
