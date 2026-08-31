@@ -1155,17 +1155,17 @@ function legacyCopyText(text) {
             const heroDesc = heroLeft.querySelector('.hero-desc-text');
             const heroMeta = heroLeft.querySelector('div[style*="border-top"] span');
 
-            if (heroA) heroA.setAttribute('href', postHref);
-            if (heroImg) {
+            if (heroA && heroA.getAttribute('href') !== postHref) heroA.setAttribute('href', postHref);
+            if (heroImg && heroImg.getAttribute('src') !== postThumb) {
                 heroImg.setAttribute('src', postThumb);
                 heroImg.setAttribute('alt', postTitle);
             }
-            if (heroCat) heroCat.textContent = postCat;
-            if (heroH2A) {
+            if (heroCat && heroCat.textContent !== postCat) heroCat.textContent = postCat;
+            if (heroH2A && heroH2A.textContent !== postTitle) {
                 heroH2A.setAttribute('href', postHref);
                 heroH2A.textContent = postTitle;
             }
-            if (heroDesc) heroDesc.textContent = `"${postDesc}"`;
+            if (heroDesc && heroDesc.textContent !== `"${postDesc}"`) heroDesc.textContent = `"${postDesc}"`;
             if (heroMeta) heroMeta.textContent = `차를 쓰다 · ${postDate}`;
         }
 
@@ -1178,12 +1178,12 @@ function legacyCopyText(text) {
             const mobP = mobPick.querySelector('p');
             const mobDate = mobPick.querySelector('div[style*="border-top"] span');
 
-            if (mobImg) {
+            if (mobImg && mobImg.getAttribute('src') !== postThumb) {
                 mobImg.setAttribute('src', postThumb);
                 mobImg.setAttribute('alt', postTitle);
             }
-            if (mobH3) mobH3.textContent = postTitle;
-            if (mobP) mobP.textContent = `"${postDesc}"`;
+            if (mobH3 && mobH3.textContent !== postTitle) mobH3.textContent = postTitle;
+            if (mobP && mobP.textContent !== `"${postDesc}"`) mobP.textContent = `"${postDesc}"`;
             if (mobDate) mobDate.textContent = `차를 쓰다 · ${postDate}`;
         }
     }
