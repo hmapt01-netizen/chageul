@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿/**
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿/**
  * 🚗 차를 쓰다 (CHAGEUL) 통합 기능 & 실시간 라이브 검색 및 인기글 TOP 10 랭킹 엔진
  */
 
@@ -1128,7 +1128,7 @@ function legacyCopyText(text) {
         if (typeof CHAGEUL_POSTS_REGISTRY === 'undefined' || !Array.isArray(CHAGEUL_POSTS_REGISTRY) || CHAGEUL_POSTS_REGISTRY.length === 0) return;
         
         // isEditorPick: true인 글 검색 (없으면 첫 번째 글)
-        const localPickSlug = localStorage.getItem('chageul_editor_pick_slug') || localStorage.getItem('honeyjar_editor_pick_slug');
+        const localPickSlug = localStorage.getItem('chageul_editor_pick_slug');
         let pickPost = null;
         if (localPickSlug) {
             pickPost = CHAGEUL_POSTS_REGISTRY.find(p => p.slug === localPickSlug || p.slug === localPickSlug + '.html' || p.slug.replace('.html','') === localPickSlug.replace('.html',''));

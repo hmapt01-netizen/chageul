@@ -1,4 +1,4 @@
-﻿﻿﻿<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta name="naver-site-verification" content="f3ea45cb3409cacb77fe1c9a6db5b5339238e368" />
@@ -46,9 +46,7 @@
     <script type="application/ld+json">
     {{JSON_LD_ARTICLE}}
     </script>
-    <script type="application/ld+json">
-    {{JSON_LD_FAQ}}
-    </script>
+    {{JSON_LD_FAQ_SCRIPT}}
 
     <style id="guaranteedMasterPostStyle">
         html, body { width: 100% !important; max-width: 100vw !important; overflow-x: clip !important; box-sizing: border-box !important; }
@@ -937,12 +935,7 @@ figure.post-photo-figure figcaption,
                     {{BODY_CONTENT_HTML}}
 
                     <!-- ❓ 구글 전용 FAQ 5선 (본문 바로 다음 연결) -->
-                    <div id="faq" style="margin-top:40px; padding-top:26px; border-top:1px solid #e2e8f0;">
-                        <h2 style="font-size:1.3rem; font-weight:850; color:#111827; margin-bottom:20px; border:none; padding:0;">자주 묻는 질문 (FAQ)</h2>
-                        <div class="faq-block-wrap" style="display:flex; flex-direction:column; gap:14px;">
-                            {{FAQ_CARDS_HTML}}
-                        </div>
-                    </div>
+                    {{FAQ_SECTION_HTML}}
 
                     <!-- 📚 참고 자료 (Rule 7 준수, 이모지 제외) -->
                     <div class="ref-box" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:16px 18px; margin:32px 0; font-size:0.83rem; color:#64748b; line-height:1.65;">
