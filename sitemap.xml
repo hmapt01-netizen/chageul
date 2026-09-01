@@ -2,9 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://chageul.com/</loc>
-        <lastmod>2026-08-31T09:00:00+09:00</lastmod>
+        <lastmod>2026-09-01T09:00:00+09:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://chageul.com/entry/kia-pv7-large-electric-pbv-minivan-specs.html</loc>
+        <lastmod>2026-09-01T09:00:00+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chageul.com/entry/genesis-gv80-hybrid-powertrain-specs.html</loc>
+        <lastmod>2026-09-01T09:00:00+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    <url>
+        <loc>https://chageul.com/entry/genesis-gv90-global-media-reviews.html</loc>
+        <lastmod>2026-08-31T09:00:00+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://chageul.com/entry/lifestyle-car-buying-guide-2026.html</loc>

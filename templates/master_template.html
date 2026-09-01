@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta name="naver-site-verification" content="f3ea45cb3409cacb77fe1c9a6db5b5339238e368" />
@@ -18,10 +18,13 @@
     <title>{{META_TITLE}} | 차를 쓰다</title>
     <meta name="description" content="{{META_DESCRIPTION}}">
     
+    <link rel="canonical" href="{{OG_URL}}">
     <!-- 🚗 차를 쓰다 공식 파비콘 -->
-    <link rel="icon" type="image/svg+xml" href="../favicon.svg?v=2.0">
-    <link rel="alternate icon" type="image/png" sizes="32x32" href="../favicon-32x32.png?v=2.0">
-    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png?v=2.0">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="../favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
 
     <!-- 🌐 OpenGraph / SNS 링크 공유 썸네일 -->
     <meta property="og:type" content="article">
@@ -41,6 +44,7 @@
     
     
     <link rel="stylesheet" href="../css/style.css?v=20260829_car_theme">
+    <script id="postsRegistryData">window.CHAGEUL_POSTS_REGISTRY = window.CHAGEUL_POSTS_REGISTRY || {{REGISTRY_JSON_INLINE}};</script>
 
     <!-- 📜 구조화 데이터 (Schema JSON-LD) -->
     <script type="application/ld+json">
@@ -937,11 +941,8 @@ figure.post-photo-figure figcaption,
                     <!-- ❓ 구글 전용 FAQ 5선 (본문 바로 다음 연결) -->
                     {{FAQ_SECTION_HTML}}
 
-                    <!-- 📚 참고 자료 (Rule 7 준수, 이모지 제외) -->
-                    <div class="ref-box" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:16px 18px; margin:32px 0; font-size:0.83rem; color:#64748b; line-height:1.65;">
-                        <strong style="color: #334155; display: block; margin-bottom: 6px;">참고 자료</strong>
-                        {{ACADEMIC_REFERENCES_HTML}}
-                    </div>
+                    <!-- 📚 참고 자료 (Rule 7 준수, 단일 박스, 이모지 제외) -->
+                    {{ACADEMIC_REFERENCES_HTML}}
 
                     <!-- 함께 읽으면 좋은 추천 칼럼 (글 마무리 후 다음 글 탐색 유도) -->
                     {{RELATED_ARTICLES_HTML}}
