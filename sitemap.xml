@@ -2,9 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://chageul.com/</loc>
-        <lastmod>2026-09-01T09:00:00+09:00</lastmod>
+        <lastmod>2026-09-02T09:00:00+09:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
+    </url>
+    <url>
+        <loc>https://chageul.com/entry/2026-mercedes-benz-electric-cla-price-specs.html</loc>
+        <lastmod>2026-09-02T09:00:00+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://chageul.com/entry/kia-pv7-large-electric-pbv-minivan-specs.html</loc>
