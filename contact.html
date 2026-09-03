@@ -1,88 +1,318 @@
-﻿﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <!-- 📊 Google Analytics 4 (GA4 공식 초광속 비동기 태그) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-YZQ2RW8QZJ"></script>
     <script>
-    async function handleContactSubmit(e) {
-        e.preventDefault();
-        const name = document.getElementById('contactName').value.trim();
-        const email = document.getElementById('contactEmail').value.trim();
-        const subject = document.getElementById('contactSubject').value;
-        const message = document.getElementById('contactMessage').value.trim();
-        const submitBtn = document.querySelector('#contactForm .btn-submit');
-        const originalBtnText = submitBtn.innerText;
-
-        submitBtn.innerText = '메일 발송 중... 🚀';
-        submitBtn.disabled = true;
-        submitBtn.style.opacity = '0.7';
-
-        try {
-            const response = await fetch('https://formsubmit.co/ajax/hmapt01@gmail.com', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                    'Accept': 'application/json'
-                },
-                body: JSON.stringify({
-                    _subject: '[차를 쓰다 문의] ' + subject + ' - ' + name + '님',
-                    _template: 'table',
-                    _captcha: 'false',
-                    이름_담당자명: name,
-                    회신_이메일: email,
-                    문의_분류: subject,
-                    문의_상세내용: message,
-                    접수_시각: new Date().toLocaleString('ko-KR')
-                })
-            });
-
-            const result = await response.json();
-            
-            document.getElementById('contactForm').reset();
-            const successEl = document.getElementById('contactSuccessMsg');
-            successEl.style.display = 'block';
-            successEl.innerHTML = '✓ 소중한 문의 메시지가 편집국 담당자(hmapt01@gmail.com)에게 성공적으로 발송되었습니다. 신속히 검토 후 회신드리겠습니다.';
-            window.scrollTo({ top: successEl.offsetTop - 80, behavior: 'smooth' });
-        } catch (err) {
-            console.error('Mail sending error:', err);
-            const mailtoUrl = 'mailto:hmapt01@gmail.com?subject=' + encodeURIComponent('[차를 쓰다 문의] ' + subject + ' - ' + name) + '&body=' + encodeURIComponent('성함/담당자명: ' + name + '
-회신 이메일: ' + email + '
-문의 분류: ' + subject + '
-
-문의 내용:
-' + message);
-            window.location.href = mailtoUrl;
-        } finally {
-            submitBtn.innerText = originalBtnText;
-            submitBtn.disabled = false;
-            submitBtn.style.opacity = '1';
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YZQ2RW8QZJ');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 🚗 차를 쓰다 공식 파비콘 -->
+    <link rel="icon" type="image/png" href="images/logo.png?v=20260829_gold">
+    <link rel="apple-touch-icon" href="images/logo.png?v=20260829_gold">
+    <title>문의하기 (Contact Us) | 차를 쓰다 (CHAGEUL)</title>
+    <meta name="description" content="차를 쓰다(CHAGEUL) 매거진 편집국 문의, 독자 제보 및 비즈니스 제휴 안내.">
+    <link rel="stylesheet" href="css/style.css?v=20260829_profile_box">
+    <!-- 💰 Google AdSense 공식 인증 및 자동 광고 코드 -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4739687813221133" crossorigin="anonymous"></script>
+    <style>
+        .form-group { margin-bottom: 20px; }
+        .form-label {
+            display: block;
+            font-weight: 700;
+            margin-bottom: 6px;
+            color: #1e293b;
+            font-size: 0.92rem;
         }
-    }
-</script>
-<script src="js/features.js?v=20260829_car_theme" defer></script>
+        .form-control {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #cbd5e1;
+            background: #ffffff;
+            border-radius: 10px;
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.2s;
+            box-sizing: border-box;
+            color: #0f172a;
+        }
+        .form-control:focus {
+            border-color: #0f172a;
+            box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.1);
+        }
+        textarea.form-control {
+            resize: vertical;
+            min-height: 140px;
+            line-height: 1.6;
+        }
+        .btn-submit {
+            background: #0f172a;
+            color: #ffffff;
+            border: none;
+            padding: 14px 28px;
+            font-size: 0.95rem;
+            font-weight: 800;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+            width: 100%;
+        }
+        .btn-submit:hover {
+            background: #1e293b;
+        }
+        .success-msg {
+            display: none;
+            background: #f0fdf4;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+            padding: 14px 18px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            font-weight: 600;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 📱 모바일 상단 바 -->
+<div class="naver-mobile-top-bar">
+    <a href="index.html" class="brand-title" style="gap: 10px;">
+        <img src="images/logo.png?v=20260829_gold" alt="차를 쓰다 로고" class="brand-logo-img" style="height: 38px; width: 38px;">
+        <span class="brand-main-title" style="font-size: 1.25rem;">차를 쓰다</span>
+    </a>
+    <button type="button" class="btn-mobile-menu-open" style="background:transparent; border:none; padding:6px; cursor:pointer;" id="btnOpenMobileDrawer" aria-label="메뉴 열기">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#1e293b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
+    </button>
+</div>
+
+<!-- 💻 PC 전용 깔끔한 상단 헤더 -->
+<header class="clean-header desktop-header">
+    <div class="header-container">
+        <a href="index.html" class="brand-title">
+            <img src="images/logo.png?v=20260829_gold" alt="차를 쓰다 로고" class="brand-logo-img">
+            <span class="brand-main-title">차를 쓰다</span>
+        </a>
+        <nav class="clean-nav">
+            <ul>
+                <li><a href="index.html">홈</a></li>
+                <li><a href="index.html?cat=신차소식">신차소식</a></li>
+                <li><a href="index.html?cat=포커스">포커스</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- 📱 모바일 드로어 메뉴 -->
+<div class="drawer-overlay" id="drawerOverlay"></div>
+<aside class="naver-mobile-drawer" id="naverMobileDrawer">
+    <div class="drawer-header">
+        <a href="index.html" class="drawer-brand" style="display:flex; align-items:center; gap:8px; text-decoration:none;" title="메인 홈으로 가기">
+            <img src="images/logo.png?v=20260829_gold" alt="차를 쓰다 로고" style="height: 32px; width: 32px;">
+            <span class="brand-main-title" style="font-size: 1.15rem;">차를 쓰다</span>
+        </a>
+        <button type="button" class="btn-drawer-close" id="btnCloseMobileDrawer" aria-label="메뉴 닫기" style="background:transparent; border:none; font-size:1.5rem; color:#64748b; cursor:pointer;">&times;</button>
+    </div>
+    <div class="drawer-body">
+        <ul class="drawer-menu-list">
+            <li><a href="about.html" class="drawer-nav-item">소개</a></li>
+            <li><a href="privacy.html" class="drawer-nav-item">개인정보처리방침</a></li>
+            <li><a href="terms.html" class="drawer-nav-item">이용약관</a></li>
+            <li><a href="contact.html" class="drawer-nav-item">문의하기</a></li>
+        </ul>
+    </div>
+</aside>
+
+<main class="container" style="max-width: 1040px; margin: 24px auto; padding: 0 16px;">
+    <div class="article-layout-grid">
+
+        <article class="article-main-col">
+            <div class="article-wrap" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:32px 28px;">
+                <header class="article-header" style="margin-bottom: 24px; border-bottom: 1px solid #f1f5f9; padding-bottom: 18px;">
+                    <span class="article-cat-tag" style="display:inline-block; font-size:0.78rem; font-weight:800; color:#0f172a; background:#f1f5f9; border:1px solid #cbd5e1; padding:4px 12px; border-radius:6px; margin-bottom:10px;">문의하기 (CONTACT)</span>
+                    <h1 class="article-main-title" style="font-size:1.65rem; font-weight:900; color:#0f172a; line-height:1.35; margin:0 0 12px 0;">차를 쓰다 편집국 문의 및 제안</h1>
+                    <div class="article-meta-bar" style="font-size:0.82rem; color:#64748b;">
+                        <span>운영시간: 평일 09:00 ~ 18:00 · 1~2영업일 이내 신속 회신</span>
+                    </div>
+                </header>
+
+                <div class="article-body" style="font-size:0.96rem; line-height:1.8; color:#334155;">
+                    <p><strong>「차를 쓰다」</strong> 콘텐츠에 대한 정정 요청, 다루어 주었으면 하는 신차 주제 제안, 시승 제보 또는 비즈니스 제휴 문의는 아래 양식을 통해 보내주시면 신속하게 검토 후 회신드리겠습니다.</p>
+
+                    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:20px; margin:24px 0; font-size:0.92rem; line-height:1.8;">
+                        <p style="margin:0 0 4px 0;"><strong>• 매체명:</strong> 차를 쓰다 (CHAGEUL)</p>
+                        <p style="margin:0 0 4px 0;"><strong>• 편집국:</strong> 자동차 전문 취재 및 심층 분석팀</p>
+                        <p style="margin:0 0 4px 0;"><strong>• 공식 이메일:</strong> <code>hmapt01@gmail.com</code></p>
+                        <p style="margin:0;"><strong>• 주소:</strong> 대한민국 서울시 도봉구 해등로 231</p>
+                    </div>
+
+                    <div id="contactSuccessMsg" class="success-msg">
+                        ✓ 소중한 문의 메시지가 편집국 담당자(hmapt01@gmail.com)에게 성공적으로 발송되었습니다. 신속히 검토 후 회신드리겠습니다.
+                    </div>
+
+                    <form id="contactForm" onsubmit="handleContactSubmit(event)">
+                        <div class="form-group">
+                            <label class="form-label" for="contactName">성함 또는 닉네임 *</label>
+                            <input type="text" id="contactName" class="form-control" placeholder="홍길동" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contactEmail">회신받으실 이메일 주소 *</label>
+                            <input type="email" id="contactEmail" class="form-control" placeholder="example@naver.com" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contactSubject">문의 분류 *</label>
+                            <select id="contactSubject" class="form-control" required>
+                                <option value="">-- 분류를 선택해 주세요 --</option>
+                                <option value="신차 정보 제보 및 피드백">신차 정보 제보 및 피드백</option>
+                                <option value="주제 및 칼럼 제안">주제 및 칼럼 제안</option>
+                                <option value="제휴 및 비즈니스 협업">제휴 및 비즈니스 협업</option>
+                                <option value="기타 일반 문의">기타 일반 문의</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="form-label" for="contactMessage">문의 내용 *</label>
+                            <textarea id="contactMessage" class="form-control" placeholder="구체적인 내용을 입력해 주세요." required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">문의 메시지 보내기</button>
+                    </form>
+                </div>
+            </div>
+        </article>
+
+        <!-- Right Sidebar Column (300px) -->
+        <aside class="article-sidebar">
+
+            <!-- 1. Editor Profile Widget -->
+            <div class="sidebar-profile-card">
+                <div class="avatar-box">
+                    <img src="images/logo.png?v=20260829_gold" alt="차를 쓰다 에디터">
+                </div>
+                <div class="profile-name">차를 쓰다</div>
+                <p class="profile-desc">
+                    빠른 신차 업데이트와 정직하고 정확한 자동차 전문 분석을 전합니다.
+                </p>
+                <span class="profile-badge">✓ 자동차 칼럼니스트</span>
+            </div>
+
+            <!-- 2. Popular Posts TOP 10 Widget -->
+            <div class="sidebar-widget" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:22px 20px; margin-bottom:20px; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+                <h3 class="widget-title" style="font-size:1.02rem; font-weight:800; color:#111827; margin-bottom:14px; padding-bottom:8px; border-bottom:1px solid #f1f5f9; display:flex; align-items:center; gap:6px;">
+                    <span>인기글 TOP 10</span>
+                </h3>
+                <ul class="popular-list" id="popularPostsWidgetList">
+                    <!-- JS 실시간 자동 렌더링 -->
+                </ul>
+            </div>
+
+        </aside>
+
+    </div>
+</main>
+
+<footer class="clean-footer">
+    <div class="footer-inner">
+        <div class="footer-info-group">
+            <p class="footer-copy">&copy; 2026 <strong>차를 쓰다</strong>. All rights reserved.</p>
+            <p class="footer-meta-desktop">운영자: 차를 쓰다 | 이메일: hmapt01@gmail.com | 주소: 대한민국 서울시 도봉구 해등로 231</p>
+            <div class="footer-meta-mobile">
+                <p>운영자: 차를 쓰다 | 이메일: hmapt01@gmail.com</p>
+                <p>주소: 대한민국 서울시 도봉구 해등로 231</p>
+            </div>
+        </div>
+        <ul class="footer-links">
+            <li><a href="about.html">소개</a></li>
+            <li><a href="privacy.html">개인정보처리방침</a></li>
+            <li><a href="terms.html">이용약관</a></li>
+            <li><a href="contact.html">문의하기</a></li>
+        </ul>
+    </div>
+</footer>
 
 <script>
-    // 📱 모바일 드로어 제어
-    const btnOpen = document.getElementById('btnOpenMobileDrawer');
-    const btnClose = document.getElementById('btnCloseMobileDrawer');
-    const overlay = document.getElementById('drawerOverlay');
-    const drawer = document.getElementById('naverMobileDrawer');
+async function handleContactSubmit(e) {
+    e.preventDefault();
+    const name = document.getElementById('contactName').value.trim();
+    const email = document.getElementById('contactEmail').value.trim();
+    const subject = document.getElementById('contactSubject').value;
+    const message = document.getElementById('contactMessage').value.trim();
+    const submitBtn = document.querySelector('#contactForm .btn-submit');
+    const originalBtnText = submitBtn.innerText;
 
-    if (btnOpen && drawer && overlay) {
-        btnOpen.addEventListener('click', () => {
-            drawer.classList.add('open');
-            overlay.classList.add('open');
-            document.body.style.overflow = 'hidden';
+    submitBtn.innerText = '메시지 발송 중... 🚀';
+    submitBtn.disabled = true;
+    submitBtn.style.opacity = '0.7';
+
+    try {
+        const response = await fetch('https://formsubmit.co/ajax/hmapt01@gmail.com', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+            },
+            body: JSON.stringify({
+                _subject: '[차를 쓰다 문의] ' + subject + ' - ' + name + '님',
+                _template: 'table',
+                _captcha: 'false',
+                이름_닉네임: name,
+                회신_이메일: email,
+                문의_분류: subject,
+                문의_상세내용: message,
+                접수_시각: new Date().toLocaleString('ko-KR')
+            })
         });
-        const closeMenu = () => {
-            drawer.classList.remove('open');
-            overlay.classList.remove('open');
-            document.body.style.overflow = '';
-        };
-        if (btnClose) btnClose.addEventListener('click', closeMenu);
-        overlay.addEventListener('click', closeMenu);
-    }
-</script>
 
+        const result = await response.json();
+        
+        document.getElementById('contactForm').reset();
+        const successEl = document.getElementById('contactSuccessMsg');
+        successEl.style.display = 'block';
+        successEl.innerHTML = '✓ 소중한 문의 메시지가 편집국 담당자(hmapt01@gmail.com)에게 성공적으로 발송되었습니다. 신속히 검토 후 회신드리겠습니다.';
+        window.scrollTo({ top: 200, behavior: 'smooth' });
+    } catch (err) {
+        console.error('Mail sending error:', err);
+        const mailtoUrl = 'mailto:hmapt01@gmail.com?subject=' + encodeURIComponent('[차를 쓰다 문의] ' + subject + ' - ' + name) + '&body=' + encodeURIComponent('성함: ' + name + '\n회신 이메일: ' + email + '\n문의 분류: ' + subject + '\n\n문의 내용:\n' + message);
+        window.location.href = mailtoUrl;
+    } finally {
+        submitBtn.innerText = originalBtnText;
+        submitBtn.disabled = false;
+        submitBtn.style.opacity = '1';
+    }
+}
+
+// 📱 모바일 드로어 제어
+const btnOpen = document.getElementById('btnOpenMobileDrawer');
+const btnClose = document.getElementById('btnCloseMobileDrawer');
+const overlay = document.getElementById('drawerOverlay');
+const drawer = document.getElementById('naverMobileDrawer');
+
+if (btnOpen && drawer && overlay) {
+    btnOpen.addEventListener('click', () => {
+        drawer.classList.add('open');
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    });
+    const closeMenu = () => {
+        drawer.classList.remove('open');
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+    };
+    if (btnClose) btnClose.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+}
+</script>
+<script src="js/features.js?v=20260829_car_theme" defer></script>
 </body>
 </html>
