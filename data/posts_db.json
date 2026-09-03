@@ -10,7 +10,7 @@
     "thumb": "images/posts/2026-car-periodic-inspection-reservation-penalty/thumb.jpg",
     "featuredCaption": "한국교통안전공단 직영 검사소 차량 진입 및 정밀 안전 검사 현장 / 사진=한국교통안전공단",
     "academicSource": "국토교통부 자동차관리법 및 한국교통안전공단 공시 기준",
-    "isEditorPick": false,
+    "isEditorPick": true,
     "isLatest": true,
     "views": 240,
     "baseWeight": 150,
@@ -211,7 +211,7 @@
     ],
     "academicRefs": "<li style=\"margin-bottom: 4px;\">대한민국 국토교통부 2026년 상반기 자동차 용도별·차급별 신규 등록 및 취득가액 통계</li>\n<li style=\"margin-bottom: 4px;\">현대자동차·기아 2026년 8월 공식 차종별 가격표 및 카탈로그 제원표</li>\n<li style=\"margin-bottom: 4px;\">한국수입자동차협회(KAIDA) 2026년 프리미엄 수입 E세그먼트 세단 등록 및 프로모션 동향</li>\n<li style=\"margin-bottom: 4px;\">환경부 무공해차 통합누리집 2026 국고·지자체 전기차 보조금 확정 지급 기준</li>\n<li style=\"margin-bottom: 4px;\">한국교통안전공단(TS) 연간 자동차 주행거리 통계 및 유지비 상관분석 리포트</li>",
     "relatedSlug": "../index.html",
-    "isEditorPick": true
+    "isEditorPick": false
   },
   {
     "slug": "2026-avante-price-hike-korean-compact-car-market.html",
