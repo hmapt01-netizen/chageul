@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
+﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
 <html lang="ko">
 <head>
     <!-- 📊 Google Analytics 4 (GA4 공식 초광속 비동기 태그) -->
@@ -18,7 +18,7 @@
     <title>관리자 대시보드 & 글 발행기 | 차를 쓰다 (CHAGEUL)</title>
     
     <link rel="stylesheet" href="css/style.css?v=20260829_profile_box">
-    <script src="js/features.js?v=20260902_092320"></script>
+    <script src="js/features.js?v=20260903_113622"></script>
     
     <style>
         /* 🔒 1. 관리자 비밀번호 잠금 화면 스타일 */
@@ -315,7 +315,7 @@
             background: #f3f4f6; color: #4b5563; border: 1px solid #d1d5db; padding: 10px; font-size: 0.88rem; font-weight: 600; border-radius: 6px; cursor: pointer; margin-top: 10px; width: 100%; display: none;
         }
     </style>
-    <script src="js/features.js?v=20260902_092320"></script>
+    <script src="js/features.js?v=20260903_113622"></script>
 </head>
 <body style="background: #f9fafb; margin: 0; padding-bottom: 40px;">
 
@@ -368,7 +368,7 @@
             </div>
         </div>
 
-        <!-- 📚 2. 발행된 칼럼 목록 관리 (102편) -->
+        <!-- 📚 2. 발행된 칼럼 목록 관리 (103편) -->
         <div class="post-table-container">
             <div class="editor-header">
                 <div>📚 발행된 칼럼 목록 관리 (<span id="tableTotalCount" style="color: #c26908; font-weight: 800;">94</span>편)</div>
@@ -546,6 +546,20 @@
 
     // 📚 5. 전체 포스트 공식 기본 데이터베이스
     const defaultPosts = [
+        {
+            id: 103,
+            slug: "2026-car-periodic-inspection-reservation-penalty.html",
+            title: "“하루 늦었다고 최대 60만 원에 번호판 영치?” 2026 자동차 정기·종합검사의 모든 것 (우리 동네 수수료 전수표)",
+            category: "포커스",
+            author: "차를 쓰다",
+            date: "2026.09.03",
+            views: "0",
+            thumb: "images/posts/2026-car-periodic-inspection-reservation-penalty/thumb.jpg",
+            link: "entry/2026-car-periodic-inspection-reservation-penalty.html",
+            desc: "신차 5년 완화와 122일 골든타임, 하루만 늦어도 최대 60만 원에 달하는 과태료와 번호판 영치 처분, 그리고 전국 229개 시군구 정기 vs 종합검사 수수료 전수표와 불합격 피하는 셀프 점검법을 총정리합니다.",
+            content: "“하루 늦었다고 최대 60만 원에 번호판 영치?” 2026 자동차 정기·종합검사의 모든 것 (우리 동네 수수료 전수표)...",
+            isHidden: false
+        },
         {
             id: 102,
             slug: "2026-mercedes-benz-electric-cla-price-specs.html",
@@ -2220,15 +2234,8 @@
     async function syncPostsDbToGitHub(commitMsg) {
         let token = localStorage.getItem('chageul_github_token');
         if (!token) {
-            const input = prompt("☁️ 실서버 마스터 DB(posts_db.json)에 자동 반영하기 위해 GitHub Access Token을 입력해주세요:\n(입력하시면 앞으로 모든 변경사항이 깃허브에 1초 만에 자동 저장됩니다)");
-            if (input && input.trim()) {
-                token = input.trim();
-                localStorage.setItem('chageul_github_token', token);
-                updateGitHubBtnStatus();
-            } else {
-                showAdminToast("⚠️ 토큰 미입력: 현재 브라우저에만 임시 적용되었습니다.", "info");
-                return;
-            }
+            // 토큰이 설정되지 않았을 때는 팝업창을 띄우지 않고 조용히 로컬 처리만 진행
+            return;
         }
 
         showAdminToast("깃허브 마스터 DB(posts_db.json)에 실시간 커밋 & 배포 동기화 중...", "loading");
