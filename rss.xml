@@ -1,6 +1,12 @@
-﻿﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
+    <title>차를 쓰다</title>
+    <link>https://chageul.com/</link>
+    <description>프리미엄 자동차 &amp; 모빌리티 전문 매거진 - 차를 쓰다</description>
+    <language>ko</language>
+    <atom:link href="https://chageul.com/rss.xml" rel="self" type="application/rss+xml"/>
+
     <item>
       <title><![CDATA[“하이브리드 장인마저 전기차로?” 2026 8세대 렉서스 ES 풀체인지, 5,140mm K9급 차체와 478km 항속 실출고가 실체]]></title>
       <link>https://chageul.com/entry/2026-lexus-es-fullchange-ev-specs-price.html</link>
@@ -10,11 +16,7 @@
       <pubDate>Sat, 29 Aug 2026 21:55:00 +0900</pubDate>
     </item>
 
-    <title>차를 쓰다</title>
-    <link>https://chageul.com/</link>
-    <description>프리미엄 자동차 &amp; 모빌리티 전문 매거진 - 차를 쓰다</description>
-    <language>ko</language>
-    <atom:link href="https://chageul.com/rss.xml" rel="self" type="application/rss+xml"/>
+    
         <item>
       <title><![CDATA[2026 토요타 라브4 하이브리드 E-Four, 5,820만 원 출고액과 실연비 20km/L 제원 유지비 실체]]></title>
       <link>https://chageul.com/entry/2026-toyota-rav4-hybrid-e-four-specs-price.html</link>
