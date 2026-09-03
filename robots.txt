@@ -1,5 +1,6 @@
 User-agent: *
 Disallow: /admin.html
+Disallow: /cdn-cgi/
 Allow: /
 
 Sitemap: https://chageul.com/sitemap.xml
