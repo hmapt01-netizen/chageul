@@ -1,4 +1,4 @@
-﻿/* 📱 모바일 스마트 상단 헤더 스크롤 영구 상단 고정 (Always Fixed Sticky) */
+/* 📱 모바일 스마트 상단 헤더 스크롤 영구 상단 고정 (Always Fixed Sticky) */
 @media (max-width: 768px) {
     body.tistory-single-post {
         padding-top: 52px !important;

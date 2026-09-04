@@ -1,4 +1,4 @@
-﻿/**
+/**
  * 🚗 차를 쓰다 공식 실시간 글로벌 클라우드 독자 댓글 시스템 (Cloudflare KV Native Engine)
  * - Cloudflare Pages Serverless & Workers KV 100% 네이티브 연동
  * - 0.001초 광속 렌더링 (로컬 캐시 즉시 표시 + 클라우드 백그라운드 동기화)

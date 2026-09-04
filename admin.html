@@ -1,4 +1,4 @@
-﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <!-- 📊 Google Analytics 4 (GA4 공식 초광속 비동기 태그) -->
@@ -12,13 +12,16 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- 🚗 차를 쓰다 공식 파비콘 -->
-    <link rel="icon" type="image/png" href="images/logo.png?v=20260829_gold">
-    <link rel="apple-touch-icon" href="images/logo.png?v=20260829_gold">
-    <title>관리자 대시보드 & 글 발행기 | 차를 쓰다 (CHAGEUL)</title>
+                                            <!-- 🚗 차를 쓰다 공식 파비콘 -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<title>관리자 대시보드 & 글 발행기 | 차를 쓰다 (CHAGEUL)</title>
     
     <link rel="stylesheet" href="css/style.css?v=20260829_profile_box">
-    <script src="js/features.js?v=20260904_085724"></script>
+    <script src="js/features.js?v=20260904_141942"></script>
     
     <style>
         /* 🔒 1. 관리자 비밀번호 잠금 화면 스타일 */
@@ -315,7 +318,7 @@
             background: #f3f4f6; color: #4b5563; border: 1px solid #d1d5db; padding: 10px; font-size: 0.88rem; font-weight: 600; border-radius: 6px; cursor: pointer; margin-top: 10px; width: 100%; display: none;
         }
     </style>
-    <script src="js/features.js?v=20260904_085724"></script>
+    <script src="js/features.js?v=20260904_141942"></script>
 </head>
 <body style="background: #f9fafb; margin: 0; padding-bottom: 40px;">
 
@@ -368,7 +371,7 @@
             </div>
         </div>
 
-        <!-- 📚 2. 발행된 칼럼 목록 관리 (104편) -->
+        <!-- 📚 2. 발행된 칼럼 목록 관리 (105편) -->
         <div class="post-table-container">
             <div class="editor-header">
                 <div>📚 발행된 칼럼 목록 관리 (<span id="tableTotalCount" style="color: #c26908; font-weight: 800;">94</span>편)</div>
@@ -546,6 +549,20 @@
 
     // 📚 5. 전체 포스트 공식 기본 데이터베이스
     const defaultPosts = [
+        {
+            id: 105,
+            slug: "2026-august-domestic-car-sales-shock-tesla-modely.html",
+            title: "8월 국산차 판매량 8만 대마저 붕괴, 6년 만에 마주한 내수 침체의 경고",
+            category: "포커스",
+            author: "차를 쓰다",
+            date: "2026.09.04",
+            views: "0",
+            thumb: "images/posts/2026-august-domestic-car-sales-shock-tesla-modely/thumb.jpg",
+            link: "entry/2026-august-domestic-car-sales-shock-tesla-modely.html",
+            desc: "8월 국산차 내수 판매량이 8만 대 선마저 무너지며 6년 만의 최저치를 기록했습니다. 현대차 3만 대 붕괴와 기아 점유율 50% 독주, 그리고 5월·7월에 이어 8월까지 3번째 전체 1위를 수성한 테슬라 모델 Y의 대세 안착과 가격 저항선의 엄중한 경고를 심층 분석합니다.",
+            content: "8월 국산차 판매량 8만 대마저 붕괴, 6년 만에 마주한 내수 침체의 경고...",
+            isHidden: false
+        },
         {
             id: 104,
             slug: "2026-polestar-4-suv-busan-rear-window-specs.html",
