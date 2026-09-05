@@ -620,63 +620,9 @@
                 </p>
             </section>
 
-            <!-- 🌟 2. [A안] 모바일 16:9 와이드 대형 비주얼 매거진 커버 -->
-                        <!-- 🌟 2. [A안] 모바일 16:9 와이드 대형 비주얼 매거진 커버 -->
-                        <!-- 🌟 2. [A안] 모바일 16:9 와이드 대형 비주얼 매거진 커버 -->
-                        <!-- 🌟 2. [A안] 모바일 16:9 와이드 대형 비주얼 매거진 커버 -->
-                        <!-- 🌟 2. [A안] 모바일 16:9 와이드 대형 비주얼 매거진 커버 -->
-                        <!-- 🌟 2. [A안] 모바일 16:9 와이드 대형 비주얼 매거진 커버 -->
-                        <!-- 🌟 2. [A안] 모바일 16:9 와이드 대형 비주얼 매거진 커버 -->
-                        <!-- 🌟 2. [A안] 모바일 16:9 와이드 대형 비주얼 매거진 커버 -->
-                        <!-- 🌟 2. [A안] 모바일 16:9 와이드 대형 비주얼 매거진 커버 -->
-                        <!-- 🌟 2. [A안] 모바일 16:9 와이드 대형 비주얼 매거진 커버 -->
-                        <!-- 🌟 2. [A안] 모바일 16:9 와이드 대형 비주얼 매거진 커버 -->
-                        <!-- 🌟 2. [A안] 모바일 16:9 와이드 대형 비주얼 매거진 커버 -->
-                        <!-- 🌟 2. [A안] 모바일 16:9 와이드 대형 비주얼 매거진 커버 -->
-                        <!-- 🌟 2. [A안] 모바일 16:9 와이드 대형 비주얼 매거진 커버 -->
-                        <!-- 🌟 2. [A안] 모바일 16:9 와이드 대형 비주얼 매거진 커버 -->
-                        <!-- 🌟 2. [A안] 모바일 16:9 와이드 대형 비주얼 매거진 커버 -->
-            <section class="mobile-editor-pick-card mobile-magazine-cover-card">
-                <script>
-                (function(){
-                    var pickSlug = '';
-                    try { pickSlug = localStorage.getItem('chageul_editor_pick_slug'); } catch(e){}
-                    var reg = window.CHAGEUL_POSTS_REGISTRY || [];
-                    var p = null;
-                    if (pickSlug && reg.length > 0) {
-                        p = reg.find(function(x){ return x.slug === pickSlug || x.slug.replace('.html','') === String(pickSlug).replace('.html',''); });
-                    }
-                    if (!p && reg.length > 0) {
-                        p = reg.find(function(x){ return x.isEditorPick; }) || reg[0];
-                    }
-                    var slug = p ? p.slug : 'genesis-gv90-global-media-reviews.html';
-                    var thumb = p ? p.thumb : 'images/posts/genesis-gv90-global-media-reviews/thumb.jpg';
-                    var title = p ? (p.fullTitle || p.title) : '“엔초 페라리보다 세다?” 제네시스 GV90 657마력·B필러리스 코치도어 공개에 英·美 외신이 던진 찬사와 3대 팩트체크';
-                    var desc = p ? (p.summary || p.desc || '') : '전설적 슈퍼카 엔초 페라리를 능가하는 657마력 듀얼 모터와 B필러를 삭제한 독립 스윙 코치도어로 무장한 제네시스 GV90이 베일을 벗었습니다. 100년 역사의 영미권 자동차 전문 매체(탑기어, 카앤드라이버, 포브스, 드라이빙)가 보낸 찬사와 함께 3톤 차체 전비 한계, 2억 원대 가격표의 실효성 등 냉정한 3대 팩트체크를 전해드립니다.';
-                    var date = p ? (p.date || '2026.08.31') : '2026.08.31';
-                    var escTitle = String(title).replace(/"/g, '&quot;');
-                    var escDesc = String(desc).replace(/"/g, '&quot;');
+            <!-- 🌟 2. 모바일 16:9 와이드 대형 비주얼 매거진 커버 (에디터 PICK - 100% 정석 SSG 박제) -->
+            {{MOBILE_EDITOR_PICK_CARD}}
 
-                    document.write(
-                        '<div onclick="location.href=\'entry/' + slug + '\'" style="cursor:pointer;">' +
-                            '<div style="position:relative; width:100%; height:200px; background:#0f172a; overflow:hidden;">' +
-                                '<img src="' + thumb + '" alt="' + escTitle + '" style="width:100%; height:100%; object-fit:cover; display:block;" fetchpriority="high" decoding="async">' +
-                                '<div style="position:absolute; top:12px; left:12px; display:flex; gap:6px;">' +
-                                    '<span style="background:rgba(15, 23, 42, 0.88); color:#f59e0b; font-size:0.72rem; font-weight:850; padding:4px 10px; border-radius:6px; backdrop-filter:blur(4px); border:1px solid rgba(245,158,11,0.3);">에디터 PICK</span>' +
-                                '</div>' +
-                            '</div>' +
-                            '<div style="padding:16px 18px; display:flex; flex-direction:column; gap:6px;">' +
-                                '<h3 style="font-size:1.06rem; font-weight:850; color:#0f172a; line-height:1.4; margin:0; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">' + escTitle + '</h3>' +
-                                '<p style="font-size:0.84rem; color:#64748b; line-height:1.55; margin:0; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden;">"' + escDesc + '"</p>' +
-                                '<div style="display:flex; justify-content:space-between; align-items:center; margin-top:6px; padding-top:10px; border-top:1px solid #f1f5f9; font-size:0.78rem;">' +
-                                    '<span style="color:#94a3b8; font-weight:600;">차를 쓰다 · ' + date + '</span>' +
-                                '</div>' +
-                            '</div>' +
-                        '</div>'
-                    );
-                })();
-                </script>
-            </section>
 
             <!-- 🏆 3. 모바일 인기글 TOP 5 -->
             <div style="margin-top:16px; margin-bottom:10px;">
@@ -1118,7 +1064,6 @@
     }
 
     document.addEventListener('DOMContentLoaded', () => {
-        if (typeof renderEditorPickCard === 'function') renderEditorPickCard();
         const urlParams = new URLSearchParams(window.location.search);
         const catParam = urlParams.get('cat');
         if (catParam) {
