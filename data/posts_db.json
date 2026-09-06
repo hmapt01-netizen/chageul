@@ -24,14 +24,15 @@
         "a": "전장 4,900mm, 전폭 1,890mm, 휠베이스 2,900mm로 아이오닉 6에 버금가는 준대형급 크기입니다. CATL의 LFP 배터리를 탑재해 중국 CLTC 기준 540km에서 최대 650km까지 주행이 가능합니다."
       }
     ],
-    "references": "<ul style=\"list-style:none; padding:0; margin:0; line-height:1.8; font-size:0.92rem; color:#64748b;\">\n    <li style=\"margin-bottom:4px;\">1. 북경현대(Beijing Hyundai) 2026 청두 모터쇼 공식 출고 및 제원 공시자료</li>\n    <li style=\"margin-bottom:4px;\">2. 중국 공업정보화부(MIIT) 신차 형식승인 및 환경보호 인증 데이터베이스</li>\n    <li style=\"margin-bottom:4px;\">3. 모멘타(Momenta) 레벨 2+ 내비게이션 파일럿 자율주행 아키텍처 기술 백서</li>\n    <li style=\"margin-bottom:4px;\">4. 환경부 2026 전기자동차 보급사업 보조금 업무처리지침 (저온 주행거리 및 배터리 계수 기준)</li>\n    <li>5. 현대자동차 공식 웹사이트 차종별 공인 제원 및 단체협약 관련 규정집</li>\n</ul>",
+    "references": "<ul style=\"list-style:none; padding:0; margin:0; line-height:1.8; font-size:0.92rem; color:#64748b;\">\n    <li style=\"margin-bottom:4px;\">1. 북경현대(Beijing Hyundai) 2026 청두 모터쇼 공식 프레스 릴리스 및 제원 자료</li>\n    <li style=\"margin-bottom:4px;\">2. 중국 공업정보화부(MIIT) 신차 형식승인 및 환경보호 카탈로그 데이터베이스</li>\n    <li style=\"margin-bottom:4px;\">3. 모멘타(Momenta) 레벨 2+ 내비게이션 자율주행 아키텍처 기술 백서</li>\n    <li style=\"margin-bottom:4px;\">4. 환경부 2026 전기자동차 무공해차 보조금 업무처리지침 (저온주행거리 및 배터리 계수 규정)</li>\n    <li>5. 글로벌 자동차 전문 매체 보도: CarNewsChina - Ioniq V 기사 및 현장 화보 종합</li>\n</ul>",
     "titles_confirmed": {
       "naver": "\"아이오닉 6 체급이 캐스퍼 출고액인데 자율주행까지?\" 아이오닉 V 2천만 원대 출고의 파장",
       "daum": "\"아이오닉 V 한국 들어오면 얼마일까?\"... 2천만 원대에 자율주행 얹은 신형 세단 보니",
       "google": "현대 아이오닉 V 중국 사전계약 개시, 2천만 원대 출고액과 국내 도입 가능성 총정리"
     },
     "slugKey": "2026-hyundai-ioniq-v-china-launch-korea-price-analysis",
-    "isLatest": true
+    "isLatest": true,
+    "academicRefs": "<ul style=\"list-style:none; padding:0; margin:0; line-height:1.8; font-size:0.92rem; color:#64748b;\">\n    <li style=\"margin-bottom:4px;\">1. 북경현대(Beijing Hyundai) 2026 청두 모터쇼 공식 프레스 릴리스 및 제원 자료</li>\n    <li style=\"margin-bottom:4px;\">2. 중국 공업정보화부(MIIT) 신차 형식승인 및 환경보호 카탈로그 데이터베이스</li>\n    <li style=\"margin-bottom:4px;\">3. 모멘타(Momenta) 레벨 2+ 내비게이션 자율주행 아키텍처 기술 백서</li>\n    <li style=\"margin-bottom:4px;\">4. 환경부 2026 전기자동차 무공해차 보조금 업무처리지침 (저온주행거리 및 배터리 계수 규정)</li>\n    <li>5. 글로벌 자동차 전문 매체 보도: CarNewsChina - Ioniq V 기사 및 현장 화보 종합</li>\n</ul>"
   },
   {
     "slug": "2026-byd-atto3-facelift-single-trim-specs.html",
