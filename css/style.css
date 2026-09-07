@@ -864,19 +864,27 @@ nav.clean-nav a:hover, nav.clean-nav a.active {
     position: relative;
 }
 
-.clean-card-thumb {
+.card-thumb-wrap, .clean-card-thumb {
     position: relative;
-    height: 200px;
+    width: 100%;
+    aspect-ratio: 16 / 9;
     border-radius: var(--radius);
     overflow: hidden;
     margin-bottom: 14px;
     background: #f3f4f6;
 }
 
-.clean-card-thumb img {
+.card-thumb-wrap a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.clean-card-thumb img, .card-thumb-wrap img, .card-thumb {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
 }
 
 .btn-save-post {
