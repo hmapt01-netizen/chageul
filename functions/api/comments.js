@@ -21,7 +21,7 @@ export async function onRequest(context) {
     }
 
     // KV 네임스페이스 바인딩 확인
-    const kv = env.CHAGEUL_COMMENTS_KV || env.COMMENTS_KV || env.HONEYJAR_COMMENTS_KV;
+    const kv = env.CHAGEUL_COMMENTS_KV || env.COMMENTS_KV;
 
     try {
         // 1. [GET] 댓글 목록 조회

@@ -766,7 +766,7 @@
             let hiddenSlugs = [];
             
             // 1. Check chageul_hidden_slugs & legacy keys
-            ['chageul_hidden_slugs', 'honeyjar_hidden_slugs'].forEach(k => {
+            ['chageul_hidden_slugs'].forEach(k => {
                 const val = localStorage.getItem(k);
                 if (val) {
                     try {
@@ -777,7 +777,7 @@
             });
 
             // 2. Check chageul_admin_posts & legacy keys
-            ['chageul_admin_posts', 'honeyjar_admin_posts', 'HONEYJAR_ADMIN_POSTS_V1'].forEach(k => {
+            ['chageul_admin_posts'].forEach(k => {
                 const val = localStorage.getItem(k);
                 if (val) {
                     try {

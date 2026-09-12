@@ -1,6 +1,6 @@
 (function() {
     const STORAGE_KEY = 'chageul_analytics_data';
-    const SEARCH_STORAGE_KEY = 'honeyjar_search_keywords';
+    const SEARCH_STORAGE_KEY = 'chageul_search_keywords';
     const postSlug = window.location.pathname.split('/').pop().replace('.html', '') || 'home';
     const pageTitle = document.title || '무제';
 
