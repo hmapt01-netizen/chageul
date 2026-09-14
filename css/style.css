@@ -59,7 +59,7 @@ html, body {
     font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif !important;
 }
 ﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿/* ==========================================================================
-   혀니의 꿀단지 (KKULDANJI | Life & Wellness Journal)
+   차를 쓰다 (CHAGEUL | Premium Automotive Magazine)
    Pure Minimalist & Clean Editorial Edition (v8.0)
    - 2열 매거진 레이아웃 (본문 720px + 우측 사이드바 300px)
    - 메인-서브 전환 시 100% 안정적인 1040px 컨테이너
@@ -124,7 +124,7 @@ strong, b {
 }
 
 /* ==========================================================================
-   Header & Clean Minimal Nav (프리미엄 2단 브랜딩: 혀니의 꿀단지)
+   Header & Clean Minimal Nav (프리미엄 2단 브랜딩: 차를 쓰다)
    ========================================================================== */
 
 
@@ -152,7 +152,7 @@ header.clean-header {
     text-decoration: none;
 }
 
-/* 꿀단지 심볼 아이콘 */
+/* 차를 쓰다 심볼 아이콘 */
 .brand-logo-img {
     height: 48px !important;
     width: 48px !important;
@@ -4828,7 +4828,7 @@ span.badge-latest {
 }
 
 
-/* 🔗 본문 내부 링크 알약 뱃지 (Internal Link Pill - 차를 쓰다 & 꿀단지 공통) */
+/* 🔗 본문 내부 링크 알약 뱃지 (Internal Link Pill - 차를 쓰다) */
 .inline-pill-link {
     display: inline-flex;
     align-items: center;
