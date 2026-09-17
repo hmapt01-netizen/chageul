@@ -2,51 +2,57 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://chageul.com/</loc>
-        <lastmod>2026-09-14T09:00:00+09:00</lastmod>
+        <lastmod>2026-09-16T09:00:00+09:00</lastmod>
         <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
         <loc>https://chageul.com/about.html</loc>
-        <lastmod>2026-09-14T09:00:00+09:00</lastmod>
+        <lastmod>2026-09-16T09:00:00+09:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://chageul.com/terms.html</loc>
-        <lastmod>2026-09-14T09:00:00+09:00</lastmod>
+        <lastmod>2026-09-16T09:00:00+09:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://chageul.com/privacy.html</loc>
-        <lastmod>2026-09-14T09:00:00+09:00</lastmod>
+        <lastmod>2026-09-16T09:00:00+09:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://chageul.com/youth-protection.html</loc>
-        <lastmod>2026-09-14T09:00:00+09:00</lastmod>
+        <lastmod>2026-09-16T09:00:00+09:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://chageul.com/copyright.html</loc>
-        <lastmod>2026-09-14T09:00:00+09:00</lastmod>
+        <lastmod>2026-09-16T09:00:00+09:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://chageul.com/email-rejection.html</loc>
-        <lastmod>2026-09-14T09:00:00+09:00</lastmod>
+        <lastmod>2026-09-16T09:00:00+09:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
     </url>
     <url>
         <loc>https://chageul.com/contact.html</loc>
-        <lastmod>2026-09-14T09:00:00+09:00</lastmod>
+        <lastmod>2026-09-16T09:00:00+09:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.5</priority>
+    </url>
+    <url>
+        <loc>https://chageul.com/entry/2027-kia-sorento-hybrid-signature-19-inch-wheel-tco-specs-review.html</loc>
+        <lastmod>2026-09-16T09:00:00+09:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
     </url>
     <url>
         <loc>https://chageul.com/entry/2026-volkswagen-golf-gti-20th-anniversary-black-edition-options-specs-price-comparison.html</loc>
