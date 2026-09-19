@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                <!-- 🚗 차를 쓰다 공식 파비콘 -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <!-- 🚗 차를 쓰다 공식 파비콘 -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -21,7 +21,7 @@
 <title>관리자 대시보드 & 글 발행기 | 차를 쓰다 (CHAGEUL)</title>
     
     <link rel="stylesheet" href="css/style.css?v=20260829_profile_box">
-    <script src="js/features.js?v=20260919_090123"></script>
+    <script src="js/features.js?v=20260920_062238"></script>
     
     <style>
         /* 🔒 1. 관리자 비밀번호 잠금 화면 스타일 */
@@ -318,7 +318,7 @@
             background: #f3f4f6; color: #4b5563; border: 1px solid #d1d5db; padding: 10px; font-size: 0.88rem; font-weight: 600; border-radius: 6px; cursor: pointer; margin-top: 10px; width: 100%; display: none;
         }
     </style>
-    <script src="js/features.js?v=20260919_090123"></script>
+    <script src="js/features.js?v=20260920_062238"></script>
 </head>
 <body style="background: #f9fafb; margin: 0; padding-bottom: 40px;">
 
@@ -371,7 +371,7 @@
             </div>
         </div>
 
-        <!-- 📚 2. 발행된 칼럼 목록 관리 (118편) -->
+        <!-- 📚 2. 발행된 칼럼 목록 관리 (121편) -->
         <div class="post-table-container">
             <div class="editor-header">
                 <div>📚 발행된 칼럼 목록 관리 (<span id="tableTotalCount" style="color: #c26908; font-weight: 800;">94</span>편)</div>
@@ -550,133 +550,7 @@
     // 📚 5. 전체 포스트 공식 기본 데이터베이스
     const defaultPosts = [
         {
-            id: 118,
-            slug: "2026-volvo-xc60-b5-plus-vs-ultra-specs-price-review.html",
-            title: "2026 볼보 XC60 B5 플러스 vs 울트라 760만 원 옵션 차이와 실인도금 계산",
-            category: "신차소식",
-            author: "차를 쓰다",
-            date: "2026-09-19",
-            views: "0",
-            thumb: "images/posts/2026-volvo-xc60-b5-plus-vs-ultra-specs-price-review/thumb.jpg",
-            link: "entry/2026-volvo-xc60-b5-plus-vs-ultra-specs-price-review.html",
-            desc: "2026 볼보 XC60 B5 플러스(6,570만 원)와 울트라(7,330만 원)의 760만 원 출고가 및 취득세 포함 약 808.4만 원 격차 정밀 분석. 액티브 에어 서스펜션, B&W 오디오, 천공 나파 통풍 마사지 시트, 크리스탈 기어노브 기본 탑재 팩트를 비교합니다.",
-            content: "2026 볼보 XC60 B5 플러스 vs 울트라 760만 원 옵션 차이와 실인도금 계산...",
-            isHidden: false
-        },
-        {
-            id: 117,
-            slug: "2026-lexus-es-350e-ev-vs-350h-hybrid-specs-price-comparison.html",
-            title: "신형 렉서스 ES 350e 전기차 vs 350h 하이브리드 출고액과 옵션 차이 5년 유지비 계산",
-            category: "신차소식",
-            author: "차를 쓰다",
-            date: "2026-09-18",
-            views: "0",
-            thumb: "images/posts/2026-lexus-es-350e-ev-vs-350h-hybrid-specs-price-comparison/thumb.jpg",
-            link: "entry/2026-lexus-es-350e-ev-vs-350h-hybrid-specs-price-comparison.html",
-            desc: "2026년 9월 사전 계약에 돌입한 신형 8세대 렉서스 ES 350e 전기차와 350h 하이브리드의 출고액, 트림별 11대 핵심 옵션 차이, 취득세 감면 반영 실인도금, 5년 유지비를 정밀 비교 분석합니다.",
-            content: "신형 렉서스 ES 350e 전기차 vs 350h 하이브리드 출고액과 옵션 차이 5년 유지비 계산...",
-            isHidden: false
-        },
-        {
-            id: 116,
-            slug: "2027-kia-sorento-hybrid-signature-19-inch-wheel-tco-specs-review.html",
-            title: "2027 쏘렌토 하이브리드 19인치 휠, 5년 유지비 얼마나 더 들까?",
-            category: "신차소식",
-            author: "차를 쓰다",
-            date: "2026-09-16",
-            views: "0",
-            thumb: "images/posts/2027-kia-sorento-hybrid-signature-19-inch-wheel-tco-specs-review/thumb.jpg",
-            link: "entry/2027-kia-sorento-hybrid-signature-19-inch-wheel-tco-specs-review.html",
-            desc: "기아 The 2027 쏘렌토 하이브리드 시그니처 19인치 휠 기본화에 따른 복합 14.8km/L 연비 하락 분석. 연간 주행거리별 5년 유류비 격차와 18인치 대비 실질적 유지비 손익을 객관적으로 대조합니다.",
-            content: "2027 쏘렌토 하이브리드 19인치 휠, 5년 유지비 얼마나 더 들까?...",
-            isHidden: false
-        },
-        {
-            id: 115,
-            slug: "2026-volkswagen-golf-gti-20th-anniversary-black-edition-options-specs-price-comparison.html",
-            title: "폭스바겐 골프 GTI 20주년 블랙 에디션 100만 원 차이 5년 소모품 혜택과 유지비 비교",
-            category: "포커스",
-            author: "차를 쓰다",
-            date: "2026-09-14",
-            views: "0",
-            thumb: "images/posts/2026-volkswagen-golf-gti-20th-anniversary-black-edition-options-specs-price-comparison/thumb.jpg",
-            link: "entry/2026-volkswagen-golf-gti-20th-anniversary-black-edition-options-specs-price-comparison.html",
-            desc: "신형 골프 GTI 대비 100만 원 차이인 20주년 블랙 에디션(5,275만 원)의 200만 원 상당 5년 소모품 패키지, 전용 허니콤 데칼, 48개월 무이자 금융 혜택과 실인도금 5,684만 원을 상세 분석합니다.",
-            content: "폭스바겐 골프 GTI 20주년 블랙 에디션 100만 원 차이 5년 소모품 혜택과 유지비 비교...",
-            isHidden: false
-        },
-        {
-            id: 114,
-            slug: "2026-kia-sportage-facelift-1-6-turbo-8at-vs-hybrid-specs-review.html",
-            title: "스포티지 1.6 가솔린 터보 8단 자동 vs 하이브리드 429만 원 실구매가 손익분기 팩트체크",
-            category: "신차소식",
-            author: "차를 쓰다",
-            date: "2026-09-15",
-            views: "0",
-            thumb: "images/posts/2026-kia-sportage-facelift-1-6-turbo-8at-vs-hybrid-specs-review/thumb.jpg",
-            link: "entry/2026-kia-sportage-facelift-1-6-turbo-8at-vs-hybrid-specs-review.html",
-            desc: "기아 더 뉴 스포티지 1.6 가솔린 터보 8단 자동과 하이브리드의 실구매가 및 주행 질감 전격 비교. 취득세 감면 반영 429만 원 격차와 연 1.5만km 기준 유류비 손익분기, 노블레스 트림 가성비를 상세 분석합니다.",
-            content: "스포티지 1.6 가솔린 터보 8단 자동 vs 하이브리드 429만 원 실구매가 손익분기 팩트체크...",
-            isHidden: false
-        },
-        {
-            id: 113,
-            slug: "2026-renault-grand-koleos-2027my-e-tech-hybrid-iconic-price-cut-warranty-review.html",
-            title: "그랑 콜레오스 E-Tech 하이브리드 2027년형 15.7km/L 연비와 5년 유지비 분석",
-            category: "신차소식",
-            author: "차를 쓰다",
-            date: "2026-09-14",
-            views: "0",
-            thumb: "images/posts/2026-renault-grand-koleos-2027my-e-tech-hybrid-iconic-price-cut-warranty-review/thumb.jpg",
-            link: "entry/2026-renault-grand-koleos-2027my-e-tech-hybrid-iconic-price-cut-warranty-review.html",
-            desc: "2027년형 르노 그랑 콜레오스 E-Tech 하이브리드 주력 트림 아이코닉 45만 원 인하(4,152만 원)와 7년 14만km 무상 보증, 복합 15.7km/L 연비 및 4,437만 원 실인도금 기준 5년 유류비와 자동차세를 심층 분석합니다.",
-            content: "그랑 콜레오스 E-Tech 하이브리드 2027년형 15.7km/L 연비와 5년 유지비 분석...",
-            isHidden: false
-        },
-        {
-            id: 112,
-            slug: "2026-highway-bus-lane-9seater-fine-penalty-points-guide.html",
-            title: "고속도로 버스전용차로 9인승 6인 이상 탑승 기준과 무인 단속 카메라 과태료 벌점 감경 요령",
-            category: "포커스",
-            author: "차를 쓰다",
-            date: "2026-09-13",
-            views: "0",
-            thumb: "images/posts/2026-highway-bus-lane-9seater-fine-penalty-points-guide/thumb.jpg",
-            link: "entry/2026-highway-bus-lane-9seater-fine-penalty-points-guide.html",
-            desc: "9인승 카니발·스타리아의 고속도로 버스전용차로 6인 이상 탑승 인정 기준과 짙은 틴팅으로 인한 무인 단속 카메라 오인 적발 시 이파인 15일 의견진술 소명 절차 및 과태료 9만 원 사전통지서 수령 시 범칙금 전환에 따른 벌점 30점 면허정지 사각지대 방어 요령을 입체 분석합니다.",
-            content: "고속도로 버스전용차로 9인승 6인 이상 탑승 기준과 무인 단속 카메라 과태료 벌점 감경 요령...",
-            isHidden: false
-        },
-        {
-            id: 111,
-            slug: "2026-real-sdv-vs-fake-screen-marketing-guide.html",
-            title: "테슬라처럼 차가 스스로 업그레이드되는 진짜 SDV와 화면만 커진 마케팅용 SDV 구별법",
-            category: "포커스",
-            author: "차를 쓰다",
-            date: "2026-09-12",
-            views: "0",
-            thumb: "images/posts/2026-real-sdv-vs-fake-screen-marketing-guide/thumb.jpg",
-            link: "entry/2026-real-sdv-vs-fake-screen-marketing-guide.html",
-            desc: "화면만 번쩍인다고 다 같은 스마트카일까요? 테슬라처럼 밤사이 차 성능이 스스로 진화하는 진짜 SDV와 단순 내비게이션 업데이트에 머문 마케팅용 차량의 결정적 차이를 밝힙니다.",
-            content: "테슬라처럼 차가 스스로 업그레이드되는 진짜 SDV와 화면만 커진 마케팅용 SDV 구별법...",
-            isHidden: false
-        },
-        {
-            id: 110,
-            slug: "2026-driver-license-renewal-online-guide.html",
-            title: "운전면허 적성검사 온라인 5분 신청과 건강검진 시력 데이터 자동 연동 실패 대처법",
-            category: "포커스",
-            author: "차를 쓰다",
-            date: "2026-09-11",
-            views: "0",
-            thumb: "images/posts/2026-driver-license-renewal-online-guide/thumb.jpg",
-            link: "entry/2026-driver-license-renewal-online-guide.html",
-            desc: "2026년 운전면허 1종 2종 적성검사 온라인 5분 신청법과 국민건강보험 시력 데이터 자동 연동, 시력 0.8 미달 시 대처법, 갱신 기간 초과 과태료 3만 원 및 면허취소 방어 요령을 총정리합니다.",
-            content: "운전면허 적성검사 온라인 5분 신청과 건강검진 시력 데이터 자동 연동 실패 대처법...",
-            isHidden: false
-        },
-        {
-            id: 109,
+            id: 121,
             slug: "2026-multichild-highway-toll-discount-guide.html",
             title: "다자녀 고속도로 통행료 최대 20% 감면 신청법과 통행료플러스 앱 미등록 시 자동 감면 불가 팩트체크",
             category: "포커스",
@@ -690,7 +564,7 @@
             isHidden: false
         },
         {
-            id: 108,
+            id: 120,
             slug: "2026-kia-tasman-commercial-tax-maintenance-cost.html",
             title: "기아 타스만 화물차 자동차세 28,500원과 연 1.5만km 5년 유류비·자동차세 계산",
             category: "포커스",
@@ -704,63 +578,7 @@
             isHidden: false
         },
         {
-            id: 107,
-            slug: "2026-hybrid-used-car-battery-life-voltage-delta-car-scanner-guide.html",
-            title: "하이브리드 중고차 배터리 수명 진단법과 스마트폰 OBD2 전압 편차 가이드",
-            category: "포커스",
-            author: "차를 쓰다",
-            date: "2026-09-08",
-            views: "0",
-            thumb: "images/posts/2026-hybrid-used-car-battery-life-voltage-delta-car-scanner-guide/thumb.jpg",
-            link: "entry/2026-hybrid-used-car-battery-life-voltage-delta-car-scanner-guide.html",
-            desc: "그랜저 IG 등 10년 차 하이브리드 중고차 구매 전후 스마트폰과 OBD2 카스캐너로 배터리 셀 전압 편차 0.02V를 1분 만에 측정하고 350만 원 교체비를 아끼는 실전 가이드입니다.",
-            content: "하이브리드 중고차 배터리 수명 진단법과 스마트폰 OBD2 전압 편차 가이드...",
-            isHidden: false
-        },
-        {
-            id: 106,
-            slug: "2026-mitsubishi-pajero-5th-gen-offroad-specs-import-analysis.html",
-            title: "1억대 정통 오프로더 대신할 4천만 원대 대안? 신형 파제로 국내 직수입 현실성",
-            category: "신차소식",
-            author: "차를 쓰다",
-            date: "2026-09-08",
-            views: "0",
-            thumb: "images/posts/2026-mitsubishi-pajero-5th-gen-offroad-specs-import-analysis/thumb.jpg",
-            link: "entry/2026-mitsubishi-pajero-5th-gen-offroad-specs-import-analysis.html",
-            desc: "미쓰비시가 7년 만에 부활시킨 5세대 신형 파제로의 래더 프레임 제원과 2.4 디젤 토크, 1억대 랭글러·브롱코 대비 4천만 원대 가성비 및 국내 직수입 총비용과 현실성을 심층 분석합니다.",
-            content: "1억대 정통 오프로더 대신할 4천만 원대 대안? 신형 파제로 국내 직수입 현실성...",
-            isHidden: false
-        },
-        {
-            id: 105,
-            slug: "2026-benz-cla-ev-autonomous-driving-nvidia-orin-fsd-comparison.html",
-            title: "테슬라 FSD 꺾고 도심 자율주행 1호 노리는 벤츠 신형 CLA, 엔비디아 칩셋 누락 트림 주의점과 실속 가이드",
-            category: "신차소식",
-            author: "차를 쓰다",
-            date: "2026-09-07",
-            views: "0",
-            thumb: "images/posts/2026-benz-cla-ev-autonomous-driving-nvidia-orin-fsd-comparison/thumb.jpg",
-            link: "entry/2026-benz-cla-ev-autonomous-driving-nvidia-orin-fsd-comparison.html",
-            desc: "신형 일렉트릭 벤츠 CLA가 테슬라 FSD를 제치고 국내 1호 도심 자율주행을 노리는 법적·기술적 배경과 5,290만 원 에센셜 트림의 엔비디아 칩셋 누락 진실, 실속 추천 트림을 심층 분석합니다.",
-            content: "테슬라 FSD 꺾고 도심 자율주행 1호 노리는 벤츠 신형 CLA, 엔비디아 칩셋 누락 트림 주의점과 실속 가이드...",
-            isHidden: false
-        },
-        {
-            id: 104,
-            slug: "2026-hyundai-ioniq-v-china-launch-korea-price-analysis.html",
-            title: "현대 아이오닉 V 중국 사전계약 개시, 2천만 원대 출고액과 국내 도입 가능성 총정리",
-            category: "신차소식",
-            author: "차를 쓰다",
-            date: "2026-09-06",
-            views: "0",
-            thumb: "images/posts/2026-hyundai-ioniq-v-china-launch-korea-price-analysis/thumb.jpg",
-            link: "entry/2026-hyundai-ioniq-v-china-launch-korea-price-analysis.html",
-            desc: "북경현대가 사전계약에 돌입한 준대형 전기 세단 아이오닉 V의 2,400만 원대 출고액과 27인치 4K 스크린, 모멘타 자율주행 스펙 및 국내 도입 가능성을 심층 분석합니다.",
-            content: "현대 아이오닉 V 중국 사전계약 개시, 2천만 원대 출고액과 국내 도입 가능성 총정리...",
-            isHidden: false
-        },
-        {
-            id: 103,
+            id: 119,
             slug: "2026-byd-atto3-facelift-single-trim-specs.html",
             title: "BYD 아토 3 페이스리프트 출시, 단일 트림 3,490만 원 책정과 사양 변화 총정리",
             category: "신차소식",
@@ -774,7 +592,7 @@
             isHidden: false
         },
         {
-            id: 102,
+            id: 118,
             slug: "2026-august-domestic-car-sales-shock-tesla-modely.html",
             title: "8월 국산차 판매량 8만 대마저 붕괴, 6년 만에 마주한 내수 침체의 경고",
             category: "포커스",
@@ -788,7 +606,7 @@
             isHidden: false
         },
         {
-            id: 101,
+            id: 117,
             slug: "2026-polestar-4-suv-busan-rear-window-specs.html",
             title: "“뒷유리 달고 부산 생산?” 폴스타 4 SUV 공개, V2L과 관세 역전 팩트체크",
             category: "신차소식",
@@ -802,7 +620,7 @@
             isHidden: false
         },
         {
-            id: 100,
+            id: 116,
             slug: "2026-car-periodic-inspection-reservation-penalty.html",
             title: "“하루 늦었다고 최대 60만 원에 번호판 영치?” 2026 자동차 정기·종합검사의 모든 것 (우리 동네 수수료 전수표)",
             category: "포커스",
@@ -816,7 +634,7 @@
             isHidden: false
         },
         {
-            id: 99,
+            id: 115,
             slug: "2026-mercedes-benz-electric-cla-price-specs.html",
             title: "“포르쉐 2단 변속기를 5천만 원대 벤츠에?” 2026 신형 일렉트릭 CLA 공개, 792km 항속거리와 5,290만 원 가격 파괴 팩트체크",
             category: "신차소식",
@@ -830,7 +648,7 @@
             isHidden: false
         },
         {
-            id: 98,
+            id: 114,
             slug: "kia-pv7-large-electric-pbv-minivan-specs.html",
             title: "“카니발·스타리아 뛰어넘는 3평 전동화 거실” 기아 PV7 대형 PBV 최초 공개, 5.9m 롱바디·E-GMP.S 플랫폼·중형 화물 보조금 5,200만 원 실구매가 팩트체크",
             category: "신차소식",
@@ -844,7 +662,7 @@
             isHidden: false
         },
         {
-            id: 97,
+            id: 113,
             slug: "genesis-gv80-hybrid-powertrain-specs.html",
             title: "“6기통 디젤의 완벽한 퇴장” 제네시스 GV80 2.5T 하이브리드, 352마력·수냉식 배터리·P2 역구동 공학과 5년 유지비 팩트체크",
             category: "신차소식",
@@ -858,7 +676,7 @@
             isHidden: false
         },
         {
-            id: 96,
+            id: 112,
             slug: "genesis-gv90-global-media-reviews.html",
             title: "“엔초 페라리보다 세다?” 제네시스 GV90 657마력·B필러리스 코치도어 공개에 英·美 외신이 던진 찬사와 3대 팩트체크",
             category: "신차소식",
@@ -872,7 +690,7 @@
             isHidden: false
         },
         {
-            id: 95,
+            id: 111,
             slug: "lifestyle-car-buying-guide-2026.html",
             title: "2026 신차 구매 가이드: 나에게 맞는 차급 선택과 하이브리드·전기차 실구매가",
             category: "포커스",
@@ -886,7 +704,7 @@
             isHidden: false
         },
         {
-            id: 94,
+            id: 110,
             slug: "2026-avante-price-hike-korean-compact-car-market.html",
             title: "“국민 첫차의 배신?” 2026 아반떼 풀옵션 4,200만원 돌파 실체와 국산 엔트리카의 종말, 쏘나타·수입차·BYD 셈법",
             category: "포커스",
@@ -900,7 +718,7 @@
             isHidden: false
         },
         {
-            id: 93,
+            id: 109,
             slug: "2026-lexus-es-fullchange-ev-specs-price.html",
             title: "“하이브리드 장인마저 전기차로?” 2026 8세대 렉서스 ES 풀체인지, 5,140mm K9급 차체와 478km 항속 실출고가 실체",
             category: "신차소식",
@@ -914,7 +732,7 @@
             isHidden: false
         },
         {
-            id: 92,
+            id: 108,
             slug: "2026-toyota-rav4-hybrid-e-four-specs-price.html",
             title: "2026 토요타 라브4 하이브리드 E-Four, 5,820만 원 출고액과 실연비 20km/L 제원 유지비 실체",
             category: "신차소식",
@@ -928,7 +746,7 @@
             isHidden: false
         },
         {
-            id: 91,
+            id: 107,
             slug: "used-ev-maintenance-cost.html",
             title: "중고 전기차 5년 타면 정말 1,400만원 아낄까? 아이오닉5·EV6 유지비 비교",
             category: "포커스",
@@ -942,7 +760,7 @@
             isHidden: false
         },
         {
-            id: 90,
+            id: 106,
             slug: "benz-gla-ev-price-specs-residual-value.html",
             title: "\"전장 14cm 키우고 800V 올렸다!\" 2026 풀체인지 벤츠 GLA 전기차 5년 잔존가치와 실출고가 셈법",
             category: "신차소식",
@@ -956,7 +774,7 @@
             isHidden: false
         },
         {
-            id: 89,
+            id: 105,
             slug: "genesis-gv60-magma-track-taxi-price-specs.html",
             title: "\"제네시스 택시 나온다?\" 2026 신형 GV60 마그마 실구매가 연비표 제원 총정리 '트랙 택시 1회 체험' 과연 타볼 만할까?\"",
             category: "신차소식",
@@ -970,7 +788,7 @@
             isHidden: false
         },
         {
-            id: 88,
+            id: 104,
             slug: "2027-renault-espace-e-tech-hybrid-review.html",
             title: "\"리터당 26km 실화일까?\" 2027 르노 에스파스 E-Tech 하이브리드 공개, 7인승 패밀리 SUV 시장의 격돌과 가치 분석\"",
             category: "신차소식",
@@ -984,7 +802,7 @@
             isHidden: false
         },
         {
-            id: 87,
+            id: 103,
             slug: "volvo-es90-ev-sedan-price-specs.html",
             title: "\"해외보다 5천만 원 싸다?\" 2026 볼보 ES90 전기 세단 공개, 106kWh 배터리와 중국 생산 관세 파장의 실체 분석",
             category: "신차소식",
@@ -998,7 +816,7 @@
             isHidden: false
         },
         {
-            id: 86,
+            id: 102,
             slug: "2026-hyundai-ioniq9-specs-price-ev9-comparison.html",
             title: "\"장의차 조롱을 넘어섰다?\" 2026 현대 아이오닉9의 EV9 5배 역전 독주, 대형 전기 SUV 시장의 공간 가치와 패밀리카 실용주의 분석",
             category: "신차소식",
@@ -1012,7 +830,7 @@
             isHidden: false
         },
         {
-            id: 85,
+            id: 101,
             slug: "2027-kgm-torres-aisin-8at-facelift.html",
             title: "\"투싼·스포티지 잡으러 왔다?\" 2027 KGM 뉴 토레스 아이신 8단 변속기 탑재, 준중형 SUV 시장의 실속 가치 분석",
             category: "신차소식",
@@ -1026,7 +844,7 @@
             isHidden: false
         },
         {
-            id: 84,
+            id: 100,
             slug: "xiaomi-su7-yu7-korea-launch-2028.html",
             title: "\"690마력이 5천만 원대?\" 2028 샤오미 SU7·YU7 한국 진출 선언, 수입 전기차 시장의 파격과 영향 분석",
             category: "신차소식",
@@ -1040,7 +858,7 @@
             isHidden: false
         },
         {
-            id: 83,
+            id: 99,
             slug: "bmw-7-series-black-trim-2026.html",
             title: "\"벤츠 S클래스 꺾을까?\" 2026 BMW 7시리즈 블랙 트림 & M 스포츠 프로 공개, 수입 플래그십 시장의 지각변동과 가치 분석",
             category: "신차소식",
@@ -1054,7 +872,7 @@
             isHidden: false
         },
         {
-            id: 82,
+            id: 98,
             slug: "2027-hyundai-casper-ev-delivery-delay.html",
             title: "\"아들 전역이 더 빠르겠다?\" 2027 현대 캐스퍼 일렉트릭, 보조금 반영 2천만 원대에 사는데 출고 대기만 28개월 걸리는 이유",
             category: "신차소식",
@@ -1068,7 +886,7 @@
             isHidden: false
         },
         {
-            id: 81,
+            id: 97,
             slug: "highway-phantom-traffic-jam.html",
             title: "\"사고 없어도 멈추는 미스터리?\" 2026 고속도로 유령 정체의 진짜 이유, 여름 휴가철 100m 안전거리와 지퍼 합류의 실속 가치 분석",
             category: "포커스",
@@ -1082,7 +900,7 @@
             isHidden: false
         },
         {
-            id: 80,
+            id: 96,
             slug: "grandeur-1-6-hybrid-price-value.html",
             title: "그랜저 2.5 가솔린 대신 500만 원 더 투자할 가치가 있을까?",
             category: "신차소식",
@@ -1096,7 +914,7 @@
             isHidden: false
         },
         {
-            id: 79,
+            id: 95,
             slug: "hyundai-ioniq5-660000km-battery-health-test.html",
             title: "\"66만km 달리고도 멀쩡하다?\" 2026 현대 아이오닉 5 배터리 잔존 수명 측정, K-배터리 열관리 기술의 시장 파장 분석\"",
             category: "포커스",
@@ -1110,7 +928,7 @@
             isHidden: false
         },
         {
-            id: 78,
+            id: 94,
             slug: "hyundai-autonomous-driving-tech-shift-2026.html",
             title: "\"이럴 거면 수조 원 왜 썼나?\" 2026 현대차그룹 자율주행 자체 개발 전면 포기선언, 테슬라 FSD 초격차와 구글·엔비디아 동맹 턴어라운드 분석\"",
             category: "포커스",
@@ -1124,7 +942,7 @@
             isHidden: false
         },
         {
-            id: 77,
+            id: 93,
             slug: "hyundai-hmgma-georgia-factory-conflict.html",
             title: "\"전부 덫이었다\" 현대자동차 조지아 HMGMA 내부 갈등의 실체, 한국 제조업계의 생존 전략 분석",
             category: "포커스",
@@ -1138,7 +956,7 @@
             isHidden: false
         },
         {
-            id: 76,
+            id: 92,
             slug: "volvo-ex30-price-cut.html",
             title: "\"국산 전기차 넘어설까?\" 2027년식 볼보 EX30 파격 가격 인하 선언, 국내 3천만 원대 전기차 격전지의 판도 변화와 가치 분석\"",
             category: "신차소식",
@@ -1152,7 +970,7 @@
             isHidden: false
         },
         {
-            id: 75,
+            id: 91,
             slug: "staria-electric-11-seater-benefits.html",
             title: "\"카니발 이탈 속출?\" 2026 현대 스타리아 일렉트릭 11인승 출시, 대형 MPV 시장의 세제 혜택과 가격 파괴 임팩트 분석\"",
             category: "신차소식",
@@ -1166,7 +984,7 @@
             isHidden: false
         },
         {
-            id: 74,
+            id: 90,
             slug: "avante-8th-generation-unveiled.html",
             title: "\"아방이 이름 떼야 하나?\" 현대차 2026 디 올 뉴 아반떼 최초 공개, 준중형 세단 시장의 대변혁과 모빌리티 비전 분석\"",
             category: "신차소식",
@@ -1180,7 +998,7 @@
             isHidden: false
         },
         {
-            id: 73,
+            id: 89,
             slug: "why-drivers-return-to-gasoline-cars.html",
             title: "\"연비만 믿었다가 낭패?\" 2026 현대 그랜저 하이브리드 vs 가솔린 직접 비교, 스마트 컨슈머의 실리 선택과 경제성 분석",
             category: "포커스",
@@ -1194,7 +1012,7 @@
             isHidden: false
         },
         {
-            id: 72,
+            id: 88,
             slug: "volkswagen-crisis-restructuring-2026.html",
             title: "\"10만명 감원 선언?\" 2026 폭스바겐 대규모 구조조정 검토, 글로벌 자동차 시장의 대전환과 시사점 분석\"",
             category: "포커스",
@@ -1208,7 +1026,7 @@
             isHidden: false
         },
         {
-            id: 71,
+            id: 87,
             slug: "2027-renault-scenic-lfp-battery.html",
             title: "\"진작 이렇게 나오지?\" 2027 르노 세닉 E-Tech 일렉트릭 부분변경 공개, 중국산 가격 공세에 맞선 글로벌 모빌리티의 변동과 전략 분석",
             category: "신차소식",
@@ -1222,7 +1040,7 @@
             isHidden: false
         },
         {
-            id: 70,
+            id: 86,
             slug: "byd-sealion-6-phev-suv.html",
             title: "\"너 같으면 사겠냐?\" 2026 BYD 씨라이언 6 국내 하이브리드 시장 상륙, 국내 친환경 SUV 지형에 미칠 파장 분석\"",
             category: "신차소식",
@@ -1236,7 +1054,7 @@
             isHidden: false
         },
         {
-            id: 69,
+            id: 85,
             slug: "2026-hyundai-grandeur-hybrid-delivery.html",
             title: "\"시동 진동 51% 줄였다?\" 2026 현대 더 뉴 그랜저 하이브리드 본격 출고, 준대형 친환경 세단 시장의 기술 진보와 가치 분석",
             category: "신차소식",
@@ -1250,7 +1068,7 @@
             isHidden: false
         },
         {
-            id: 68,
+            id: 84,
             slug: "kia-k4-sportswagon-review.html",
             title: "\"SUV 살 이유가 없네?\" 2026 기아 K4 스포츠왜건 공개, 역대급 디자인의 왜건 실물과 국내 미출시 아쉬움 분석\"",
             category: "신차소식",
@@ -1264,7 +1082,21 @@
             isHidden: false
         },
         {
-            id: 67,
+            id: 83,
+            slug: "kia-seltos-hybrid-review-2026.html",
+            title: "\"경쟁 차종들 장난감 같네?\" 2026 기아 디 올 뉴 셀토스 하이브리드 공개, 소형 SUV 시장 격돌과 국내 사양 분석",
+            category: "신차소식",
+            author: "차를 쓰다",
+            date: "2026.07.12",
+            views: "0",
+            thumb: "images/posts/kia-seltos-hybrid-review-2026/thumb.jpg",
+            link: "entry/kia-seltos-hybrid-review-2026.html",
+            desc: "\"글로벌 시장을 향해 던진 진짜 SUV(A Real SUV)의 강력한 캠페인 선언. 기아의 디 올 뉴 셀토스가 30인치 파노라믹 디스플레이와 19.5km/L의 압도적 연비를 탑재하고 나선 비하인드와 국내형 e-AWD 누락에 담긴 거시적 시장 역학 관계를 집중적으로 들여다봅니다.\" 기아 디 올 뉴 셀토스 X-line (전측면 외관) /사진=기아최근 글로벌 소형 SUV 시장은 대동소이한 제품 편차를 극복하고 세그먼트의 한계를 허무는 초강도 사양 경쟁 체제로 급속하게 재편되는 흐름을 보이고 있습니다. 과거 엔트리 모델에서 누리기 어려웠던 테크놀로지와 친환경 고효율 파워트레인이 적극 결합되면서 소비자들의 만족 기준선이 대형 세그먼트 수준으로 크게 상향되었습니다. 이러한 모빌리티 대전환 국면 속에서 기아는 글로벌..",
+            content: "\"경쟁 차종들 장난감 같네?\" 2026 기아 디 올 뉴 셀토스 하이브리드 공개, 소형 SUV 시장 격돌과 국내 사양 분석...",
+            isHidden: false
+        },
+        {
+            id: 82,
             slug: "2027-volkswagen-atlas-reveal.html",
             title: "\"팰리세이드 위협할까?\" 2027 폭스바겐 아틀라스 풀체인지 공개",
             category: "신차소식",
@@ -1278,7 +1110,7 @@
             isHidden: false
         },
         {
-            id: 66,
+            id: 81,
             slug: "tesla-fsd-lite-korea-model-y-used.html",
             title: "\"미국도 안 풀렸는데 한국 먼저?\" 2026 테슬라 모델Y FSD 라이트 기습 배포, 국내 중고차 시장의 지각변동과 가치 분석",
             category: "포커스",
@@ -1292,7 +1124,7 @@
             isHidden: false
         },
         {
-            id: 65,
+            id: 80,
             slug: "genesis-gv70-ev-family-suv.html",
             title: "\"아내 눈치 안 보고 질렀다\" 3040 아빠들이 패밀리카로 제네시스 GV70 전기차 고른 진짜 이유",
             category: "신차소식",
@@ -1306,7 +1138,7 @@
             isHidden: false
         },
         {
-            id: 64,
+            id: 79,
             slug: "toyota-camry-hybrid-price-comparison.html",
             title: "\"수입 세단이 더 저렴하다?\" 2026 토요타 캠리 하이브리드 가격 포지셔닝, 국산 준대형 및 SUV 패밀리카 라인업과의 경제성 비교 분석",
             category: "신차소식",
@@ -1320,7 +1152,7 @@
             isHidden: false
         },
         {
-            id: 63,
+            id: 78,
             slug: "zeekr-7x-korea-launch-success.html",
             title: "\"중국차가 이 가격에 팔린다고?\" 2026 지커 7X 국내 사전계약 1,000대 돌파, 전기차 시장의 대반전과 국산 브랜드의 과제 분석",
             category: "신차소식",
@@ -1334,7 +1166,7 @@
             isHidden: false
         },
         {
-            id: 62,
+            id: 77,
             slug: "kia-niro-facelift-2027.html",
             title: "\"하이브리드 올인?\" 2027 기아 니로 페이스리프트 북미 깜짝 공개, 친환경 소형 SUV 시장의 새로운 지각변동 분석",
             category: "신차소식",
@@ -1348,7 +1180,7 @@
             isHidden: false
         },
         {
-            id: 61,
+            id: 76,
             slug: "hyundai-us-hybrid-success-hmgma.html",
             title: "\"비웃을 땐 언제고?\" 2026 현대차그룹 하이브리드 북미 시장 공략, 조지아 공장 라인 기습 변경과 스포티지 HEV의 가치 분석",
             category: "포커스",
@@ -1362,7 +1194,7 @@
             isHidden: false
         },
         {
-            id: 60,
+            id: 75,
             slug: "polestar-3-korea-launch-price.html",
             title: "\"진짜 전세계 최저가?\" 2026 폴스타 폴스타3 국내 파격 출시, 수입 전기 SUV 시장의 지각변동과 가치 분석",
             category: "신차소식",
@@ -1376,7 +1208,7 @@
             isHidden: false
         },
         {
-            id: 59,
+            id: 74,
             slug: "2026-kia-ev9-light-price-sales.html",
             title: "\"국내는 351대, 미국은 폭증?\" 2026 기아 EV9 라이트 트림의 가격 승부수, 글로벌 대형 SUV 전기차 시장의 지각변동 총정리",
             category: "신차소식",
@@ -1390,7 +1222,7 @@
             isHidden: false
         },
         {
-            id: 58,
+            id: 73,
             slug: "byd-sealion-6-vs-kia-sportage-hybrid.html",
             title: "\"로고 떼면 국산차 긴장할까?\" 2026 BYD 씨라이언6 PHEV 국내 공개, 수입 친환경 SUV 시장의 파격적 지각변동과 소비자 가치 분석",
             category: "신차소식",
@@ -1404,7 +1236,7 @@
             isHidden: false
         },
         {
-            id: 57,
+            id: 72,
             slug: "tesla-cybercab-epa-conformity.html",
             title: "\"운전대·페달 아예 없다?\" 2026 테슬라 사이버캡 미국 EPA 공식 판매 인증, 무인 로보택시가 가져올 미래 모빌리티 시장의 지각변동 분석",
             category: "신차소식",
@@ -1418,7 +1250,7 @@
             isHidden: false
         },
         {
-            id: 56,
+            id: 71,
             slug: "polestar-4-us-ban.html",
             title: "\"한국서 만들었는데 수입 금지?\" 2027 폴스타 4 미국 규제 퇴출 선언, 부산공장 타격과 모빌리티 공급망 지각변동 분석",
             category: "포커스",
@@ -1432,7 +1264,7 @@
             isHidden: false
         },
         {
-            id: 55,
+            id: 70,
             slug: "2026-ferrari-luce-ev-china-sellout.html",
             title: "\"디자인 폭망했다더니 완판?\" 2026 페라리 루체 전격 공개, K-배터리와 디스플레이 동맹의 가치 분석",
             category: "포커스",
@@ -1446,7 +1278,7 @@
             isHidden: false
         },
         {
-            id: 54,
+            id: 69,
             slug: "byd-sealion6-dmi-price.html",
             title: "\"3,750만원에 PHEV를?\" 2026 BYD 시라이언 6 DM-i 국내 출시 선언 국산 하이브리드 시장의 지각변동과 가치 분석",
             category: "신차소식",
@@ -1460,7 +1292,7 @@
             isHidden: false
         },
         {
-            id: 53,
+            id: 68,
             slug: "bmw-7-series-black-trim.html",
             title: "\"올 블랙의 압도적 존재감?\" 2026 BMW 7시리즈 740i 740d 블랙 트림 공식 출시, 수입 대형 세단 시장의 새로운 기준과 가치 분석",
             category: "신차소식",
@@ -1474,7 +1306,21 @@
             isHidden: false
         },
         {
-            id: 52,
+            id: 67,
+            slug: "2026-hyundai-avante-cn8-reveal.html",
+            title: "\"1.6 엔진 폐기?\" 2026 현대 디 올 뉴 아반떼 8세대 전격 공개, 준중형 시장의 지각변동과 가치 분석",
+            category: "신차소식",
+            author: "차를 쓰다",
+            date: "2026.06.26",
+            views: "0",
+            thumb: "images/posts/2026-hyundai-avante-cn8-reveal/thumb.jpg",
+            link: "entry/2026-hyundai-avante-cn8-reveal.html",
+            desc: "\" 1.6 가솔린 엔진 전면 폐기? 준중형 체급의 한계를 돌파한 초격차 모빌리티의 등장 \" 현대자동차가 부산 벡스코에서 개최된 '2026 부산모빌리티쇼'를 통해 국민 준중형 세단인 아반떼의 8세대 완전변경 모델 '디 올 뉴 아반떼'를 세계 최초로 전격 공개했습니다. 기아 K3의 공식 단종으로 국내 준중형 세단 세그먼트의 강력한 독점 지위를 확보한 현대자동차가 선보인 이번 신형 모델은 준중형 체급의 한계를 부수는 혁신적 변화를 대거 수용하며 뜨거운 화제를 모으고 있습니다. 글로벌 모빌리티 산업이 전기차 캐즘 현상과 내연기관의 고효율화라는 복합적 국면에 직면하면서, 완성차 제조사들은 한정된 플랫폼 내에서 패키징 효율과 디지털 경쟁력을 극대화하는 방향으로 신차 개발 전략을 선회하고 있습니다. 특히 고물가..",
+            content: "\"1.6 엔진 폐기?\" 2026 현대 디 올 뉴 아반떼 8세대 전격 공개, 준중형 시장의 지각변동과 가치 분석...",
+            isHidden: false
+        },
+        {
+            id: 66,
             slug: "FSD.html",
             title: "\"FSD가 미국선 이미 병원 이송?\" 2026 신형 테슬라 모델Y 모델3 감독형 자율주행 락 해제, 한국 규제 조율의 현실적 변수와 가치 전망",
             category: "포커스",
@@ -1488,7 +1334,7 @@
             isHidden: false
         },
         {
-            id: 51,
+            id: 65,
             slug: "2026-기아-EV3-롱레인지.html",
             title: "2026 기아 EV3 롱레인지 스펙 유지비 셀토스 풀옵션 가격 비교 분석 총정리",
             category: "신차소식",
@@ -1502,7 +1348,7 @@
             isHidden: false
         },
         {
-            id: 50,
+            id: 64,
             slug: "E-Tech.html",
             title: "\"구글 제미나이 AI 통합?\" 2026 르노 메간 E Tech 일렉트릭의 스마트 디지털 콕핏 혁신, 국내 예비 오너들의 출시 요구 동향 분석",
             category: "신차소식",
@@ -1516,7 +1362,7 @@
             isHidden: false
         },
         {
-            id: 49,
+            id: 63,
             slug: "N-e-Shift.html",
             title: "\"포르쉐·BMW도 베꼈다?\" 전기차 가상 변속 동향과 현대 N e-Shift 가치 분석",
             category: "신차소식",
@@ -1530,7 +1376,7 @@
             isHidden: false
         },
         {
-            id: 48,
+            id: 62,
             slug: "2026-BMW-신형-iX3.html",
             title: "\"중국산 배터리 탑재해도 안전할까?\" 2026 BMW 신형 iX3 스펙 공개, 한국인 선호 옵션의 충돌과 시장 가치 총정리",
             category: "신차소식",
@@ -1544,7 +1390,7 @@
             isHidden: false
         },
         {
-            id: 47,
+            id: 61,
             slug: "결함-아닌-부족함입니다.html",
             title: "\"고객님 결함 아닌 부족함입니다?\" 2026 토요타·닛산 미국산 품질 고지 파문, 글로벌 제조 완성도 격차가 던진 메시지 분석",
             category: "신차소식",
@@ -1558,7 +1404,7 @@
             isHidden: false
         },
         {
-            id: 46,
+            id: 60,
             slug: "보보금-조기-소진.html",
             title: "\"8월이면 동난다? \"2026년 전기차 보조금 조기 소진 위기와 시장 분석",
             category: "신차소식",
@@ -1572,7 +1418,7 @@
             isHidden: false
         },
         {
-            id: 45,
+            id: 59,
             slug: "자동차도-한일전-이다.html",
             title: "\"자동차도 한일전 이다?\" 2026 현대 그랜저 하이브리드 가격 상승과, 렉서스 ES300h 패권 경쟁의 흐름 분석",
             category: "신차소식",
@@ -1586,7 +1432,7 @@
             isHidden: false
         },
         {
-            id: 44,
+            id: 58,
             slug: "하이브리드-전성시대.html",
             title: "\"하이브리드 전성 시대\" 국내 점유율 30.3% 돌파한 '하이브리드 자동차' 어떤 하이브리드를 선택해야 할까?",
             category: "신차소식",
@@ -1600,7 +1446,7 @@
             isHidden: false
         },
         {
-            id: 43,
+            id: 57,
             slug: "2026-BMW-iX3-50-xDrive.html",
             title: "\"611km 달리는 BMW SUV?\" 2026 BMW iX3 50 xDrive 국내 공식 출시 선언, 수입 전기차 시장의 지각변동과 가치 분석",
             category: "신차소식",
@@ -1614,7 +1460,7 @@
             isHidden: false
         },
         {
-            id: 42,
+            id: 56,
             slug: "2027-볼보-EX30의-파격-가격-인하.html",
             title: "\"테슬라가 불을 지폈다?\" 2027 볼보 EX30의 파격 가격 인하 선언, 국내 수입 전기차 시장의 지각변동과 가치 분석",
             category: "신차소식",
@@ -1628,7 +1474,7 @@
             isHidden: false
         },
         {
-            id: 41,
+            id: 55,
             slug: "2026-현대-아반떼-풀체인지.html",
             title: "아반떼 500만원 인상설? 2026 현대 아반떼 풀체인지 가격 유출 논란, 국내 가성비 세단 시장의 지각변동과 가치 분석",
             category: "신차소식",
@@ -1642,7 +1488,7 @@
             isHidden: false
         },
         {
-            id: 40,
+            id: 54,
             slug: "FSD-글로벌-개방.html",
             title: "\"일본·대만 다 여는데 한국만 빗장?\" 2026 테슬라 모델3·사이버캡 FSD 글로벌 개방 선언, 한국 자율주행 시장의 규제 갈라파고스화와 대응 분석",
             category: "신차소식",
@@ -1656,7 +1502,7 @@
             isHidden: false
         },
         {
-            id: 39,
+            id: 53,
             slug: "갤럭시-크루저-700.html",
             title: "\"1128마력과 게걸음?\" 2026 지리 갤럭시 크루저 700 양산형 공개, 글로벌 오프로더 시장의 지각변동과 가치 분석",
             category: "신차소식",
@@ -1670,7 +1516,21 @@
             isHidden: false
         },
         {
-            id: 38,
+            id: 52,
+            slug: "뷰익-일렉트라-E7.html",
+            title: "\"GM의 뷰익 일렉트라 E7 PHEV 국내 포착!\" 예상 가격 및 주행거리 제원 분석",
+            category: "신차소식",
+            author: "차를 쓰다",
+            date: "2026.06.18",
+            views: "0",
+            thumb: "images/posts/뷰익-일렉트라-E7/thumb.jpg",
+            link: "entry/뷰익-일렉트라-E7.html",
+            desc: "국산 중형 SUV 양강 생태계를 뒤흔드는 초장거리 PHEV의 상륙과 예비 오너들의 이탈 조짐 국내 친환경 패밀리카 시장을 견고하게 분점하고 있던 현대 싼타페와 기아 쏘렌토 하이브리드 진영에 전에 없던 거대한 지각변동이 감지되고 있습니다. 인천 부평에 있는 한국GM 본사 근처 도로에서 정체불명의 위장막을 두르고 부평구청 발행 임시번호판을 부착한 채 기밀 로드 테스트를 벌이는 중형 SUV가 연이어 포착되었기 때문입니다. 해당 차량의 정체는 제너럴모터스(GM) 그룹 내 프리미엄 포지션을 담당하는 '뷰익(Buick)' 브랜드의 플러그인 하이브리드(PHEV) 대표 주자인 '일렉트라 E7(Electra E7)'로 밝혀지면서, 수개월의 오랜 출고 대기를 견뎌오던 예비 오너들 사이에서는 계약 취소 및 대이동에 관한 ..",
+            content: "\"GM의 뷰익 일렉트라 E7 PHEV 국내 포착!\" 예상 가격 및 주행거리 제원 분석...",
+            isHidden: false
+        },
+        {
+            id: 51,
             slug: "2026-폭스바겐-ID5.html",
             title: "\"현대·기아 긴장할까?\" 2026 폭스바겐 ID5 파격 가격 선언, 국내 전기차 시장의 지각변동과 가치 분석",
             category: "신차소식",
@@ -1684,7 +1544,7 @@
             isHidden: false
         },
         {
-            id: 37,
+            id: 50,
             slug: "라브4-출시.html",
             title: "\"현대·기아도 긴장할 만하네?\" 하이브리드 명가 2026 토요타 올 뉴 RAV4 출시, 국산 SUV 위협하는 지각변동과 가치 분석",
             category: "신차소식",
@@ -1698,7 +1558,7 @@
             isHidden: false
         },
         {
-            id: 36,
+            id: 49,
             slug: "카니발-하이루프-출시.html",
             title: "\"기아가 미쳤나?\" 카니발 하이루프 출시가 몰고 올 미니밴 시장의 지각변동 분석",
             category: "신차소식",
@@ -1712,7 +1572,7 @@
             isHidden: false
         },
         {
-            id: 35,
+            id: 48,
             slug: "현대-싼타페-EREV해외생산.html",
             title: "\"이걸 왜 우리만 안 팔아?\" 현대 싼타페 EREV 해외 생산 고수, 중국 BYD 공습에 맞선 이중 헷징 분석",
             category: "신차소식",
@@ -1726,7 +1586,7 @@
             isHidden: false
         },
         {
-            id: 34,
+            id: 47,
             slug: "은퇴-자동차.html",
             title: "\"은퇴 준비 중이라면 이차가 정답!\"  5060 은퇴 세대의 전동화 대이동, 국산 프리미엄 전기차 3종의 초격차 생태계 분석",
             category: "신차소식",
@@ -1740,7 +1600,7 @@
             isHidden: false
         },
         {
-            id: 33,
+            id: 46,
             slug: "유럽의-비웃음과-정면승부.html",
             title: "\"유럽의 비웃음과 정면 승부?\" 제네시스가 수천억 원을 던져 르망 24시로 간 이유, 마그마 브랜드의 거시적 퍼포먼스 전략 분석",
             category: "신차소식",
@@ -1754,7 +1614,7 @@
             isHidden: false
         },
         {
-            id: 32,
+            id: 45,
             slug: "캐스퍼-일렉트릭-수출-쏠림.html",
             title: "\"국내 소비자는 2년 대기?\" 캐스퍼 일렉트릭 수출 쏠림의 구조적 역설, GGM 공장 가동 지연의 실체 분석",
             category: "신차소식",
@@ -1768,7 +1628,7 @@
             isHidden: false
         },
         {
-            id: 31,
+            id: 44,
             slug: "캐스퍼-일렉트릭.html",
             title: "\"국산 전기차가 2,100만 원대?\" 고전압 NCM 배터리와 취득세 감면 혜택이 이끄는 2026 캐스퍼 일렉트릭 공학적·재정적 가치 분석",
             category: "신차소식",
@@ -1782,7 +1642,7 @@
             isHidden: false
         },
         {
-            id: 30,
+            id: 43,
             slug: "코나-풀체인지.html",
             title: "\"페이스리프트도 없이 바로 풀체인지?\" 현대차의 초강수 세대교체 전략, 소형 SUV 시장 판도 흔들 비책 분석",
             category: "신차소식",
@@ -1796,7 +1656,7 @@
             isHidden: false
         },
         {
-            id: 29,
+            id: 42,
             slug: "폴스타4-연식변경.html",
             title: "\"가격 내린 수입 프리미엄?\" 폴스타 4의 승부수, 수입 전기차 시장의 지각 변동 분석",
             category: "신차소식",
@@ -1810,7 +1670,7 @@
             isHidden: false
         },
         {
-            id: 28,
+            id: 41,
             slug: "중국산벤츠논란.html",
             title: "\"중국산 벤츠 논란?\" 미국의 판매 금지 법안 추진, 현대차 제네시스 GLE GLS 프리미엄 SUV 시장 반사이익 분석",
             category: "신차소식",
@@ -1824,7 +1684,7 @@
             isHidden: false
         },
         {
-            id: 27,
+            id: 40,
             slug: "아이오닉9.html",
             title: "“수입 럭셔리 전멸했다” BMW·볼보 꺾고 해외 비교 평가 1위 차지한 아이오닉 9 분석",
             category: "신차소식",
@@ -1838,7 +1698,7 @@
             isHidden: false
         },
         {
-            id: 26,
+            id: 39,
             slug: "2026-신형-그랜저-풀옵션-벤츠-E클래스-E200.html",
             title: "\"비교가 되나?\"2026 신형 그랜저 풀옵션 벤츠 E클래스 E200 기본형 가격 옵션 비교 분석",
             category: "신차소식",
@@ -1852,7 +1712,7 @@
             isHidden: false
         },
         {
-            id: 25,
+            id: 38,
             slug: "2026-아우디-A3.html",
             title: "\"쏘나타 대신 독일차?\" 2026 아우디 A3 가격표 및 1,050만 원 할인 프로모션 실구매가 분석",
             category: "신차소식",
@@ -1866,7 +1726,7 @@
             isHidden: false
         },
         {
-            id: 24,
+            id: 37,
             slug: "한국용-지커-7X.html",
             title: "\"라이다·오린X 칩 빼고 풀옵 7,909만원?\" 한국용 지커 7X 공개에 쏠리는 시장의 시선",
             category: "신차소식",
@@ -1880,7 +1740,7 @@
             isHidden: false
         },
         {
-            id: 23,
+            id: 36,
             slug: "모델Y-국내판매-1위.html",
             title: "“현대차 비상” 국산차 제치고 판매 1위…5월 한 달 8천 대 폭주한 테슬라 모델 Y의 위력 (분석",
             category: "신차소식",
@@ -1894,7 +1754,7 @@
             isHidden: false
         },
         {
-            id: 22,
+            id: 35,
             slug: "혼다-철수-할인.html",
             title: "“진짜 30% 폭풍 할인?” 혼다 한국 철수 소식에 어코드·CR-V ‘희망고문’ 시작된 이유 (분석)",
             category: "신차소식",
@@ -1908,7 +1768,7 @@
             isHidden: false
         },
         {
-            id: 21,
+            id: 34,
             slug: "EV9-라이트-스탠다드.html",
             title: "\"결국 남는 건 공간이었다\"  기아 EV9 라이트 스탠다드 출시가 불러온 시장의 반전 분석",
             category: "신차소식",
@@ -1922,7 +1782,7 @@
             isHidden: false
         },
         {
-            id: 20,
+            id: 33,
             slug: "모델-x-중고.html",
             title: "“마이바흐·모델 Y 정리하고 단 한 대로”… 박명수가 선택한 테슬라 모델 X 중고의 가치",
             category: "신차소식",
@@ -1936,7 +1796,7 @@
             isHidden: false
         },
         {
-            id: 19,
+            id: 32,
             slug: "스팅어-부활.html",
             title: "“기아가 미쳤나?” 스팅어 부활 콘셉트카 공개되자 “양산 출시” 청원 폭주 분석",
             category: "신차소식",
@@ -1950,7 +1810,7 @@
             isHidden: false
         },
         {
-            id: 18,
+            id: 31,
             slug: "미니-컨트리맨-딜러-에디션.html",
             title: "\"수입 SUV가 딜러 커스텀을?\" MINI 코리아 공식 딜러 4사의 독자 한정 에디션, 한국 컴팩트 프리미엄 SUV 시장 재편 분석",
             category: "신차소식",
@@ -1964,7 +1824,7 @@
             isHidden: false
         },
         {
-            id: 17,
+            id: 30,
             slug: "벤츠-e200-익스클루시브.html",
             title: "\"오버스펙 대신 편안함 택했다\" 벤츠 오너들이 E 300 대신 E 200 익스클루시브를 선택한 진짜 이유",
             category: "신차소식",
@@ -1978,7 +1838,7 @@
             isHidden: false
         },
         {
-            id: 16,
+            id: 29,
             slug: "테슬라-모델-y-스탠다드.html",
             title: "\"옵션 다이어트와 효율성의 반전\" 테슬라 모델 Y 스탠다드 국내 인증 완료와 FSD 플랫폼 전략",
             category: "신차소식",
@@ -1992,7 +1852,7 @@
             isHidden: false
         },
         {
-            id: 15,
+            id: 28,
             slug: "스펙만-프리미엄인-중국산의-공습-지커-7X.html",
             title: "\"스펙만 프리미엄인 중국산의 공습\" 지커 7X 가격 논란, 프리미엄 브랜드는 어떻게 정해질까?",
             category: "신차소식",
@@ -2006,7 +1866,7 @@
             isHidden: false
         },
         {
-            id: 14,
+            id: 27,
             slug: "웨이모-오하이-무인택시.html",
             title: "\"3천만원에 무인택시를?\" 미국 규제 우회하는 구글 웨이모의 묘수! 테슬라 긴장 하는 이유",
             category: "신차소식",
@@ -2020,7 +1880,7 @@
             isHidden: false
         },
         {
-            id: 13,
+            id: 26,
             slug: "그랜저-페이스리프트-이돈이면.html",
             title: "\"이 돈이면 수입차 간다?\" 현대차 그랜저 페이스리프트의 초고가 전략, 국산 패밀리카가 마주한 가격 저항선 분석",
             category: "신차소식",
@@ -2034,7 +1894,7 @@
             isHidden: false
         },
         {
-            id: 12,
+            id: 25,
             slug: "신형-그랜저-vs-기아-K8-정면승부.html",
             title: "\"진짜 돈값 할까?\" 신형 그랜저 vs 기아 K8 정면승부, 이 정도 가격 차이가 만든 시장 파장 분석",
             category: "신차소식",
@@ -2048,7 +1908,7 @@
             isHidden: false
         },
         {
-            id: 11,
+            id: 24,
             slug: "BYD-돌핀-G-DM-i.html",
             title: "\"중국산 관세 장벽도 넘는다?\" BYD 돌핀 G DM-i 헝가리 공장의 현지화 승부수, 글로벌 소형차 시장에 던진 파장 분석",
             category: "신차소식",
@@ -2062,7 +1922,7 @@
             isHidden: false
         },
         {
-            id: 10,
+            id: 23,
             slug: "뇌이징도-한계가-있다.html",
             title: "\"뇌이징도 한계가 있다\" 요즘 수입차가 '못생긴 디자인'을 고집하는 진짜 이유와 대중의 저항",
             category: "신차소식",
@@ -2076,7 +1936,7 @@
             isHidden: false
         },
         {
-            id: 9,
+            id: 22,
             slug: "르노-필랑트.html",
             title: "\"중국산 플랫폼의 역습?\" 르노 필랑트 하이브리드, 실제 차주들이 밝힌 진짜 가치와 한국 시장의 과제 분석",
             category: "신차소식",
@@ -2090,7 +1950,7 @@
             isHidden: false
         },
         {
-            id: 8,
+            id: 21,
             slug: "지커7x-국내-인증-완료.html",
             title: "\"국내 인증 완료에 보조금 0원?\" 중국 지커 7X의 한국 상륙 선언, 수입 전기차 시장의 지각변동과 보이지 않는 장벽 분석",
             category: "신차소식",
@@ -2104,7 +1964,7 @@
             isHidden: false
         },
         {
-            id: 7,
+            id: 20,
             slug: "토요타-랜드크루저-FJ-글로벌-런칭.html",
             title: "\"가격 파괴 정통 오프로더의 습격?\" 토요타 랜드크루저 FJ 글로벌 런칭, 아시아·신흥국 시장에 몰고 올 지각변동 분석",
             category: "신차소식",
@@ -2118,7 +1978,7 @@
             isHidden: false
         },
         {
-            id: 6,
+            id: 19,
             slug: "충전기-뒷돈.html",
             title: "\"충전기 깔면 뒷돈 수백만 원?\" 보조금 사냥터가 된 아파트 주차장, 전기차 요금 폭등을 부른 독점 구조의 실체 분석",
             category: "신차소식",
@@ -2132,7 +1992,7 @@
             isHidden: false
         },
         {
-            id: 5,
+            id: 18,
             slug: "토요타-시에나-캠핑.html",
             title: "\"인생의 절정기에 타는 차?\" 토요타 시에나 하이브리드, 결국 선택하게 되는 미니밴의 승차감과 단점 분석",
             category: "신차소식",
@@ -2146,7 +2006,7 @@
             isHidden: false
         },
         {
-            id: 4,
+            id: 17,
             slug: "페라리-루체.html",
             title: "\"중국차도 안 베낄 디자인?\" 페라리 전 회장의 독설과 주가 폭락, 슈퍼카 전동화가 직면한 거대한 시험대 분석",
             category: "신차소식",
@@ -2160,7 +2020,7 @@
             isHidden: false
         },
         {
-            id: 3,
+            id: 16,
             slug: "하반기-수입-전기-suv.html",
             title: "\"독일 플랫폼 vs 중국 가성비?\" 2026 하반기 프리미엄 전기 SUV 대격돌, 한국 시장이 마주한 구조적 변화 분석",
             category: "신차소식",
@@ -2174,7 +2034,7 @@
             isHidden: false
         },
         {
-            id: 2,
+            id: 15,
             slug: "샤오펑-p7.html",
             title: "4,900만 원대에 에어서스·820km·자율주행까지? 샤오펑 P7 한국 출시 가격과 스펙 비교",
             category: "신차소식",
@@ -2188,7 +2048,7 @@
             isHidden: false
         },
         {
-            id: 1,
+            id: 14,
             slug: "현대-베르나-한국-미출시-이유-—-1660만원짜리-가성비-세단-왜-안방엔-없나.html",
             title: "현대 베르나 한국 미출시 이유 — 1,660만원짜리 가성비 세단, 왜 안방엔 없나",
             category: "신차소식",
@@ -2199,6 +2059,188 @@
             link: "entry/현대-베르나-한국-미출시-이유-—-1660만원짜리-가성비-세단-왜-안방엔-없나.html",
             desc: "┌인도에서 연간 6만대 팔리는 현대차가정작 한국에는 없는 이유, 알고 보면 좀 씁쓸합니다.┘엑센트가 사라진 자리, 베르나가 있었다2019년, 현대자동차는 국내 소형 세단 엑센트를 조용히 단종시켰습니다. 이후 한국 시장에서 1,000~2,000만원대 소형 세단 라인업은 사실상 비어버렸어요.그런데 같은 시기, 해외에서는 엑센트의 후속 격 모델이 승승장구하고 있",
             content: "현대 베르나 한국 미출시 이유 — 1,660만원짜리 가성비 세단, 왜 안방엔 없나...",
+            isHidden: false
+        },
+        {
+            id: 13,
+            slug: "2026-volvo-xc60-b5-plus-vs-ultra-specs-price-review.html",
+            title: "2026 볼보 XC60 B5 플러스 vs 울트라 760만 원 옵션 차이와 실인도금 계산",
+            category: "신차소식",
+            author: "차를 쓰다",
+            date: "2026-09-19",
+            views: "0",
+            thumb: "images/posts/2026-volvo-xc60-b5-plus-vs-ultra-specs-price-review/thumb.jpg",
+            link: "entry/2026-volvo-xc60-b5-plus-vs-ultra-specs-price-review.html",
+            desc: "2026 볼보 XC60 B5 플러스(6,570만 원)와 울트라(7,330만 원)의 760만 원 출고가 및 취득세 포함 약 808.4만 원 격차 정밀 분석. 액티브 에어 서스펜션, B&W 오디오, 천공 나파 통풍 마사지 시트, 크리스탈 기어노브 기본 탑재 팩트를 비교합니다.",
+            content: "2026 볼보 XC60 B5 플러스 vs 울트라 760만 원 옵션 차이와 실인도금 계산...",
+            isHidden: false
+        },
+        {
+            id: 12,
+            slug: "2026-lexus-es-350e-ev-vs-350h-hybrid-specs-price-comparison.html",
+            title: "신형 렉서스 ES 350e 전기차 vs 350h 하이브리드 출고액과 옵션 차이 5년 유지비 계산",
+            category: "신차소식",
+            author: "차를 쓰다",
+            date: "2026-09-18",
+            views: "0",
+            thumb: "images/posts/2026-lexus-es-350e-ev-vs-350h-hybrid-specs-price-comparison/thumb.jpg",
+            link: "entry/2026-lexus-es-350e-ev-vs-350h-hybrid-specs-price-comparison.html",
+            desc: "2026년 9월 사전 계약에 돌입한 신형 8세대 렉서스 ES 350e 전기차와 350h 하이브리드의 출고액, 트림별 11대 핵심 옵션 차이, 취득세 감면 반영 실인도금, 5년 유지비를 정밀 비교 분석합니다.",
+            content: "신형 렉서스 ES 350e 전기차 vs 350h 하이브리드 출고액과 옵션 차이 5년 유지비 계산...",
+            isHidden: false
+        },
+        {
+            id: 11,
+            slug: "2027-kia-sorento-hybrid-signature-19-inch-wheel-tco-specs-review.html",
+            title: "2027 쏘렌토 하이브리드 19인치 휠, 5년 유지비 얼마나 더 들까?",
+            category: "신차소식",
+            author: "차를 쓰다",
+            date: "2026-09-16",
+            views: "0",
+            thumb: "images/posts/2027-kia-sorento-hybrid-signature-19-inch-wheel-tco-specs-review/thumb.jpg",
+            link: "entry/2027-kia-sorento-hybrid-signature-19-inch-wheel-tco-specs-review.html",
+            desc: "기아 The 2027 쏘렌토 하이브리드 시그니처 19인치 휠 기본화에 따른 복합 14.8km/L 연비 하락 분석. 연간 주행거리별 5년 유류비 격차와 18인치 대비 실질적 유지비 손익을 객관적으로 대조합니다.",
+            content: "2027 쏘렌토 하이브리드 19인치 휠, 5년 유지비 얼마나 더 들까?...",
+            isHidden: false
+        },
+        {
+            id: 10,
+            slug: "2026-kia-sportage-facelift-1-6-turbo-8at-vs-hybrid-specs-review.html",
+            title: "스포티지 1.6 가솔린 터보 8단 자동 vs 하이브리드 429만 원 실구매가 손익분기 팩트체크",
+            category: "신차소식",
+            author: "차를 쓰다",
+            date: "2026-09-15",
+            views: "0",
+            thumb: "images/posts/2026-kia-sportage-facelift-1-6-turbo-8at-vs-hybrid-specs-review/thumb.jpg",
+            link: "entry/2026-kia-sportage-facelift-1-6-turbo-8at-vs-hybrid-specs-review.html",
+            desc: "기아 더 뉴 스포티지 1.6 가솔린 터보 8단 자동과 하이브리드의 실구매가 및 주행 질감 전격 비교. 취득세 감면 반영 429만 원 격차와 연 1.5만km 기준 유류비 손익분기, 노블레스 트림 가성비를 상세 분석합니다.",
+            content: "스포티지 1.6 가솔린 터보 8단 자동 vs 하이브리드 429만 원 실구매가 손익분기 팩트체크...",
+            isHidden: false
+        },
+        {
+            id: 9,
+            slug: "2026-volkswagen-golf-gti-20th-anniversary-black-edition-options-specs-price-comparison.html",
+            title: "폭스바겐 골프 GTI 20주년 블랙 에디션 100만 원 차이 5년 소모품 혜택과 유지비 비교",
+            category: "포커스",
+            author: "차를 쓰다",
+            date: "2026-09-14",
+            views: "0",
+            thumb: "images/posts/2026-volkswagen-golf-gti-20th-anniversary-black-edition-options-specs-price-comparison/thumb.jpg",
+            link: "entry/2026-volkswagen-golf-gti-20th-anniversary-black-edition-options-specs-price-comparison.html",
+            desc: "신형 골프 GTI 대비 100만 원 차이인 20주년 블랙 에디션(5,275만 원)의 200만 원 상당 5년 소모품 패키지, 전용 허니콤 데칼, 48개월 무이자 금융 혜택과 실인도금 5,684만 원을 상세 분석합니다.",
+            content: "폭스바겐 골프 GTI 20주년 블랙 에디션 100만 원 차이 5년 소모품 혜택과 유지비 비교...",
+            isHidden: false
+        },
+        {
+            id: 8,
+            slug: "2026-renault-grand-koleos-2027my-e-tech-hybrid-iconic-price-cut-warranty-review.html",
+            title: "그랑 콜레오스 E-Tech 하이브리드 2027년형 15.7km/L 연비와 5년 유지비 분석",
+            category: "신차소식",
+            author: "차를 쓰다",
+            date: "2026-09-14",
+            views: "0",
+            thumb: "images/posts/2026-renault-grand-koleos-2027my-e-tech-hybrid-iconic-price-cut-warranty-review/thumb.jpg",
+            link: "entry/2026-renault-grand-koleos-2027my-e-tech-hybrid-iconic-price-cut-warranty-review.html",
+            desc: "2027년형 르노 그랑 콜레오스 E-Tech 하이브리드 주력 트림 아이코닉 45만 원 인하(4,152만 원)와 7년 14만km 무상 보증, 복합 15.7km/L 연비 및 4,437만 원 실인도금 기준 5년 유류비와 자동차세를 심층 분석합니다.",
+            content: "그랑 콜레오스 E-Tech 하이브리드 2027년형 15.7km/L 연비와 5년 유지비 분석...",
+            isHidden: false
+        },
+        {
+            id: 7,
+            slug: "2026-highway-bus-lane-9seater-fine-penalty-points-guide.html",
+            title: "고속도로 버스전용차로 9인승 6인 이상 탑승 기준과 무인 단속 카메라 과태료 벌점 감경 요령",
+            category: "포커스",
+            author: "차를 쓰다",
+            date: "2026-09-13",
+            views: "0",
+            thumb: "images/posts/2026-highway-bus-lane-9seater-fine-penalty-points-guide/thumb.jpg",
+            link: "entry/2026-highway-bus-lane-9seater-fine-penalty-points-guide.html",
+            desc: "9인승 카니발·스타리아의 고속도로 버스전용차로 6인 이상 탑승 인정 기준과 짙은 틴팅으로 인한 무인 단속 카메라 오인 적발 시 이파인 15일 의견진술 소명 절차 및 과태료 9만 원 사전통지서 수령 시 범칙금 전환에 따른 벌점 30점 면허정지 사각지대 방어 요령을 입체 분석합니다.",
+            content: "고속도로 버스전용차로 9인승 6인 이상 탑승 기준과 무인 단속 카메라 과태료 벌점 감경 요령...",
+            isHidden: false
+        },
+        {
+            id: 6,
+            slug: "2026-real-sdv-vs-fake-screen-marketing-guide.html",
+            title: "테슬라처럼 차가 스스로 업그레이드되는 진짜 SDV와 화면만 커진 마케팅용 SDV 구별법",
+            category: "포커스",
+            author: "차를 쓰다",
+            date: "2026-09-12",
+            views: "0",
+            thumb: "images/posts/2026-real-sdv-vs-fake-screen-marketing-guide/thumb.jpg",
+            link: "entry/2026-real-sdv-vs-fake-screen-marketing-guide.html",
+            desc: "화면만 번쩍인다고 다 같은 스마트카일까요? 테슬라처럼 밤사이 차 성능이 스스로 진화하는 진짜 SDV와 단순 내비게이션 업데이트에 머문 마케팅용 차량의 결정적 차이를 밝힙니다.",
+            content: "테슬라처럼 차가 스스로 업그레이드되는 진짜 SDV와 화면만 커진 마케팅용 SDV 구별법...",
+            isHidden: false
+        },
+        {
+            id: 5,
+            slug: "2026-driver-license-renewal-online-guide.html",
+            title: "운전면허 적성검사 온라인 5분 신청과 건강검진 시력 데이터 자동 연동 실패 대처법",
+            category: "포커스",
+            author: "차를 쓰다",
+            date: "2026-09-11",
+            views: "0",
+            thumb: "images/posts/2026-driver-license-renewal-online-guide/thumb.jpg",
+            link: "entry/2026-driver-license-renewal-online-guide.html",
+            desc: "2026년 운전면허 1종 2종 적성검사 온라인 5분 신청법과 국민건강보험 시력 데이터 자동 연동, 시력 0.8 미달 시 대처법, 갱신 기간 초과 과태료 3만 원 및 면허취소 방어 요령을 총정리합니다.",
+            content: "운전면허 적성검사 온라인 5분 신청과 건강검진 시력 데이터 자동 연동 실패 대처법...",
+            isHidden: false
+        },
+        {
+            id: 4,
+            slug: "2026-hybrid-used-car-battery-life-voltage-delta-car-scanner-guide.html",
+            title: "하이브리드 중고차 배터리 수명 진단법과 스마트폰 OBD2 전압 편차 가이드",
+            category: "포커스",
+            author: "차를 쓰다",
+            date: "2026-09-08",
+            views: "0",
+            thumb: "images/posts/2026-hybrid-used-car-battery-life-voltage-delta-car-scanner-guide/thumb.jpg",
+            link: "entry/2026-hybrid-used-car-battery-life-voltage-delta-car-scanner-guide.html",
+            desc: "그랜저 IG 등 10년 차 하이브리드 중고차 구매 전후 스마트폰과 OBD2 카스캐너로 배터리 셀 전압 편차 0.02V를 1분 만에 측정하고 350만 원 교체비를 아끼는 실전 가이드입니다.",
+            content: "하이브리드 중고차 배터리 수명 진단법과 스마트폰 OBD2 전압 편차 가이드...",
+            isHidden: false
+        },
+        {
+            id: 3,
+            slug: "2026-mitsubishi-pajero-5th-gen-offroad-specs-import-analysis.html",
+            title: "1억대 정통 오프로더 대신할 4천만 원대 대안? 신형 파제로 국내 직수입 현실성",
+            category: "신차소식",
+            author: "차를 쓰다",
+            date: "2026-09-08",
+            views: "0",
+            thumb: "images/posts/2026-mitsubishi-pajero-5th-gen-offroad-specs-import-analysis/thumb.jpg",
+            link: "entry/2026-mitsubishi-pajero-5th-gen-offroad-specs-import-analysis.html",
+            desc: "미쓰비시가 7년 만에 부활시킨 5세대 신형 파제로의 래더 프레임 제원과 2.4 디젤 토크, 1억대 랭글러·브롱코 대비 4천만 원대 가성비 및 국내 직수입 총비용과 현실성을 심층 분석합니다.",
+            content: "1억대 정통 오프로더 대신할 4천만 원대 대안? 신형 파제로 국내 직수입 현실성...",
+            isHidden: false
+        },
+        {
+            id: 2,
+            slug: "2026-benz-cla-ev-autonomous-driving-nvidia-orin-fsd-comparison.html",
+            title: "테슬라 FSD 꺾고 도심 자율주행 1호 노리는 벤츠 신형 CLA, 엔비디아 칩셋 누락 트림 주의점과 실속 가이드",
+            category: "신차소식",
+            author: "차를 쓰다",
+            date: "2026-09-07",
+            views: "0",
+            thumb: "images/posts/2026-benz-cla-ev-autonomous-driving-nvidia-orin-fsd-comparison/thumb.jpg",
+            link: "entry/2026-benz-cla-ev-autonomous-driving-nvidia-orin-fsd-comparison.html",
+            desc: "신형 일렉트릭 벤츠 CLA가 테슬라 FSD를 제치고 국내 1호 도심 자율주행을 노리는 법적·기술적 배경과 5,290만 원 에센셜 트림의 엔비디아 칩셋 누락 진실, 실속 추천 트림을 심층 분석합니다.",
+            content: "테슬라 FSD 꺾고 도심 자율주행 1호 노리는 벤츠 신형 CLA, 엔비디아 칩셋 누락 트림 주의점과 실속 가이드...",
+            isHidden: false
+        },
+        {
+            id: 1,
+            slug: "2026-hyundai-ioniq-v-china-launch-korea-price-analysis.html",
+            title: "현대 아이오닉 V 중국 사전계약 개시, 2천만 원대 출고액과 국내 도입 가능성 총정리",
+            category: "신차소식",
+            author: "차를 쓰다",
+            date: "2026-09-06",
+            views: "0",
+            thumb: "images/posts/2026-hyundai-ioniq-v-china-launch-korea-price-analysis/thumb.jpg",
+            link: "entry/2026-hyundai-ioniq-v-china-launch-korea-price-analysis.html",
+            desc: "북경현대가 사전계약에 돌입한 준대형 전기 세단 아이오닉 V의 2,400만 원대 출고액과 27인치 4K 스크린, 모멘타 자율주행 스펙 및 국내 도입 가능성을 심층 분석합니다.",
+            content: "현대 아이오닉 V 중국 사전계약 개시, 2천만 원대 출고액과 국내 도입 가능성 총정리...",
             isHidden: false
         }
     ];
