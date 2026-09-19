@@ -1,3 +1,11 @@
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+Disallow: /admin.html
+Disallow: /cdn-cgi/
+
 User-agent: *
 Disallow: /admin.html
 Disallow: /cdn-cgi/

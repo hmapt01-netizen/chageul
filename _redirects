@@ -1,2 +1,7 @@
 # 🚀 차를 쓰다 (CHAGEUL) 구글 서치콘솔 SEO 100% 보존 리다이렉트 룰
 /posts/*    /entry/:splat    301
+
+# 301 redirects for pruned thin posts
+/entry/kia-seltos-hybrid-review-2026.html    /    301
+/entry/2026-hyundai-avante-cn8-reveal.html    /    301
+/entry/뷰익-일렉트라-E7.html    /    301
