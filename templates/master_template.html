@@ -261,6 +261,114 @@ figure.post-photo-figure figcaption,
             line-height: 1.4 !important;
         }
 
+        /* 📊 프리미엄 모바일 반응형 데이터 테이블 표준 (다크 네이비 헤더 + 자동 보장 스타일) */
+        .custom-data-table-wrap {
+            width: 100% !important;
+            overflow-x: auto !important;
+            -webkit-overflow-scrolling: touch !important;
+            margin: 32px 0 !important;
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 12px !important;
+            background: #ffffff !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02) !important;
+        }
+        .custom-data-table-wrap::-webkit-scrollbar {
+            height: 6px;
+        }
+        .custom-data-table-wrap::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        table.custom-data-table,
+        .article-body-content table {
+            width: 100% !important;
+            border-collapse: collapse !important;
+            min-width: 560px !important;
+            font-size: 0.93rem !important;
+            text-align: center !important;
+            line-height: 1.6 !important;
+            border: none !important;
+        }
+        .custom-data-table thead,
+        .article-body-content table thead,
+        .custom-data-table thead tr,
+        .article-body-content table thead tr {
+            background: #0f172a !important;
+            color: #ffffff !important;
+        }
+        .custom-data-table th,
+        .article-body-content table th {
+            padding: 13px 10px !important;
+            border: 1px solid #334155 !important;
+            font-weight: 700 !important;
+            font-size: 0.92rem !important;
+            letter-spacing: -0.2px !important;
+            background: #0f172a !important;
+            color: #ffffff !important;
+            text-align: center !important;
+        }
+        .custom-data-table th.point-col,
+        .custom-data-table th[style*="#0284c7"],
+        .article-body-content table th.point-col,
+        .article-body-content table th[style*="#0284c7"] {
+            background: #0284c7 !important;
+            color: #ffffff !important;
+        }
+        .custom-data-table tbody tr:nth-child(even),
+        .article-body-content table tbody tr:nth-child(even) {
+            background: #f8fafc !important;
+        }
+        .custom-data-table tbody tr:nth-child(odd),
+        .article-body-content table tbody tr:nth-child(odd) {
+            background: #ffffff !important;
+        }
+        .custom-data-table tbody tr:hover,
+        .article-body-content table tbody tr:hover {
+            background: #f1f5f9 !important;
+        }
+        .custom-data-table td,
+        .article-body-content table td {
+            padding: 12px 10px !important;
+            border: 1px solid #e2e8f0 !important;
+            color: #334155 !important;
+            text-align: center !important;
+        }
+        .custom-data-table td.point-col {
+            color: #0284c7 !important;
+            font-weight: 700 !important;
+        }
+
+        /* 💻 PC 데스크톱 (769px 이상): 너비 100% 핏 */
+        @media (min-width: 769px) {
+            table.custom-data-table,
+            .article-body-content table {
+                min-width: 100% !important;
+                table-layout: auto !important;
+            }
+            .custom-data-table th,
+            .custom-data-table td,
+            .article-body-content table th,
+            .article-body-content table td {
+                white-space: normal !important;
+                word-break: keep-all !important;
+            }
+        }
+
+        /* 📱 모바일 스마트폰 (768px 이하): 가로 터치 스크롤 보장 */
+        @media (max-width: 768px) {
+            table.custom-data-table,
+            .article-body-content table {
+                min-width: 520px !important;
+            }
+            .custom-data-table th,
+            .custom-data-table td,
+            .article-body-content table th,
+            .article-body-content table td {
+                padding: 10px 10px !important;
+                font-size: 0.88rem !important;
+            }
+        }
+
         /* 🥗 레시피 카드 리스트 (모던 미니멀 카드 & 컴팩트 여백) */
         .recipe-card-list {
             display: flex !important;
@@ -461,78 +569,7 @@ figure.post-photo-figure figcaption,
         .sidebar-calc-card .btn-calc-action:hover {
             background: #1e293b !important;
         }
-            /* 📊 테이블 PC 무스크롤 100% 최적화 */
-        @media (min-width: 769px) {
-            .custom-data-table {
-                min-width: 100% !important;
-                table-layout: auto !important;
-            }
-            .custom-data-table th,
-            .custom-data-table td {
-                white-space: normal !important;
-                word-break: keep-all !important;
-                padding: 11px 12px !important;
-            }
-        }
-            /* 📊 모바일 반응형 표 (Rule 2 영구 표준: PC 무스크롤 100% / 모바일 터치 가로스크롤) */
-        .custom-data-table-wrap {
-            width: 100% !important;
-            margin: 24px 0 !important;
-            border-radius: 12px !important;
-            border: 1px solid #e2e8f0 !important;
-            background: #ffffff !important;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.02) !important;
-            overflow-x: auto !important;
-            -webkit-overflow-scrolling: touch !important;
-        }
-        .custom-data-table {
-            width: 100% !important;
-            border-collapse: collapse !important;
-            text-align: left !important;
-            font-size: 0.9rem !important;
-        }
-        .custom-data-table th {
-            background: #f8fafc !important;
-            color: #1e293b !important;
-            font-weight: 750 !important;
-            padding: 11px 12px !important;
-            border-bottom: 2px solid #e2e8f0 !important;
-        }
-        .custom-data-table td {
-            padding: 11px 12px !important;
-            border-bottom: 1px solid #f1f5f9 !important;
-            color: #334155 !important;
-            line-height: 1.55 !important;
-        }
-        .custom-data-table tr:last-child td {
-            border-bottom: none !important;
-        }
 
-        /* 💻 PC 데스크톱 (769px 이상): 4개 열 전체가 가로 스크롤 없이 100% 핏 */
-        @media (min-width: 769px) {
-            .custom-data-table {
-                min-width: 100% !important;
-                table-layout: auto !important;
-            }
-            .custom-data-table th,
-            .custom-data-table td {
-                white-space: normal !important;
-                word-break: keep-all !important;
-            }
-        }
-
-        /* 📱 모바일 스마트폰 (768px 이하): 글자 찌그러짐 원천 차단 + 시원한 터치 가로스크롤 유지 */
-        @media (max-width: 768px) {
-            body.tistory-single-post { padding-top: 52px !important; }
-            .custom-data-table {
-                min-width: 520px !important;
-            }
-            .custom-data-table th,
-            .custom-data-table td {
-                white-space: nowrap !important;
-                padding: 10px 14px !important;
-            }
-        }
             /* 📱 모바일 헤더 스마트폰 최적화 (로고 거대화 100% 원천 차단) */
         .mobile-tistory-header {
             display: none;
@@ -682,17 +719,7 @@ figure.post-photo-figure figcaption,
             aspect-ratio: unset !important;
             object-fit: contain !important;
         }
-        figure.article-featured-img-box figcaption,
-        .article-featured-img-box figcaption {
-            font-size: 0.82rem !important;
-            font-weight: 400 !important;
-            color: #94a3b8 !important;
-            text-align: center !important;
-            margin-top: 8px !important;
-            line-height: 1.5 !important;
-            letter-spacing: -0.2px !important;
-            display: block !important;
-        }
+
             /* 🌟 대표 메인 화보 & 본문 모든 화보 16:9 풀와이드 100% 꽉 채움 표준 */
         figure.article-featured-img-box,
         .article-featured-img-box,
@@ -733,14 +760,16 @@ figure.post-photo-figure figcaption,
         }
         figure.article-featured-img-box figcaption,
         .article-featured-img-box figcaption,
+        .article-featured-img-box div[style*="color:#64748b"],
         figure.post-photo-figure figcaption,
-        .post-photo-figure figcaption {
-            font-size: 0.82rem !important;
+        .post-photo-figure figcaption,
+        .article-body-content p[style*="color:#64748b"] {
+            font-size: 0.88rem !important;
             font-weight: 400 !important;
-            color: #94a3b8 !important;
+            color: #64748b !important;
             text-align: center !important;
             margin-top: 8px !important;
-            line-height: 1.5 !important;
+            line-height: 1.4 !important;
             letter-spacing: -0.2px !important;
             display: block !important;
         }
@@ -855,6 +884,33 @@ figure.post-photo-figure figcaption,
             color: #64748b !important;
             margin: 0 !important;
             letter-spacing: -0.2px !important;
+        }
+
+        /* 🔗 본문 내부 맞링크 알약 뱃지 (Internal Link Pill - 차를 쓰다) */
+        .inline-pill-link {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 4px !important;
+            background: #e0f2fe !important;
+            color: #0369a1 !important;
+            padding: 2px 10px !important;
+            border-radius: 6px !important;
+            border: 1px solid #bae6fd !important;
+            font-size: 0.93rem !important;
+            font-weight: 700 !important;
+            text-decoration: none !important;
+            vertical-align: middle !important;
+            margin: 0 3px !important;
+            line-height: 1.5 !important;
+            transition: all 0.2s ease !important;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+        }
+        .inline-pill-link:hover {
+            background: #bae6fd !important;
+            color: #0284c7 !important;
+            border-color: #7dd3fc !important;
+            box-shadow: 0 2px 6px rgba(2, 132, 199, 0.2) !important;
+            transform: translateY(-1px) !important;
         }
     
         .article-body-content h2, .article-body-content h3, #faq { scroll-margin-top: 75px !important; }

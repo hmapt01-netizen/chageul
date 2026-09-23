@@ -2820,31 +2820,59 @@ body.is-home .naver-mobile-top-bar {
 .custom-data-table {
     width: 100% !important;
     border-collapse: collapse !important;
-    text-align: left !important;
-    font-size: 0.9rem !important;
+    text-align: center !important;
+    font-size: 0.92rem !important;
+}
+
+.custom-data-table thead tr {
+    background: #0f172a !important;
+    color: #ffffff !important;
 }
 
 .custom-data-table th {
-    background: #f8fafc !important;
-    color: #1e293b !important;
-    font-weight: 750 !important;
-    padding: 11px 12px !important;
-    border-bottom: 2px solid #e2e8f0 !important;
-    font-size: 0.88rem !important;
+    background: #0f172a !important;
+    color: #ffffff !important;
+    font-weight: 700 !important;
+    padding: 12px 10px !important;
+    border: 1px solid #334155 !important;
+    font-size: 0.92rem !important;
     letter-spacing: -0.2px !important;
+    text-align: center !important;
+}
+
+.custom-data-table th.point-col {
+    background: #0284c7 !important;
+    color: #ffffff !important;
+}
+
+.custom-data-table tbody tr:nth-child(even) {
+    background: #f8fafc !important;
+}
+
+.custom-data-table tbody tr:nth-child(odd) {
+    background: #ffffff !important;
+}
+
+.custom-data-table tbody tr:hover {
+    background: #f1f5f9 !important;
 }
 
 .custom-data-table td {
-    padding: 11px 12px !important;
-    border-bottom: 1px solid #f1f5f9 !important;
+    padding: 11px 10px !important;
+    border: 1px solid #e2e8f0 !important;
     color: #334155 !important;
     line-height: 1.55 !important;
-    font-size: 0.88rem !important;
-    word-break: keep-all !important;
+    font-size: 0.9rem !important;
+    text-align: center !important;
+}
+
+.custom-data-table td.point-col {
+    color: #0284c7 !important;
+    font-weight: 700 !important;
 }
 
 .custom-data-table tr:last-child td {
-    border-bottom: none !important;
+    border-bottom: 1px solid #e2e8f0 !important;
 }
 
 /* 💻 PC 데스크톱 (769px 이상): 가로 스크롤 없이 4열 전체 100% 한눈에 쏙 들어옴 */
@@ -2856,18 +2884,20 @@ body.is-home .naver-mobile-top-bar {
     .custom-data-table th,
     .custom-data-table td {
         white-space: normal !important;
+        word-break: keep-all !important;
     }
 }
 
 /* 📱 모바일 스마트폰 (768px 이하): 찌그러짐 방지용 터치 가로스크롤 */
 @media (max-width: 768px) {
     .custom-data-table {
-        min-width: 480px !important;
+        min-width: 520px !important;
     }
     .custom-data-table th,
     .custom-data-table td {
         white-space: nowrap !important;
-        padding: 10px 12px !important;
+        padding: 10px 10px !important;
+        font-size: 0.86rem !important;
     }
 }
 
