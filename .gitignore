@@ -9,3 +9,8 @@ Thumbs.db
 
 service_account.json
 *.json.key
+
+# Python
+__pycache__/
+*.pyc
+*.bak

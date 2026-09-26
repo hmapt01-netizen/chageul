@@ -517,6 +517,7 @@
 
         if (val === ADMIN_PASS || val === '8809') {
             sessionStorage.setItem('chageul_admin_session', 'authorized');
+            localStorage.setItem('chageul_admin_auth', 'authorized');
             if (err) err.style.display = 'none';
             unlockAdmin();
         } else {

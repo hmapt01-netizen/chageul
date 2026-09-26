@@ -245,3 +245,11 @@ function legacyCopyText(text) {
     function renderEditorPickCard() {
         return;
     }
+
+    // ✍️ [차를 쓰다 운영자 직접 편집 엔진 로드] (글 상세 페이지 entry/*.html 접속 시 자동 연동)
+    if (typeof window !== 'undefined' && window.location.pathname.includes('/entry/')) {
+        const editorScript = document.createElement('script');
+        editorScript.src = '../js/entry-editor.js?v=20260927_savefix_v3';
+        editorScript.defer = true;
+        document.head.appendChild(editorScript);
+    }

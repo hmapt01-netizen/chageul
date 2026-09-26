@@ -72,7 +72,66 @@ try {
             continue
         }
 
+        $method = $tokens[0].ToUpper()
         $rawPath = $tokens[1].Split('?')[0]
+
+        # POST /api/save-entry API 지원
+        if ($method -eq "POST" -and $rawPath -eq "/api/save-entry") {
+            $contentLength = 0
+            while ($true) {
+                $line = $reader.ReadLine()
+                if ([string]::IsNullOrEmpty($line)) { break }
+                if ($line -match '^Content-Length:\s*(\d+)') {
+                    $contentLength = [int]$matches[1]
+                }
+            }
+            $bodyBuffer = New-Object char[] $contentLength
+            if ($contentLength -gt 0) {
+                [void]$reader.ReadBlock($bodyBuffer, 0, $contentLength)
+            }
+            $bodyJson = New-Object string ($bodyBuffer, 0, $contentLength)
+            
+            try {
+                $data = $bodyJson | ConvertFrom-Json
+                $slug = $data.slug
+                if (-not $slug.EndsWith(".html")) { $slug += ".html" }
+                $targetFile = Join-Path $webRoot "entry\$slug"
+                
+                if (Test-Path $targetFile) {
+                    $html = [System.IO.File]::ReadAllText($targetFile, [System.Text.Encoding]::UTF8)
+                    if ($data.title) {
+                        $html = [regex]::Replace($html, '(<h1[^>]*class=["''][^"'']*article-title[^"'']*["''][^>]*>)([\s\S]*?)(</h1>)', "`$1`n                    $($data.title)`n                `$3", [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+                    }
+                    if ($data.bodyContent) {
+                        $html = [regex]::Replace($html, '(<div[^>]*class=["''][^"'']*article-body-content[^"'']*["''][^>]*>)([\s\S]*?)(</div>\s*</article>)', "`$1`n                    $($data.bodyContent)`n                `$3", [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+                    }
+                    [System.IO.File]::WriteAllText($targetFile, $html, [System.Text.Encoding]::UTF8)
+                    
+                    $resBytes = [System.Text.Encoding]::UTF8.GetBytes('{"success":true,"message":"성공적으로 저장되었습니다."}')
+                    $respHeader = "HTTP/1.1 200 OK`r`nContent-Type: application/json; charset=utf-8`r`nAccess-Control-Allow-Origin: *`r`nContent-Length: $($resBytes.Length)`r`nConnection: close`r`n`r`n"
+                    $respHeaderBytes = [System.Text.Encoding]::UTF8.GetBytes($respHeader)
+                    $stream.Write($respHeaderBytes, 0, $respHeaderBytes.Length)
+                    $stream.Write($resBytes, 0, $resBytes.Length)
+                } else {
+                    $resBytes = [System.Text.Encoding]::UTF8.GetBytes('{"success":false,"error":"파일을 찾을 수 없습니다."}')
+                    $respHeader = "HTTP/1.1 404 Not Found`r`nContent-Type: application/json; charset=utf-8`r`nAccess-Control-Allow-Origin: *`r`nContent-Length: $($resBytes.Length)`r`nConnection: close`r`n`r`n"
+                    $respHeaderBytes = [System.Text.Encoding]::UTF8.GetBytes($respHeader)
+                    $stream.Write($respHeaderBytes, 0, $respHeaderBytes.Length)
+                    $stream.Write($resBytes, 0, $resBytes.Length)
+                }
+            } catch {
+                $errObj = @{ success = $false; error = $_.Exception.Message } | ConvertTo-Json
+                $resBytes = [System.Text.Encoding]::UTF8.GetBytes($errObj)
+                $respHeader = "HTTP/1.1 500 Internal Server Error`r`nContent-Type: application/json; charset=utf-8`r`nAccess-Control-Allow-Origin: *`r`nContent-Length: $($resBytes.Length)`r`nConnection: close`r`n`r`n"
+                $respHeaderBytes = [System.Text.Encoding]::UTF8.GetBytes($respHeader)
+                $stream.Write($respHeaderBytes, 0, $respHeaderBytes.Length)
+                $stream.Write($resBytes, 0, $resBytes.Length)
+            }
+            $stream.Flush()
+            $client.Close()
+            continue
+        }
+
         $relPath = [System.Uri]::UnescapeDataString($rawPath.TrimStart('/'))
         if ([string]::IsNullOrWhiteSpace($relPath)) {
             $relPath = "index.html"
