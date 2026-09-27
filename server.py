@@ -29,6 +29,14 @@ ENTRY_DIR = os.path.join(BASE_DIR, 'entry')
 DATA_DIR = os.path.join(PROJECT_ROOT, 'data')
 POSTS_DB_PATH = os.path.join(DATA_DIR, 'posts_db.json')
 
+TOOLS_DIR = os.path.join(PROJECT_ROOT, 'tools')
+if TOOLS_DIR not in sys.path:
+    sys.path.insert(0, TOOLS_DIR)
+try:
+    from paragraph_splitter import format_body_readability
+except ImportError:
+    format_body_readability = lambda x, **kw: x
+
 def get_local_ip():
     try:
         s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -101,6 +109,8 @@ class ChageulServerHandler(SimpleHTTPRequestHandler):
             slug = data.get('slug', '').strip()
             title = data.get('title', '').strip()
             body_content = data.get('bodyContent', '').strip()
+            if body_content:
+                body_content = format_body_readability(body_content, max_chars=220)
 
             if not slug:
                 raise ValueError("슬러그(파일명)가 누락되었습니다.")
@@ -110,6 +120,7 @@ class ChageulServerHandler(SimpleHTTPRequestHandler):
                 slug += '.html'
 
             target_file = os.path.join(ENTRY_DIR, slug)
+            html_text = ""
             if not os.path.exists(target_file):
                 # slug가 파일명과 다를 경우 대비해 검색
                 matched = None
@@ -120,15 +131,44 @@ class ChageulServerHandler(SimpleHTTPRequestHandler):
                 if matched:
                     target_file = matched
                 else:
-                    raise FileNotFoundError(f"파일을 찾을 수 없습니다: {slug}")
+                    # 신규 포스트 자동 생성 모드: 마스터 템플릿으로부터 신규 HTML 파일 생성
+                    tpl_path = os.path.join(BASE_DIR, 'templates', 'master_template.html')
+                    if os.path.exists(tpl_path):
+                        with open(tpl_path, 'r', encoding='utf-8-sig') as f_tpl:
+                            html_text = f_tpl.read()
+                    else:
+                        html_text = "<!DOCTYPE html><html lang='ko'><head><meta charset='utf-8'><title>{{META_TITLE}}</title></head><body><main><article><h1 class='article-title'>{{H1_TITLE}}</h1><div class='article-body-content'>{{BODY_CONTENT_HTML}}</div></article></main></body></html>"
+                    
+                    category = data.get('category', '신차소식')
+                    thumb = data.get('thumb', 'images/logo.png')
+                    desc = data.get('desc', title)
+                    now_date = time.strftime('%Y.%m.%d')
+                    
+                    html_text = html_text.replace("{{META_TITLE}}", title or slug)
+                    html_text = html_text.replace("{{H1_TITLE}}", title or slug)
+                    html_text = html_text.replace("{{META_DESCRIPTION}}", desc)
+                    html_text = html_text.replace("{{SHORT_TITLE}}", title or slug)
+                    html_text = html_text.replace("{{CATEGORY_TITLE}}", category)
+                    html_text = html_text.replace("{{PUBLISHED_DATE}}", now_date)
+                    html_text = html_text.replace("{{LATEST_BADGE_HTML}}", "")
+                    html_text = html_text.replace("{{ACADEMIC_SOURCE}}", "자동차공학·제조사 공식 제원 기반")
+                    html_text = html_text.replace("{{FEATURED_IMAGE_HTML}}", "")
+                    html_text = html_text.replace("{{BODY_CONTENT_HTML}}", body_content if body_content.startswith("<") else f"<p>{body_content}</p>")
+                    html_text = html_text.replace("{{FAQ_SECTION_HTML}}", "")
+                    html_text = html_text.replace("{{ACADEMIC_REFERENCES_HTML}}", "")
+                    html_text = html_text.replace("{{RELATED_ARTICLES_HTML}}", "")
+                    html_text = html_text.replace("{{JSON_LD_ARTICLE}}", "{}")
+                    html_text = html_text.replace("{{JSON_LD_FAQ_SCRIPT}}", "")
+                    html_text = html_text.replace("{{REGISTRY_JSON_INLINE}}", "[]")
 
-            # 1. 파일 백업
-            bak_file = target_file + '.bak'
-            shutil.copy2(target_file, bak_file)
+            if os.path.exists(target_file):
+                # 1. 파일 백업
+                bak_file = target_file + '.bak'
+                shutil.copy2(target_file, bak_file)
 
-            # 2. 기존 HTML 읽기
-            with open(target_file, 'r', encoding='utf-8') as f:
-                html_text = f.read()
+                # 2. 기존 HTML 읽기
+                with open(target_file, 'r', encoding='utf-8') as f:
+                    html_text = f.read()
 
             # 3. 제목 업데이트 (title이 제공된 경우)
             if title:
@@ -154,7 +194,7 @@ class ChageulServerHandler(SimpleHTTPRequestHandler):
                 f.write(html_text)
 
             # 6. posts_db.json 동기화 (존재 시)
-            self.sync_posts_db(slug, title, body_content)
+            self.sync_posts_db(slug, title, body_content, data)
 
             print(f"[OK] Entry saved successfully: {os.path.basename(target_file)}")
 
@@ -175,28 +215,70 @@ class ChageulServerHandler(SimpleHTTPRequestHandler):
             self.end_headers()
             self.wfile.write(json.dumps({'success': False, 'error': str(e)}, ensure_ascii=False).encode('utf-8'))
 
-    def sync_posts_db(self, slug, title, body_content):
+    def extract_pure_body_html(self, body_content):
+        if not body_content:
+            return ""
+        markers = ['id="faq"', "id='faq'", 'class="ref-box"', "class='ref-box'", 'class="related-articles-section"', "class='related-articles-section'", 'class="comment-section"', "class='comment-section'", 'id="commentSectionWrapper"', "id='commentSectionWrapper'"]
+        cuts = [body_content.find(m) for m in markers if body_content.find(m) != -1]
+        if cuts:
+            first_cut = min(cuts)
+            tag_open = body_content.rfind('<', 0, first_cut)
+            return body_content[:tag_open if tag_open != -1 else first_cut].strip()
+        return body_content.strip()
+
+    def sync_posts_db(self, slug, title, body_content, data=None):
         try:
-            if not os.path.exists(POSTS_DB_PATH):
-                return
-            with open(POSTS_DB_PATH, 'r', encoding='utf-8') as f:
-                db_data = json.load(f)
-
+            target_db_paths = [
+                POSTS_DB_PATH,
+                os.path.join(BASE_DIR, 'data', 'posts_db.json')
+            ]
+            clean_body = self.extract_pure_body_html(body_content)
             slug_base = os.path.basename(slug)
-            changed = False
-            for item in db_data:
-                item_slug = item.get('slug', '')
-                if item_slug == slug_base or item_slug.replace('.html', '') == slug_base.replace('.html', ''):
-                    if title:
-                        item['fullTitle'] = title
-                        item['title'] = title[:35]
-                    changed = True
-                    break
 
-            if changed:
-                with open(POSTS_DB_PATH, 'w', encoding='utf-8') as f:
-                    json.dump(db_data, f, ensure_ascii=False, indent=2)
-                print(f"[OK] posts_db.json synchronized for {slug_base}")
+            for db_p in target_db_paths:
+                if not os.path.exists(db_p):
+                    continue
+                with open(db_p, 'r', encoding='utf-8-sig') as f:
+                    db_data = json.load(f)
+
+                changed = False
+                matched = False
+                for item in db_data:
+                    item_slug = item.get('slug', '')
+                    if item_slug == slug_base or item_slug.replace('.html', '') == slug_base.replace('.html', ''):
+                        matched = True
+                        if title:
+                            item['fullTitle'] = title
+                            item['title'] = title
+                        if clean_body and len(clean_body) >= 500:
+                            item['bodyHtml'] = clean_body
+                        changed = True
+                        break
+
+                if not matched and data:
+                    new_slug = slug_base if slug_base.endswith('.html') else slug_base + '.html'
+                    new_item = {
+                        "id": len(db_data) + 1,
+                        "slug": new_slug,
+                        "title": title or data.get('title', ''),
+                        "fullTitle": title or data.get('title', ''),
+                        "category": data.get('category', '신차소식'),
+                        "author": data.get('author', '차를 쓰다'),
+                        "date": time.strftime('%Y. %m. %d.'),
+                        "views": "0",
+                        "thumb": data.get('thumb', 'images/logo.png'),
+                        "link": "entry/" + new_slug,
+                        "desc": data.get('desc', title),
+                        "bodyHtml": clean_body,
+                        "isHidden": False
+                    }
+                    db_data.insert(0, new_item)
+                    changed = True
+
+                if changed:
+                    with open(db_p, 'w', encoding='utf-8-sig') as f:
+                        json.dump(db_data, f, ensure_ascii=False, indent=2)
+                    print(f"[OK] {os.path.basename(db_p)} synchronized for {slug_base}")
         except Exception as e:
             print(f"[WARN] DB sync error: {e}")
 
