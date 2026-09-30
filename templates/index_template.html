@@ -46,13 +46,13 @@
     <style id="ironcladLayoutIsolation">
         /* 💻 [PC 데스크톱] 모바일 모든 레이아웃 및 모바일 더보기 버튼 100% 완전 원천 차단 */
         @media screen and (min-width: 769px) {
-            .mobile-tistory-layout,
-            .mobile-tistory-layout *,
+            .mobile-chageul-layout,
+            .mobile-chageul-layout *,
             #mobileLoadMoreWrapper,
             #mobileLoadMoreWrapper *,
             #btnMobileLoadMore,
-            #tistoryFeedContainer,
-            #tistoryFeedContainer *,
+            #chageulFeedContainer,
+            #chageulFeedContainer *,
             .category-trigger-bar,
             .popular-posts-card-box,
             .highlight-banner-card,
@@ -96,7 +96,7 @@
                 opacity: 0 !important;
                 pointer-events: none !important;
             }
-            .mobile-tistory-layout {
+            .mobile-chageul-layout {
                 display: block !important;
                 visibility: visible !important;
                 opacity: 1 !important;
@@ -106,7 +106,7 @@
             #mobileLoadMoreWrapper {
                 display: block !important;
             }
-            .tistory-main-layout {
+            .chageul-main-layout {
                 padding: 8px 14px 24px 14px !important;
                 margin-top: 0 !important;
             }
@@ -124,13 +124,13 @@
         height: 100%;
     }
     .clean-card.card-hidden,
-    .tistory-feed-item.feed-hidden {
+    .chageul-feed-item.feed-hidden {
         display: none !important;
     }
     .clean-card.card-visible {
         display: flex !important;
     }
-    .tistory-feed-item.feed-visible {
+    .chageul-feed-item.feed-visible {
         display: block !important;
     }
     .clean-card > div:nth-child(2) {
@@ -279,13 +279,13 @@
     }
 </style>
     <style id="mobileFeedPerfectStyle">
-    .tistory-feed-list {
+    .chageul-feed-list {
         display: flex !important;
         flex-direction: column !important;
         gap: 20px !important;
         width: 100% !important;
     }
-    .tistory-feed-item {
+    .chageul-feed-item {
         background: #ffffff !important;
         border: 1px solid #e2e8f0 !important;
         border-radius: 14px !important;
@@ -299,7 +299,7 @@
         width: 100% !important;
         box-shadow: 0 2px 8px rgba(0,0,0,0.03) !important;
     }
-    .tistory-feed-item .feed-item-thumb-link {
+    .chageul-feed-item .feed-item-thumb-link {
         display: block !important;
         width: 100% !important;
         height: 190px !important;
@@ -307,21 +307,21 @@
         flex-shrink: 0 !important;
         order: 1 !important;
     }
-    .tistory-feed-item .feed-item-thumb {
+    .chageul-feed-item .feed-item-thumb {
         width: 100% !important;
         height: 100% !important;
         border-radius: 0 !important;
         object-fit: cover !important;
         display: block !important;
     }
-    .tistory-feed-item .feed-item-body {
+    .chageul-feed-item .feed-item-body {
         padding: 16px 18px 16px 18px !important;
         display: flex !important;
         flex-direction: column !important;
         flex: 1 !important;
         order: 2 !important;
     }
-    .tistory-feed-item .feed-item-cat {
+    .chageul-feed-item .feed-item-cat {
         font-size: 0.76rem !important;
         font-weight: 750 !important;
         color: #c26908 !important;
@@ -329,18 +329,18 @@
         display: block !important;
         line-height: 1.2 !important;
     }
-    .tistory-feed-item .feed-item-title {
+    .chageul-feed-item .feed-item-title {
         font-size: 1.05rem !important;
         font-weight: 850 !important;
         color: #111827 !important;
         margin: 3px 0 8px 0 !important;
         line-height: 1.38 !important;
     }
-    .tistory-feed-item .feed-item-title a {
+    .chageul-feed-item .feed-item-title a {
         color: #111827 !important;
         text-decoration: none !important;
     }
-    .tistory-feed-item .feed-item-summary {
+    .chageul-feed-item .feed-item-summary {
         font-size: 0.86rem !important;
         color: #475569 !important;
         line-height: 1.55 !important;
@@ -356,7 +356,7 @@
         -webkit-box-orient: vertical !important;
         overflow: hidden !important;
     }
-    .tistory-feed-item .feed-item-meta {
+    .chageul-feed-item .feed-item-meta {
         font-size: 0.76rem !important;
         color: #94a3b8 !important;
         margin-top: auto !important;
@@ -383,7 +383,7 @@
         .desktop-layout {
             display: block !important;
         }
-        .mobile-tistory-layout {
+        .mobile-chageul-layout {
             display: none !important;
         }
     }
@@ -393,7 +393,7 @@
         .desktop-layout {
             display: none !important;
         }
-        .mobile-tistory-layout {
+        .mobile-chageul-layout {
             display: block !important;
         }
     }
@@ -603,8 +603,8 @@
     <!-- ==========================================================================
          📱 [모바일 스마트폰 레이아웃] 완벽 단일 마스터 레이아웃
          ========================================================================== -->
-    <div class="mobile-tistory-layout">
-        <main class="tistory-main-layout" style="padding: 16px 14px 24px 14px;">
+    <div class="mobile-chageul-layout">
+        <main class="chageul-main-layout" style="padding: 16px 14px 24px 14px;">
 
             <!-- 🚗 1. [시안 B] 모바일 상단 딥 차콜 & 럭셔리 골드 웅장한 브랜드 히어로 카드 -->
             <section class="mobile-brand-hero-strip" style="background:linear-gradient(145deg, #0b1120 0%, #0f172a 50%, #1e293b 100%) !important; border:1px solid #334155 !important; border-radius:20px !important; padding:28px 20px 24px 20px !important; color:#ffffff !important; margin-bottom:18px !important; box-shadow:0 8px 24px rgba(15, 23, 42, 0.22) !important; display:flex !important; flex-direction:column !important; align-items:center !important; text-align:center !important; box-sizing:border-box !important;">
@@ -718,7 +718,7 @@
 
                         <!-- 📚 6. 모바일 풀 와이드 비주얼 카드 스트림 (캡처 디자인 100% 완벽 일치!) -->
             <div id="mobileSearchResultBanner" style="display:none;"></div>
-                        <div class="tistory-feed-list" id="tistoryFeedContainer">
+                        <div class="chageul-feed-list" id="chageulFeedContainer">
 {{MOBILE_FEED_CARDS}}
             </div>
 
@@ -895,7 +895,7 @@
             }
 
             // 3. 모바일 피드 스트림 필터링
-            const allMobFeeds = Array.from(document.querySelectorAll('#tistoryFeedContainer .tistory-feed-item'));
+            const allMobFeeds = Array.from(document.querySelectorAll('#chageulFeedContainer .chageul-feed-item'));
             allMobFeeds.forEach(el => {
                 const link = el.querySelector('a') || (el.getAttribute('onclick') ? { getAttribute: () => el.getAttribute('onclick') } : null);
                 const href = link ? (link.getAttribute('href') || link.getAttribute('onclick') || '') : '';
@@ -1030,7 +1030,7 @@
         applyAdminHiddenFilter();
     }
 
-    function filterTistoryFeed(cat, label) {
+    function filterChageulFeed(cat, label) {
         currentSelectedCategory = cat;
         mobileShown = 6; // Mobile also starts with 6 items
         
@@ -1071,7 +1071,7 @@
         const q = input ? input.value.trim().toLowerCase() : '';
         filterArticlesBySearch(q);
         
-        const targetSection = document.getElementById('desktopCardsGrid') || document.getElementById('tistoryFeedContainer');
+        const targetSection = document.getElementById('desktopCardsGrid') || document.getElementById('chageulFeedContainer');
         if (targetSection && q) {
             targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
@@ -1114,7 +1114,7 @@
         if (catParam) {
             const targetBtn = Array.from(document.querySelectorAll('.clean-nav .nav-cat-btn')).find(b => b.textContent.includes(catParam));
             filterDesktopCategory(catParam, targetBtn);
-            filterTistoryFeed(catParam, catParam);
+            filterChageulFeed(catParam, catParam);
         } else {
             applyAdminHiddenFilter();
         }
@@ -1124,7 +1124,7 @@
     <!-- ==========================================================================
          📱 [모바일 카테고리 팝업 모달 마크업]
          - openCategoryModal() 호출 시 active 클래스가 붙어 화면에 표시됨
-         - 항목 클릭 시 filterTistoryFeed() 실행 후 closeCategoryModal()로 닫힘
+         - 항목 클릭 시 filterChageulFeed() 실행 후 closeCategoryModal()로 닫힘
          ========================================================================== -->
     <div id="categoryModal" class="category-modal" onclick="if(event.target===this)closeCategoryModal()">
         <div class="category-modal-body">
@@ -1133,13 +1133,13 @@
                 <button type="button" class="category-modal-close" onclick="closeCategoryModal()" aria-label="닫기">✕</button>
             </div>
             <ul class="category-modal-list">
-                    <li class="category-modal-item active" onclick="filterTistoryFeed('all', '전체'); closeCategoryModal();">
+                    <li class="category-modal-item active" onclick="filterChageulFeed('all', '전체'); closeCategoryModal();">
                         <span>전체보기</span>
                     </li>
-                    <li class="category-modal-item" onclick="filterTistoryFeed('신차소식', '신차소식'); closeCategoryModal();">
+                    <li class="category-modal-item" onclick="filterChageulFeed('신차소식', '신차소식'); closeCategoryModal();">
                         <span>신차소식</span>
                     </li>
-                    <li class="category-modal-item" onclick="filterTistoryFeed('포커스', '포커스'); closeCategoryModal();">
+                    <li class="category-modal-item" onclick="filterChageulFeed('포커스', '포커스'); closeCategoryModal();">
                         <span>포커스</span>
                     </li>
                 </ul>

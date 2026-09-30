@@ -1,9 +1,9 @@
 /* 📱 모바일 스마트 상단 헤더 스크롤 영구 상단 고정 (Always Fixed Sticky) */
 @media (max-width: 768px) {
-    body.tistory-single-post {
+    body.chageul-single-post {
         padding-top: 52px !important;
     }
-    header.mobile-tistory-header {
+    header.mobile-chageul-header {
         position: fixed !important;
         top: 0 !important;
         left: 0 !important;
@@ -1559,7 +1559,7 @@ footer.clean-footer {
    📱 [티스토리 순정형 모바일 헤더] 좌측 뒤로가기(‹) + 우측 원형 아바타(홈 이동)
    ========================================================================== */
 @media (min-width: 769px) {
-    .mobile-tistory-header {
+    .mobile-chageul-header {
         display: none !important;
     }
 }
@@ -1569,7 +1569,7 @@ footer.clean-footer {
         display: none !important;
     }
     
-    .mobile-tistory-header {
+    .mobile-chageul-header {
         position: sticky !important;
         top: 0 !important;
         left: 0 !important;
@@ -1585,7 +1585,7 @@ footer.clean-footer {
         box-sizing: border-box !important;
     }
 
-    .tistory-btn-back {
+    .chageul-btn-back {
         width: 38px !important;
         height: 38px !important;
         display: flex !important;
@@ -1598,22 +1598,22 @@ footer.clean-footer {
         transition: background 0.15s ease !important;
     }
 
-    .tistory-btn-back:active {
+    .chageul-btn-back:active {
         background: #f1f5f9 !important;
     }
 
-    .tistory-btn-back svg {
+    .chageul-btn-back svg {
         width: 24px !important;
         height: 24px !important;
     }
 
-    .tistory-avatar-link {
+    .chageul-avatar-link {
         display: flex !important;
         align-items: center !important;
         text-decoration: none !important;
     }
 
-    .tistory-circle-avatar {
+    .chageul-circle-avatar {
         width: 36px !important;
         height: 36px !important;
         border-radius: 50% !important;
@@ -1626,7 +1626,7 @@ footer.clean-footer {
         box-sizing: border-box !important;
     }
 
-    .tistory-circle-avatar:active {
+    .chageul-circle-avatar:active {
         transform: scale(0.92) !important;
     }
 }
@@ -1837,7 +1837,7 @@ footer.clean-footer {
    ========================================================================== */
 
 /* 1. 상단 프로필 헤어로 배너 */
-.tistory-profile-hero {
+.chageul-profile-hero {
     background: linear-gradient(160deg, #1e293b 0%, #0f172a 100%);
     color: #ffffff;
     padding: 32px 20px 28px 20px;
@@ -1845,7 +1845,7 @@ footer.clean-footer {
     border-bottom: 1px solid #334155;
 }
 
-.tistory-hero-container {
+.chageul-hero-container {
     max-width: 760px;
     margin: 0 auto;
 }
@@ -1932,7 +1932,7 @@ footer.clean-footer {
 }
 
 /* 2. 메인 컨테이너 (단정 760px) */
-.tistory-main-layout {
+.chageul-main-layout {
     max-width: 760px;
     margin: 0 auto;
     padding: 20px 16px 16px 16px;
@@ -2045,13 +2045,13 @@ footer.clean-footer {
 }
 
 /* 5. 티스토리 1개씩 피드 리스트 (Feed Cards) */
-.tistory-feed-list {
+.chageul-feed-list {
     display: flex;
     flex-direction: column;
     gap: 16px;
 }
 
-.tistory-feed-item {
+.chageul-feed-item {
     background: #ffffff;
     border: 1px solid #e2e8f0;
     border-radius: 12px;
@@ -2065,7 +2065,7 @@ footer.clean-footer {
     position: relative;
 }
 
-.tistory-feed-item:hover {
+.chageul-feed-item:hover {
     transform: translateY(-2px);
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.06);
 }
@@ -2128,7 +2128,7 @@ footer.clean-footer {
     transition: transform 0.2s ease;
 }
 
-.tistory-feed-item:hover .feed-item-thumb {
+.chageul-feed-item:hover .feed-item-thumb {
     transform: scale(1.04);
 }
 
@@ -2231,7 +2231,7 @@ footer.clean-footer {
    ========================================================================== */
 
 /* 상단 프로필 영역: 깨끗한 화이트 & 웜 허니 감성 */
-.tistory-profile-hero {
+.chageul-profile-hero {
     background: #ffffff !important;
     color: #1e293b !important;
     padding: 36px 20px 24px 20px !important;
@@ -2239,7 +2239,7 @@ footer.clean-footer {
     text-align: center !important;
 }
 
-.tistory-hero-container {
+.chageul-hero-container {
     max-width: 680px !important;
     margin: 0 auto !important;
     display: flex !important;
@@ -2287,14 +2287,14 @@ body.is-home .naver-mobile-top-bar {
 /* ==========================================================================
    🍯 [자연스러운 배경 일체형] 흰색 상단 블록 제거 ➔ 페이지 배경색 100% 노출
    ========================================================================== */
-.tistory-profile-hero {
+.chageul-profile-hero {
     background: transparent !important;
     border: none !important;
     padding: 32px 20px 8px 20px !important;
     text-align: center !important;
 }
 
-.tistory-hero-container {
+.chageul-hero-container {
     max-width: 680px !important;
     margin: 0 auto !important;
     display: flex !important;
@@ -2458,7 +2458,7 @@ body.is-home .naver-mobile-top-bar {
 
 /* 💻 [PC 데스크톱] 뷰포트 규칙 */
 @media (min-width: 769px) {
-    .mobile-tistory-layout {
+    .mobile-chageul-layout {
         display: none !important;
     }
     .desktop-layout {
@@ -2480,10 +2480,10 @@ body.is-home .naver-mobile-top-bar {
     .desktop-header {
         display: none !important;
     }
-    .mobile-tistory-layout {
+    .mobile-chageul-layout {
         display: block !important;
     }
-    .tistory-main-layout {
+    .chageul-main-layout {
         padding-bottom: 8px !important;
     }
     footer.clean-footer {
@@ -2904,7 +2904,7 @@ body.is-home .naver-mobile-top-bar {
 /* ========================================================================== */
 /* 📱 [모바일 스마트폰 상단바: ‹ 뒤로가기 + 글 제목 + 원형 프로필]             */
 /* ========================================================================== */
-.mobile-tistory-header {
+.mobile-chageul-header {
     display: none;
     position: fixed;
     top: 0;
@@ -2922,7 +2922,7 @@ body.is-home .naver-mobile-top-bar {
     gap: 8px;
 }
 
-.tistory-header-back {
+.chageul-header-back {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2932,13 +2932,13 @@ body.is-home .naver-mobile-top-bar {
     text-decoration: none;
     flex-shrink: 0;
 }
-.tistory-header-back svg {
+.chageul-header-back svg {
     width: 22px;
     height: 22px;
     stroke: #334155;
 }
 
-.tistory-header-title {
+.chageul-header-title {
     flex: 1;
     font-size: 0.95rem;
     font-weight: 750;
@@ -2951,7 +2951,7 @@ body.is-home .naver-mobile-top-bar {
     line-height: 1.2;
 }
 
-.tistory-avatar-link {
+.chageul-avatar-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -2964,7 +2964,7 @@ body.is-home .naver-mobile-top-bar {
     text-decoration: none;
     background: #fffbeb;
 }
-.tistory-circle-avatar {
+.chageul-circle-avatar {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -2975,7 +2975,7 @@ body.is-home .naver-mobile-top-bar {
     .desktop-header {
         display: none !important;
     }
-    .mobile-tistory-header {
+    .mobile-chageul-header {
         display: flex !important;
     }
     body {
@@ -3369,7 +3369,7 @@ img {
         }
 
         /* 📱 모바일 헤더 스마트폰 최적화 (로고 거대화 100% 원천 차단) */
-        .mobile-tistory-header {
+        .mobile-chageul-header {
             display: none;
             position: sticky !important;
             top: 0 !important;
@@ -3382,7 +3382,7 @@ img {
             z-index: 99999 !important;
         }
         @media (max-width: 768px) {
-            .mobile-tistory-header {
+            .mobile-chageul-header {
                 display: block !important;
             }
             .desktop-header {
@@ -4139,7 +4139,7 @@ html {
 
 /* 💻 PC 데스크톱 vs 📱 모바일 레이아웃 철통 분리 */
 @media (min-width: 769px) {
-    .mobile-tistory-layout,
+    .mobile-chageul-layout,
     #mobileLoadMoreWrapper,
     #btnMobileLoadMore {
         display: none !important;
@@ -4162,7 +4162,7 @@ html {
         height: 0 !important;
         overflow: hidden !important;
     }
-    .mobile-tistory-layout {
+    .mobile-chageul-layout {
         display: block !important;
     }
     #mobileLoadMoreWrapper {
@@ -4175,7 +4175,7 @@ html {
         height: 0 !important;
         overflow: hidden !important;
     }
-    .mobile-tistory-layout {
+    .mobile-chageul-layout {
         display: block !important;
     }
 }
@@ -4185,11 +4185,11 @@ html {
    ========================================================================== */
 @media screen and (min-width: 769px) {
     .desktop-layout { display: block !important; }
-    .mobile-tistory-layout { display: none !important; }
+    .mobile-chageul-layout { display: none !important; }
 }
 @media screen and (max-width: 768px) {
     .desktop-layout { display: none !important; }
-    .mobile-tistory-layout { display: block !important; }
+    .mobile-chageul-layout { display: block !important; }
 }
 
 /* ==========================================================================
@@ -4306,11 +4306,11 @@ footer.clean-footer {
     text-decoration: underline !important;
 }
 /* 📱 모바일 최상급 표준 헤더바 (뒤로가기 + 제목홈링크 + 검색 + 공유) */
-.mobile-tistory-header {
+.mobile-chageul-header {
     display: none !important;
 }
 @media (max-width: 768px) {
-    .mobile-tistory-header {
+    .mobile-chageul-header {
         display: flex !important;
         position: sticky !important;
         top: 0 !important;
@@ -4382,11 +4382,11 @@ footer.clean-footer {
     
 }
 /* 📱 모바일 전용 헤더 (PC 데스크톱에서는 100% 완전 소멸) */
-.mobile-tistory-header {
+.mobile-chageul-header {
     display: none !important;
 }
 @media (max-width: 768px) {
-    .mobile-tistory-header {
+    .mobile-chageul-header {
         display: flex !important;
         flex-direction: row !important;
         align-items: center !important;
@@ -4407,8 +4407,8 @@ footer.clean-footer {
     }
 }
 @media (min-width: 769px) {
-    .mobile-tistory-header,
-    header.mobile-tistory-header {
+    .mobile-chageul-header,
+    header.mobile-chageul-header {
         display: none !important;
         height: 0 !important;
         overflow: hidden !important;
