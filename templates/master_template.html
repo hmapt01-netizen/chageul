@@ -859,6 +859,66 @@ figure.post-photo-figure figcaption,
             word-break: keep-all !important;
             letter-spacing: -0.2px !important;
         }
+
+        /* 📖 본문 리스트 (ul, ol, li) 황금 가독성 & 줄나눔 호흡 표준 (딱 붙는 현상 영구 원천 방지) */
+        .article-body-content ul,
+        .article-body-text ul,
+        article ul {
+            margin: 20px 0 26px 0 !important;
+            padding-left: 24px !important;
+            list-style-type: disc !important;
+        }
+
+        .article-body-content ol,
+        .article-body-text ol,
+        article ol {
+            margin: 20px 0 26px 0 !important;
+            padding-left: 24px !important;
+            list-style-type: decimal !important;
+        }
+
+        .article-body-content li,
+        .article-body-text li,
+        article li {
+            font-size: 1.04rem !important;
+            line-height: 1.88 !important;
+            color: #334155 !important;
+            margin-bottom: 14px !important;
+            word-break: keep-all !important;
+            letter-spacing: -0.2px !important;
+        }
+
+        .article-body-content li:last-child,
+        .article-body-text li:last-child,
+        article li:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        /* 📖 2단계 중첩 리스트 (Nested List) 여백 및 인덴트 */
+        .article-body-content ul ul,
+        .article-body-content ol ul,
+        .article-body-content ul ol,
+        .article-body-content ol ol {
+            margin: 10px 0 12px 0 !important;
+            padding-left: 20px !important;
+            list-style-type: circle !important;
+        }
+
+        .article-body-content ul ul li,
+        .article-body-content ol ul li,
+        .article-body-content ul ol li,
+        .article-body-content ol ol li {
+            font-size: 1.0rem !important;
+            line-height: 1.82 !important;
+            margin-bottom: 8px !important;
+            color: #475569 !important;
+        }
+
+        /* 푸터 소셜/탑버튼 정렬 (모바일에서 차라리 오른쪽으로 붙임) */
+        .footer-social-group {
+            margin-left: auto !important;
+        }
+
         @media (max-width: 768px) {
             body.chageul-single-post { padding-top: 52px !important; }
             .article-body-content p,
@@ -867,6 +927,34 @@ figure.post-photo-figure figcaption,
                 font-size: 1.0rem !important;
                 line-height: 1.92 !important;
                 margin: 0 0 24px 0 !important;
+            }
+            .article-body-content ul,
+            .article-body-content ol,
+            .article-body-text ul,
+            .article-body-text ol,
+            article ul,
+            article ol {
+                margin: 16px 0 22px 0 !important;
+                padding-left: 20px !important;
+            }
+            .article-body-content li,
+            .article-body-text li,
+            article li {
+                font-size: 0.98rem !important;
+                line-height: 1.82 !important;
+                margin-bottom: 12px !important;
+            }
+            .article-body-content ul ul li,
+            .article-body-content ol ul li {
+                font-size: 0.94rem !important;
+                line-height: 1.76 !important;
+                margin-bottom: 6px !important;
+            }
+            .footer-social-group {
+                width: 100% !important;
+                display: flex !important;
+                justify-content: flex-end !important;
+                margin-top: 10px !important;
             }
         }
             /*  추천 칼럼 카드 타이포그래피 (제목 1.02rem 진하게 vs 설명 0.84rem 아담하게) */
@@ -1084,7 +1172,7 @@ figure.post-photo-figure figcaption,
             </div>
 
             <!-- 우측 공식 채널 & 소통 뱃지 세트 (모노크롬 다크그레이 톤) -->
-            <div class="footer-social-group" style="display:flex; align-items:center; gap:10px; flex-shrink:0; padding-top:4px;">
+            <div class="footer-social-group" style="display:flex; align-items:center; gap:10px; flex-shrink:0; padding-top:4px; margin-left:auto;">
                 <!-- 1. 네이버 공식 채널 -->
                 <a href="https://blog.naver.com/hyuni-insight" target="_blank" rel="noopener noreferrer" title="네이버 공식 블로그" style="display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:#475569; color:#ffffff; font-size:0.92rem; font-weight:850; text-decoration:none; transition:background 0.15s, transform 0.15s;" onmouseover="this.style.background='#1e293b'; this.style.transform='translateY(-2px)'" onmouseout="this.style.background='#475569'; this.style.transform='translateY(0)'">
                     N

@@ -3728,6 +3728,85 @@ img {
             }
         }
 
+        /* 📖 본문 리스트 (ul, ol, li) 황금 가독성 & 줄나눔 호흡 표준 (딱 붙는 현상 영구 원천 방지) */
+        .article-body-content ul,
+        .article-body-text ul,
+        article ul {
+            margin: 20px 0 26px 0 !important;
+            padding-left: 24px !important;
+            list-style-type: disc !important;
+        }
+
+        .article-body-content ol,
+        .article-body-text ol,
+        article ol {
+            margin: 20px 0 26px 0 !important;
+            padding-left: 24px !important;
+            list-style-type: decimal !important;
+        }
+
+        .article-body-content li,
+        .article-body-text li,
+        article li {
+            font-size: 1.04rem !important;
+            line-height: 1.88 !important;
+            color: #334155 !important;
+            margin-bottom: 14px !important;
+            word-break: keep-all !important;
+            letter-spacing: -0.2px !important;
+        }
+
+        .article-body-content li:last-child,
+        .article-body-text li:last-child,
+        article li:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        /* 📖 2단계 중첩 리스트 (Nested List) 여백 및 인덴트 */
+        .article-body-content ul ul,
+        .article-body-content ol ul,
+        .article-body-content ul ol,
+        .article-body-content ol ol {
+            margin: 10px 0 12px 0 !important;
+            padding-left: 20px !important;
+            list-style-type: circle !important;
+        }
+
+        .article-body-content ul ul li,
+        .article-body-content ol ul li,
+        .article-body-content ul ol li,
+        .article-body-content ol ol li {
+            font-size: 1.0rem !important;
+            line-height: 1.82 !important;
+            margin-bottom: 8px !important;
+            color: #475569 !important;
+        }
+
+        @media (max-width: 768px) {
+            .article-body-content ul,
+            .article-body-content ol,
+            .article-body-text ul,
+            .article-body-text ol,
+            article ul,
+            article ol {
+                margin: 16px 0 22px 0 !important;
+                padding-left: 20px !important;
+            }
+            .article-body-content li,
+            .article-body-text li,
+            article li {
+                font-size: 0.98rem !important;
+                line-height: 1.82 !important;
+                margin-bottom: 12px !important;
+            }
+            .article-body-content ul ul li,
+            .article-body-content ol ul li {
+                font-size: 0.94rem !important;
+                line-height: 1.76 !important;
+                margin-bottom: 6px !important;
+            }
+        }
+
         /* 📖 모바일 터치 최적화 목차 박스 (Rule 1-2 영구 표준: 좌측 주황색 포인트 라인 100% 통일) */
         .toc-box {
             background: #f8fafc !important;
@@ -4884,3 +4963,18 @@ span.badge-latest {
     box-shadow: 0 2px 6px rgba(2, 132, 199, 0.2);
     transform: translateY(-1px);
 }
+
+/* 📱 푸터 소셜 및 맨위로(TOP) 버튼 그룹: 모바일 우측 밀착 정렬 표준 */
+.footer-social-group {
+    margin-left: auto !important;
+}
+
+@media screen and (max-width: 768px) {
+    .footer-social-group {
+        width: 100% !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+        margin-top: 12px !important;
+    }
+}
+
