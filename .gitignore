@@ -2,6 +2,7 @@
 upload.ps1
 upload.bat
 *.token
+.git_secret.txt
 
 # OS generated files
 Thumbs.db
