@@ -3666,40 +3666,44 @@ img {
             border: 1px solid #e2e8f0 !important;
             border-left: 4px solid #c26908 !important;
             border-radius: 10px !important;
-            padding: 18px 20px !important;
-            margin: 28px 0 34px 0 !important;
+            padding: 14px 18px !important;
+            margin: 22px 0 26px 0 !important;
             box-sizing: border-box !important;
         }
         .toc-title {
-            font-size: 0.96rem !important;
+            font-size: 0.95rem !important;
             font-weight: 800 !important;
             color: #0f172a !important;
-            margin: 0 0 12px 0 !important;
-            padding: 0 4px 8px 4px !important;
+            margin: 0 0 10px 0 !important;
+            padding: 0 0 6px 0 !important;
             border-bottom: 1px dashed #e2e8f0 !important;
             line-height: 1.2 !important;
         }
-        .toc-box ul.toc-list {
+        .toc-box ul.toc-list,
+        .toc-box ul {
             list-style: none !important;
             padding: 0 !important;
             margin: 0 !important;
             display: flex !important;
             flex-direction: column !important;
-            gap: 10px !important;
+            gap: 8px !important;
         }
-        .toc-box ul.toc-list li a {
+        .toc-box ul.toc-list li a,
+        .toc-box ul li a {
             display: flex !important;
             align-items: flex-start !important;
-            gap: 8px !important;
-            color: #334155 !important;
-            font-size: 0.93rem !important;
+            gap: 6px !important;
+            color: #0284c7 !important;
+            font-size: 0.92rem !important;
             font-weight: 600 !important;
             text-decoration: none !important;
             line-height: 1.45 !important;
             transition: color 0.15s !important;
         }
-        .toc-box ul.toc-list li a:hover {
-            color: #c26908 !important;
+        .toc-box ul.toc-list li a:hover,
+        .toc-box ul li a:hover {
+            color: #0369a1 !important;
+            text-decoration: underline !important;
         }
         .toc-box .toc-num {
             color: #c26908 !important;
@@ -3813,40 +3817,44 @@ img {
             border: 1px solid #e2e8f0 !important;
             border-left: 4px solid #c26908 !important;
             border-radius: 10px !important;
-            padding: 18px 20px !important;
-            margin: 28px 0 34px 0 !important;
+            padding: 14px 18px !important;
+            margin: 22px 0 26px 0 !important;
             box-sizing: border-box !important;
         }
         .toc-title {
-            font-size: 0.96rem !important;
+            font-size: 0.95rem !important;
             font-weight: 800 !important;
             color: #0f172a !important;
-            margin: 0 0 12px 0 !important;
-            padding: 0 4px 8px 4px !important;
+            margin: 0 0 10px 0 !important;
+            padding: 0 0 6px 0 !important;
             border-bottom: 1px dashed #e2e8f0 !important;
             line-height: 1.2 !important;
         }
-        .toc-box ul.toc-list {
+        .toc-box ul.toc-list,
+        .toc-box ul {
             list-style: none !important;
             padding: 0 !important;
             margin: 0 !important;
             display: flex !important;
             flex-direction: column !important;
-            gap: 10px !important;
+            gap: 8px !important;
         }
-        .toc-box ul.toc-list li a {
+        .toc-box ul.toc-list li a,
+        .toc-box ul li a {
             display: flex !important;
             align-items: flex-start !important;
-            gap: 8px !important;
-            color: #334155 !important;
-            font-size: 0.93rem !important;
+            gap: 6px !important;
+            color: #0284c7 !important;
+            font-size: 0.92rem !important;
             font-weight: 600 !important;
             text-decoration: none !important;
             line-height: 1.45 !important;
             transition: color 0.15s !important;
         }
-        .toc-box ul.toc-list li a:hover {
-            color: #c26908 !important;
+        .toc-box ul.toc-list li a:hover,
+        .toc-box ul li a:hover {
+            color: #0369a1 !important;
+            text-decoration: underline !important;
         }
         .toc-box .toc-num {
             color: #c26908 !important;
