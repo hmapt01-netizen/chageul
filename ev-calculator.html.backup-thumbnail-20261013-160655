@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>“전기차로 바꾸면 1년에 얼마나 아낄까?” 실전 계산기와 예비 오너 선택 가이드 | 차를 쓰다</title>
+    <meta name="description" content="전기차 연료비 절감액과 구매 차액 회수 기간, 충전 환경별 요금과 예상 시간, 겨울철 한파 주행거리 변화를 내 실제 주행거리에 맞춰 정직하게 계산하는 차를 쓰다 실전 가이드.">
+    <link rel="canonical" href="https://chageul.com/ev-calculator.html">
+    <meta name="naver-site-verification" content="f3ea45cb3409cacb77fe1c9a6db5b5339238e368" />
+    
+    <!-- 🌐 OpenGraph / SNS 링크 공유 메타태그 -->
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="차를 쓰다">
+    <meta property="og:title" content="“전기차로 바꾸면 1년에 얼마나 아낄까?” 실전 계산기와 예비 오너 선택 가이드">
+    <meta property="og:description" content="전기차 연료비 절감액과 구매 차액 회수 기간, 충전 요금과 겨울철 한파 주행거리를 정직하게 계산하는 실전 가이드.">
+    <meta property="og:image" content="https://chageul.com/images/posts/used-ev-maintenance-cost/thumb.jpg">
+    <meta property="og:url" content="https://chageul.com/ev-calculator.html">
+    
+    <!-- 🚗 차를 쓰다 공식 파비콘 5종 세트 -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <!-- 📡 RSS 피드 자동 감지 -->
+    <link rel="alternate" type="application/rss+xml" title="차를 쓰다 | 프리미엄 자동차 &amp; 모빌리티 전문 매거진 RSS 피드" href="https://chageul.com/rss.xml">
+
+    <!-- 📊 Google Analytics 4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YZQ2RW8QZJ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YZQ2RW8QZJ');
+    </script>
+    <!-- 💰 Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4739687813221133" crossorigin="anonymous"></script>
+
+    <!-- 🔤 차를 쓰다 공식 Pretendard 웹폰트 -->
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="css/style.css?v=20260830_car_fixed">
+
+    <style id="guaranteedMasterPostStyle">
+        html, body {
+            width: 100% !important;
+            max-width: 100vw !important;
+            overflow-x: clip !important;
+            box-sizing: border-box !important;
+            font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif !important;
+        }
+
+        /* 📱 모바일 (768px 이하): 1열 본문 집중형 레이아웃 */
+        @media (max-width: 768px) {
+            body.chageul-single-post { padding-top: 52px !important; }
+            .desktop-header,
+            .clean-nav {
+                display: none !important;
+            }
+            .mobile-chageul-header {
+                display: flex !important;
+            }
+            .article-layout-grid {
+                display: block !important;
+                width: 100% !important;
+                padding: 16px 14px !important;
+                margin: 0 !important;
+                box-sizing: border-box !important;
+            }
+            .article-sidebar {
+                display: none !important;
+            }
+        }
+
+        /* 💻 PC 데스크톱 (769px 이상): 완벽한 2열 그리드 강제 (본문 + 우측 사이드바 300px) */
+        @media (min-width: 769px) {
+            .mobile-chageul-header {
+                display: none !important;
+            }
+            .desktop-header {
+                display: block !important;
+            }
+            .article-layout-grid {
+                display: grid !important;
+                grid-template-columns: 1fr 300px !important;
+                gap: 44px !important;
+                max-width: 1060px !important;
+                margin: 36px auto !important;
+                padding: 0 20px !important;
+                align-items: start !important;
+                box-sizing: border-box !important;
+            }
+            .article-main-col {
+                min-width: 0 !important;
+                width: 100% !important;
+            }
+            .article-sidebar {
+                display: block !important;
+                width: 300px !important;
+                position: sticky !important;
+                top: 80px !important;
+            }
+        }
+
+        /* 🏷️ 상단 카테고리 텍스트 */
+        .article-cat-title {
+            font-size: 0.84rem !important;
+            font-weight: 750 !important;
+            color: #c26908 !important;
+            margin-bottom: 6px !important;
+            display: block !important;
+            line-height: 1.2 !important;
+        }
+
+        /* 📊 메타바 스타일 */
+        .article-meta-bar {
+            font-size: 0.82rem !important;
+            color: #64748b !important;
+            display: flex !important;
+            gap: 5px 8px !important;
+            align-items: center !important;
+            flex-wrap: wrap !important;
+            margin-bottom: 16px !important;
+            line-height: 1.35 !important;
+            border-bottom: 1px solid #f1f5f9 !important;
+            padding-bottom: 14px !important;
+        }
+
+        /* 📖 본문 문단 황금 가독성 타이포그래피 */
+        .article-body-content p {
+            font-size: 1.04rem !important;
+            line-height: 1.88 !important;
+            color: #334155 !important;
+            margin: 0 0 20px 0 !important;
+            word-break: keep-all !important;
+            letter-spacing: -0.2px !important;
+        }
+
+        .article-body-content h2 {
+            font-size: 1.35rem !important;
+            font-weight: 850 !important;
+            color: #0f172a !important;
+            margin: 38px 0 16px 0 !important;
+            line-height: 1.4 !important;
+            letter-spacing: -0.3px !important;
+        }
+
+        .article-body-content ul {
+            margin: 20px 0 26px 0 !important;
+            padding-left: 24px !important;
+            list-style-type: disc !important;
+        }
+
+        .article-body-content li {
+            font-size: 1.02rem !important;
+            line-height: 1.82 !important;
+            color: #334155 !important;
+            margin-bottom: 10px !important;
+            word-break: keep-all !important;
+        }
+
+        /* ==========================================================================
+           ⚡ [차를 쓰다 프리미엄 반응형 계산기 위젯 스타일]
+           ========================================================================== */
+        .ev-calc-master-box {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+            padding: 24px 22px;
+            margin: 32px 0 38px 0;
+            box-sizing: border-box;
+        }
+        .ev-calc-header {
+            text-align: center;
+            margin-bottom: 22px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .ev-calc-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: #fef3c7;
+            color: #b45309;
+            font-size: 0.76rem;
+            font-weight: 850;
+            padding: 3px 12px;
+            border-radius: 9999px;
+            margin-bottom: 8px;
+            border: 1px solid #fde68a;
+        }
+        .ev-calc-title {
+            font-size: 1.32rem;
+            font-weight: 850;
+            color: #0f172a;
+            margin: 0 0 6px 0;
+            letter-spacing: -0.4px;
+        }
+        .ev-calc-desc {
+            font-size: 0.86rem;
+            color: #64748b;
+            margin: 0;
+        }
+
+        /* 탭 네비게이션 */
+        .ev-tab-bar {
+            display: flex;
+            gap: 6px;
+            background: #f8fafc;
+            padding: 5px;
+            border-radius: 12px;
+            margin-bottom: 22px;
+            border: 1px solid #e2e8f0;
+        }
+        .ev-tab-btn {
+            flex: 1;
+            padding: 10px 6px;
+            border: none;
+            background: transparent;
+            font-size: 0.88rem;
+            font-weight: 750;
+            color: #64748b;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            text-align: center;
+            font-family: inherit;
+        }
+        .ev-tab-btn.active {
+            background: #0f172a;
+            color: #ffffff;
+            box-shadow: 0 2px 6px rgba(15, 23, 42, 0.15);
+        }
+
+        .ev-tab-content {
+            display: none;
+        }
+        .ev-tab-content.active {
+            display: block;
+            animation: fadeInCalc 0.2s ease-out;
+        }
+        @keyframes fadeInCalc {
+            from { opacity: 0; transform: translateY(4px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* 직관적인 선택 버튼 그룹 */
+        .choice-section {
+            margin-bottom: 18px;
+        }
+        .choice-title {
+            font-size: 0.86rem;
+            font-weight: 800;
+            color: #1e293b;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .choice-sub {
+            font-size: 0.78rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+        .choice-pill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+            gap: 8px;
+        }
+        .choice-pill {
+            padding: 10px 12px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            background: #ffffff;
+            font-size: 0.84rem;
+            font-weight: 700;
+            color: #334155;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.15s ease;
+            font-family: inherit;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2px;
+        }
+        .choice-pill .pill-sub {
+            font-size: 0.73rem;
+            font-weight: 500;
+            color: #64748b;
+        }
+        .choice-pill:hover {
+            border-color: #94a3b8;
+            background: #f8fafc;
+        }
+        .choice-pill.active {
+            background: #eff6ff;
+            border-color: #0284c7;
+            color: #0284c7;
+            box-shadow: 0 0 0 1px #0284c7;
+        }
+        .choice-pill.active .pill-sub {
+            color: #0369a1;
+        }
+
+        /* 메인 결과 카드 (프리미엄 다크 네이비) */
+        .calc-result-card {
+            background: #0f172a;
+            color: #ffffff;
+            border-radius: 14px;
+            padding: 22px 20px;
+            margin: 22px 0 16px 0;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(15, 23, 42, 0.12);
+        }
+        .calc-res-label {
+            font-size: 0.82rem;
+            color: #94a3b8;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+        .calc-res-hero {
+            font-size: 1.85rem;
+            font-weight: 900;
+            color: #38bdf8;
+            letter-spacing: -0.5px;
+            line-height: 1.25;
+            margin-bottom: 6px;
+        }
+        .calc-res-hero-sub {
+            font-size: 0.86rem;
+            color: #cbd5e1;
+        }
+
+        /* 결과 상세 리스트 */
+        .res-summary-table {
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 14px 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-bottom: 14px;
+        }
+        .res-summary-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.88rem;
+            padding: 5px 0;
+            border-bottom: 1px solid #f1f5f9;
+        }
+        .res-summary-row:last-child {
+            border-bottom: none;
+        }
+        .res-summary-row .label {
+            color: #64748b;
+            font-weight: 600;
+        }
+        .res-summary-row .val {
+            color: #0f172a;
+            font-weight: 800;
+        }
+        .res-summary-row.highlight {
+            background: #f0fdf4;
+            margin: 2px -8px;
+            padding: 8px 8px;
+            border-radius: 8px;
+            border: 1px solid #bbf7d0;
+        }
+        .res-summary-row.highlight .label {
+            color: #166534;
+            font-weight: 750;
+        }
+        .res-summary-row.highlight .val {
+            color: #15803d;
+            font-weight: 900;
+            font-size: 0.95rem;
+        }
+
+        /* 🚗 차량 차액 및 본전 회수 분석 카드 */
+        .payback-card {
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin: 14px 0 16px 0;
+            border: 1px solid #e2e8f0;
+            background: #f8fafc;
+            text-align: left;
+        }
+        .payback-card.green {
+            background: #f0fdf4;
+            border-color: #bbf7d0;
+        }
+        .payback-card.blue {
+            background: #f0f9ff;
+            border-color: #bae6fd;
+        }
+        .payback-card.slate {
+            background: #f8fafc;
+            border-color: #cbd5e1;
+        }
+        .payback-badge {
+            display: inline-block;
+            font-size: 0.76rem;
+            font-weight: 800;
+            padding: 3px 9px;
+            border-radius: 6px;
+            margin-bottom: 8px;
+        }
+        .payback-badge.green {
+            background: #dcfce7;
+            color: #15803d;
+        }
+        .payback-badge.blue {
+            background: #e0f2fe;
+            color: #0369a1;
+        }
+        .payback-badge.slate {
+            background: #e2e8f0;
+            color: #475569;
+        }
+        .payback-title {
+            font-size: 1.05rem;
+            font-weight: 850;
+            color: #0f172a;
+            margin: 0 0 6px 0;
+            letter-spacing: -0.3px;
+        }
+        .payback-desc {
+            font-size: 0.85rem;
+            color: #475569;
+            margin: 0;
+            line-height: 1.55;
+        }
+
+        /* 🏷️ 충전 요금 단가 빠른 프리셋 뱃지 */
+        .preset-pill {
+            padding: 6px 11px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            background: #ffffff;
+            font-size: 0.78rem;
+            font-weight: 700;
+            color: #475569;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            font-family: inherit;
+        }
+        .preset-pill:hover {
+            border-color: #94a3b8;
+            background: #f1f5f9;
+        }
+        .preset-pill.active {
+            background: #0f172a;
+            color: #ffffff;
+            border-color: #0f172a;
+        }
+
+        /* ⚙️ 세부 조건 직접 조절 아코디언 */
+        .custom-toggle-btn {
+            background: transparent;
+            border: 1px dashed #cbd5e1;
+            border-radius: 8px;
+            padding: 8px 14px;
+            width: 100%;
+            font-size: 0.82rem;
+            font-weight: 750;
+            color: #64748b;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: all 0.15s;
+            font-family: inherit;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+        .custom-toggle-btn:hover {
+            background: #f1f5f9;
+            color: #1e293b;
+            border-color: #94a3b8;
+        }
+        .custom-accordion-body {
+            display: none;
+            background: #f8fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 16px 18px;
+            margin-top: 12px;
+        }
+        .custom-accordion-body.open {
+            display: block;
+        }
+        .custom-row {
+            margin-bottom: 12px;
+        }
+        .custom-label-wrap {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #475569;
+            margin-bottom: 4px;
+        }
+        .custom-range {
+            width: 100%;
+            height: 6px;
+            border-radius: 4px;
+            background: #cbd5e1;
+            outline: none;
+            cursor: pointer;
+            accent-color: #0284c7;
+        }
+        .custom-input {
+            width: 100%;
+            padding: 7px 10px;
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            background: #ffffff;
+            box-sizing: border-box;
+            font-family: inherit;
+        }
+    </style>
+</head>
+<body class="chageul-single-post">
+
+    <!-- 📱 모바일 스마트 상단 헤더 -->
+    <header class="mobile-chageul-header">
+        <div class="m-header-inner">
+            <button type="button" class="m-btn-back" onclick="if(window.history.length > 1){window.history.back();}else{location.href='index.html';}" aria-label="이전 페이지">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#111827" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </button>
+            <a href="index.html" class="m-header-title" aria-label="홈으로 가기">전기차 실전 계산기 &amp; 선택 가이드</a>
+            <button type="button" class="m-btn-share" onclick="copyCurrentUrl()" aria-label="공유하기">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="#111827" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><polyline points="16 6 12 2 8 6"/><line x1="12" y1="2" x2="12" y2="15"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- 💻 PC 데스크톱 깔끔한 상단 헤더 -->
+    <header class="clean-header desktop-header">
+        <div class="header-container">
+            <a href="index.html" class="brand-title">
+                <img src="images/logo.png?v=20260829_gold" alt="차를 쓰다 심볼" class="brand-logo-img">
+                <span class="brand-main-title">차를 쓰다</span>
+            </a>
+            <nav class="clean-nav">
+                <ul>
+                    <li><a href="index.html" class="nav-cat-btn">홈</a></li>
+                    <li><a href="index.html?cat=신차소식" class="nav-cat-btn">신차소식</a></li>
+                    <li><a href="index.html?cat=포커스" class="nav-cat-btn active">포커스</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- 📖 본문 & 사이드바 반응형 2열 정석 레이아웃 -->
+    <div class="container article-layout-grid">
+        
+        <!-- 좌측 본문 메인 칼럼 -->
+        <main class="article-main-col">
+            <article class="article-container" style="background:#ffffff; border:none; padding:0; box-shadow:none;">
+                
+                <header class="article-header">
+                    <span class="article-cat-title">포커스 · 실전 분석 도구</span>
+                    <h1 class="article-title" style="font-size:1.72rem; font-weight:850; color:#111827; line-height:1.42; margin-bottom:14px; letter-spacing:-0.4px;">
+                        “전기차로 바꾸면 1년에 얼마나 아낄까?” 실전 계산기와 예비 오너 선택 가이드
+                    </h1>
+                    <div class="article-meta-bar">
+                        <div class="article-meta-left">
+                            <span>차를 쓰다</span>
+                            <span>·</span>
+                            <span>2026-10-13</span>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- 🌟 대표 메인 화보 -->
+                <div class="article-featured-img-box" style="margin:22px 0 20px 0; text-align:center;">
+                    <div style="position:relative; width:100%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; background:#f1f5f9;">
+                        <img src="images/posts/ev-charging-calculator/thumb.jpg" alt="350kW 초고속 충전소에서 배터리를 충전 중인 전기차" style="width:100%; height:100%; object-fit:cover; display:block;" fetchpriority="high" decoding="async">
+                    </div>
+                    <div style="font-size:0.88rem; color:#64748b; margin-top:8px; line-height:1.4; text-align:center;">▲ 350kW 초고속 충전소에서 배터리를 충전 중인 전기차 / 사진=차를 쓰다</div>
+                </div>
+
+                <!-- 📖 본문 내용 영역 -->
+                <div class="article-body-content">
+                    
+                    <p>내 차와 전기차의 실구매가 차이, 과연 기름값을 아껴서 몇 년 만에 회수할 수 있을까요? 아니면 이미 전기차가 더 저렴할까요? <strong>내 기존 차종과 비교할 전기차, 주행거리와 충전 환경</strong>을 선택하시면 1년 순수 연료비 절감액과 실구매가 손익이 1초 만에 산출됩니다.</p>
+
+                    <!-- 🧮 [차를 쓰다 프리미엄 반응형 실전 계산기] -->
+                    <div class="ev-calc-master-box">
+                        <div class="ev-calc-header">
+                            <h3 class="ev-calc-title">전기차 실전 올인원 계산기</h3>
+                            <p class="ev-calc-desc">내 운전 조건에 맞춰 버튼을 누르면 실시간 절감액이 즉시 도출됩니다.</p>
+                        </div>
+
+                        <!-- 3대 탭 전환 네비게이션 -->
+                        <div class="ev-tab-bar">
+                            <button type="button" class="ev-tab-btn active" onclick="setTab('t1', this)">1. 연료비 절감 &amp; 차액 회수</button>
+                            <button type="button" class="ev-tab-btn" onclick="setTab('t2', this)">2. 충전 요금 &amp; 소요 시간</button>
+                            <button type="button" class="ev-tab-btn" onclick="setTab('t3', this)">3. 겨울철 한파 주행거리</button>
+                        </div>
+
+                        <!-- ====================================================
+                             탭 1: 연료비 절감 & 차액 회수 시뮬레이터
+                             ==================================================== -->
+                        <div id="t1" class="ev-tab-content active">
+                            <!-- 1. 비교 내 차 선택 -->
+                            <div class="choice-section">
+                                <div class="choice-title">
+                                    <span>1. 비교할 내 기존 차종</span>
+                                    <span class="choice-sub" id="txtIceChoice">그랜저·중대형 하브 (16.5 km/L · 5,200만 원)</span>
+                                </div>
+                                <div class="choice-pill-grid">
+                                    <button type="button" class="choice-pill" onclick="chooseIceCar('준중형 가솔린', 14.5, 1680, 2400, this)">
+                                        <span>🚗 준중형 가솔린</span>
+                                        <span class="pill-sub">아반떼 등 (14.5km/L · 2,400만)</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseIceCar('중형 가솔린', 12.0, 1680, 3300, this)">
+                                        <span>🚘 중형 가솔린</span>
+                                        <span class="pill-sub">쏘나타·K5 (12.0km/L · 3,300만)</span>
+                                    </button>
+                                    <button type="button" class="choice-pill active" onclick="chooseIceCar('그랜저·중대형 하브', 16.5, 1680, 5200, this)">
+                                        <span>⚡ 그랜저·중대형 하브</span>
+                                        <span class="pill-sub">그랜저·쏘렌토 (16.5km/L · 5,200만)</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseIceCar('중형 가솔린 SUV', 10.5, 1680, 3700, this)">
+                                        <span>🚙 중형 가솔린 SUV</span>
+                                        <span class="pill-sub">투싼·싼타페 (10.5km/L · 3,700만)</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 2. 비교할 전기차 선택 -->
+                            <div class="choice-section">
+                                <div class="choice-title">
+                                    <span>2. 비교할 전기차 (보조금 반영 실구매가)</span>
+                                    <span class="choice-sub" id="txtEvChoice">캐스퍼 일렉트릭 (5.6 km/kWh · 실구매 2,700만 원)</span>
+                                </div>
+                                <div class="choice-pill-grid">
+                                    <button type="button" class="choice-pill active" onclick="chooseEvCar('캐스퍼 일렉트릭', 5.6, 2700, this)">
+                                        <span>⚡ 캐스퍼 일렉트릭</span>
+                                        <span class="pill-sub">5.6km/kWh · 실구매 2,700만</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseEvCar('기아 EV3', 5.4, 3900, this)">
+                                        <span>⚡ 기아 EV3</span>
+                                        <span class="pill-sub">5.4km/kWh · 실구매 3,900만</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseEvCar('아이오닉 5 · EV6', 5.1, 4800, this)">
+                                        <span>⚡ 아이오닉5 · EV6</span>
+                                        <span class="pill-sub">5.1km/kWh · 실구매 4,800만</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseEvCar('테슬라 모델Y RWD', 5.1, 5200, this)">
+                                        <span>⚡ 모델Y RWD</span>
+                                        <span class="pill-sub">5.1km/kWh · 실구매 5,200만</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 3. 연간 주행거리 선택 -->
+                            <div class="choice-section">
+                                <div class="choice-title">
+                                    <span>3. 연간 주행거리</span>
+                                    <span class="choice-sub" id="txtDistChoice">10,000 km (근거리 출퇴근)</span>
+                                </div>
+                                <div class="choice-pill-grid">
+                                    <button type="button" class="choice-pill active" onclick="chooseDist(10000, this)">
+                                        <span>10,000 km</span>
+                                        <span class="pill-sub">근거리 출퇴근</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseDist(15000, this)">
+                                        <span>15,000 km</span>
+                                        <span class="pill-sub">일반 평균 주행</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseDist(20000, this)">
+                                        <span>20,000 km</span>
+                                        <span class="pill-sub">장거리 통근</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseDist(30000, this)">
+                                        <span>30,000 km</span>
+                                        <span class="pill-sub">외근·영업용</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 4. 충전 환경 선택 및 요금 셋팅 -->
+                            <div class="choice-section">
+                                <div class="choice-title">
+                                    <span>4. 내 충전 인프라 여건 및 요금 셋팅</span>
+                                    <span class="choice-sub" id="txtChargeChoice">아파트 집밥 80% + 급속 20%</span>
+                                </div>
+                                <div class="choice-pill-grid">
+                                    <button type="button" class="choice-pill active" onclick="chooseCharge(80, this)">
+                                        <span>🏠 집밥 80% + 급속 20%</span>
+                                        <span class="pill-sub">가장 일반적인 패턴</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseCharge(100, this)">
+                                        <span>🔌 집밥 완속 100%</span>
+                                        <span class="pill-sub">최고의 경제성 (한전 심야)</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseCharge(0, this)">
+                                        <span>⚡ 공용 급속 100%</span>
+                                        <span class="pill-sub">집밥 없음 (충전소 의존)</span>
+                                    </button>
+                                </div>
+                                
+                                <!-- ⚡ 충전 요금 직접 설정 바 (완속/급속 요금 즉시 조절) -->
+                                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:12px 14px; margin-top:10px; display:flex; flex-wrap:wrap; gap:12px 18px; align-items:center; justify-content:space-between;">
+                                    <div style="display:flex; align-items:center; gap:8px;">
+                                        <span style="font-size:0.83rem; font-weight:800; color:#1e293b;">🏠 아파트 완속:</span>
+                                        <input type="number" id="inpSlowPrice" value="230" step="5" min="100" max="400" style="width:75px; padding:5px 8px; border:1px solid #cbd5e1; border-radius:6px; font-size:0.88rem; font-weight:850; text-align:center; color:#0284c7;" oninput="syncSlowPrice(this.value)">
+                                        <span style="font-size:0.8rem; font-weight:600; color:#64748b;">원/kWh</span>
+                                    </div>
+                                    <div style="display:flex; align-items:center; gap:8px;">
+                                        <span style="font-size:0.83rem; font-weight:800; color:#1e293b;">⚡ 공용 급속:</span>
+                                        <input type="number" id="inpFastPrice" value="347.2" step="5" min="200" max="550" style="width:75px; padding:5px 8px; border:1px solid #cbd5e1; border-radius:6px; font-size:0.88rem; font-weight:850; text-align:center; color:#0284c7;" oninput="syncFastPrice(this.value)">
+                                        <span style="font-size:0.8rem; font-weight:600; color:#64748b;">원/kWh</span>
+                                    </div>
+                                    <div style="font-size:0.77rem; color:#94a3b8; margin-left:auto;">
+                                        ※ 내 아파트·자주 가는 충전소 요금으로 직접 수정 가능
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 메인 핵심 결과 카드 (순수 연료비 절감액 중심) -->
+                            <div class="calc-result-card">
+                                <div class="calc-res-label">1년 순수 연료비 절감액</div>
+                                <div class="calc-res-hero" id="heroAnnualSave">연 약 57만 원 절약</div>
+                                <div class="calc-res-hero-sub" id="heroAnnualSaveSub">기존 주유비 대비 월 약 4.7만 원 · 5년 누적 약 283만 원 절감</div>
+                            </div>
+
+                            <!-- 상세 내역 표 -->
+                            <div class="res-summary-table">
+                                <div class="res-summary-row">
+                                    <span class="label">기존 차 1년 주유비</span>
+                                    <span class="val" id="sumIceCost">1,018,200원</span>
+                                </div>
+                                <div class="res-summary-row">
+                                    <span class="label">전기차 1년 충전비 (가중평균)</span>
+                                    <span class="val" id="sumEvCost" style="color:#0284c7;">452,600원</span>
+                                </div>
+                                <div class="res-summary-row highlight">
+                                    <span class="label">👉 1년 순수 연료비 절감액</span>
+                                    <span class="val" id="sumAnnualSave">565,600원 (월 약 4.7만 원 절약)</span>
+                                </div>
+                                <div class="res-summary-row highlight" style="background:#e0f2fe; border-color:#bae6fd;">
+                                    <span class="label" style="color:#0369a1;">🏆 5년 누적 연료비 절감액</span>
+                                    <span class="val" id="sumFiveSave" style="color:#0284c7;">2,828,000원 절약</span>
+                                </div>
+                            </div>
+
+                            <!-- 🚗 차량 구매 차액 & 본전 회수 분석 카드 -->
+                            <div class="payback-card green" id="paybackCard">
+                                <span class="payback-badge green" id="paybackBadge">🟢 전기차(캐스퍼 일렉트릭)가 약 2,500만 원 더 저렴!</span>
+                                <h4 class="payback-title" id="paybackTitle">본전 회수 기간: 계산 불필요 (구입 즉시 2,500만 원 세이브)</h4>
+                                <p class="payback-desc" id="paybackDesc">기존 차량(그랜저·중대형 하브, 약 5,200만 원) 대비 전기차(캐스퍼 일렉트릭, 실구매 약 2,700만 원) 가격이 훨씬 저렴합니다. 첫날부터 차값 2,500만 원을 아끼고, 매년 기름값 57만 원을 추가로 절감합니다.</p>
+                            </div>
+
+                            <!-- 세부 조절 토글 아코디언 -->
+                            <button type="button" class="custom-toggle-btn" onclick="toggleAccordion('acc1', this)">
+                                <span>⚙️ 차량 가격·유가·전비 세부 수치 직접 조절하기</span>
+                                <span id="accIcon1">▼</span>
+                            </button>
+                            <div id="acc1" class="custom-accordion-body">
+                                <div class="custom-row">
+                                    <div class="custom-label-wrap">
+                                        <span>내 기존 차 출고가 (만 원)</span>
+                                        <span id="vCustomIcePrice">5,200만 원</span>
+                                    </div>
+                                    <input type="range" class="custom-range" id="rgIcePrice" min="1500" max="9000" step="50" value="5200" oninput="onCustomChange()">
+                                </div>
+                                <div class="custom-row">
+                                    <div class="custom-label-wrap">
+                                        <span>내 기존 차 실연비 (km/L)</span>
+                                        <span id="vCustomIceEff">16.5 km/L</span>
+                                    </div>
+                                    <input type="range" class="custom-range" id="rgIceEff" min="6.0" max="25.0" step="0.5" value="16.5" oninput="onCustomChange()">
+                                </div>
+                                <div class="custom-row">
+                                    <div class="custom-label-wrap">
+                                        <span>현재 휘발유 유가 (원/L)</span>
+                                    </div>
+                                    <input type="number" class="custom-input" id="numFuelPrice" value="1680" step="10" oninput="onCustomChange()">
+                                </div>
+                                <div class="custom-row">
+                                    <div class="custom-label-wrap">
+                                        <span>비교 전기차 실구매가 (만 원)</span>
+                                        <span id="vCustomEvPrice">2,700만 원</span>
+                                    </div>
+                                    <input type="range" class="custom-range" id="rgEvPrice" min="2000" max="9000" step="50" value="2700" oninput="onCustomChange()">
+                                </div>
+                                <div class="custom-row">
+                                    <div class="custom-label-wrap">
+                                        <span>전기차 공인 전비 (km/kWh)</span>
+                                        <span id="vCustomEvEff">5.6 km/kWh</span>
+                                    </div>
+                                    <input type="range" class="custom-range" id="rgEvEff" min="3.0" max="7.5" step="0.1" value="5.6" oninput="onCustomChange()">
+                                </div>
+                                <div class="custom-row">
+                                    <div class="custom-label-wrap">
+                                        <span>아파트 완속 충전단가 (원/kWh)</span>
+                                    </div>
+                                    <input type="number" class="custom-input" id="numSlowPrice" value="230" step="5" oninput="onCustomChange()">
+                                </div>
+                                <div class="custom-row">
+                                    <div class="custom-label-wrap">
+                                        <span>공용 급속 충전단가 (원/kWh)</span>
+                                    </div>
+                                    <input type="number" class="custom-input" id="numFastPrice" value="347.2" step="5" oninput="onCustomChange()">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ====================================================
+                             탭 2: 배터리 충전 시간 & 충전 요금 계산기
+                             ==================================================== -->
+                        <div id="t2" class="ev-tab-content">
+                            <!-- 1. 차종 배터리 용량 선택 -->
+                            <div class="choice-section">
+                                <div class="choice-title">
+                                    <span>1. 배터리 용량 선택</span>
+                                    <span class="choice-sub" id="txtBatChoice">아이오닉5·EV6 (84 kWh)</span>
+                                </div>
+                                <div class="choice-pill-grid">
+                                    <button type="button" class="choice-pill active" onclick="chooseBattery(84, this)">
+                                        <span>아이오닉5·EV6</span>
+                                        <span class="pill-sub">84 kWh</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseBattery(60, this)">
+                                        <span>테슬라 모델Y RWD</span>
+                                        <span class="pill-sub">60 kWh</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseBattery(82, this)">
+                                        <span>모델Y 롱레인지</span>
+                                        <span class="pill-sub">82 kWh</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseBattery(64.8, this)">
+                                        <span>EV3·코나 EV</span>
+                                        <span class="pill-sub">64.8 kWh</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseBattery(49, this)">
+                                        <span>캐스퍼 EV</span>
+                                        <span class="pill-sub">49 kWh</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 2. 충전 구간 선택 -->
+                            <div class="choice-section">
+                                <div class="choice-title">
+                                    <span>2. 충전 목표 구간</span>
+                                    <span class="choice-sub" id="txtSocChoice">20% → 80% (일상 급속 충전 권장)</span>
+                                </div>
+                                <div class="choice-pill-grid">
+                                    <button type="button" class="choice-pill active" onclick="chooseSoc(20, 80, this)">
+                                        <span>20% → 80%</span>
+                                        <span class="pill-sub">가장 이상적인 일상 충전</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseSoc(10, 80, this)">
+                                        <span>10% → 80%</span>
+                                        <span class="pill-sub">고속도로 휴게소 충전</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseSoc(20, 100, this)">
+                                        <span>20% → 100%</span>
+                                        <span class="pill-sub">장거리 전야 심야 완충</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 3. 충전기 출력 선택 -->
+                            <div class="choice-section">
+                                <div class="choice-title">
+                                    <span>3. 충전기 출력</span>
+                                    <span class="choice-sub" id="txtChargerChoice">100kW 급속</span>
+                                </div>
+                                <div class="choice-pill-grid">
+                                    <button type="button" class="choice-pill" onclick="chooseKw(7, this)">
+                                        <span>7kW 완속</span>
+                                        <span class="pill-sub">아파트 완속기</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseKw(50, this)">
+                                        <span>50kW 급속</span>
+                                        <span class="pill-sub">주민센터·마트</span>
+                                    </button>
+                                    <button type="button" class="choice-pill active" onclick="chooseKw(100, this)">
+                                        <span>100kW 급속</span>
+                                        <span class="pill-sub">환경부·공용 표준</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseKw(350, this)">
+                                        <span>350kW 초급속</span>
+                                        <span class="pill-sub">E-pit·초고속</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 4. 내 충전기 요금 직접 셋팅 (원/kWh) -->
+                            <div class="choice-section">
+                                <div class="choice-title">
+                                    <span>4. 충전 요금 단가 셋팅</span>
+                                    <span class="choice-sub" id="txtUnitPriceChoice">347.2원 / kWh</span>
+                                </div>
+                                
+                                <!-- 원터치 대표 요금 프리셋 버튼들 -->
+                                <div style="display:flex; flex-wrap:wrap; gap:6px; margin-bottom:10px;">
+                                    <button type="button" class="preset-pill" onclick="setTab2Price(210, this)">아파트 심야 (210원)</button>
+                                    <button type="button" class="preset-pill" onclick="setTab2Price(240, this)">아파트 일반 (240원)</button>
+                                    <button type="button" class="preset-pill active" onclick="setTab2Price(347.2, this)">환경부 공용 (347.2원)</button>
+                                    <button type="button" class="preset-pill" onclick="setTab2Price(385, this)">고속도로/이핏 (385원)</button>
+                                    <button type="button" class="preset-pill" onclick="setTab2Price(420, this)">테슬라 수퍼차저 (420원)</button>
+                                </div>
+
+                                <!-- 직접 타이핑 및 슬라이더 조절 바 -->
+                                <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:10px; padding:12px 16px; display:flex; align-items:center; justify-content:space-between; gap:14px; flex-wrap:wrap;">
+                                    <div style="display:flex; align-items:center; gap:8px;">
+                                        <span style="font-size:0.86rem; font-weight:800; color:#1e293b;">내 충전기 요금 직접 입력:</span>
+                                        <input type="number" id="inpTab2Price" value="347.2" step="1" min="100" max="600" style="width:90px; padding:6px 10px; border:1px solid #cbd5e1; border-radius:6px; font-size:0.92rem; font-weight:850; text-align:center; color:#0284c7;" oninput="onTab2PriceInput(this.value)">
+                                        <span style="font-size:0.82rem; font-weight:700; color:#64748b;">원 / kWh</span>
+                                    </div>
+                                    <div style="flex:1; min-width:160px;">
+                                        <input type="range" id="rgTab2Price" min="150" max="500" step="5" value="347" class="custom-range" oninput="onTab2PriceSlider(this.value)">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- 결과 카드 -->
+                            <div class="calc-result-card" style="background:#1e293b;">
+                                <div class="calc-res-label">예상 결제 금액 (충전 손실율 12% 반영)</div>
+                                <div class="calc-res-hero" id="heroChargeCost">약 19,850원</div>
+                                <div class="calc-res-hero-sub" id="heroChargeTime">예상 소요 시간: 약 35분 ~ 45분</div>
+                            </div>
+
+                            <div class="res-summary-table">
+                                <div class="res-summary-row">
+                                    <span class="label">배터리 순수 충전량</span>
+                                    <span class="val" id="sumNetKwh">50.4 kWh</span>
+                                </div>
+                                <div class="res-summary-row">
+                                    <span class="label">수전 전력량 (손실 감안 결제 기준)</span>
+                                    <span class="val" id="sumGridKwh">약 57.2 kWh</span>
+                                </div>
+                                <div class="res-summary-row">
+                                    <span class="label">적용 충전 단가</span>
+                                    <span class="val" id="sumUnitPrice">347.2원 / kWh</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ====================================================
+                             탭 3: 겨울철 한파 실주행거리 예측기
+                             ==================================================== -->
+                        <div id="t3" class="ev-tab-content">
+                            <!-- 1. 공인 상온 주행거리 선택 -->
+                            <div class="choice-section">
+                                <div class="choice-title">
+                                    <span>1. 내 차 공인 상온 주행거리</span>
+                                    <span class="choice-sub" id="txtCertChoice">450 km (중형 SUV 표준)</span>
+                                </div>
+                                <div class="choice-pill-grid">
+                                    <button type="button" class="choice-pill" onclick="chooseCert(350, this)">
+                                        <span>350 km</span>
+                                        <span class="pill-sub">소형·경형 도심형</span>
+                                    </button>
+                                    <button type="button" class="choice-pill active" onclick="chooseCert(450, this)">
+                                        <span>450 km</span>
+                                        <span class="pill-sub">중형 패밀리 표준</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseCert(550, this)">
+                                        <span>550 km</span>
+                                        <span class="pill-sub">롱레인지 플래그십</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 2. 히트펌프 탑재 여부 -->
+                            <div class="choice-section">
+                                <div class="choice-title">
+                                    <span>2. 난방 시스템 (히트펌프 유무)</span>
+                                    <span class="choice-sub" id="txtHpChoice">히트펌프 탑재 (폐열 회수 난방)</span>
+                                </div>
+                                <div class="choice-pill-grid">
+                                    <button type="button" class="choice-pill active" onclick="chooseHp(true, this)">
+                                        <span>히트펌프 탑재</span>
+                                        <span class="pill-sub">저온 주행거리 78~82% 방어</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseHp(false, this)">
+                                        <span>일반 PTC 히터</span>
+                                        <span class="pill-sub">저온 주행거리 65~70% 방어</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 3. 외기 기온 조건 -->
+                            <div class="choice-section">
+                                <div class="choice-title">
+                                    <span>3. 주행 환경 기온</span>
+                                    <span class="choice-sub" id="txtTempChoice">영하 6.7℃ (환경부 공인 저온 시험)</span>
+                                </div>
+                                <div class="choice-pill-grid">
+                                    <button type="button" class="choice-pill" onclick="chooseTemp(20, this)">
+                                        <span>봄/가을 (20℃)</span>
+                                        <span class="pill-sub">공인 성능 100%</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseTemp(3, this)">
+                                        <span>초겨울 (3℃)</span>
+                                        <span class="pill-sub">가벼운 난방 가동</span>
+                                    </button>
+                                    <button type="button" class="choice-pill active" onclick="chooseTemp(-6.7, this)">
+                                        <span>한파 (-6.7℃)</span>
+                                        <span class="pill-sub">공인 저온 기준</span>
+                                    </button>
+                                    <button type="button" class="choice-pill" onclick="chooseTemp(-15, this)">
+                                        <span>혹한기 (-15℃)</span>
+                                        <span class="pill-sub">극심한 한파</span>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- 결과 카드 -->
+                            <div class="calc-result-card" style="background:#0369a1;">
+                                <div class="calc-res-label">겨울철 예상 실제 도달 거리</div>
+                                <div class="calc-res-hero" id="heroWinterRange">약 350 ~ 370 km</div>
+                                <div class="calc-res-hero-sub" id="heroWinterLoss">상온 450km 대비 약 20 ~ 22% 감소 예상</div>
+                            </div>
+
+                            <div class="res-summary-table">
+                                <div class="res-summary-row">
+                                    <span class="label">공인 상온 복합 기준</span>
+                                    <span class="val" id="sumBaseRange">450 km (100%)</span>
+                                </div>
+                                <div class="res-summary-row">
+                                    <span class="label">한파 손실 예상 거리</span>
+                                    <span class="val" id="sumLossKm" style="color:#ef4444;">약 -80 ~ -100 km</span>
+                                </div>
+                                <div class="res-summary-row">
+                                    <span class="label">난방 시스템 저온 방어율</span>
+                                    <span class="val" id="sumDefendRate" style="color:#0284c7;">히트펌프 약 80% 수준 유지</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- 📖 본문 심층 분석 섹션들 -->
+                    <h2>차급별 실구매가 차이와 집밥 완속 80%가 가르는 경제성</h2>
+                    <p>전기차의 경제성을 따질 때 가장 먼저 짚어야 할 사실은 <strong>'비교 대상 차량의 체급과 실구매가 차액'</strong>입니다. 예컨대 5천만 원대 그랜저 하이브리드를 타던 운전자가 출퇴근용으로 2천만 원대 캐스퍼 일렉트릭을 선택한다면, 차량 가격 자체가 2천만 원 이상 저렴하므로 '차액 회수 기간'을 따질 필요도 없이 첫날부터 이득입니다. 반면 2천만 원대 아반떼 가솔린에서 3천만 원대 후반의 기아 EV3로 기변할 경우 약 1,500만 원의 차액이 발생하므로, 이때는 내 주행거리로 그 차액을 몇 년 만에 회수할 수 있는지 냉정하게 계산해야 합니다.</p>
+
+                    <p>또한 <strong>'집밥(아파트/자가 완속) 충전 인프라 유무'</strong>는 경제성의 성패를 좌우합니다. 아파트 완속(한전 심야 약 200~230원/kWh)으로 80% 이상을 충전하면 연 1.5만km 주행 시 가솔린 대비 연간 100만~140만 원의 순수 연료비가 절약됩니다. 반면 공용 급속(347.2원/kWh 이상)에 80% 이상 의존해야 한다면 연간 절감액은 50만~70만 원 수준으로 떨어집니다. 특히 복합 연비 16~18km/L의 하이브리드를 타면서 급속 충전소만 찾아다닌다면 기름값과 충전비 차이가 거의 나지 않아 경제적 이점이 사라집니다.</p>
+
+                    <h2>충전 시간의 오해와 배터리 80% 끊어치기 원칙</h2>
+                    <p>두 번째 탭의 충전 시간 계산에서 유념할 점은, <strong>"350kW 초급속 충전기에 연결하더라도 차량이 계속해서 350kW를 받아먹는 것은 아니다"</strong>라는 전기 공학적 사실입니다. 현대 아이오닉 5나 기아 EV6 같은 800V 고전압 아키텍처 차량이라도 피크 수전 출력은 약 220~240kW 수준이며, 테슬라나 일반 400V 시스템 차량은 급속기에 꽂아도 100~150kW 수준으로 제한됩니다.</p>
+
+                    <p>더욱이 배터리 잔량이 80%를 넘어서는 순간, 배터리 관리 시스템(BMS)은 화재 예방과 수명 보호를 위해 충전 출력을 30~40kW 이하로 급격히 떨어뜨립니다. 즉, 20%에서 80%까지 충전하는 데 20분이 걸렸다면, 80%에서 100%까지 완충하는 데는 그 두 배인 40분 이상이 소요됩니다. 따라서 장거리 고속도로 주행 시에는 무리하게 100%를 채우려 고속도로 충전소에서 줄을 서기보다, 80%까지만 채우고 출발하는 '끊어치기 전략'이 시간과 비용 모두에서 가장 현명합니다.</p>
+
+                    <h2>겨울철 한파에 주행거리가 줄어드는 원리와 실전 방어법</h2>
+                    <p>겨울철 영하의 날씨에서 전기차 주행거리가 줄어드는 현상은 배터리 고장이 아닌 물리화학적 특성 때문입니다. 영하권에서는 리튬 이온의 이동 속도가 현저히 느려져 가용 용량이 줄어들 뿐만 아니라, 내연기관처럼 엔진 폐열이 없기 때문에 실내 난방을 위해 전기를 직접 태워 공기를 덥혀야 합니다.</p>
+
+                    <p>시뮬레이터 3번 탭에서 확인하듯, 모터와 인버터의 폐열을 모아 난방에 보태는 <strong>히트펌프(Heat Pump) 시스템</strong>이 탑재된 차량은 영하 6.7℃ 한파에서도 상온 대비 약 78~82%의 주행거리를 방어합니다. 반면 옵션에서 히트펌프가 빠진 PTC 전용 차량은 65~70% 수준까지 주행거리가 떨어집니다. 겨울철 주행거리를 최대한 지키려면 출발 전 충전 케이블이 꽂힌 상태에서 실내를 미리 데워두는 '예약 공조'를 활용하고, 전력 소모가 큰 공기 히터보다는 시트와 스티어링 휠 열선을 우선 활용하는 습관이 필수적입니다.</p>
+
+                    <!-- 에디터 요약 카드 -->
+                    <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:14px; padding:22px 20px; margin:36px 0;">
+                        <div style="font-size:1.05rem; font-weight:850; color:#0f172a; margin-bottom:12px;">💡 에디터의 전기차 구매 현실 조언 요약</div>
+                        <ul style="margin:0; padding-left:20px; color:#475569; font-size:0.95rem; line-height:1.75;">
+                            <li><strong>집밥(아파트/자가 완속) 인프라가 확실한 경우</strong>: 연간 1.5만km 이상 주행 시 5~6년 내에 차량 가격 차액을 연료비로 충분히 회수할 수 있어 경제적 가치가 매우 우수합니다.</li>
+                            <li><strong>공용 급속 충전에 70% 이상 의존해야 하는 경우</strong>: 연료비 절감액이 연 60~80만 원 수준으로 떨어져 비싼 차값을 회수하기 어렵습니다. 복합 연비 16km/L 이상의 하이브리드가 훨씬 현실적인 대안입니다.</li>
+                            <li><strong>겨울철 주행 환경 고려</strong>: 강원·경기 북부 등 혹한기 주행이 잦다면 반드시 히트펌프 옵션을 포함하고, 장거리 출장 시에는 80% 충전 끊어치기 동선을 계획하는 것이 스트레스를 방지하는 비결입니다.</li>
+                    </div>
+
+                </div>
+            </article>
+        </main>
+
+        <!-- 우측 사이드바 (프로필 + 인기글 TOP 10) -->
+        <aside class="article-sidebar">
+            <div class="sidebar-profile-card">
+                <div class="avatar-box">
+                    <img src="images/logo.png?v=20260829_gold" alt="차를 쓰다 에디터">
+                </div>
+                <div class="profile-name">차를 쓰다</div>
+                <p class="profile-desc">
+                    빠른 신차 업데이트와 정직하고 정확한 자동차 전문 분석을 전합니다.
+                </p>
+                <span class="profile-badge">✓ 자동차 칼럼니스트</span>
+            </div>
+
+            <div class="sidebar-widget" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:22px 20px; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+                <h3 class="widget-title" style="font-size:1.02rem; font-weight:800; color:#111827; margin-bottom:14px; padding-bottom:8px; border-bottom:1px solid #f1f5f9; display:flex; align-items:center; gap:6px;">
+                    <span>인기글 TOP 5</span>
+                </h3>
+                <ul class="popular-list" style="list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:10px;">
+                    <li style="display:flex; gap:10px; align-items:flex-start;">
+                        <span style="font-size:0.95rem; font-weight:900; color:#c26908; width:18px;">1</span>
+                        <a href="entry/used-ev-maintenance-cost.html" style="font-size:0.86rem; font-weight:700; color:#1e293b; text-decoration:none; line-height:1.4;">중고 전기차 5년 타면 정말 1,400만원 아낄까? 아이오닉5·EV6 유지비 비교</a>
+                    </li>
+                    <li style="display:flex; gap:10px; align-items:flex-start;">
+                        <span style="font-size:0.95rem; font-weight:900; color:#c26908; width:18px;">2</span>
+                        <a href="entry/2026-hyundai-all-new-bayon-b-suv-reclining-hybrid-specs.html" style="font-size:0.86rem; font-weight:700; color:#1e293b; text-decoration:none; line-height:1.4;">현대 신형 바이욘 유럽 공개, 12.3인치 디스플레이와 2열 거주 편의 분석</a>
+                    </li>
+                    <li style="display:flex; gap:10px; align-items:flex-start;">
+                        <span style="font-size:0.95rem; font-weight:900; color:#c26908; width:18px;">3</span>
+                        <a href="entry/2027-hyundai-sonata-the-edge-black-n-line-vs-s-trim-tco-guide.html" style="font-size:0.86rem; font-weight:700; color:#1e293b; text-decoration:none; line-height:1.4;">현대 2027 쏘나타 디 엣지 끝물 패밀리카 선택: S 트림 실속 vs 블랙 N Line 차이 비교</a>
+                    </li>
+                    <li style="display:flex; gap:10px; align-items:flex-start;">
+                        <span style="font-size:0.95rem; font-weight:900; color:#c26908; width:18px;">4</span>
+                        <a href="entry/tesla-fsd-korea-transport-ministry-audit-model3-modely-exemption.html" style="font-size:0.86rem; font-weight:700; color:#1e293b; text-decoration:none; line-height:1.4;">테슬라 FSD 국토부가 막았을까? 중국산 모델 3·Y 특례 미신청과 도입 한계</a>
+                    </li>
+                    <li style="display:flex; gap:10px; align-items:flex-start;">
+                        <span style="font-size:0.95rem; font-weight:900; color:#c26908; width:18px;">5</span>
+                        <a href="entry/2026-chevrolet-trax-crossover-vs-kia-seltos-price-specs-comparison.html" style="font-size:0.86rem; font-weight:700; color:#1e293b; text-decoration:none; line-height:1.4;">쉐보레 트랙스 크로스오버 2,199만 원 출고가와 셀토스 가성비 옵션 비교</a>
+                    </li>
+                </ul>
+            </div>
+        </aside>
+
+    </div>
+
+    <!-- 📄 푸터 -->
+    <footer class="clean-footer">
+        <div class="footer-inner" style="max-width:1060px; margin:0 auto; padding:28px 20px 36px;">
+            <div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:20px; padding-bottom:18px; border-bottom:1px solid #f1f5f9; width:100%;">
+                <div class="footer-info-group" style="flex:1; min-width:320px;">
+                    <p class="footer-copy" style="margin-bottom:6px;">&copy; 2026 <strong>차를 쓰다</strong>. All rights reserved.</p>
+                    <p class="footer-meta-desktop" style="font-size:0.83rem; color:#64748b; line-height:1.6; margin-bottom:5px;">
+                        제호: 차를 쓰다 | 발행인: 임진현 | 수석에디터: 임진현 | 이메일: <a href="contact.html" style="color:inherit; text-decoration:underline; font-weight:700;" title="1:1 공식 문의하기">contact@chageul.com</a> | 주소: 대한민국 서울시 도봉구 해등로 231
+                    </p>
+                    <p class="footer-copyright-warning" style="font-size:0.78rem; color:#94a3b8; line-height:1.5; margin-bottom:3px;">
+                        차를 쓰다의 모든 콘텐츠(기사·화보·데이터·계산기)는 저작권법의 보호를 받으며, 사전 승인 없는 무단 전재, 복사, 배포 및 AI 무단 학습을 엄격히 금합니다.
+                    </p>
+                    <p class="footer-disclaimer" style="font-size:0.77rem; color:#94a3b8; line-height:1.5; margin:0;">
+                        ※ 차를 쓰다 계산기는 입력 조건에 따른 추정 시뮬레이션이며, 실제 운전자의 주행 습관·충전기 요금제·차량 상태에 따라 변동될 수 있습니다.
+                    </p>
+                </div>
+
+                <div class="footer-social-group" style="display:flex; align-items:center; gap:10px; flex-shrink:0; padding-top:4px; margin-left:auto;">
+                    <a href="https://blog.naver.com/hyuni-insight" target="_blank" rel="noopener noreferrer" title="네이버 공식 블로그" style="display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:#475569; color:#ffffff; font-size:0.92rem; font-weight:850; text-decoration:none;">N</a>
+                    <a href="contact.html" title="1:1 문의 및 의견 보내기" style="display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:#475569; color:#ffffff; text-decoration:none;"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+                    <a href="rss.xml" target="_blank" title="RSS 피드 구독" style="display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:#475569; color:#ffffff; text-decoration:none;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ffffff" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+                </div>
+            </div>
+
+            <div style="padding-top:14px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; width:100%;">
+                <ul class="footer-links" style="display:flex; flex-wrap:wrap; gap:14px; list-style:none; padding:0; margin:0;">
+                    <li><a href="about.html">매체소개</a></li>
+                    <li><a href="terms.html">이용약관</a></li>
+                    <li><a href="privacy.html">개인정보처리방침</a></li>
+                    <li><a href="youth-protection.html">청소년보호정책</a></li>
+                    <li><a href="copyright.html">저작권보호정책</a></li>
+                    <li><a href="email-rejection.html">이메일무단수집거부</a></li>
+                    <li><a href="contact.html">문의하기</a></li>
+                </ul>
+                <div class="footer-brand-tag" style="font-size:0.75rem; font-weight:700; color:#94a3b8; letter-spacing:0.5px;">
+                    CHAGEUL AUTOMOTIVE MAGAZINE
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ⚡ 계산기 인터랙션 초경량 스크립트 -->
+    <script>
+        // --- 전역 상태 변수 ---
+        let currentIcePrice = 5200; // 만원 (기본: 그랜저 하브)
+        let currentCarEff = 16.5;   // km/L
+        let currentFuelPrice = 1680; // 원/L
+        let currentDist = 10000;    // km
+        let currentSlowRatio = 80;  // %
+        let currentSlowPrice = 230; // 원/kWh
+        let currentFastPrice = 347.2; // 원/kWh
+
+        let currentEvPrice = 2700;  // 만원 (기본: 캐스퍼 일렉트릭)
+        let currentEvEff = 5.6;     // km/kWh
+
+        let currentIceName = '그랜저·중대형 하브';
+        let currentEvName = '캐스퍼 일렉트릭';
+
+        // 탭 2 상태
+        let curBatCap = 84;
+        let curStartSoc = 20;
+        let curEndSoc = 80;
+        let curChargerKw = 100;
+        let curUnitPrice = 347.2;
+
+        // 탭 3 상태
+        let curCertRange = 450;
+        let curHasHp = true;
+        let curTemp = -6.7;
+
+        // 탭 전환
+        function setTab(tabId, btn) {
+            document.querySelectorAll('.ev-tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.ev-tab-content').forEach(c => c.classList.remove('active'));
+            btn.classList.add('active');
+            const target = document.getElementById(tabId);
+            if (target) target.classList.add('active');
+        }
+
+        // 탭 1 버튼 액션: 내 기존 차종 선택
+        function chooseIceCar(name, eff, fuelPrice, basePrice, btn) {
+            btn.parentElement.querySelectorAll('.choice-pill').forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            currentIceName = name;
+            currentCarEff = eff;
+            currentFuelPrice = fuelPrice;
+            currentIcePrice = basePrice;
+
+            document.getElementById('rgIcePrice').value = basePrice;
+            document.getElementById('vCustomIcePrice').innerText = basePrice.toLocaleString() + '만 원';
+            document.getElementById('rgIceEff').value = eff;
+            document.getElementById('vCustomIceEff').innerText = eff.toFixed(1) + ' km/L';
+            document.getElementById('numFuelPrice').value = fuelPrice;
+
+            document.getElementById('txtIceChoice').innerText = `${name} (${eff.toFixed(1)} km/L · ${basePrice.toLocaleString()}만 원)`;
+            calcSavings();
+        }
+
+        // 탭 1 버튼 액션: 비교할 전기차 선택
+        function chooseEvCar(name, eff, realPrice, btn) {
+            btn.parentElement.querySelectorAll('.choice-pill').forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            currentEvName = name;
+            currentEvEff = eff;
+            currentEvPrice = realPrice;
+
+            document.getElementById('rgEvPrice').value = realPrice;
+            document.getElementById('vCustomEvPrice').innerText = realPrice.toLocaleString() + '만 원';
+            document.getElementById('rgEvEff').value = eff;
+            document.getElementById('vCustomEvEff').innerText = eff.toFixed(1) + ' km/kWh';
+
+            document.getElementById('txtEvChoice').innerText = `${name} (${eff.toFixed(1)} km/kWh · 실구매 ${realPrice.toLocaleString()}만 원)`;
+            calcSavings();
+        }
+
+        function chooseDist(dist, btn) {
+            btn.parentElement.querySelectorAll('.choice-pill').forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            currentDist = dist;
+            document.getElementById('txtDistChoice').innerText = dist.toLocaleString() + ' km';
+            calcSavings();
+        }
+
+        function chooseCharge(ratio, btn) {
+            btn.parentElement.querySelectorAll('.choice-pill').forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            currentSlowRatio = ratio;
+            const labels = {
+                80: '아파트 집밥 80% + 급속 20%',
+                100: '집밥 완속 100% (알뜰)',
+                0: '공용 급속 100% (집밥 없음)'
+            };
+            document.getElementById('txtChargeChoice').innerText = labels[ratio] || '';
+            calcSavings();
+        }
+
+        function syncSlowPrice(val) {
+            const num = parseFloat(val) || 230;
+            currentSlowPrice = num;
+            const el = document.getElementById('numSlowPrice');
+            if (el) el.value = num;
+            calcSavings();
+        }
+
+        function syncFastPrice(val) {
+            const num = parseFloat(val) || 347.2;
+            currentFastPrice = num;
+            const el = document.getElementById('numFastPrice');
+            if (el) el.value = num;
+            calcSavings();
+        }
+
+        function toggleAccordion(id, btn) {
+            const body = document.getElementById(id);
+            const icon = document.getElementById('accIcon1');
+            if (body.classList.contains('open')) {
+                body.classList.remove('open');
+                icon.innerText = '▼';
+            } else {
+                body.classList.add('open');
+                icon.innerText = '▲';
+            }
+        }
+
+        function onCustomChange() {
+            currentIcePrice = parseFloat(document.getElementById('rgIcePrice').value) || 5200;
+            currentCarEff = parseFloat(document.getElementById('rgIceEff').value) || 16.5;
+            currentFuelPrice = parseFloat(document.getElementById('numFuelPrice').value) || 1680;
+
+            currentEvPrice = parseFloat(document.getElementById('rgEvPrice').value) || 2700;
+            currentEvEff = parseFloat(document.getElementById('rgEvEff').value) || 5.6;
+
+            currentSlowPrice = parseFloat(document.getElementById('numSlowPrice').value) || 230;
+            currentFastPrice = parseFloat(document.getElementById('numFastPrice').value) || 347.2;
+
+            const elSlow = document.getElementById('inpSlowPrice');
+            const elFast = document.getElementById('inpFastPrice');
+            if (elSlow) elSlow.value = currentSlowPrice;
+            if (elFast) elFast.value = currentFastPrice;
+
+            document.getElementById('vCustomIcePrice').innerText = currentIcePrice.toLocaleString() + '만 원';
+            document.getElementById('vCustomIceEff').innerText = currentCarEff.toFixed(1) + ' km/L';
+            document.getElementById('vCustomEvPrice').innerText = currentEvPrice.toLocaleString() + '만 원';
+            document.getElementById('vCustomEvEff').innerText = currentEvEff.toFixed(1) + ' km/kWh';
+
+            document.getElementById('txtIceChoice').innerText = `사용자 맞춤 (${currentCarEff.toFixed(1)} km/L · ${currentIcePrice.toLocaleString()}만 원)`;
+            document.getElementById('txtEvChoice').innerText = `사용자 맞춤 (${currentEvEff.toFixed(1)} km/kWh · ${currentEvPrice.toLocaleString()}만 원)`;
+
+            calcSavings();
+        }
+
+        function calcSavings() {
+            // 1. 내연기관 1년 유류비 = (주행거리 / 연비) * 유가
+            const iceCost = (currentDist / currentCarEff) * currentFuelPrice;
+
+            // 2. 전기차 1년 충전비 = (주행거리 / 전비) * 가중평균단가
+            const avgKwhPrice = (currentSlowPrice * (currentSlowRatio / 100)) + (currentFastPrice * ((100 - currentSlowRatio) / 100));
+            const evCost = (currentDist / currentEvEff) * avgKwhPrice;
+
+            // 3. 절감액
+            const annualSave = iceCost - evCost;
+            const fiveSave = annualSave * 5;
+
+            // 4. 차량 구매 차액 = 전기차 실구매가 - 기존 내연기관 출고가 (만 원 단위)
+            const priceDiffMan = currentEvPrice - currentIcePrice;
+
+            // DOM 갱신: 주유비 및 충전비
+            document.getElementById('sumIceCost').innerText = Math.round(iceCost).toLocaleString() + '원';
+            document.getElementById('sumEvCost').innerText = Math.round(evCost).toLocaleString() + '원';
+
+            // 메인 히어로 카드 (순수 연료비 절감액 중심)
+            if (annualSave > 0) {
+                const monthlySave = Math.round(annualSave / 12);
+                const annualSaveMan = (annualSave / 10000).toFixed(1);
+                const fiveSaveMan = (fiveSave / 10000).toFixed(0);
+
+                document.getElementById('heroAnnualSave').innerText = `연 약 ${annualSaveMan}만 원 절약`;
+                document.getElementById('heroAnnualSaveSub').innerText = `기존 주유비 대비 월 약 ${(monthlySave / 10000).toFixed(1)}만 원 · 5년 누적 약 ${fiveSaveMan}만 원 절감`;
+
+                document.getElementById('sumAnnualSave').innerText = Math.round(annualSave).toLocaleString() + '원 (월 약 ' + (monthlySave / 10000).toFixed(1) + '만 원 절약)';
+                document.getElementById('sumFiveSave').innerText = Math.round(fiveSave).toLocaleString() + '원 절약';
+            } else {
+                document.getElementById('heroAnnualSave').innerText = '연료비 절감 효과 미미';
+                document.getElementById('heroAnnualSaveSub').innerText = '현재 주행거리 및 연비 조건에서는 내연기관 주유비와 충전비 차이가 거의 없습니다.';
+                document.getElementById('sumAnnualSave').innerText = '0원 (절감 불가)';
+                document.getElementById('sumFiveSave').innerText = '0원';
+            }
+
+            // 차량 구매 차액 & 본전 분석 카드
+            const card = document.getElementById('paybackCard');
+            const badge = document.getElementById('paybackBadge');
+            const title = document.getElementById('paybackTitle');
+            const desc = document.getElementById('paybackDesc');
+
+            if (priceDiffMan < -100) {
+                // 전기차가 100만원 이상 더 저렴한 경우 (예: 그랜저 하브 vs 캐스퍼 EV)
+                const saveDiff = Math.abs(priceDiffMan);
+                card.className = 'payback-card green';
+                badge.className = 'payback-badge green';
+                badge.innerText = `🟢 전기차(${currentEvName})가 약 ${saveDiff.toLocaleString()}만 원 더 저렴!`;
+                title.innerText = `본전 회수 기간: 계산 불필요 (구입 즉시 ${saveDiff.toLocaleString()}만 원 세이브)`;
+                const annualAdd = annualSave > 0 ? `매년 기름값 ${(annualSave / 10000).toFixed(1)}만 원을 추가로 절감` : '유지비 절감 효과 누림';
+                desc.innerText = `기존 차량(${currentIceName}, 약 ${currentIcePrice.toLocaleString()}만 원) 대비 전기차(${currentEvName}, 실구매 약 ${currentEvPrice.toLocaleString()}만 원) 가격이 훨씬 저렴합니다. 첫날부터 차값 ${saveDiff.toLocaleString()}만 원을 아끼고, ${annualAdd}합니다.`;
+            } else if (priceDiffMan <= 150 && priceDiffMan >= -100) {
+                // 가격 차이가 거의 없는 경우 (동급/유사 가격대, 차액 150만원 이내)
+                card.className = 'payback-card blue';
+                badge.className = 'payback-badge blue';
+                badge.innerText = `🟡 차량 구매 가격 동등 수준 (차액 거의 없음)`;
+                title.innerText = `본전 회수 기간: 즉시 이득 전환 (출고 직후부터 순수 절약)`;
+                desc.innerText = `${currentIceName}(약 ${currentIcePrice.toLocaleString()}만 원)과 ${currentEvName}(실구매 약 ${currentEvPrice.toLocaleString()}만 원)의 실구매가 차이가 거의 없어, 출고 첫 달부터 발생하는 매달 약 ${(Math.max(0, annualSave) / 12 / 10000).toFixed(1)}만 원의 주유비 절감 효과를 그대로 누립니다.`;
+            } else {
+                // 전기차가 더 비싼 경우 (차액 회수 기간 계산)
+                card.className = 'payback-card slate';
+                badge.className = 'payback-badge slate';
+                badge.innerText = `🔵 전기차(${currentEvName}) 실구매가가 약 ${priceDiffMan.toLocaleString()}만 원 더 높음`;
+
+                if (annualSave > 0) {
+                    const totalDiffWon = priceDiffMan * 10000;
+                    const years = totalDiffWon / annualSave;
+                    const y = Math.floor(years);
+                    const m = Math.round((years - y) * 12);
+                    const totalKm = Math.round(years * currentDist);
+
+                    let timeStr = '';
+                    if (y > 0 && m > 0) timeStr = `약 ${y}년 ${m}개월`;
+                    else if (y > 0) timeStr = `약 ${y}년`;
+                    else timeStr = `약 ${m}개월`;
+
+                    title.innerText = `연료비로 차액 회수까지: ${timeStr}`;
+                    desc.innerText = `누적 약 ${(totalKm / 10000).toFixed(1)}만 km 주행 시 차량 구매 차액(${priceDiffMan.toLocaleString()}만 원)을 순수 연료비 절감액으로 회수합니다. 연간 주행거리가 길수록 회수 기간이 단축됩니다.`;
+                } else {
+                    title.innerText = `차액 회수 불가`;
+                    desc.innerText = `현재 유가와 전비 조건에서는 충전비 절감액이 없어 차량 구매 차액을 연료비로 회수할 수 없습니다.`;
+                }
+            }
+        }
+
+        // 탭 2 함수들
+        function chooseBattery(cap, btn) {
+            btn.parentElement.querySelectorAll('.choice-pill').forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            curBatCap = cap;
+            document.getElementById('txtBatChoice').innerText = btn.querySelector('span:first-child').innerText + ' (' + cap + ' kWh)';
+            calcCharge();
+        }
+
+        function chooseSoc(start, end, btn) {
+            btn.parentElement.querySelectorAll('.choice-pill').forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            curStartSoc = start;
+            curEndSoc = end;
+            document.getElementById('txtSocChoice').innerText = `${start}% → ${end}%`;
+            calcCharge();
+        }
+
+        function chooseKw(kw, btn) {
+            btn.parentElement.querySelectorAll('.choice-pill').forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            curChargerKw = kw;
+            document.getElementById('txtChargerChoice').innerText = `${kw}kW 충전기`;
+            calcCharge();
+        }
+
+        function setTab2Price(price, btn) {
+            if (btn && btn.parentElement) {
+                btn.parentElement.querySelectorAll('.preset-pill').forEach(p => p.classList.remove('active'));
+                btn.classList.add('active');
+            }
+            curUnitPrice = price;
+            const inp = document.getElementById('inpTab2Price');
+            const rg = document.getElementById('rgTab2Price');
+            if (inp) inp.value = price;
+            if (rg) rg.value = Math.min(500, Math.max(150, Math.round(price)));
+            document.getElementById('txtUnitPriceChoice').innerText = `${price}원 / kWh`;
+            calcCharge();
+        }
+
+        function onTab2PriceInput(val) {
+            const price = parseFloat(val) || 0;
+            curUnitPrice = price;
+            const rg = document.getElementById('rgTab2Price');
+            if (rg) rg.value = Math.min(500, Math.max(150, Math.round(price)));
+            document.getElementById('txtUnitPriceChoice').innerText = `${price}원 / kWh`;
+            document.querySelectorAll('.preset-pill').forEach(p => p.classList.remove('active'));
+            calcCharge();
+        }
+
+        function onTab2PriceSlider(val) {
+            const price = parseFloat(val) || 0;
+            curUnitPrice = price;
+            const inp = document.getElementById('inpTab2Price');
+            if (inp) inp.value = price;
+            document.getElementById('txtUnitPriceChoice').innerText = `${price}원 / kWh`;
+            document.querySelectorAll('.preset-pill').forEach(p => p.classList.remove('active'));
+            calcCharge();
+        }
+
+        function calcCharge() {
+            const netKwh = curBatCap * ((curEndSoc - curStartSoc) / 100);
+            const lossRate = curChargerKw <= 11 ? 0.08 : 0.12; // 손실율
+            const gridKwh = netKwh / (1 - lossRate);
+            const totalCost = Math.round(gridKwh * curUnitPrice);
+
+            document.getElementById('sumNetKwh').innerText = netKwh.toFixed(1) + ' kWh';
+            document.getElementById('sumGridKwh').innerText = '약 ' + gridKwh.toFixed(1) + ' kWh';
+            document.getElementById('sumUnitPrice').innerText = curUnitPrice + '원 / kWh';
+            document.getElementById('heroChargeCost').innerText = '약 ' + totalCost.toLocaleString() + '원';
+
+            // 시간 계산
+            let effectiveKw = Math.min(curChargerKw, 220);
+            if (curChargerKw >= 100) effectiveKw = effectiveKw * 0.72; // BMS 감속 평균
+            const hours = netKwh / effectiveKw;
+            const mins = Math.round(hours * 60);
+
+            if (mins >= 60) {
+                const h = Math.floor(mins / 60);
+                const m = mins % 60;
+                document.getElementById('heroChargeTime').innerText = `예상 소요 시간: 약 ${h}시간 ${m}분`;
+            } else {
+                document.getElementById('heroChargeTime').innerText = `예상 소요 시간: 약 ${mins}분 ~ ${mins + 10}분`;
+            }
+        }
+
+        // 탭 3 함수들
+        function chooseCert(dist, btn) {
+            btn.parentElement.querySelectorAll('.choice-pill').forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            curCertRange = dist;
+            document.getElementById('txtCertChoice').innerText = dist + ' km';
+            calcWinter();
+        }
+
+        function chooseHp(hasHp, btn) {
+            btn.parentElement.querySelectorAll('.choice-pill').forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            curHasHp = hasHp;
+            document.getElementById('txtHpChoice').innerText = hasHp ? '히트펌프 탑재' : '일반 PTC 히터';
+            calcWinter();
+        }
+
+        function chooseTemp(temp, btn) {
+            btn.parentElement.querySelectorAll('.choice-pill').forEach(p => p.classList.remove('active'));
+            btn.classList.add('active');
+            curTemp = temp;
+            document.getElementById('txtTempChoice').innerText = temp + '℃';
+            calcWinter();
+        }
+
+        function calcWinter() {
+            let ratio = 1.0;
+            if (curTemp >= 15) {
+                ratio = 1.0;
+            } else if (curTemp >= 0) {
+                ratio = curHasHp ? 0.90 : 0.85;
+            } else if (curTemp >= -10) {
+                ratio = curHasHp ? 0.80 : 0.70;
+            } else {
+                ratio = curHasHp ? 0.70 : 0.58;
+            }
+
+            const estRange = Math.round(curCertRange * ratio);
+            const lossKm = curCertRange - estRange;
+            const lossPct = Math.round((1 - ratio) * 100);
+
+            document.getElementById('sumBaseRange').innerText = curCertRange + ' km (100%)';
+            document.getElementById('sumLossKm').innerText = `약 -${lossKm} km (${lossPct}% 감소)`;
+            document.getElementById('sumDefendRate').innerText = curHasHp ? '히트펌프 탑재 약 ' + Math.round(ratio * 100) + '% 방어' : 'PTC 전용 약 ' + Math.round(ratio * 100) + '% 방어';
+
+            document.getElementById('heroWinterRange').innerText = `약 ${estRange - 10} ~ ${estRange + 10} km`;
+            document.getElementById('heroWinterLoss').innerText = `상온 ${curCertRange}km 대비 약 ${lossPct}% 감소 예상`;
+        }
+
+        // 초기 계산 실행
+        window.addEventListener('DOMContentLoaded', () => {
+            calcSavings();
+            calcCharge();
+            calcWinter();
+        });
+
+        function copyCurrentUrl() {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                alert('링크가 복사되었습니다.');
+            }).catch(() => {
+                prompt('이 글의 링크입니다:', window.location.href);
+            });
+        }
+    </script>
+</body>
+</html>
