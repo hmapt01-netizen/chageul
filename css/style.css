@@ -4986,3 +4986,46 @@ span.badge-latest {
     }
 }
 
+/* ⚡ 전기차 충전비·주행거리 계산기 (ev-tool) 전용 스타일 표준 */
+#ev-tool { border:1px solid #e2e8f0; border-radius:12px; padding:20px; margin:24px 0; background:#fff; }
+#ev-tool * { box-sizing:border-box; min-width:0; }
+#ev-tool [hidden] { display:none !important; }
+#ev-tool .ev-tabs { display:flex; gap:4px; background:#f1f5f9; padding:4px; border-radius:8px; margin-bottom:20px; }
+#ev-tool button, #ev-tool select, #ev-tool input { font:inherit; }
+#ev-tool .ev-tabs button { flex:1; border:0; border-radius:6px; padding:11px 5px; background:transparent; color:#334155; font-size:.86rem; font-weight:750; cursor:pointer; }
+#ev-tool .ev-tabs button[aria-selected=true] { background:#0f172a; color:#fff; }
+#ev-tool .ev-fields { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px 12px; margin:16px 0; }
+#ev-tool label { display:block; font-size:.84rem; font-weight:700; color:#334155; margin-bottom:6px; line-height:1.5; }
+#ev-tool input, #ev-tool select { width:100%; padding:11px; border:1px solid #94a3b8; border-radius:7px; background:white; color:#0f172a; min-height:44px; }
+#ev-tool input[aria-invalid=true] { border:2px solid #b91c1c; }
+#ev-tool :focus-visible { outline:3px solid #0284c7; outline-offset:3px; }
+#ev-tool .ev-note { font-size:.84rem !important; line-height:1.65 !important; color:#64748b !important; margin:10px 0 16px !important; }
+#ev-tool details, .ev-method { border-top:1px solid #e2e8f0; padding:14px 0; }
+#ev-tool summary, .ev-method summary { cursor:pointer; font-weight:750; line-height:1.6; }
+#ev-tool .ev-error { color:#b91c1c !important; font-size:.88rem !important; }
+#ev-tool .ev-result { background:#f0f9ff; border:1px solid #bae6fd; border-radius:10px; padding:18px; margin:0 0 20px; }
+#ev-tool .ev-result.ev-loss { background:#fff7ed; border-color:#fed7aa; }
+#ev-tool .ev-result h2 { margin:0 0 14px !important; font-size:1.25rem !important; }
+#ev-tool dl { margin:0 0 16px; }
+#ev-tool dl > div { display:flex; justify-content:space-between; gap:12px; padding:9px 0; border-bottom:1px solid #dbe5ee; font-size:.86rem; line-height:1.55; }
+#ev-tool dt { color:#475569; }
+#ev-tool dd { margin:0; text-align:right; font-weight:750; }
+#ev-tool strong { line-height:1.6; }
+#ev-tool .ev-presets { display:flex; gap:8px; flex-wrap:wrap; margin:12px 0; }
+#ev-tool .ev-presets button, #ev-reset { border:1px solid #cbd5e1; border-radius:7px; background:#f8fafc; padding:10px 12px; color:#334155; cursor:pointer; font-size:.84rem; min-height:44px; }
+#ev-tool meter { width:100%; height:24px; margin:8px 0 16px; }
+#ev-tool .ev-purchase-result { background:#f8fafc; padding:14px; border-radius:8px; margin-top:12px; }
+#ev-tool .ev-select-label { margin-top:16px; }
+#ev-tool summary { padding:6px 0; }
+#ev-tool .ev-bottom-result { margin:16px 0 20px !important; padding:0 2px; background:transparent; border-radius:0; font-weight:750; line-height:1.6; color:#1e293b; }
+#ev-tool .ev-detail-result { background:#f8fafc; border:1px solid #e2e8f0; border-radius:8px; padding:14px; margin-top:16px; }
+#ev-tool .ev-result .ev-note { font-size:.75rem !important; margin:0 0 8px !important; }
+#ev-tool .ev-fix-input { padding:10px 12px; margin-bottom:12px; border:1px solid #b91c1c; border-radius:7px; background:#fff; color:#b91c1c; cursor:pointer; }
+@media (max-width:480px) {
+    #ev-tool { padding:14px 10px; }
+    #ev-tool .ev-fields { grid-template-columns:1fr; }
+    #ev-tool .ev-tabs button { font-size:.78rem; }
+    #ev-tool dl > div { flex-direction:column; gap:2px; }
+    #ev-tool dd { text-align:left; }
+}
+

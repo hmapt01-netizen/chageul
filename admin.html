@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    <!-- 🚗 차를 쓰다 공식 파비콘 -->
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <!-- 🚗 차를 쓰다 공식 파비콘 -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
@@ -21,7 +21,7 @@
 <title>관리자 대시보드 & 글 발행기 | 차를 쓰다 (CHAGEUL)</title>
     
     <link rel="stylesheet" href="css/style.css?v=20260829_profile_box">
-    <script src="js/features.js?v=20261014_114940"></script>
+    <script src="js/features.js?v=20261014_120421"></script>
     
     <style>
         /* 🔒 1. 관리자 비밀번호 잠금 화면 스타일 */
@@ -318,7 +318,7 @@
             background: #f3f4f6; color: #4b5563; border: 1px solid #d1d5db; padding: 10px; font-size: 0.88rem; font-weight: 600; border-radius: 6px; cursor: pointer; margin-top: 10px; width: 100%; display: none;
         }
     </style>
-    <script src="js/features.js?v=20261014_114940"></script>
+    <script src="js/features.js?v=20261014_120421"></script>
 </head>
 <body style="background: #f9fafb; margin: 0; padding-bottom: 40px;">
 
@@ -371,7 +371,7 @@
             </div>
         </div>
 
-        <!-- 📚 2. 발행된 칼럼 목록 관리 (138편) -->
+        <!-- 📚 2. 발행된 칼럼 목록 관리 (139편) -->
         <div class="post-table-container">
             <div class="editor-header">
                 <div>📚 발행된 칼럼 목록 관리 (<span id="tableTotalCount" style="color: #c26908; font-weight: 800;">94</span>편)</div>
@@ -551,7 +551,7 @@
     // 📚 5. 전체 포스트 공식 기본 데이터베이스
     const defaultPosts = [
         {
-            id: 138,
+            id: 139,
             slug: "2026-tesla-cybercab-korea-autonomous-regulations-analysis.html",
             title: "테슬라 사이버캡 국내 도입 쟁점, 자가용 등록 요건과 자율주행차법 특례 분석",
             category: "포커스",
@@ -562,6 +562,20 @@
             link: "entry/2026-tesla-cybercab-korea-autonomous-regulations-analysis.html",
             desc: "2024년 10월 첫 공개 이후 양산 국면에 진입한 테슬라 2인승 무인 로보택시 사이버캡의 목표 스펙을 점검하고, 자동차관리법상 자가용 등록 요건과 자율주행자동차법 제40·41조 성능인증 및 제11조 시범운행지구 안전기준 특례를 심층 분석합니다.",
             content: "테슬라 사이버캡 국내 도입 쟁점, 자가용 등록 요건과 자율주행차법 특례 분석...",
+            isHidden: false
+        },
+        {
+            id: 138,
+            slug: "ev-charging-calculator.html",
+            title: "“전기차로 바꾸면 1년에 얼마나 아낄까?” 실전 계산기와 예비 오너 선택 가이드",
+            category: "포커스",
+            author: "차를 쓰다",
+            date: "2026-10-13",
+            views: "0",
+            thumb: "images/posts/ev-charging-calculator/thumb.jpg",
+            link: "entry/ev-charging-calculator.html",
+            desc: "전기차와 하이브리드·내연기관의 구매 차액 회수 기간부터 완속·급속 충전 요금, 한파 속 실제 주행거리 변화까지 내 운전 환경에 맞춰 정직하게 계산하는 실전 가이드.",
+            content: "“전기차로 바꾸면 1년에 얼마나 아낄까?” 실전 계산기와 예비 오너 선택 가이드...",
             isHidden: false
         },
         {
