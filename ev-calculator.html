@@ -1,1159 +1,1159 @@
-<!DOCTYPE html>
-
-<html lang="ko">
-<head>
-    <meta name="google-adsense-account" content="ca-pub-4739687813221153">
-
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>전기차 충전비·주행거리 계산기 | 차를 쓰다</title>
-<meta content="내 주행거리와 충전요금으로 전기차 연료비와 구매 차액을 비교하세요. 충전 시간과 겨울 주행거리는 직접 설정한 조건으로 추산합니다." name="description"/>
-<link href="https://chageul.com/entry/ev-charging-calculator.html" rel="canonical"/>
-<meta http-equiv="refresh" content="0; url=entry/ev-charging-calculator.html"/>
-<script>location.replace('entry/ev-charging-calculator.html');</script>
-<meta content="f3ea45cb3409cacb77fe1c9a6db5b5339238e368" name="naver-site-verification"/>
-<!-- 🌐 OpenGraph / SNS 링크 공유 메타태그 -->
-<meta content="article" property="og:type"/>
-<meta content="차를 쓰다" property="og:site_name"/>
-<meta content="전기차 충전비·주행거리 계산기 | 차를 쓰다" property="og:title"/>
-<meta content="내 주행거리와 충전요금으로 전기차 연료비와 구매 차액을 비교하세요. 충전 시간과 겨울 주행거리는 직접 설정한 조건으로 추산합니다." property="og:description"/>
-<meta content="https://chageul.com/images/posts/ev-charging-calculator/thumb.jpg" property="og:image"/>
-<meta content="https://chageul.com/entry/ev-charging-calculator.html" property="og:url"/>
-<!-- 🚗 차를 쓰다 공식 파비콘 5종 세트 -->
-<link href="favicon.ico" rel="icon" type="image/x-icon"/>
-<link href="favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
-<link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
-<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
-<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
-<!-- 📡 RSS 피드 자동 감지 -->
-<link href="https://chageul.com/rss.xml" rel="alternate" title="차를 쓰다 | 프리미엄 자동차 &amp; 모빌리티 전문 매거진 RSS 피드" type="application/rss+xml"/>
-<!-- 📊 Google Analytics 4 -->
-<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-YZQ2RW8QZJ"></script>
-<script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-YZQ2RW8QZJ');
-    </script>
-<!-- 💰 Google AdSense -->
-<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4739687813221153"></script>
-<!-- 🔤 차를 쓰다 공식 Pretendard 웹폰트 -->
-<link as="style" crossorigin="" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
-<link href="css/style.css?v=20260830_car_fixed" rel="stylesheet"/>
-<style id="guaranteedMasterPostStyle">
-        html, body { width: 100% !important; max-width: 100vw !important; overflow-x: clip !important; box-sizing: border-box !important; }
-        
-        
-        .brand-text-stack { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif !important;
-            display: flex !important;
-            flex-direction: column !important;
-            justify-content: center !important;
-            line-height: 1.15 !important;
-        }
-        .brand-sub-title { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif !important;
-            font-size: 0.72rem !important;
-            font-weight: 800 !important;
-            color: #c26908 !important;
-            letter-spacing: 0.5px !important;
-        }
-        .brand-main-title { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif !important;
-            font-size: 1.35rem !important;
-            font-weight: 800 !important;
-            color: #111827 !important;
-            letter-spacing: -0.5px !important;
-        }
-
-        /* 📱 모바일 (768px 이하): 1열 본문 집중형 레이아웃 */
-        @media (max-width: 768px) {
-            body.chageul-single-post { padding-top: 52px !important; }
-            .desktop-header,
-            .clean-nav {
-                display: none !important;
-            }
-            .mobile-chageul-header {
-                display: flex !important;
-            }
-            .article-layout-grid {
-                display: block !important;
-                width: 100% !important;
-                padding: 16px 14px !important;
-                margin: 0 !important;
-            }
-            .article-sidebar {
-                display: none !important;
-            }
-        }
-
-        /* 💻 PC 데스크톱 (769px 이상): 완벽한 2열 그리드 강제 (본문 700px + 우측 사이드바 300px) */
-        @media (min-width: 769px) {
-            .mobile-chageul-header {
-                display: none !important;
-            }
-            .desktop-header {
-                display: block !important;
-            }
-            .article-layout-grid {
-                display: grid !important;
-                grid-template-columns: 1fr 300px !important;
-                gap: 44px !important;
-                max-width: 1060px !important;
-                margin: 36px auto !important;
-                padding: 0 20px !important;
-                align-items: start !important;
-            }
-            .article-main-col {
-                min-width: 0 !important;
-                width: 100% !important;
-            }
-            .article-sidebar {
-                display: block !important;
-                width: 300px !important;
-                position: sticky !important;
-                top: 80px !important;
-            }
-        }
-
-        /* 🏷️ 상단 카테고리 텍스트 (컴팩트 칼각 여백) */
-        .article-cat-title {
-            font-size: 0.84rem !important;
-            font-weight: 750 !important;
-            color: #475569 !important;
-            margin-bottom: 6px !important;
-            display: block !important;
-            line-height: 1.2 !important;
-        }
-
-        /* 📊 메타바 스타일 (줄간격 밀착 & 스마트폰 최적화) */
-        .article-meta-bar {
-            font-size: 0.82rem !important;
-            color: #64748b !important;
-            display: flex !important;
-            gap: 5px 8px !important;
-            align-items: center !important;
-            flex-wrap: wrap !important;
-            margin-bottom: 16px !important;
-            line-height: 1.35 !important;
-        }
-        font-size: 0.84rem !important;
-            font-weight: 400 !important;
-            color: #ef4444 !important;
-            background: none !important;
-            background-color: transparent !important;
-            border: none !important;
-            padding: 0 !important;
-            border-radius: 0 !important;
-            display: inline !important;
-            box-shadow: none !important;
-        .article-meta-bar .academic-source-tag {
-            color: #0d9488 !important;
-            font-weight: 750 !important;
-        }
-
-        /* 🌟 대표 메인 화보 (가로/세로 모든 이미지 완벽 자연 렌더링 & 캡션 선명화) */
-        figure.article-featured-img-box,
-        .article-featured-img-box {
-            width: 100% !important;
-            aspect-ratio: auto !important;
-            overflow: visible !important;
-            margin: 0 0 32px 0 !important;
-            background: transparent !important;
-            text-align: center !important;
-            display: block !important;
-            padding: 0 !important;
-            border: none !important;
-        }
-        figure.article-featured-img-box img,
-        .article-featured-img-box img {
-            max-width: 100% !important;
-            width: auto !important;
-            height: auto !important;
-            max-height: 560px !important;
-            object-fit: contain !important;
-            display: block !important;
-            margin: 0 auto !important;
-            border-radius: 12px !important;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
-        }
-        figure.article-featured-img-box figcaption,
-.article-featured-img-box figcaption,
-figure.post-photo-figure figcaption,
-.post-photo-figure figcaption {
-    font-size: 0.83rem !important;
-    font-weight: 500 !important;
-    color: #64748b !important;
-    text-align: center !important;
-    margin-top: 8px !important;
-    line-height: 1.4 !important;
-    letter-spacing: -0.2px !important;
-    display: block !important;
-}
-
-        /* 📸 본문 내 모든 figure 사진 (회색 배경 완전 박멸) */
-        figure.post-photo-figure {
-            background: transparent !important;
-            margin: 32px auto !important;
-            text-align: center !important;
-            padding: 0 !important;
-        }
-        figure.post-photo-figure img {
-            background: transparent !important;
-            max-width: 100% !important;
-            width: auto !important;
-            height: auto !important;
-            max-height: 520px !important;
-            object-fit: contain !important;
-            border-radius: 12px !important;
-            display: block !important;
-            margin: 0 auto !important;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
-        }
-        figure.post-photo-figure figcaption {
-            font-size: 0.86rem !important;
-            color: #64748b !important;
-            text-align: center !important;
-            margin-top: 10px !important;
-            font-weight: 600 !important;
-            display: block !important;
-        }
-
-        /* 📖 본문 폰트 및 줄바꿈/가독성 극대화 */
-        .article-body-content {
-            font-size: 1.05rem !important;
-            line-height: 1.95 !important;
-            color: #334155 !important;
-            word-break: keep-all !important;
-            letter-spacing: -0.25px !important;
-        }
-        .article-body-content p {
-            margin-bottom: 22px !important;
-            line-height: 1.95 !important;
-        }
-        .article-body-content h2 {
-            font-size: 1.36rem !important;
-            font-weight: 850 !important;
-            color: #0f172a !important;
-            margin: 44px 0 20px 0 !important;
-            padding-bottom: 10px !important;
-            border-bottom: 1.5px solid #e2e8f0 !important;
-            letter-spacing: -0.3px !important;
-            line-height: 1.4 !important;
-        }
-        .article-body-content h3 {
-            font-size: 1.15rem !important;
-            font-weight: 800 !important;
-            color: #1e293b !important;
-            margin: 32px 0 14px 0 !important;
-            line-height: 1.4 !important;
-        }
-
-        /* 📊 프리미엄 모바일 반응형 데이터 테이블 표준 (다크 네이비 헤더 + 자동 보장 스타일) */
-        .custom-data-table-wrap {
-            width: 100% !important;
-            overflow-x: auto !important;
-            -webkit-overflow-scrolling: touch !important;
-            margin: 32px 0 !important;
-            border: 1px solid #e2e8f0 !important;
-            border-radius: 12px !important;
-            background: #ffffff !important;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02) !important;
-        }
-        .custom-data-table-wrap::-webkit-scrollbar {
-            height: 6px;
-        }
-        .custom-data-table-wrap::-webkit-scrollbar-thumb {
-            background: #cbd5e1;
-            border-radius: 4px;
-        }
-        table.custom-data-table,
-        .article-body-content table {
-            width: 100% !important;
-            border-collapse: collapse !important;
-            min-width: 560px !important;
-            font-size: 0.93rem !important;
-            text-align: center !important;
-            line-height: 1.6 !important;
-            border: none !important;
-        }
-        .custom-data-table thead,
-        .article-body-content table thead,
-        .custom-data-table thead tr,
-        .article-body-content table thead tr {
-            background: #0f172a !important;
-            color: #ffffff !important;
-        }
-        .custom-data-table th,
-        .article-body-content table th {
-            padding: 13px 10px !important;
-            border: 1px solid #334155 !important;
-            font-weight: 700 !important;
-            font-size: 0.92rem !important;
-            letter-spacing: -0.2px !important;
-            background: #0f172a !important;
-            color: #ffffff !important;
-            text-align: center !important;
-        }
-        .custom-data-table th.point-col,
-        .custom-data-table th[style*="#0284c7"],
-        .article-body-content table th.point-col,
-        .article-body-content table th[style*="#0284c7"] {
-            background: #0284c7 !important;
-            color: #ffffff !important;
-        }
-        .custom-data-table tbody tr:nth-child(even),
-        .article-body-content table tbody tr:nth-child(even) {
-            background: #f8fafc !important;
-        }
-        .custom-data-table tbody tr:nth-child(odd),
-        .article-body-content table tbody tr:nth-child(odd) {
-            background: #ffffff !important;
-        }
-        .custom-data-table tbody tr:hover,
-        .article-body-content table tbody tr:hover {
-            background: #f1f5f9 !important;
-        }
-        .custom-data-table td,
-        .article-body-content table td {
-            padding: 12px 10px !important;
-            border: 1px solid #e2e8f0 !important;
-            color: #334155 !important;
-            text-align: center !important;
-        }
-        .custom-data-table td.point-col {
-            color: #0284c7 !important;
-            font-weight: 700 !important;
-        }
-
-        /* 💻 PC 데스크톱 (769px 이상): 너비 100% 핏 */
-        @media (min-width: 769px) {
-            table.custom-data-table,
-            .article-body-content table {
-                min-width: 100% !important;
-                table-layout: auto !important;
-            }
-            .custom-data-table th,
-            .custom-data-table td,
-            .article-body-content table th,
-            .article-body-content table td {
-                white-space: normal !important;
-                word-break: keep-all !important;
-            }
-        }
-
-        /* 📱 모바일 스마트폰 (768px 이하): 가로 터치 스크롤 보장 */
-        @media (max-width: 768px) {
-            table.custom-data-table,
-            .article-body-content table {
-                min-width: 520px !important;
-            }
-            .custom-data-table th,
-            .custom-data-table td,
-            .article-body-content table th,
-            .article-body-content table td {
-                padding: 10px 10px !important;
-                font-size: 0.88rem !important;
-            }
-        }
-
-        /* 🥗 레시피 카드 리스트 (모던 미니멀 카드 & 컴팩트 여백) */
-        .recipe-card-list {
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 14px !important;
-            margin: 24px 0 28px 0 !important;
-        }
-        .recipe-card-item {
-            background: #f8fafc !important;
-            border: 1px solid #e2e8f0 !important;
-            border-radius: 12px !important;
-            padding: 16px 18px 14px 18px !important;
-            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02) !important;
-        }
-        .recipe-card-header {
-            font-size: 1.02rem !important;
-            font-weight: 800 !important;
-            color: #0f172a !important;
-            margin-bottom: 8px !important;
-        }
-        .recipe-card-body {
-            font-size: 0.92rem !important;
-            color: #334155 !important;
-            line-height: 1.65 !important;
-        }
-        .recipe-card-body p {
-            margin: 0 0 6px 0 !important;
-            line-height: 1.65 !important;
-        }
-        .recipe-card-body p:last-child {
-            margin-bottom: 0 !important;
-        }
-
-                        /* 📖 모바일 터치 최적화 목차 박스 (Rule 1-2 영구 표준: 좌측 주황색 포인트 라인 100% 통일) */
-        .toc-box {
-            background: #f8fafc !important;
-            border: 1px solid #e2e8f0 !important;
-            border-left: 4px solid #c26908 !important;
-            border-radius: 10px !important;
-            padding: 18px 20px !important;
-            margin: 28px 0 34px 0 !important;
-            box-sizing: border-box !important;
-        }
-        .toc-title {
-            font-size: 0.96rem !important;
-            font-weight: 800 !important;
-            color: #0f172a !important;
-            margin: 0 0 12px 0 !important;
-            padding: 0 4px 8px 4px !important;
-            border-bottom: 1px dashed #e2e8f0 !important;
-            line-height: 1.2 !important;
-        }
-        .toc-box ul.toc-list {
-            list-style: none !important;
-            padding: 0 !important;
-            margin: 0 !important;
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 10px !important;
-        }
-        .toc-box ul.toc-list li a {
-            display: flex !important;
-            align-items: flex-start !important;
-            gap: 8px !important;
-            color: #334155 !important;
-            font-size: 0.93rem !important;
-            font-weight: 600 !important;
-            text-decoration: none !important;
-            line-height: 1.45 !important;
-            transition: color 0.15s !important;
-        }
-        .toc-box ul.toc-list li a:hover {
-            color: #c26908 !important;
-        }
-        .toc-box .toc-num {
-            color: #c26908 !important;
-            font-weight: 800 !important;
-            flex-shrink: 0 !important;
-        }
-
-        /* 👤 사이드바 프로필 위젯 */
-        .sidebar-profile-card {
-            background: #ffffff !important;
-            border: 1px solid #e2e8f0 !important;
-            border-radius: 16px !important;
-            padding: 24px 20px !important;
-            text-align: center !important;
-            margin-bottom: 20px !important;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03) !important;
-        }
-        .sidebar-profile-card .avatar-box {
-            width: 68px !important;
-            height: 68px !important;
-            background: transparent !important;
-            border: none !important;
-            border-radius: 50% !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            margin: 0 auto 12px auto !important;
-        }
-        .sidebar-profile-card .avatar-box img {
-            width: 68px !important;
-            height: 68px !important;
-            border-radius: 50% !important;
-            object-fit: cover !important;
-            display: block !important;
-            filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.18)) !important;
-        }
-        .sidebar-profile-card .profile-name {
-            font-size: 1.05rem !important;
-            font-weight: 850 !important;
-            color: #0f172a !important;
-            margin-bottom: 6px !important;
-        }
-        .sidebar-profile-card .profile-desc {
-            font-size: 0.82rem !important;
-            color: #64748b !important;
-            line-height: 1.55 !important;
-            margin: 0 0 14px 0 !important;
-            word-break: keep-all !important;
-        }
-        .sidebar-profile-card .profile-badge {
-            font-size: 0.78rem !important;
-            font-weight: 750 !important;
-            color: #1e293b !important;
-            background: #f1f5f9 !important;
-            border: 1px solid #cbd5e1 !important;
-            padding: 4px 14px !important;
-            border-radius: 9999px !important;
-            display: inline-block !important;
-            letter-spacing: -0.2px !important;
-        }
-
-        /* ⚡ 사이드바 3번 '내 몸 맞춤 건강 계산기' (100% 완벽 중앙 정렬 & 칼각) */
-        .sidebar-calc-card {
-            background: #fffdf5 !important;
-            border: 1px solid #fef08a !important;
-            border-radius: 16px !important;
-            padding: 24px 20px !important;
-            text-align: center !important;
-            display: flex !important;
-            flex-direction: column !important;
-            align-items: center !important;
-            justify-content: center !important;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03) !important;
-            box-sizing: border-box !important;
-        }
-        .sidebar-calc-card .calc-badge {
-            font-size: 0.74rem !important;
-            font-weight: 800 !important;
-            color: #c26908 !important;
-            background: #ffffff !important;
-            border: 1px solid #fde68a !important;
-            padding: 3px 12px !important;
-            border-radius: 9999px !important;
-            display: inline-flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            margin: 0 auto 12px auto !important;
-            text-align: center !important;
-        }
-        .sidebar-calc-card .calc-title {
-            font-size: 1.08rem !important;
-            font-weight: 850 !important;
-            color: #0f172a !important;
-            margin: 0 auto 8px auto !important;
-            letter-spacing: -0.3px !important;
-            text-align: center !important;
-            display: block !important;
-            width: 100% !important;
-        }
-        .sidebar-calc-card .calc-desc {
-            font-size: 0.83rem !important;
-            color: #64748b !important;
-            line-height: 1.55 !important;
-            margin: 0 auto 18px auto !important;
-            word-break: keep-all !important;
-            text-align: center !important;
-            display: block !important;
-            width: 100% !important;
-        }
-        .sidebar-calc-card .btn-calc-action {
-            display: block !important;
-            width: 100% !important;
-            background: #0f172a !important;
-            color: #ffffff !important;
-            font-size: 0.88rem !important;
-            font-weight: 750 !important;
-            padding: 11px 0 !important;
-            border-radius: 8px !important;
-            text-decoration: none !important;
-            transition: background 0.15s !important;
-            box-sizing: border-box !important;
-            text-align: center !important;
-            margin: 0 auto !important;
-        }
-        .sidebar-calc-card .btn-calc-action:hover {
-            background: #1e293b !important;
-        }
-
-            /* 📱 모바일 헤더 스마트폰 최적화 (로고 거대화 100% 원천 차단) */
-        .mobile-chageul-header {
-            display: none;
-            position: fixed !important;
-            top: 0 !important;
-            left: 0 !important;
-            width: 100% !important;
-            height: 52px !important;
-            background: #ffffff !important;
-            border-bottom: 1px solid #eef2f6 !important;
-            box-shadow: 0 1px 6px rgba(0,0,0,0.03) !important;
-            z-index: 99999 !important;
-        }
-        @media (max-width: 768px) {
-            body.chageul-single-post { padding-top: 52px !important; }
-            .mobile-chageul-header {
-                display: block !important;
-            }
-            .desktop-header {
-                display: none !important;
-            }
-        }
-        .m-header-inner {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: space-between !important;
-            height: 52px !important;
-            padding: 0 14px !important;
-            max-width: 100% !important;
-            box-sizing: border-box !important;
-            gap: 8px !important;
-        }
-        .m-btn-back {
-            background: transparent !important;
-            border: none !important;
-            padding: 4px !important;
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            cursor: pointer !important;
-            flex-shrink: 0 !important;
-        }
-        .m-header-title {
-            font-size: 0.94rem !important;
-            font-weight: 750 !important;
-            color: #0f172a !important;
-            text-align: center !important;
-            white-space: nowrap !important;
-            overflow: hidden !important;
-            text-overflow: ellipsis !important;
-            flex: 1 !important;
-            padding: 0 6px !important;
-            line-height: 1.2 !important;
-        }
-        .m-header-profile {
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-            width: 34px !important;
-            height: 34px !important;
-            border-radius: 50% !important;
-            background: #fffbeb !important;
-            border: 1.5px solid #fde68a !important;
-            overflow: hidden !important;
-            flex-shrink: 0 !important;
-            text-decoration: none !important;
-        }
-        .m-profile-img {
-            width: 22px !important;
-            height: 22px !important;
-            object-fit: contain !important;
-            display: block !important;
-            margin: 0 auto !important;
-        }
-            
-            /* 🌟 대표 메인 화보 (Rule 5 표준: 풍경/음식/운동 16:9 와이드 풀와이드 / 인물 화보 contain) */
-        figure.article-featured-img-box,
-        .article-featured-img-box {
-            width: 100% !important;
-            margin: 0 0 24px 0 !important;
-            background: transparent !important;
-            text-align: center !important;
-            display: block !important;
-            padding: 0 !important;
-            border: none !important;
-        }
-        figure.article-featured-img-box img,
-        .article-featured-img-box img {
-            width: 100% !important;
-            aspect-ratio: 16 / 9 !important;
-            object-fit: cover !important;
-            display: block !important;
-            margin: 0 auto !important;
-            border-radius: 12px !important;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
-        }
-        /* 인물 전신 화보 전용 클래스 (머리/발목 잘림 방지) */
-        figure.article-featured-img-box.portrait-fit img,
-        .article-featured-img-box.portrait-fit img {
-            width: auto !important;
-            max-width: 100% !important;
-            height: auto !important;
-            max-height: 560px !important;
-            aspect-ratio: unset !important;
-            object-fit: contain !important;
-        }
-
-            /* 🌟 대표 메인 화보 & 본문 모든 화보 16:9 풀와이드 100% 꽉 채움 표준 */
-        figure.article-featured-img-box,
-        .article-featured-img-box,
-        figure.post-photo-figure,
-        .post-photo-figure {
-            width: 100% !important;
-            margin: 28px 0 !important;
-            background: transparent !important;
-            text-align: center !important;
-            display: block !important;
-            padding: 0 !important;
-            border: none !important;
-        }
-        figure.article-featured-img-box img,
-        .article-featured-img-box img,
-        figure.post-photo-figure img,
-        .post-photo-figure img {
-            width: 100% !important;
-            height: auto !important;
-            aspect-ratio: 16 / 9 !important;
-            object-fit: cover !important;
-            display: block !important;
-            margin: 0 auto !important;
-            border-radius: 12px !important;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
-        }
-        /* 💃 인물 전신 화보 전용 (오나라 등 머리/발목 잘림 방지) */
-        figure.article-featured-img-box.portrait-fit img,
-        .article-featured-img-box.portrait-fit img,
-        figure.post-photo-figure.portrait-fit img,
-        .post-photo-figure.portrait-fit img {
-            width: auto !important;
-            max-width: 100% !important;
-            height: auto !important;
-            max-height: 560px !important;
-            aspect-ratio: unset !important;
-            object-fit: contain !important;
-        }
-        figure.article-featured-img-box figcaption,
-        .article-featured-img-box figcaption,
-        .article-featured-img-box div[style*="color:#64748b"],
-        figure.post-photo-figure figcaption,
-        .post-photo-figure figcaption,
-        .article-body-content .caption,
-        .article-body-content div.caption,
-        .article-body-content div[style*="color:#64748b"],
-        .article-body-content p[style*="color:#64748b"] {
-            font-size: 0.88rem !important;
-            font-weight: 400 !important;
-            color: #64748b !important;
-            text-align: center !important;
-            margin-top: 8px !important;
-            margin-bottom: 26px !important;
-            line-height: 1.4 !important;
-            letter-spacing: -0.2px !important;
-            display: block !important;
-        }
-            /* ❓ FAQ 카드 영구 표준 규격 (모든 글 100% 동일한 고급스러운 테두리 박스) */
-        .faq-block-wrap {
-            display: flex !important;
-            flex-direction: column !important;
-            gap: 14px !important;
-            margin-top: 14px !important;
-        }
-        .faq-card {
-            background: #ffffff !important;
-            border: 1px solid #e2e8f0 !important;
-            border-radius: 12px !important;
-            padding: 18px 20px !important;
-            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02) !important;
-            transition: border-color 0.2s, box-shadow 0.2s !important;
-            box-sizing: border-box !important;
-        }
-        .faq-card:hover {
-            border-color: #cbd5e1 !important;
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04) !important;
-        }
-        .faq-q, .faq-card .faq-q {
-            font-size: 0.98rem !important;
-            font-weight: 800 !important;
-            color: #0f172a !important;
-            margin-bottom: 8px !important;
-            display: flex !important;
-            align-items: flex-start !important;
-            line-height: 1.45 !important;
-        }
-        .q-icon, .faq-card .q-icon {
-            color: #c26908 !important;
-            font-weight: 900 !important;
-            margin-right: 6px !important;
-            flex-shrink: 0 !important;
-        }
-        .faq-a, .faq-card .faq-a {
-            font-size: 0.9rem !important;
-            color: #475569 !important;
-            line-height: 1.75 !important;
-            margin: 0 !important;
-        }
-        .faq-a strong, .faq-card .faq-a strong {
-            color: #0f172a !important;
-            font-weight: 800 !important;
-        }
-            /* 🏷️ 본문 소제목 (소제목 앞 색 라인 일체 제거 & 깔끔한 칼각 폰트) */
-        .article-body-content h2,
-        .article-body-text h2,
-        article h2,
-        h2 {
-            font-size: 1.35rem !important;
-            font-weight: 850 !important;
-            color: #0f172a !important;
-            margin: 36px 0 16px 0 !important;
-            border-left: none !important;
-            border: none !important;
-            padding-left: 0 !important;
-            padding: 0 !important;
-            line-height: 1.4 !important;
-            letter-spacing: -0.3px !important;
-        }
-        .article-body-content h3,
-        .article-body-text h3,
-        article h3,
-        h3 {
-            font-size: 1.15rem !important;
-            font-weight: 800 !important;
-            color: #1e293b !important;
-            margin: 28px 0 12px 0 !important;
-            border-left: none !important;
-            border: none !important;
-            padding-left: 0 !important;
-            padding: 0 !important;
-            line-height: 1.4 !important;
-        }
-            /* 📖 본문 문단 황금 가독성 타이포그래피 (1문단 2~3줄 쾌적 호흡 & 시원한 여백) */
-        .article-body-content p,
-        .article-body-text p,
-        article p {
-            font-size: 1.04rem !important;
-            line-height: 1.88 !important;
-            color: #334155 !important;
-            margin: 0 0 20px 0 !important;
-            word-break: keep-all !important;
-            letter-spacing: -0.2px !important;
-        }
-
-        /* 📖 본문 리스트 (ul, ol, li) 황금 가독성 & 줄나눔 호흡 표준 (딱 붙는 현상 영구 원천 방지) */
-        .article-body-content ul,
-        .article-body-text ul,
-        article ul {
-            margin: 20px 0 26px 0 !important;
-            padding-left: 24px !important;
-            list-style-type: disc !important;
-        }
-
-        .article-body-content ol,
-        .article-body-text ol,
-        article ol {
-            margin: 20px 0 26px 0 !important;
-            padding-left: 24px !important;
-            list-style-type: decimal !important;
-        }
-
-        .article-body-content li,
-        .article-body-text li,
-        article li {
-            font-size: 1.04rem !important;
-            line-height: 1.88 !important;
-            color: #334155 !important;
-            margin-bottom: 14px !important;
-            word-break: keep-all !important;
-            letter-spacing: -0.2px !important;
-        }
-
-        .article-body-content li:last-child,
-        .article-body-text li:last-child,
-        article li:last-child {
-            margin-bottom: 0 !important;
-        }
-
-        /* 📖 2단계 중첩 리스트 (Nested List) 여백 및 인덴트 */
-        .article-body-content ul ul,
-        .article-body-content ol ul,
-        .article-body-content ul ol,
-        .article-body-content ol ol {
-            margin: 10px 0 12px 0 !important;
-            padding-left: 20px !important;
-            list-style-type: circle !important;
-        }
-
-        .article-body-content ul ul li,
-        .article-body-content ol ul li,
-        .article-body-content ul ol li,
-        .article-body-content ol ol li {
-            font-size: 1.0rem !important;
-            line-height: 1.82 !important;
-            margin-bottom: 8px !important;
-            color: #475569 !important;
-        }
-
-        /* 푸터 소셜/탑버튼 정렬 (모바일에서 차라리 오른쪽으로 붙임) */
-        .footer-social-group {
-            margin-left: auto !important;
-        }
-
-        @media (max-width: 768px) {
-            body.chageul-single-post { padding-top: 52px !important; }
-            .article-body-content p,
-            .article-body-text p,
-            article p {
-                font-size: 1.0rem !important;
-                line-height: 1.92 !important;
-                margin: 0 0 24px 0 !important;
-            }
-            .article-body-content ul,
-            .article-body-content ol,
-            .article-body-text ul,
-            .article-body-text ol,
-            article ul,
-            article ol {
-                margin: 16px 0 22px 0 !important;
-                padding-left: 20px !important;
-            }
-            .article-body-content li,
-            .article-body-text li,
-            article li {
-                font-size: 0.98rem !important;
-                line-height: 1.82 !important;
-                margin-bottom: 12px !important;
-            }
-            .article-body-content ul ul li,
-            .article-body-content ol ul li {
-                font-size: 0.94rem !important;
-                line-height: 1.76 !important;
-                margin-bottom: 6px !important;
-            }
-            .footer-social-group {
-                width: 100% !important;
-                display: flex !important;
-                justify-content: flex-end !important;
-                margin-top: 10px !important;
-            }
-        }
-            /*  추천 칼럼 카드 타이포그래피 (제목 1.02rem 진하게 vs 설명 0.84rem 아담하게) */
-        .related-articles-section h4 {
-            font-size: 1.02rem !important;
-            font-weight: 800 !important;
-            color: #0f172a !important;
-            line-height: 1.4 !important;
-            margin: 0 0 6px 0 !important;
-            word-break: keep-all !important;
-        }
-        .related-articles-section p {
-            font-size: 0.84rem !important;
-            line-height: 1.45 !important;
-            color: #64748b !important;
-            margin: 0 !important;
-            letter-spacing: -0.2px !important;
-        }
-
-        /* 🔗 본문 내부 맞링크 알약 뱃지 (Internal Link Pill - 차를 쓰다) */
-        .inline-pill-link {
-            display: inline-flex !important;
-            align-items: center !important;
-            gap: 4px !important;
-            background: #e0f2fe !important;
-            color: #0369a1 !important;
-            padding: 2px 10px !important;
-            border-radius: 6px !important;
-            border: 1px solid #bae6fd !important;
-            font-size: 0.93rem !important;
-            font-weight: 700 !important;
-            text-decoration: none !important;
-            vertical-align: middle !important;
-            margin: 0 3px !important;
-            line-height: 1.5 !important;
-            transition: all 0.2s ease !important;
-            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
-        }
-        .inline-pill-link:hover {
-            background: #bae6fd !important;
-            color: #0284c7 !important;
-            border-color: #7dd3fc !important;
-            box-shadow: 0 2px 6px rgba(2, 132, 199, 0.2) !important;
-            transform: translateY(-1px) !important;
-        }
-    
-        .article-body-content h2, .article-body-content h3, #faq { scroll-margin-top: 75px !important; }
-        html { scroll-behavior: smooth !important; }
-        @media (max-width: 768px) { .btn-pc-share { display: none !important; } }
-        /* ==========================================================================
-   도입부 요약 인용 박스 및 콜아웃 박스 상하 여백 완벽 대칭 (하단 빈공간 제거)
-   ========================================================================== */
-.article-body-content div[style*="border-left"] p,
-.article-body-content blockquote p,
-.article-body-content div[style*="background"] > p:last-child,
-.article-body-content div > p:last-child,
-.article-body-content p:last-child {
-    margin-bottom: 0 !important;
-}
-    </style>
-<style>
-#ev-tool {border:1px solid #e2e8f0;border-radius:12px;padding:20px;margin:24px 0;background:#fff;}
-#ev-tool *{box-sizing:border-box;min-width:0;}
-#ev-tool [hidden]{display:none!important;}
-#ev-tool .ev-tabs{display:flex;gap:4px;background:#f1f5f9;padding:4px;border-radius:8px;margin-bottom:20px;}
-#ev-tool button,#ev-tool select,#ev-tool input{font:inherit;}
-#ev-tool .ev-tabs button{flex:1;border:0;border-radius:6px;padding:11px 5px;background:transparent;color:#334155;font-size:.86rem;font-weight:750;cursor:pointer;}
-#ev-tool .ev-tabs button[aria-selected=true]{background:#0f172a;color:#fff;}
-#ev-tool .ev-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px;margin:16px 0;}
-#ev-tool label{display:block;font-size:.84rem;font-weight:700;color:#334155;margin-bottom:6px;line-height:1.5;}
-#ev-tool input,#ev-tool select{width:100%;padding:11px;border:1px solid #94a3b8;border-radius:7px;background:white;color:#0f172a;min-height:44px;}
-#ev-tool input[aria-invalid=true]{border:2px solid #b91c1c;}
-#ev-tool :focus-visible{outline:3px solid #0284c7;outline-offset:3px;}
-#ev-tool .ev-note{font-size:.84rem!important;line-height:1.65!important;color:#64748b!important;margin:10px 0 16px!important;}
-#ev-tool details,.ev-method{border-top:1px solid #e2e8f0;padding:14px 0;}
-#ev-tool summary,.ev-method summary{cursor:pointer;font-weight:750;line-height:1.6;}
-#ev-tool .ev-error{color:#b91c1c!important;font-size:.88rem!important;}
-#ev-tool .ev-result{background:#f0f9ff;border:1px solid #bae6fd;border-radius:10px;padding:18px;margin:18px 0;}
-#ev-tool .ev-result.ev-loss{background:#fff7ed;border-color:#fed7aa;}
-#ev-tool .ev-result h2{margin:0 0 14px!important;font-size:1.25rem!important;}
-#ev-tool dl{margin:0 0 16px;}#ev-tool dl>div{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid #dbe5ee;font-size:.86rem;line-height:1.55;}
-#ev-tool dt{color:#475569;}#ev-tool dd{margin:0;text-align:right;font-weight:750;}#ev-tool strong{line-height:1.6;}
-#ev-tool .ev-presets{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;}
-#ev-tool .ev-presets button,#ev-reset{border:1px solid #cbd5e1;border-radius:7px;background:#f8fafc;padding:10px 12px;color:#334155;cursor:pointer;font-size:.84rem;min-height:44px;}
-#ev-tool meter{width:100%;height:24px;margin:8px 0 16px;}
-@media(max-width:480px){#ev-tool{padding:14px 10px;}#ev-tool .ev-fields{grid-template-columns:1fr;}#ev-tool .ev-tabs button{font-size:.78rem;}#ev-tool dl>div{flex-direction:column;gap:2px;}#ev-tool dd{text-align:left;}}
-</style><style>#ev-tool .ev-result{margin:0 0 20px} #ev-tool .ev-purchase-result{background:#f8fafc;padding:14px;border-radius:8px;margin-top:12px} #ev-tool .ev-select-label{margin-top:16px} #ev-tool summary{padding:6px 0}</style><style>#ev-tool .ev-bottom-result{margin:16px 0 20px!important;padding:0 2px;background:transparent;border-radius:0;font-weight:750;line-height:1.6;color:#1e293b}</style><style>
-#ev-tool .ev-detail-result{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px;margin-top:16px}
-#ev-tool .ev-result .ev-note{font-size:.75rem!important;margin:0 0 8px!important}
-#ev-tool .ev-result h2{margin:0!important}
-#ev-tool .ev-fix-input{padding:10px 12px;margin-bottom:12px;border:1px solid #b91c1c;border-radius:7px;background:#fff;color:#b91c1c;cursor:pointer}
-</style></head>
-<body class="chageul-single-post">
-<!-- 📱 모바일 스마트 상단 헤더 -->
-<header class="mobile-chageul-header">
-<div class="m-header-inner">
-<button aria-label="이전 페이지" class="m-btn-back" onclick="if(window.history.length &gt; 1){window.history.back();}else{location.href='index.html';}" type="button">
-<svg fill="none" height="22" stroke="#111827" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" viewbox="0 0 24 24" width="22"><path d="M15 18l-6-6 6-6"></path></svg>
-</button>
-<a aria-label="홈으로 가기" class="m-header-title" href="index.html">전기차 충전비·주행거리 계산기</a>
-<button aria-label="공유하기" class="m-btn-share" onclick="copyCurrentUrl()" type="button">
-<svg fill="none" height="20" stroke="#111827" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="20"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" x2="12" y1="2" y2="15"></line></svg>
-</button>
-</div>
-</header>
-<!-- 💻 PC 데스크톱 깔끔한 상단 헤더 -->
-<header class="clean-header desktop-header">
-<div class="header-container">
-<a class="brand-title" href="index.html">
-<img alt="차를 쓰다 심볼" class="brand-logo-img" src="images/logo.png?v=20260829_gold"/>
-<span class="brand-main-title">차를 쓰다</span>
-</a>
-<nav class="clean-nav">
-<ul>
-<li><a class="nav-cat-btn" href="index.html">홈</a></li>
-<li><a class="nav-cat-btn" href="index.html?cat=신차소식">신차소식</a></li>
-<li><a class="nav-cat-btn" href="index.html?cat=포커스">포커스</a></li>
-</ul>
-</nav>
-</div>
-</header>
-<!-- 📖 본문 & 사이드바 반응형 2열 정석 레이아웃 -->
-<div class="container article-layout-grid">
-<!-- 좌측 본문 메인 칼럼 -->
-<main class="article-main-col"><article class="article-container" style="background:#fff;border:none;padding:0;box-shadow:none">
-<header class="article-header"><h1 class="article-title" style="font-size:1.72rem;font-weight:850;color:#111827;line-height:1.42;margin-bottom:14px;letter-spacing:-.4px">전기차 비용 계산기: 내 차 기름값과 얼마나 다를까?</h1>
-<div class="article-meta-bar"><div class="article-meta-left"><span>차를 쓰다</span><span> · </span><time datetime="2026-10-14">2026-10-14 수정</time></div><button class="btn-pc-share" onclick="copyCurrentUrl()" type="button">공유</button></div></header>
-<div class="article-body-content"><p>내 주행거리와 이용 요금을 넣으면, 내 차 기름값과 전기차 충전비를 비교할 수 있습니다. 차량 가격까지 입력하면 추가 구매비를 연료비 절감으로 회수하는 기간도 계산합니다.</p>
-<section aria-label="전기차 계산기" id="ev-tool">
-<p class="ev-note">① 1년·5년 연료비 비교  ② 한 번 충전할 때 요금  ③ 주행거리가 줄었을 때 갈 수 있는 거리</p><div aria-label="계산 종류" class="ev-tabs" role="tablist">
-<button aria-controls="ev-panel-cost" aria-selected="true" id="ev-tab-cost" role="tab" tabindex="0">기름값 vs 충전비</button>
-<button aria-controls="ev-panel-charge" aria-selected="false" id="ev-tab-charge" role="tab" tabindex="-1">1회 충전 요금</button>
-<button aria-controls="ev-panel-winter" aria-selected="false" id="ev-tab-winter" role="tab" tabindex="-1">주행거리 감소</button></div>
-<div aria-labelledby="ev-tab-cost" id="ev-panel-cost" role="tabpanel"><form id="ev-cost-form" novalidate=""><p class="ev-error" role="status"></p><button class="ev-fix-input" hidden="" type="button">입력 오류 수정하기</button><div aria-live="polite" class="ev-result"><p class="ev-note">현재 입력값으로 계산한 예상 결과 · 처음에는 예시값이 들어 있습니다</p><h2 id="ev-annual">입력 조건을 확인해 주세요.</h2></div>
-<p class="ev-note">기본값은 계산 예시입니다. 내 주행거리와 실제 요금으로 바꿔보세요.</p>
-<div class="ev-fields"><div class="ev-field"><label for="ev-distance">연간 주행거리 (km)</label><input id="ev-distance" inputmode="decimal" max="200000" min="0" name="distance" required="" step="any" type="number" value="15000"/></div><div class="ev-field"><label for="ev-iceEff">기존 차 또는 비교 신차 연비 (km/L)</label><input id="ev-iceEff" inputmode="decimal" max="100" min="0.1" name="iceEff" required="" step="any" type="number" value="15"/></div><div class="ev-field"><label for="ev-evEff">전기차 전비 (km/kWh)</label><input aria-describedby="ev-evEff-help" id="ev-evEff" inputmode="decimal" max="30" min="0.1" name="evEff" required="" step="any" type="number" value="5"/><p class="ev-note" id="ev-evEff-help">전비는 전기 1kWh로 달리는 거리입니다. 충전 결제량과 실제 주행거리로 계산한 값이 있으면 입력하세요.</p></div><div class="ev-field"><label for="ev-fuel">주유 단가 (원/L)</label><input id="ev-fuel" inputmode="decimal" max="10000" min="0" name="fuel" required="" step="any" type="number" value="1700"/></div><div class="ev-field"><label for="ev-slow">내 충전 단가 (원/kWh)</label><input id="ev-slow" inputmode="decimal" max="10000" min="0" name="slow" required="" step="any" type="number" value="250"/></div></div><label for="ev-mix-mode">충전 요금 적용 방식</label><select id="ev-mix-mode" name="mixMode"><option value="single">한 가지 단가로 계산</option><option value="mixed">완속·급속 비중으로 계산</option></select><details id="ev-mix-options"><summary>완속·급속 단가와 비중 설정</summary><div class="ev-fields"><div class="ev-field"><label for="ev-fast">급속 충전 단가 (원/kWh)</label><input id="ev-fast" inputmode="decimal" max="10000" min="0" name="fast" required="" step="any" type="number" value="350"/></div><div class="ev-field"><label for="ev-share">완속 충전량 비중 (%)</label><input id="ev-share" inputmode="decimal" max="100" min="0" name="share" required="" step="any" type="number" value="80"/></div></div></details><p class="ev-note">혼합 방식을 선택하면 위 단가는 완속 요금으로 사용합니다. 설정을 접어도 선택한 방식과 입력값은 유지됩니다. 무료 충전은 0원으로 입력하세요.</p>
-<details id="ev-price-options"><summary>구매 차액까지 비교하기</summary><label class="ev-select-label" for="ev-mode">어떤 상황을 비교할까요?</label><select id="ev-mode" name="mode"><option value="new">새 차 두 대의 구매 견적 비교</option><option value="trade">타던 차를 계속 타기 vs 전기차로 교체</option></select><p class="ev-note" id="ev-mode-note"></p><div class="ev-fields"><div class="ev-field"><label for="ev-icePrice"><span id="ev-ice-label">비교 신차 최종 구매가 (만 원)</span></label><input id="ev-icePrice" inputmode="decimal" max="100000" min="0" name="icePrice" required="" step="any" type="number" value="3000"/></div><div class="ev-field"><label for="ev-evPrice">전기차 할인·보조금 반영 구매가 (만 원)</label><input id="ev-evPrice" inputmode="decimal" max="100000" min="0" name="evPrice" required="" step="any" type="number" value="4000"/></div><div class="ev-field"><label for="ev-fees">전기차 선택 시 더 드는 취득·설치 등 비용 (만 원)</label><input id="ev-fees" inputmode="decimal" max="100000" min="0" name="fees" required="" step="any" type="number" value="0"/></div></div><p class="ev-note">교체 모드에서는 기존 차의 과거 출고가 대신 현재 매각 견적을 입력합니다. 남은 대출·금융비는 이 계산에 포함되지 않습니다.</p><div class="ev-purchase-result"><dl><div><dt>초기 구매·교체 지출 차이</dt><dd id="ev-investment">—</dd></div><div><dt>초기 지출 + 5년 연료비 합계 차이</dt><dd id="ev-five-net">—</dd></div></dl><strong id="ev-payback"></strong></div></details>
-<p class="ev-note">유가·충전요금·연비·주행거리를 5년 동안 동일하게 가정합니다. 잔존가치·보험·정비·금융비를 제외한 단순 비교이며 총소유비용(TCO)이 아닙니다.</p><div class="ev-detail-result"><dl><div><dt>비교 차량 1년 연료비</dt><dd id="ev-ice-cost">—</dd></div><div><dt>전기차 1년 충전비</dt><dd id="ev-ev-cost">—</dd></div><div><dt>적용 충전 단가</dt><dd id="ev-mixed-rate">—</dd></div><div><dt>5년 연료비 차이</dt><dd id="ev-five-fuel">—</dd></div></dl></div><p class="ev-bottom-result" data-result-source="ev-annual"></p></form></div>
-<div aria-labelledby="ev-tab-charge" hidden="" id="ev-panel-charge" role="tabpanel"><form id="ev-charge-form" novalidate=""><p class="ev-error" role="status"></p><button class="ev-fix-input" hidden="" type="button">입력 오류 수정하기</button><div aria-live="polite" class="ev-result"><p class="ev-note">현재 입력값으로 계산한 예상 결과 · 처음에는 예시값이 들어 있습니다</p><h2 id="ev-charge-cost">—</h2></div>
-<p class="ev-note">배터리 용량·잔량·단가로 충전 요금을 계산합니다. 충전 시간은 아래에서 추가로 확인할 수 있습니다.</p><div class="ev-fields"><div class="ev-field"><label for="ev-cap">사용 가능한 배터리 용량 (kWh)</label><input aria-describedby="ev-cap-help" id="ev-cap" inputmode="decimal" max="300" min="0.1" name="cap" required="" step="any" type="number" value="60"/><p class="ev-note" id="ev-cap-help">사용 가능한 용량은 배터리 전체 용량과 다를 수 있습니다. 제조사에서 안내하는 사용 가능 용량을 확인하세요.</p></div><div class="ev-field"><label for="ev-start">현재 잔량 (%)</label><input id="ev-start" inputmode="decimal" max="100" min="0" name="start" required="" step="any" type="number" value="20"/></div><div class="ev-field"><label for="ev-end">목표 잔량 (%)</label><input id="ev-end" inputmode="decimal" max="100" min="0" name="end" required="" step="any" type="number" value="80"/></div><div class="ev-field"><label for="ev-rate">결제 단가 (원/kWh)</label><input id="ev-rate" inputmode="decimal" max="10000" min="0" name="rate" required="" step="any" type="number" value="350"/></div><div class="ev-field"><label for="ev-loss">결제 전력 대비 저장 손실 가정 (%)</label><input id="ev-loss" inputmode="decimal" max="40" min="0" name="loss" required="" step="any" type="number" value="10"/></div></div><details id="ev-time-options"><summary>충전 시간도 계산하기 (선택)</summary><p class="ev-note">차량 사양과 최근 충전 기록으로 입력하세요. 아래 버튼은 특정 차종의 성능을 뜻하지 않는 예시입니다.</p><div class="ev-presets"><button data-charge-preset="7,7,6" type="button">완속 예시</button><button data-charge-preset="100,100,60" type="button">급속 예시</button></div><div class="ev-fields"><div class="ev-field"><label for="ev-charger">충전기 표시 출력 (kW)</label><input id="ev-charger" inputmode="decimal" max="1000" min="0.1" name="charger" required="" step="any" type="number" value="100"/></div><div class="ev-field"><label for="ev-vehicle">차량의 해당 AC/DC 충전 한도 (kW)</label><input id="ev-vehicle" inputmode="decimal" max="1000" min="0.1" name="vehicle" required="" step="any" type="number" value="100"/></div><div class="ev-field"><label for="ev-average">충전 구간 평균 저장 출력 (kW)</label><input aria-describedby="ev-average-help" id="ev-average" inputmode="decimal" max="1000" min="0.1" name="average" required="" step="any" type="number" value="60"/><p class="ev-note" id="ev-average-help">평균 저장 출력 = 실제 추가된 배터리 에너지(kWh) ÷ 충전 시간(시간). 모르면 시간 계산은 참고하지 않아도 됩니다.</p></div></div><p class="ev-note">80% 이후, 저온·고온, 출력 공유 등에서는 평균 출력이 낮아질 수 있습니다. 최대 출력만 알고 있다면 결과를 실제 충전 시간으로 보지 마세요.</p><strong id="ev-time"></strong></details>
-<p class="ev-note">손실률은 고정된 공인값이 아닙니다. 과금 계량 위치와 보조장치 소비에 따라 실제 청구량이 달라집니다. 대기·연결 시간, 주차비·점유료·할인은 제외합니다.</p><div class="ev-detail-result"><dl><div><dt>배터리에 추가 저장할 에너지</dt><dd id="ev-net">—</dd></div><div><dt>손실 가정 반영 결제 전력량</dt><dd id="ev-billed">—</dd></div></dl></div><p class="ev-bottom-result" data-result-source="ev-charge-cost"></p></form></div>
-<div aria-labelledby="ev-tab-winter" hidden="" id="ev-panel-winter" role="tabpanel"><form id="ev-winter-form" novalidate=""><p class="ev-error" role="status"></p><button class="ev-fix-input" hidden="" type="button">입력 오류 수정하기</button><div aria-live="polite" class="ev-result"><p class="ev-note">현재 입력값으로 계산한 예상 결과 · 처음에는 예시값이 들어 있습니다</p><h2 id="ev-winter-range">—</h2></div>
-<p class="ev-note">겨울철 등 주행거리가 줄어드는 상황을 가정해 비교합니다. 실제 겨울 성능을 예측하는 기능은 아니며, 감소율은 내 차의 인증값이나 실측 기록을 참고해 입력하세요.</p><div class="ev-fields"><div class="ev-field"><label for="ev-range">기준 100% 충전 주행거리 (km)</label><input id="ev-range" inputmode="decimal" max="1500" min="0.1" name="range" required="" step="any" type="number" value="400"/></div><div class="ev-field"><label for="ev-drop">예상 주행거리 감소율 (%)</label><input id="ev-drop" inputmode="decimal" max="80" min="0" name="drop" required="" step="any" type="number" value="20"/></div><div class="ev-field"><label for="ev-wstart">출발 배터리 잔량 (%)</label><input id="ev-wstart" inputmode="decimal" max="100" min="0" name="wstart" required="" step="any" type="number" value="100"/></div><div class="ev-field"><label for="ev-reserve">도착 시 남겨둘 잔량 (%)</label><input id="ev-reserve" inputmode="decimal" max="100" min="0" name="reserve" required="" step="any" type="number" value="10"/></div></div><div aria-label="감소율 예시" class="ev-presets"><button data-drop="10" type="button">10% 감소 가정</button><button data-drop="20" type="button">20% 감소 가정</button><button data-drop="30" type="button">30% 감소 가정</button></div>
-<p class="ev-note">교통·고속주행·난방·경사·배터리 상태는 별도로 모델링하지 않습니다. 충전소 도달을 보장하는 값이 아니며, 실제 운행은 차량의 잔량·주행가능거리 안내를 함께 확인하세요.</p><div class="ev-detail-result"><label for="ev-range-gauge" id="ev-gauge-caption">기준 대비 예상 주행거리</label><meter id="ev-range-gauge" max="100" min="0" value="80">80%</meter><dl><div><dt>100% 배터리 전체 사용 시 계산값</dt><dd id="ev-full-range">—</dd></div></dl></div><p class="ev-bottom-result" data-result-source="ev-winter-range"></p></form></div>
-<button id="ev-reset" type="button">현재 탭만 예시값으로 초기화</button><noscript><p>계산기를 사용하려면 자바스크립트를 켜주세요.</p></noscript></section>
-<h2>구매 차액과 연료비는 나눠서 보세요</h2><p>새 차 비교에서는 두 차량의 최종 구매 견적 차이를 계산합니다. 타던 차를 바꾼다면 기존 차의 현재 매각액을 전기차 구매비에서 뺀 금액이 출발점입니다.</p><p>전기차 충전비가 더 많이 들면 추가 지출을 그대로 표시합니다. 구매비가 저렴해도 운행비가 높다면 시간이 지나 초기 가격 이점이 사라질 수 있습니다.</p>
-<h2>충전 속도는 충전기 숫자만으로 결정되지 않습니다</h2><p>차량의 충전 한도, 잔량, 배터리 온도와 충전 설비 상태에 따라 출력이 달라집니다. 이 도구는 입력한 평균 출력으로 시간을 나누어 계산하며 차종별 충전 곡선을 재현하지 않습니다.</p>
-<h2>겨울 주행거리는 가정을 확인하세요</h2><p>차종·구동방식·휠·난방 조건에 따라 겨울 주행거리 감소폭이 달라집니다. 히트펌프가 있다는 이유만으로 모든 차량에 같은 감소율을 적용할 수 없습니다.</p>
-<details class="ev-method"><summary>계산식과 참고 자료</summary><ul><li>연간 연료비 = 연간 주행거리 ÷ 연비 × 주유 단가</li><li>연간 충전비 = 연간 주행거리 ÷ 전비 × 충전량 비중을 반영한 평균 단가</li><li>차액 회수 개월 = 추가 지출 ÷ 연간 연료비 절감액 × 12 (절감액이 양수인 경우)</li><li>충전 에너지 = 사용 가능 배터리 용량 × 잔량 차이 ÷ 100</li><li>예상 충전 시간 = 저장할 에너지 ÷ 평균 저장 출력</li><li>겨울 예상 거리 = 기준 거리 × (1 − 감소율) × 사용 가능한 잔량 비율</li></ul>
-<p>숫자 기본값은 계산 예시입니다. 특정 사업자의 현재 요금, 차종별 실구매가 또는 인증값으로 제공하지 않습니다. 계산 방식 검토일: 2026-10-14.</p>
-<ul><li><a href="https://afdc.energy.gov/fuels/electricity-stations" rel="noopener noreferrer" target="_blank">미국 에너지부: 차량·설비에 따른 충전 시간 차이</a></li><li><a href="https://org-casper.hyundai.com/vehicles/electric/highlight" rel="noopener noreferrer" target="_blank">현대차: 캐스퍼 일렉트릭 충전 성능과 조건</a></li><li><a href="https://ev.or.kr/" rel="noopener noreferrer" target="_blank">무공해차 통합누리집: 차량·보조금·충전 정보 확인</a></li></ul></details>
-
-</div><section class="comment-section" id="commentSectionWrapper" style="margin-top:44px; padding-top:26px; border-top:1px solid #e2e8f0;">
-                        <div class="comment-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
-                            <h3 style="font-size:1.15rem; font-weight:800; color:#111827; margin:0;">독자 댓글 <span id="commentCountBadge" style="color:#0f172a; font-weight:750;">(0)</span></h3>
-                        </div>
-                        <form id="commentForm" onsubmit="handleCommentSubmit(event)" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:18px 20px; margin-bottom:24px; width:100%; box-sizing:border-box;">
-    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:12px; width:100%; box-sizing:border-box;">
-        <input type="text" id="commentAuthor" placeholder="작성자 닉네임" required style="flex:1 1 140px; min-width:0; width:100%; box-sizing:border-box; padding:10px 14px; border:1px solid #cbd5e1; border-radius:8px; font-size:0.88rem; background:#ffffff; outline:none;">
-        <input type="password" id="commentPassword" placeholder="비밀번호 (4자리)" required style="flex:1 1 140px; min-width:0; width:100%; box-sizing:border-box; padding:10px 14px; border:1px solid #cbd5e1; border-radius:8px; font-size:0.88rem; background:#ffffff; outline:none;">
-    </div>
-    <textarea id="commentContent" placeholder="계산기 사용 의견이나 궁금한 점을 남겨주세요." required style="width:100%; min-width:0; box-sizing:border-box; height:85px; padding:12px 14px; border:1px solid #cbd5e1; border-radius:8px; font-size:0.88rem; margin-bottom:14px; resize:none; background:#ffffff; outline:none; line-height:1.5;"></textarea>
-    <div style="display:flex; justify-content:flex-end; align-items:center; width:100%;">
-        <button type="submit" class="btn-comment-submit" style="background:#0f172a; color:#ffffff; font-weight:750; font-size:0.84rem; padding:8px 18px; border-radius:8px; border:none; cursor:pointer; transition:all 0.15s ease; box-shadow:0 1px 3px rgba(15,23,42,0.15);">등록하기</button>
-    </div>
-</form>
-                        <div id="commentList" style="display:flex; flex-direction:column; gap:12px;"></div>
-                    </section>
-</article></main>
-<!-- 우측 사이드바 (프로필 + 인기글 TOP 10) -->
-<aside class="article-sidebar">
-<!-- 1. Editor Profile Widget -->
-<div class="sidebar-profile-card">
-<div class="avatar-box">
-<img alt="차를 쓰다 에디터" src="images/logo.png?v=20260829_gold"/>
-</div>
-<div class="profile-name">차를 쓰다</div>
-<p class="profile-desc">
-                    빠른 신차 업데이트와 정직하고 정확한 자동차 전문 분석을 전합니다.
-                </p>
-<span class="profile-badge">✓ 자동차 칼럼니스트</span>
-</div>
-<!-- 2. Popular Posts TOP 10 Widget -->
-<div class="sidebar-widget" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:22px 20px; margin-bottom:20px; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
-<h3 class="widget-title" style="font-size:1.02rem; font-weight:800; color:#111827; margin-bottom:14px; padding-bottom:8px; border-bottom:1px solid #f1f5f9; display:flex; align-items:center; gap:6px;">
-<span>인기글 TOP 10</span>
-</h3>
-<ul class="popular-list" id="popularPostsWidgetList">
-<!-- JS 실시간 자동 렌더링 -->
-</ul>
-</div>
-</aside>
-</div>
-<!-- 📄 푸터 -->
-<footer class="clean-footer">
-<div class="footer-inner" style="max-width:1060px; margin:0 auto; padding:28px 20px 36px;">
-<!-- 상단 2단 분할: 좌측(발행·법적 정보) vs 우측(공식 채널/소통 뱃지) -->
-<div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:20px; padding-bottom:18px; border-bottom:1px solid #f1f5f9; width:100%;">
-<!-- 좌측 정보 그룹 -->
-<div class="footer-info-group" style="flex:1; min-width:320px;">
-<p class="footer-copy" style="margin-bottom:6px;">© 2026 <strong>차를 쓰다</strong>. All rights reserved.</p>
-<p class="footer-meta-desktop" style="font-size:0.83rem; color:#64748b; line-height:1.6; margin-bottom:5px;">
-                    제호: 차를 쓰다 | 발행인: 임진현 | 수석에디터: 임진현 | 이메일: <a href="contact.html" style="color:inherit; text-decoration:underline; font-weight:700;" title="1:1 공식 문의하기">contact@chageul.com</a> | 주소: 대한민국 서울시 도봉구 해등로 231
-                </p>
-<div class="footer-meta-mobile" style="display:none;">
-<p>제호: 차를 쓰다 | 발행인: 임진현 | 수석에디터: 임진현</p>
-<p>이메일: <a href="contact.html" style="color:inherit; text-decoration:underline; font-weight:700;">contact@chageul.com</a> | 주소: 대한민국 서울시 도봉구 해등로 231</p>
-</div>
-<p class="footer-copyright-warning" style="font-size:0.78rem; color:#94a3b8; line-height:1.5; margin-bottom:3px;">
-                    차를 쓰다의 모든 콘텐츠(기사·화보·데이터)는 저작권법의 보호를 받으며, 사전 승인 없는 무단 전재, 복사, 배포 및 AI 무단 학습을 엄격히 금합니다.
-                </p>
-<p class="footer-disclaimer" style="font-size:0.77rem; color:#94a3b8; line-height:1.5; margin:0;">
-                    ※ 차를 쓰다의 신차 정보 및 견적 분석은 제조사 공시 자료를 바탕으로 작성되며, 실제 출고 시점의 정책 및 프로모션에 따라 변동될 수 있습니다.
-                </p>
-</div>
-<!-- 우측 공식 채널 & 소통 뱃지 세트 (모노크롬 다크그레이 톤) -->
-<div class="footer-social-group" style="display:flex; align-items:center; gap:10px; flex-shrink:0; padding-top:4px; margin-left:auto;">
-<!-- 1. 네이버 공식 채널 -->
-<a href="https://blog.naver.com/hyuni-insight" onmouseout="this.style.background='#475569'; this.style.transform='translateY(0)'" onmouseover="this.style.background='#1e293b'; this.style.transform='translateY(-2px)'" rel="noopener noreferrer" style="display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:#475569; color:#ffffff; font-size:0.92rem; font-weight:850; text-decoration:none; transition:background 0.15s, transform 0.15s;" target="_blank" title="네이버 공식 블로그">
-                    N
-                </a>
-<!-- 2. 공식 문의하기 -->
-<a href="contact.html" onmouseout="this.style.background='#475569'; this.style.transform='translateY(0)'" onmouseover="this.style.background='#1e293b'; this.style.transform='translateY(-2px)'" style="display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:#475569; color:#ffffff; text-decoration:none; transition:background 0.15s, transform 0.15s;" title="1:1 문의 및 의견 보내기">
-<svg fill="none" height="16" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-</a>
-<!-- 3. RSS 피드 구독 -->
-<a href="rss.xml" onmouseout="this.style.background='#475569'; this.style.transform='translateY(0)'" onmouseover="this.style.background='#1e293b'; this.style.transform='translateY(-2px)'" style="display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:#475569; color:#ffffff; text-decoration:none; transition:background 0.15s, transform 0.15s;" target="_blank" title="RSS 피드 구독">
-<svg fill="none" height="15" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" viewbox="0 0 24 24" width="15"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
-</a>
-<!-- 4. 맨 위로 가기 (TOP) -->
-<a href="#top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;" onmouseout="this.style.background='#475569'; this.style.transform='translateY(0)'" onmouseover="this.style.background='#1e293b'; this.style.transform='translateY(-2px)'" style="display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:#475569; color:#ffffff; text-decoration:none; transition:background 0.15s, transform 0.15s;" title="화면 맨 위로 이동">
-<svg fill="none" height="16" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" viewbox="0 0 24 24" width="16"><path d="M18 15l-6-6-6 6"></path></svg>
-</a>
-</div>
-</div>
-<!-- 하단 행: 7대 정책 메뉴 링크 + 매거진 영문 서명 -->
-<div style="padding-top:14px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; width:100%;">
-<ul class="footer-links" style="display:flex; flex-wrap:wrap; gap:14px; list-style:none; padding:0; margin:0;">
-<li><a href="about.html">매체소개</a></li>
-<li><a href="terms.html">이용약관</a></li>
-<li><a href="privacy.html">개인정보처리방침</a></li>
-<li><a href="youth-protection.html">청소년보호정책</a></li>
-<li><a href="copyright.html">저작권보호정책</a></li>
-<li><a href="email-rejection.html">이메일무단수집거부</a></li>
-<li><a href="contact.html">문의하기</a></li>
-</ul>
-<div class="footer-brand-tag" style="font-size:0.75rem; font-weight:700; color:#94a3b8; letter-spacing:0.5px;">
-                CHAGEUL AUTOMOTIVE MAGAZINE
-            </div>
-</div>
-</div>
-</footer>
-<!-- ⚡ 계산기 인터랙션 초경량 스크립트 -->
-<script defer="" src="js/features.js?v=20260829_car_v1"></script><script defer="" src="js/ev-calculator.js?v=20261014-final-flow"></script><script defer src="js/comments.js?v=20260826_kv3"></script>
-</body>
-</html>
+<!DOCTYPE html>
+
+<html lang="ko">
+<head>
+    <meta name="google-adsense-account" content="ca-pub-4739687813221133">
+
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>전기차 충전비·주행거리 계산기 | 차를 쓰다</title>
+<meta content="내 주행거리와 충전요금으로 전기차 연료비와 구매 차액을 비교하세요. 충전 시간과 겨울 주행거리는 직접 설정한 조건으로 추산합니다." name="description"/>
+<link href="https://chageul.com/entry/ev-charging-calculator.html" rel="canonical"/>
+<meta http-equiv="refresh" content="0; url=entry/ev-charging-calculator.html"/>
+<script>location.replace('entry/ev-charging-calculator.html');</script>
+<meta content="f3ea45cb3409cacb77fe1c9a6db5b5339238e368" name="naver-site-verification"/>
+<!-- 🌐 OpenGraph / SNS 링크 공유 메타태그 -->
+<meta content="article" property="og:type"/>
+<meta content="차를 쓰다" property="og:site_name"/>
+<meta content="전기차 충전비·주행거리 계산기 | 차를 쓰다" property="og:title"/>
+<meta content="내 주행거리와 충전요금으로 전기차 연료비와 구매 차액을 비교하세요. 충전 시간과 겨울 주행거리는 직접 설정한 조건으로 추산합니다." property="og:description"/>
+<meta content="https://chageul.com/images/posts/ev-charging-calculator/thumb.jpg" property="og:image"/>
+<meta content="https://chageul.com/entry/ev-charging-calculator.html" property="og:url"/>
+<!-- 🚗 차를 쓰다 공식 파비콘 5종 세트 -->
+<link href="favicon.ico" rel="icon" type="image/x-icon"/>
+<link href="favicon-192x192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="favicon-32x32.png" rel="icon" sizes="32x32" type="image/png"/>
+<link href="favicon.svg" rel="icon" type="image/svg+xml"/>
+<link href="apple-touch-icon.png" rel="apple-touch-icon" sizes="180x180"/>
+<!-- 📡 RSS 피드 자동 감지 -->
+<link href="https://chageul.com/rss.xml" rel="alternate" title="차를 쓰다 | 프리미엄 자동차 &amp; 모빌리티 전문 매거진 RSS 피드" type="application/rss+xml"/>
+<!-- 📊 Google Analytics 4 -->
+<script async="" src="https://www.googletagmanager.com/gtag/js?id=G-YZQ2RW8QZJ"></script>
+<script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YZQ2RW8QZJ');
+    </script>
+<!-- 💰 Google AdSense -->
+<script async="" crossorigin="anonymous" src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4739687813221133"></script>
+<!-- 🔤 차를 쓰다 공식 Pretendard 웹폰트 -->
+<link as="style" crossorigin="" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" rel="stylesheet"/>
+<link href="css/style.css?v=20260830_car_fixed" rel="stylesheet"/>
+<style id="guaranteedMasterPostStyle">
+        html, body { width: 100% !important; max-width: 100vw !important; overflow-x: clip !important; box-sizing: border-box !important; }
+        
+        
+        .brand-text-stack { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif !important;
+            display: flex !important;
+            flex-direction: column !important;
+            justify-content: center !important;
+            line-height: 1.15 !important;
+        }
+        .brand-sub-title { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif !important;
+            font-size: 0.72rem !important;
+            font-weight: 800 !important;
+            color: #c26908 !important;
+            letter-spacing: 0.5px !important;
+        }
+        .brand-main-title { font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard Variable", Pretendard, "Malgun Gothic", "맑은 고딕", "Noto Sans KR", sans-serif !important;
+            font-size: 1.35rem !important;
+            font-weight: 800 !important;
+            color: #111827 !important;
+            letter-spacing: -0.5px !important;
+        }
+
+        /* 📱 모바일 (768px 이하): 1열 본문 집중형 레이아웃 */
+        @media (max-width: 768px) {
+            body.chageul-single-post { padding-top: 52px !important; }
+            .desktop-header,
+            .clean-nav {
+                display: none !important;
+            }
+            .mobile-chageul-header {
+                display: flex !important;
+            }
+            .article-layout-grid {
+                display: block !important;
+                width: 100% !important;
+                padding: 16px 14px !important;
+                margin: 0 !important;
+            }
+            .article-sidebar {
+                display: none !important;
+            }
+        }
+
+        /* 💻 PC 데스크톱 (769px 이상): 완벽한 2열 그리드 강제 (본문 700px + 우측 사이드바 300px) */
+        @media (min-width: 769px) {
+            .mobile-chageul-header {
+                display: none !important;
+            }
+            .desktop-header {
+                display: block !important;
+            }
+            .article-layout-grid {
+                display: grid !important;
+                grid-template-columns: 1fr 300px !important;
+                gap: 44px !important;
+                max-width: 1060px !important;
+                margin: 36px auto !important;
+                padding: 0 20px !important;
+                align-items: start !important;
+            }
+            .article-main-col {
+                min-width: 0 !important;
+                width: 100% !important;
+            }
+            .article-sidebar {
+                display: block !important;
+                width: 300px !important;
+                position: sticky !important;
+                top: 80px !important;
+            }
+        }
+
+        /* 🏷️ 상단 카테고리 텍스트 (컴팩트 칼각 여백) */
+        .article-cat-title {
+            font-size: 0.84rem !important;
+            font-weight: 750 !important;
+            color: #475569 !important;
+            margin-bottom: 6px !important;
+            display: block !important;
+            line-height: 1.2 !important;
+        }
+
+        /* 📊 메타바 스타일 (줄간격 밀착 & 스마트폰 최적화) */
+        .article-meta-bar {
+            font-size: 0.82rem !important;
+            color: #64748b !important;
+            display: flex !important;
+            gap: 5px 8px !important;
+            align-items: center !important;
+            flex-wrap: wrap !important;
+            margin-bottom: 16px !important;
+            line-height: 1.35 !important;
+        }
+        font-size: 0.84rem !important;
+            font-weight: 400 !important;
+            color: #ef4444 !important;
+            background: none !important;
+            background-color: transparent !important;
+            border: none !important;
+            padding: 0 !important;
+            border-radius: 0 !important;
+            display: inline !important;
+            box-shadow: none !important;
+        .article-meta-bar .academic-source-tag {
+            color: #0d9488 !important;
+            font-weight: 750 !important;
+        }
+
+        /* 🌟 대표 메인 화보 (가로/세로 모든 이미지 완벽 자연 렌더링 & 캡션 선명화) */
+        figure.article-featured-img-box,
+        .article-featured-img-box {
+            width: 100% !important;
+            aspect-ratio: auto !important;
+            overflow: visible !important;
+            margin: 0 0 32px 0 !important;
+            background: transparent !important;
+            text-align: center !important;
+            display: block !important;
+            padding: 0 !important;
+            border: none !important;
+        }
+        figure.article-featured-img-box img,
+        .article-featured-img-box img {
+            max-width: 100% !important;
+            width: auto !important;
+            height: auto !important;
+            max-height: 560px !important;
+            object-fit: contain !important;
+            display: block !important;
+            margin: 0 auto !important;
+            border-radius: 12px !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+        }
+        figure.article-featured-img-box figcaption,
+.article-featured-img-box figcaption,
+figure.post-photo-figure figcaption,
+.post-photo-figure figcaption {
+    font-size: 0.83rem !important;
+    font-weight: 500 !important;
+    color: #64748b !important;
+    text-align: center !important;
+    margin-top: 8px !important;
+    line-height: 1.4 !important;
+    letter-spacing: -0.2px !important;
+    display: block !important;
+}
+
+        /* 📸 본문 내 모든 figure 사진 (회색 배경 완전 박멸) */
+        figure.post-photo-figure {
+            background: transparent !important;
+            margin: 32px auto !important;
+            text-align: center !important;
+            padding: 0 !important;
+        }
+        figure.post-photo-figure img {
+            background: transparent !important;
+            max-width: 100% !important;
+            width: auto !important;
+            height: auto !important;
+            max-height: 520px !important;
+            object-fit: contain !important;
+            border-radius: 12px !important;
+            display: block !important;
+            margin: 0 auto !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+        }
+        figure.post-photo-figure figcaption {
+            font-size: 0.86rem !important;
+            color: #64748b !important;
+            text-align: center !important;
+            margin-top: 10px !important;
+            font-weight: 600 !important;
+            display: block !important;
+        }
+
+        /* 📖 본문 폰트 및 줄바꿈/가독성 극대화 */
+        .article-body-content {
+            font-size: 1.05rem !important;
+            line-height: 1.95 !important;
+            color: #334155 !important;
+            word-break: keep-all !important;
+            letter-spacing: -0.25px !important;
+        }
+        .article-body-content p {
+            margin-bottom: 22px !important;
+            line-height: 1.95 !important;
+        }
+        .article-body-content h2 {
+            font-size: 1.36rem !important;
+            font-weight: 850 !important;
+            color: #0f172a !important;
+            margin: 44px 0 20px 0 !important;
+            padding-bottom: 10px !important;
+            border-bottom: 1.5px solid #e2e8f0 !important;
+            letter-spacing: -0.3px !important;
+            line-height: 1.4 !important;
+        }
+        .article-body-content h3 {
+            font-size: 1.15rem !important;
+            font-weight: 800 !important;
+            color: #1e293b !important;
+            margin: 32px 0 14px 0 !important;
+            line-height: 1.4 !important;
+        }
+
+        /* 📊 프리미엄 모바일 반응형 데이터 테이블 표준 (다크 네이비 헤더 + 자동 보장 스타일) */
+        .custom-data-table-wrap {
+            width: 100% !important;
+            overflow-x: auto !important;
+            -webkit-overflow-scrolling: touch !important;
+            margin: 32px 0 !important;
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 12px !important;
+            background: #ffffff !important;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02) !important;
+        }
+        .custom-data-table-wrap::-webkit-scrollbar {
+            height: 6px;
+        }
+        .custom-data-table-wrap::-webkit-scrollbar-thumb {
+            background: #cbd5e1;
+            border-radius: 4px;
+        }
+        table.custom-data-table,
+        .article-body-content table {
+            width: 100% !important;
+            border-collapse: collapse !important;
+            min-width: 560px !important;
+            font-size: 0.93rem !important;
+            text-align: center !important;
+            line-height: 1.6 !important;
+            border: none !important;
+        }
+        .custom-data-table thead,
+        .article-body-content table thead,
+        .custom-data-table thead tr,
+        .article-body-content table thead tr {
+            background: #0f172a !important;
+            color: #ffffff !important;
+        }
+        .custom-data-table th,
+        .article-body-content table th {
+            padding: 13px 10px !important;
+            border: 1px solid #334155 !important;
+            font-weight: 700 !important;
+            font-size: 0.92rem !important;
+            letter-spacing: -0.2px !important;
+            background: #0f172a !important;
+            color: #ffffff !important;
+            text-align: center !important;
+        }
+        .custom-data-table th.point-col,
+        .custom-data-table th[style*="#0284c7"],
+        .article-body-content table th.point-col,
+        .article-body-content table th[style*="#0284c7"] {
+            background: #0284c7 !important;
+            color: #ffffff !important;
+        }
+        .custom-data-table tbody tr:nth-child(even),
+        .article-body-content table tbody tr:nth-child(even) {
+            background: #f8fafc !important;
+        }
+        .custom-data-table tbody tr:nth-child(odd),
+        .article-body-content table tbody tr:nth-child(odd) {
+            background: #ffffff !important;
+        }
+        .custom-data-table tbody tr:hover,
+        .article-body-content table tbody tr:hover {
+            background: #f1f5f9 !important;
+        }
+        .custom-data-table td,
+        .article-body-content table td {
+            padding: 12px 10px !important;
+            border: 1px solid #e2e8f0 !important;
+            color: #334155 !important;
+            text-align: center !important;
+        }
+        .custom-data-table td.point-col {
+            color: #0284c7 !important;
+            font-weight: 700 !important;
+        }
+
+        /* 💻 PC 데스크톱 (769px 이상): 너비 100% 핏 */
+        @media (min-width: 769px) {
+            table.custom-data-table,
+            .article-body-content table {
+                min-width: 100% !important;
+                table-layout: auto !important;
+            }
+            .custom-data-table th,
+            .custom-data-table td,
+            .article-body-content table th,
+            .article-body-content table td {
+                white-space: normal !important;
+                word-break: keep-all !important;
+            }
+        }
+
+        /* 📱 모바일 스마트폰 (768px 이하): 가로 터치 스크롤 보장 */
+        @media (max-width: 768px) {
+            table.custom-data-table,
+            .article-body-content table {
+                min-width: 520px !important;
+            }
+            .custom-data-table th,
+            .custom-data-table td,
+            .article-body-content table th,
+            .article-body-content table td {
+                padding: 10px 10px !important;
+                font-size: 0.88rem !important;
+            }
+        }
+
+        /* 🥗 레시피 카드 리스트 (모던 미니멀 카드 & 컴팩트 여백) */
+        .recipe-card-list {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 14px !important;
+            margin: 24px 0 28px 0 !important;
+        }
+        .recipe-card-item {
+            background: #f8fafc !important;
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 12px !important;
+            padding: 16px 18px 14px 18px !important;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02) !important;
+        }
+        .recipe-card-header {
+            font-size: 1.02rem !important;
+            font-weight: 800 !important;
+            color: #0f172a !important;
+            margin-bottom: 8px !important;
+        }
+        .recipe-card-body {
+            font-size: 0.92rem !important;
+            color: #334155 !important;
+            line-height: 1.65 !important;
+        }
+        .recipe-card-body p {
+            margin: 0 0 6px 0 !important;
+            line-height: 1.65 !important;
+        }
+        .recipe-card-body p:last-child {
+            margin-bottom: 0 !important;
+        }
+
+                        /* 📖 모바일 터치 최적화 목차 박스 (Rule 1-2 영구 표준: 좌측 주황색 포인트 라인 100% 통일) */
+        .toc-box {
+            background: #f8fafc !important;
+            border: 1px solid #e2e8f0 !important;
+            border-left: 4px solid #c26908 !important;
+            border-radius: 10px !important;
+            padding: 18px 20px !important;
+            margin: 28px 0 34px 0 !important;
+            box-sizing: border-box !important;
+        }
+        .toc-title {
+            font-size: 0.96rem !important;
+            font-weight: 800 !important;
+            color: #0f172a !important;
+            margin: 0 0 12px 0 !important;
+            padding: 0 4px 8px 4px !important;
+            border-bottom: 1px dashed #e2e8f0 !important;
+            line-height: 1.2 !important;
+        }
+        .toc-box ul.toc-list {
+            list-style: none !important;
+            padding: 0 !important;
+            margin: 0 !important;
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 10px !important;
+        }
+        .toc-box ul.toc-list li a {
+            display: flex !important;
+            align-items: flex-start !important;
+            gap: 8px !important;
+            color: #334155 !important;
+            font-size: 0.93rem !important;
+            font-weight: 600 !important;
+            text-decoration: none !important;
+            line-height: 1.45 !important;
+            transition: color 0.15s !important;
+        }
+        .toc-box ul.toc-list li a:hover {
+            color: #c26908 !important;
+        }
+        .toc-box .toc-num {
+            color: #c26908 !important;
+            font-weight: 800 !important;
+            flex-shrink: 0 !important;
+        }
+
+        /* 👤 사이드바 프로필 위젯 */
+        .sidebar-profile-card {
+            background: #ffffff !important;
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 16px !important;
+            padding: 24px 20px !important;
+            text-align: center !important;
+            margin-bottom: 20px !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03) !important;
+        }
+        .sidebar-profile-card .avatar-box {
+            width: 68px !important;
+            height: 68px !important;
+            background: transparent !important;
+            border: none !important;
+            border-radius: 50% !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin: 0 auto 12px auto !important;
+        }
+        .sidebar-profile-card .avatar-box img {
+            width: 68px !important;
+            height: 68px !important;
+            border-radius: 50% !important;
+            object-fit: cover !important;
+            display: block !important;
+            filter: drop-shadow(0 3px 8px rgba(0, 0, 0, 0.18)) !important;
+        }
+        .sidebar-profile-card .profile-name {
+            font-size: 1.05rem !important;
+            font-weight: 850 !important;
+            color: #0f172a !important;
+            margin-bottom: 6px !important;
+        }
+        .sidebar-profile-card .profile-desc {
+            font-size: 0.82rem !important;
+            color: #64748b !important;
+            line-height: 1.55 !important;
+            margin: 0 0 14px 0 !important;
+            word-break: keep-all !important;
+        }
+        .sidebar-profile-card .profile-badge {
+            font-size: 0.78rem !important;
+            font-weight: 750 !important;
+            color: #1e293b !important;
+            background: #f1f5f9 !important;
+            border: 1px solid #cbd5e1 !important;
+            padding: 4px 14px !important;
+            border-radius: 9999px !important;
+            display: inline-block !important;
+            letter-spacing: -0.2px !important;
+        }
+
+        /* ⚡ 사이드바 3번 '내 몸 맞춤 건강 계산기' (100% 완벽 중앙 정렬 & 칼각) */
+        .sidebar-calc-card {
+            background: #fffdf5 !important;
+            border: 1px solid #fef08a !important;
+            border-radius: 16px !important;
+            padding: 24px 20px !important;
+            text-align: center !important;
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            justify-content: center !important;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03) !important;
+            box-sizing: border-box !important;
+        }
+        .sidebar-calc-card .calc-badge {
+            font-size: 0.74rem !important;
+            font-weight: 800 !important;
+            color: #c26908 !important;
+            background: #ffffff !important;
+            border: 1px solid #fde68a !important;
+            padding: 3px 12px !important;
+            border-radius: 9999px !important;
+            display: inline-flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            margin: 0 auto 12px auto !important;
+            text-align: center !important;
+        }
+        .sidebar-calc-card .calc-title {
+            font-size: 1.08rem !important;
+            font-weight: 850 !important;
+            color: #0f172a !important;
+            margin: 0 auto 8px auto !important;
+            letter-spacing: -0.3px !important;
+            text-align: center !important;
+            display: block !important;
+            width: 100% !important;
+        }
+        .sidebar-calc-card .calc-desc {
+            font-size: 0.83rem !important;
+            color: #64748b !important;
+            line-height: 1.55 !important;
+            margin: 0 auto 18px auto !important;
+            word-break: keep-all !important;
+            text-align: center !important;
+            display: block !important;
+            width: 100% !important;
+        }
+        .sidebar-calc-card .btn-calc-action {
+            display: block !important;
+            width: 100% !important;
+            background: #0f172a !important;
+            color: #ffffff !important;
+            font-size: 0.88rem !important;
+            font-weight: 750 !important;
+            padding: 11px 0 !important;
+            border-radius: 8px !important;
+            text-decoration: none !important;
+            transition: background 0.15s !important;
+            box-sizing: border-box !important;
+            text-align: center !important;
+            margin: 0 auto !important;
+        }
+        .sidebar-calc-card .btn-calc-action:hover {
+            background: #1e293b !important;
+        }
+
+            /* 📱 모바일 헤더 스마트폰 최적화 (로고 거대화 100% 원천 차단) */
+        .mobile-chageul-header {
+            display: none;
+            position: fixed !important;
+            top: 0 !important;
+            left: 0 !important;
+            width: 100% !important;
+            height: 52px !important;
+            background: #ffffff !important;
+            border-bottom: 1px solid #eef2f6 !important;
+            box-shadow: 0 1px 6px rgba(0,0,0,0.03) !important;
+            z-index: 99999 !important;
+        }
+        @media (max-width: 768px) {
+            body.chageul-single-post { padding-top: 52px !important; }
+            .mobile-chageul-header {
+                display: block !important;
+            }
+            .desktop-header {
+                display: none !important;
+            }
+        }
+        .m-header-inner {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: space-between !important;
+            height: 52px !important;
+            padding: 0 14px !important;
+            max-width: 100% !important;
+            box-sizing: border-box !important;
+            gap: 8px !important;
+        }
+        .m-btn-back {
+            background: transparent !important;
+            border: none !important;
+            padding: 4px !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            cursor: pointer !important;
+            flex-shrink: 0 !important;
+        }
+        .m-header-title {
+            font-size: 0.94rem !important;
+            font-weight: 750 !important;
+            color: #0f172a !important;
+            text-align: center !important;
+            white-space: nowrap !important;
+            overflow: hidden !important;
+            text-overflow: ellipsis !important;
+            flex: 1 !important;
+            padding: 0 6px !important;
+            line-height: 1.2 !important;
+        }
+        .m-header-profile {
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+            width: 34px !important;
+            height: 34px !important;
+            border-radius: 50% !important;
+            background: #fffbeb !important;
+            border: 1.5px solid #fde68a !important;
+            overflow: hidden !important;
+            flex-shrink: 0 !important;
+            text-decoration: none !important;
+        }
+        .m-profile-img {
+            width: 22px !important;
+            height: 22px !important;
+            object-fit: contain !important;
+            display: block !important;
+            margin: 0 auto !important;
+        }
+            
+            /* 🌟 대표 메인 화보 (Rule 5 표준: 풍경/음식/운동 16:9 와이드 풀와이드 / 인물 화보 contain) */
+        figure.article-featured-img-box,
+        .article-featured-img-box {
+            width: 100% !important;
+            margin: 0 0 24px 0 !important;
+            background: transparent !important;
+            text-align: center !important;
+            display: block !important;
+            padding: 0 !important;
+            border: none !important;
+        }
+        figure.article-featured-img-box img,
+        .article-featured-img-box img {
+            width: 100% !important;
+            aspect-ratio: 16 / 9 !important;
+            object-fit: cover !important;
+            display: block !important;
+            margin: 0 auto !important;
+            border-radius: 12px !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+        }
+        /* 인물 전신 화보 전용 클래스 (머리/발목 잘림 방지) */
+        figure.article-featured-img-box.portrait-fit img,
+        .article-featured-img-box.portrait-fit img {
+            width: auto !important;
+            max-width: 100% !important;
+            height: auto !important;
+            max-height: 560px !important;
+            aspect-ratio: unset !important;
+            object-fit: contain !important;
+        }
+
+            /* 🌟 대표 메인 화보 & 본문 모든 화보 16:9 풀와이드 100% 꽉 채움 표준 */
+        figure.article-featured-img-box,
+        .article-featured-img-box,
+        figure.post-photo-figure,
+        .post-photo-figure {
+            width: 100% !important;
+            margin: 28px 0 !important;
+            background: transparent !important;
+            text-align: center !important;
+            display: block !important;
+            padding: 0 !important;
+            border: none !important;
+        }
+        figure.article-featured-img-box img,
+        .article-featured-img-box img,
+        figure.post-photo-figure img,
+        .post-photo-figure img {
+            width: 100% !important;
+            height: auto !important;
+            aspect-ratio: 16 / 9 !important;
+            object-fit: cover !important;
+            display: block !important;
+            margin: 0 auto !important;
+            border-radius: 12px !important;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04) !important;
+        }
+        /* 💃 인물 전신 화보 전용 (오나라 등 머리/발목 잘림 방지) */
+        figure.article-featured-img-box.portrait-fit img,
+        .article-featured-img-box.portrait-fit img,
+        figure.post-photo-figure.portrait-fit img,
+        .post-photo-figure.portrait-fit img {
+            width: auto !important;
+            max-width: 100% !important;
+            height: auto !important;
+            max-height: 560px !important;
+            aspect-ratio: unset !important;
+            object-fit: contain !important;
+        }
+        figure.article-featured-img-box figcaption,
+        .article-featured-img-box figcaption,
+        .article-featured-img-box div[style*="color:#64748b"],
+        figure.post-photo-figure figcaption,
+        .post-photo-figure figcaption,
+        .article-body-content .caption,
+        .article-body-content div.caption,
+        .article-body-content div[style*="color:#64748b"],
+        .article-body-content p[style*="color:#64748b"] {
+            font-size: 0.88rem !important;
+            font-weight: 400 !important;
+            color: #64748b !important;
+            text-align: center !important;
+            margin-top: 8px !important;
+            margin-bottom: 26px !important;
+            line-height: 1.4 !important;
+            letter-spacing: -0.2px !important;
+            display: block !important;
+        }
+            /* ❓ FAQ 카드 영구 표준 규격 (모든 글 100% 동일한 고급스러운 테두리 박스) */
+        .faq-block-wrap {
+            display: flex !important;
+            flex-direction: column !important;
+            gap: 14px !important;
+            margin-top: 14px !important;
+        }
+        .faq-card {
+            background: #ffffff !important;
+            border: 1px solid #e2e8f0 !important;
+            border-radius: 12px !important;
+            padding: 18px 20px !important;
+            box-shadow: 0 1px 4px rgba(0, 0, 0, 0.02) !important;
+            transition: border-color 0.2s, box-shadow 0.2s !important;
+            box-sizing: border-box !important;
+        }
+        .faq-card:hover {
+            border-color: #cbd5e1 !important;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.04) !important;
+        }
+        .faq-q, .faq-card .faq-q {
+            font-size: 0.98rem !important;
+            font-weight: 800 !important;
+            color: #0f172a !important;
+            margin-bottom: 8px !important;
+            display: flex !important;
+            align-items: flex-start !important;
+            line-height: 1.45 !important;
+        }
+        .q-icon, .faq-card .q-icon {
+            color: #c26908 !important;
+            font-weight: 900 !important;
+            margin-right: 6px !important;
+            flex-shrink: 0 !important;
+        }
+        .faq-a, .faq-card .faq-a {
+            font-size: 0.9rem !important;
+            color: #475569 !important;
+            line-height: 1.75 !important;
+            margin: 0 !important;
+        }
+        .faq-a strong, .faq-card .faq-a strong {
+            color: #0f172a !important;
+            font-weight: 800 !important;
+        }
+            /* 🏷️ 본문 소제목 (소제목 앞 색 라인 일체 제거 & 깔끔한 칼각 폰트) */
+        .article-body-content h2,
+        .article-body-text h2,
+        article h2,
+        h2 {
+            font-size: 1.35rem !important;
+            font-weight: 850 !important;
+            color: #0f172a !important;
+            margin: 36px 0 16px 0 !important;
+            border-left: none !important;
+            border: none !important;
+            padding-left: 0 !important;
+            padding: 0 !important;
+            line-height: 1.4 !important;
+            letter-spacing: -0.3px !important;
+        }
+        .article-body-content h3,
+        .article-body-text h3,
+        article h3,
+        h3 {
+            font-size: 1.15rem !important;
+            font-weight: 800 !important;
+            color: #1e293b !important;
+            margin: 28px 0 12px 0 !important;
+            border-left: none !important;
+            border: none !important;
+            padding-left: 0 !important;
+            padding: 0 !important;
+            line-height: 1.4 !important;
+        }
+            /* 📖 본문 문단 황금 가독성 타이포그래피 (1문단 2~3줄 쾌적 호흡 & 시원한 여백) */
+        .article-body-content p,
+        .article-body-text p,
+        article p {
+            font-size: 1.04rem !important;
+            line-height: 1.88 !important;
+            color: #334155 !important;
+            margin: 0 0 20px 0 !important;
+            word-break: keep-all !important;
+            letter-spacing: -0.2px !important;
+        }
+
+        /* 📖 본문 리스트 (ul, ol, li) 황금 가독성 & 줄나눔 호흡 표준 (딱 붙는 현상 영구 원천 방지) */
+        .article-body-content ul,
+        .article-body-text ul,
+        article ul {
+            margin: 20px 0 26px 0 !important;
+            padding-left: 24px !important;
+            list-style-type: disc !important;
+        }
+
+        .article-body-content ol,
+        .article-body-text ol,
+        article ol {
+            margin: 20px 0 26px 0 !important;
+            padding-left: 24px !important;
+            list-style-type: decimal !important;
+        }
+
+        .article-body-content li,
+        .article-body-text li,
+        article li {
+            font-size: 1.04rem !important;
+            line-height: 1.88 !important;
+            color: #334155 !important;
+            margin-bottom: 14px !important;
+            word-break: keep-all !important;
+            letter-spacing: -0.2px !important;
+        }
+
+        .article-body-content li:last-child,
+        .article-body-text li:last-child,
+        article li:last-child {
+            margin-bottom: 0 !important;
+        }
+
+        /* 📖 2단계 중첩 리스트 (Nested List) 여백 및 인덴트 */
+        .article-body-content ul ul,
+        .article-body-content ol ul,
+        .article-body-content ul ol,
+        .article-body-content ol ol {
+            margin: 10px 0 12px 0 !important;
+            padding-left: 20px !important;
+            list-style-type: circle !important;
+        }
+
+        .article-body-content ul ul li,
+        .article-body-content ol ul li,
+        .article-body-content ul ol li,
+        .article-body-content ol ol li {
+            font-size: 1.0rem !important;
+            line-height: 1.82 !important;
+            margin-bottom: 8px !important;
+            color: #475569 !important;
+        }
+
+        /* 푸터 소셜/탑버튼 정렬 (모바일에서 차라리 오른쪽으로 붙임) */
+        .footer-social-group {
+            margin-left: auto !important;
+        }
+
+        @media (max-width: 768px) {
+            body.chageul-single-post { padding-top: 52px !important; }
+            .article-body-content p,
+            .article-body-text p,
+            article p {
+                font-size: 1.0rem !important;
+                line-height: 1.92 !important;
+                margin: 0 0 24px 0 !important;
+            }
+            .article-body-content ul,
+            .article-body-content ol,
+            .article-body-text ul,
+            .article-body-text ol,
+            article ul,
+            article ol {
+                margin: 16px 0 22px 0 !important;
+                padding-left: 20px !important;
+            }
+            .article-body-content li,
+            .article-body-text li,
+            article li {
+                font-size: 0.98rem !important;
+                line-height: 1.82 !important;
+                margin-bottom: 12px !important;
+            }
+            .article-body-content ul ul li,
+            .article-body-content ol ul li {
+                font-size: 0.94rem !important;
+                line-height: 1.76 !important;
+                margin-bottom: 6px !important;
+            }
+            .footer-social-group {
+                width: 100% !important;
+                display: flex !important;
+                justify-content: flex-end !important;
+                margin-top: 10px !important;
+            }
+        }
+            /*  추천 칼럼 카드 타이포그래피 (제목 1.02rem 진하게 vs 설명 0.84rem 아담하게) */
+        .related-articles-section h4 {
+            font-size: 1.02rem !important;
+            font-weight: 800 !important;
+            color: #0f172a !important;
+            line-height: 1.4 !important;
+            margin: 0 0 6px 0 !important;
+            word-break: keep-all !important;
+        }
+        .related-articles-section p {
+            font-size: 0.84rem !important;
+            line-height: 1.45 !important;
+            color: #64748b !important;
+            margin: 0 !important;
+            letter-spacing: -0.2px !important;
+        }
+
+        /* 🔗 본문 내부 맞링크 알약 뱃지 (Internal Link Pill - 차를 쓰다) */
+        .inline-pill-link {
+            display: inline-flex !important;
+            align-items: center !important;
+            gap: 4px !important;
+            background: #e0f2fe !important;
+            color: #0369a1 !important;
+            padding: 2px 10px !important;
+            border-radius: 6px !important;
+            border: 1px solid #bae6fd !important;
+            font-size: 0.93rem !important;
+            font-weight: 700 !important;
+            text-decoration: none !important;
+            vertical-align: middle !important;
+            margin: 0 3px !important;
+            line-height: 1.5 !important;
+            transition: all 0.2s ease !important;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04) !important;
+        }
+        .inline-pill-link:hover {
+            background: #bae6fd !important;
+            color: #0284c7 !important;
+            border-color: #7dd3fc !important;
+            box-shadow: 0 2px 6px rgba(2, 132, 199, 0.2) !important;
+            transform: translateY(-1px) !important;
+        }
+    
+        .article-body-content h2, .article-body-content h3, #faq { scroll-margin-top: 75px !important; }
+        html { scroll-behavior: smooth !important; }
+        @media (max-width: 768px) { .btn-pc-share { display: none !important; } }
+        /* ==========================================================================
+   도입부 요약 인용 박스 및 콜아웃 박스 상하 여백 완벽 대칭 (하단 빈공간 제거)
+   ========================================================================== */
+.article-body-content div[style*="border-left"] p,
+.article-body-content blockquote p,
+.article-body-content div[style*="background"] > p:last-child,
+.article-body-content div > p:last-child,
+.article-body-content p:last-child {
+    margin-bottom: 0 !important;
+}
+    </style>
+<style>
+#ev-tool {border:1px solid #e2e8f0;border-radius:12px;padding:20px;margin:24px 0;background:#fff;}
+#ev-tool *{box-sizing:border-box;min-width:0;}
+#ev-tool [hidden]{display:none!important;}
+#ev-tool .ev-tabs{display:flex;gap:4px;background:#f1f5f9;padding:4px;border-radius:8px;margin-bottom:20px;}
+#ev-tool button,#ev-tool select,#ev-tool input{font:inherit;}
+#ev-tool .ev-tabs button{flex:1;border:0;border-radius:6px;padding:11px 5px;background:transparent;color:#334155;font-size:.86rem;font-weight:750;cursor:pointer;}
+#ev-tool .ev-tabs button[aria-selected=true]{background:#0f172a;color:#fff;}
+#ev-tool .ev-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px;margin:16px 0;}
+#ev-tool label{display:block;font-size:.84rem;font-weight:700;color:#334155;margin-bottom:6px;line-height:1.5;}
+#ev-tool input,#ev-tool select{width:100%;padding:11px;border:1px solid #94a3b8;border-radius:7px;background:white;color:#0f172a;min-height:44px;}
+#ev-tool input[aria-invalid=true]{border:2px solid #b91c1c;}
+#ev-tool :focus-visible{outline:3px solid #0284c7;outline-offset:3px;}
+#ev-tool .ev-note{font-size:.84rem!important;line-height:1.65!important;color:#64748b!important;margin:10px 0 16px!important;}
+#ev-tool details,.ev-method{border-top:1px solid #e2e8f0;padding:14px 0;}
+#ev-tool summary,.ev-method summary{cursor:pointer;font-weight:750;line-height:1.6;}
+#ev-tool .ev-error{color:#b91c1c!important;font-size:.88rem!important;}
+#ev-tool .ev-result{background:#f0f9ff;border:1px solid #bae6fd;border-radius:10px;padding:18px;margin:18px 0;}
+#ev-tool .ev-result.ev-loss{background:#fff7ed;border-color:#fed7aa;}
+#ev-tool .ev-result h2{margin:0 0 14px!important;font-size:1.25rem!important;}
+#ev-tool dl{margin:0 0 16px;}#ev-tool dl>div{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid #dbe5ee;font-size:.86rem;line-height:1.55;}
+#ev-tool dt{color:#475569;}#ev-tool dd{margin:0;text-align:right;font-weight:750;}#ev-tool strong{line-height:1.6;}
+#ev-tool .ev-presets{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0;}
+#ev-tool .ev-presets button,#ev-reset{border:1px solid #cbd5e1;border-radius:7px;background:#f8fafc;padding:10px 12px;color:#334155;cursor:pointer;font-size:.84rem;min-height:44px;}
+#ev-tool meter{width:100%;height:24px;margin:8px 0 16px;}
+@media(max-width:480px){#ev-tool{padding:14px 10px;}#ev-tool .ev-fields{grid-template-columns:1fr;}#ev-tool .ev-tabs button{font-size:.78rem;}#ev-tool dl>div{flex-direction:column;gap:2px;}#ev-tool dd{text-align:left;}}
+</style><style>#ev-tool .ev-result{margin:0 0 20px} #ev-tool .ev-purchase-result{background:#f8fafc;padding:14px;border-radius:8px;margin-top:12px} #ev-tool .ev-select-label{margin-top:16px} #ev-tool summary{padding:6px 0}</style><style>#ev-tool .ev-bottom-result{margin:16px 0 20px!important;padding:0 2px;background:transparent;border-radius:0;font-weight:750;line-height:1.6;color:#1e293b}</style><style>
+#ev-tool .ev-detail-result{background:#f8fafc;border:1px solid #e2e8f0;border-radius:8px;padding:14px;margin-top:16px}
+#ev-tool .ev-result .ev-note{font-size:.75rem!important;margin:0 0 8px!important}
+#ev-tool .ev-result h2{margin:0!important}
+#ev-tool .ev-fix-input{padding:10px 12px;margin-bottom:12px;border:1px solid #b91c1c;border-radius:7px;background:#fff;color:#b91c1c;cursor:pointer}
+</style></head>
+<body class="chageul-single-post">
+<!-- 📱 모바일 스마트 상단 헤더 -->
+<header class="mobile-chageul-header">
+<div class="m-header-inner">
+<button aria-label="이전 페이지" class="m-btn-back" onclick="if(window.history.length &gt; 1){window.history.back();}else{location.href='index.html';}" type="button">
+<svg fill="none" height="22" stroke="#111827" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" viewbox="0 0 24 24" width="22"><path d="M15 18l-6-6 6-6"></path></svg>
+</button>
+<a aria-label="홈으로 가기" class="m-header-title" href="index.html">전기차 충전비·주행거리 계산기</a>
+<button aria-label="공유하기" class="m-btn-share" onclick="copyCurrentUrl()" type="button">
+<svg fill="none" height="20" stroke="#111827" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" viewbox="0 0 24 24" width="20"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"></path><polyline points="16 6 12 2 8 6"></polyline><line x1="12" x2="12" y1="2" y2="15"></line></svg>
+</button>
+</div>
+</header>
+<!-- 💻 PC 데스크톱 깔끔한 상단 헤더 -->
+<header class="clean-header desktop-header">
+<div class="header-container">
+<a class="brand-title" href="index.html">
+<img alt="차를 쓰다 심볼" class="brand-logo-img" src="images/logo.png?v=20260829_gold"/>
+<span class="brand-main-title">차를 쓰다</span>
+</a>
+<nav class="clean-nav">
+<ul>
+<li><a class="nav-cat-btn" href="index.html">홈</a></li>
+<li><a class="nav-cat-btn" href="index.html?cat=신차소식">신차소식</a></li>
+<li><a class="nav-cat-btn" href="index.html?cat=포커스">포커스</a></li>
+</ul>
+</nav>
+</div>
+</header>
+<!-- 📖 본문 & 사이드바 반응형 2열 정석 레이아웃 -->
+<div class="container article-layout-grid">
+<!-- 좌측 본문 메인 칼럼 -->
+<main class="article-main-col"><article class="article-container" style="background:#fff;border:none;padding:0;box-shadow:none">
+<header class="article-header"><h1 class="article-title" style="font-size:1.72rem;font-weight:850;color:#111827;line-height:1.42;margin-bottom:14px;letter-spacing:-.4px">전기차 비용 계산기: 내 차 기름값과 얼마나 다를까?</h1>
+<div class="article-meta-bar"><div class="article-meta-left"><span>차를 쓰다</span><span> · </span><time datetime="2026-10-14">2026-10-14 수정</time></div><button class="btn-pc-share" onclick="copyCurrentUrl()" type="button">공유</button></div></header>
+<div class="article-body-content"><p>내 주행거리와 이용 요금을 넣으면, 내 차 기름값과 전기차 충전비를 비교할 수 있습니다. 차량 가격까지 입력하면 추가 구매비를 연료비 절감으로 회수하는 기간도 계산합니다.</p>
+<section aria-label="전기차 계산기" id="ev-tool">
+<p class="ev-note">① 1년·5년 연료비 비교  ② 한 번 충전할 때 요금  ③ 주행거리가 줄었을 때 갈 수 있는 거리</p><div aria-label="계산 종류" class="ev-tabs" role="tablist">
+<button aria-controls="ev-panel-cost" aria-selected="true" id="ev-tab-cost" role="tab" tabindex="0">기름값 vs 충전비</button>
+<button aria-controls="ev-panel-charge" aria-selected="false" id="ev-tab-charge" role="tab" tabindex="-1">1회 충전 요금</button>
+<button aria-controls="ev-panel-winter" aria-selected="false" id="ev-tab-winter" role="tab" tabindex="-1">주행거리 감소</button></div>
+<div aria-labelledby="ev-tab-cost" id="ev-panel-cost" role="tabpanel"><form id="ev-cost-form" novalidate=""><p class="ev-error" role="status"></p><button class="ev-fix-input" hidden="" type="button">입력 오류 수정하기</button><div aria-live="polite" class="ev-result"><p class="ev-note">현재 입력값으로 계산한 예상 결과 · 처음에는 예시값이 들어 있습니다</p><h2 id="ev-annual">입력 조건을 확인해 주세요.</h2></div>
+<p class="ev-note">기본값은 계산 예시입니다. 내 주행거리와 실제 요금으로 바꿔보세요.</p>
+<div class="ev-fields"><div class="ev-field"><label for="ev-distance">연간 주행거리 (km)</label><input id="ev-distance" inputmode="decimal" max="200000" min="0" name="distance" required="" step="any" type="number" value="15000"/></div><div class="ev-field"><label for="ev-iceEff">기존 차 또는 비교 신차 연비 (km/L)</label><input id="ev-iceEff" inputmode="decimal" max="100" min="0.1" name="iceEff" required="" step="any" type="number" value="15"/></div><div class="ev-field"><label for="ev-evEff">전기차 전비 (km/kWh)</label><input aria-describedby="ev-evEff-help" id="ev-evEff" inputmode="decimal" max="30" min="0.1" name="evEff" required="" step="any" type="number" value="5"/><p class="ev-note" id="ev-evEff-help">전비는 전기 1kWh로 달리는 거리입니다. 충전 결제량과 실제 주행거리로 계산한 값이 있으면 입력하세요.</p></div><div class="ev-field"><label for="ev-fuel">주유 단가 (원/L)</label><input id="ev-fuel" inputmode="decimal" max="10000" min="0" name="fuel" required="" step="any" type="number" value="1700"/></div><div class="ev-field"><label for="ev-slow">내 충전 단가 (원/kWh)</label><input id="ev-slow" inputmode="decimal" max="10000" min="0" name="slow" required="" step="any" type="number" value="250"/></div></div><label for="ev-mix-mode">충전 요금 적용 방식</label><select id="ev-mix-mode" name="mixMode"><option value="single">한 가지 단가로 계산</option><option value="mixed">완속·급속 비중으로 계산</option></select><details id="ev-mix-options"><summary>완속·급속 단가와 비중 설정</summary><div class="ev-fields"><div class="ev-field"><label for="ev-fast">급속 충전 단가 (원/kWh)</label><input id="ev-fast" inputmode="decimal" max="10000" min="0" name="fast" required="" step="any" type="number" value="350"/></div><div class="ev-field"><label for="ev-share">완속 충전량 비중 (%)</label><input id="ev-share" inputmode="decimal" max="100" min="0" name="share" required="" step="any" type="number" value="80"/></div></div></details><p class="ev-note">혼합 방식을 선택하면 위 단가는 완속 요금으로 사용합니다. 설정을 접어도 선택한 방식과 입력값은 유지됩니다. 무료 충전은 0원으로 입력하세요.</p>
+<details id="ev-price-options"><summary>구매 차액까지 비교하기</summary><label class="ev-select-label" for="ev-mode">어떤 상황을 비교할까요?</label><select id="ev-mode" name="mode"><option value="new">새 차 두 대의 구매 견적 비교</option><option value="trade">타던 차를 계속 타기 vs 전기차로 교체</option></select><p class="ev-note" id="ev-mode-note"></p><div class="ev-fields"><div class="ev-field"><label for="ev-icePrice"><span id="ev-ice-label">비교 신차 최종 구매가 (만 원)</span></label><input id="ev-icePrice" inputmode="decimal" max="100000" min="0" name="icePrice" required="" step="any" type="number" value="3000"/></div><div class="ev-field"><label for="ev-evPrice">전기차 할인·보조금 반영 구매가 (만 원)</label><input id="ev-evPrice" inputmode="decimal" max="100000" min="0" name="evPrice" required="" step="any" type="number" value="4000"/></div><div class="ev-field"><label for="ev-fees">전기차 선택 시 더 드는 취득·설치 등 비용 (만 원)</label><input id="ev-fees" inputmode="decimal" max="100000" min="0" name="fees" required="" step="any" type="number" value="0"/></div></div><p class="ev-note">교체 모드에서는 기존 차의 과거 출고가 대신 현재 매각 견적을 입력합니다. 남은 대출·금융비는 이 계산에 포함되지 않습니다.</p><div class="ev-purchase-result"><dl><div><dt>초기 구매·교체 지출 차이</dt><dd id="ev-investment">—</dd></div><div><dt>초기 지출 + 5년 연료비 합계 차이</dt><dd id="ev-five-net">—</dd></div></dl><strong id="ev-payback"></strong></div></details>
+<p class="ev-note">유가·충전요금·연비·주행거리를 5년 동안 동일하게 가정합니다. 잔존가치·보험·정비·금융비를 제외한 단순 비교이며 총소유비용(TCO)이 아닙니다.</p><div class="ev-detail-result"><dl><div><dt>비교 차량 1년 연료비</dt><dd id="ev-ice-cost">—</dd></div><div><dt>전기차 1년 충전비</dt><dd id="ev-ev-cost">—</dd></div><div><dt>적용 충전 단가</dt><dd id="ev-mixed-rate">—</dd></div><div><dt>5년 연료비 차이</dt><dd id="ev-five-fuel">—</dd></div></dl></div><p class="ev-bottom-result" data-result-source="ev-annual"></p></form></div>
+<div aria-labelledby="ev-tab-charge" hidden="" id="ev-panel-charge" role="tabpanel"><form id="ev-charge-form" novalidate=""><p class="ev-error" role="status"></p><button class="ev-fix-input" hidden="" type="button">입력 오류 수정하기</button><div aria-live="polite" class="ev-result"><p class="ev-note">현재 입력값으로 계산한 예상 결과 · 처음에는 예시값이 들어 있습니다</p><h2 id="ev-charge-cost">—</h2></div>
+<p class="ev-note">배터리 용량·잔량·단가로 충전 요금을 계산합니다. 충전 시간은 아래에서 추가로 확인할 수 있습니다.</p><div class="ev-fields"><div class="ev-field"><label for="ev-cap">사용 가능한 배터리 용량 (kWh)</label><input aria-describedby="ev-cap-help" id="ev-cap" inputmode="decimal" max="300" min="0.1" name="cap" required="" step="any" type="number" value="60"/><p class="ev-note" id="ev-cap-help">사용 가능한 용량은 배터리 전체 용량과 다를 수 있습니다. 제조사에서 안내하는 사용 가능 용량을 확인하세요.</p></div><div class="ev-field"><label for="ev-start">현재 잔량 (%)</label><input id="ev-start" inputmode="decimal" max="100" min="0" name="start" required="" step="any" type="number" value="20"/></div><div class="ev-field"><label for="ev-end">목표 잔량 (%)</label><input id="ev-end" inputmode="decimal" max="100" min="0" name="end" required="" step="any" type="number" value="80"/></div><div class="ev-field"><label for="ev-rate">결제 단가 (원/kWh)</label><input id="ev-rate" inputmode="decimal" max="10000" min="0" name="rate" required="" step="any" type="number" value="350"/></div><div class="ev-field"><label for="ev-loss">결제 전력 대비 저장 손실 가정 (%)</label><input id="ev-loss" inputmode="decimal" max="40" min="0" name="loss" required="" step="any" type="number" value="10"/></div></div><details id="ev-time-options"><summary>충전 시간도 계산하기 (선택)</summary><p class="ev-note">차량 사양과 최근 충전 기록으로 입력하세요. 아래 버튼은 특정 차종의 성능을 뜻하지 않는 예시입니다.</p><div class="ev-presets"><button data-charge-preset="7,7,6" type="button">완속 예시</button><button data-charge-preset="100,100,60" type="button">급속 예시</button></div><div class="ev-fields"><div class="ev-field"><label for="ev-charger">충전기 표시 출력 (kW)</label><input id="ev-charger" inputmode="decimal" max="1000" min="0.1" name="charger" required="" step="any" type="number" value="100"/></div><div class="ev-field"><label for="ev-vehicle">차량의 해당 AC/DC 충전 한도 (kW)</label><input id="ev-vehicle" inputmode="decimal" max="1000" min="0.1" name="vehicle" required="" step="any" type="number" value="100"/></div><div class="ev-field"><label for="ev-average">충전 구간 평균 저장 출력 (kW)</label><input aria-describedby="ev-average-help" id="ev-average" inputmode="decimal" max="1000" min="0.1" name="average" required="" step="any" type="number" value="60"/><p class="ev-note" id="ev-average-help">평균 저장 출력 = 실제 추가된 배터리 에너지(kWh) ÷ 충전 시간(시간). 모르면 시간 계산은 참고하지 않아도 됩니다.</p></div></div><p class="ev-note">80% 이후, 저온·고온, 출력 공유 등에서는 평균 출력이 낮아질 수 있습니다. 최대 출력만 알고 있다면 결과를 실제 충전 시간으로 보지 마세요.</p><strong id="ev-time"></strong></details>
+<p class="ev-note">손실률은 고정된 공인값이 아닙니다. 과금 계량 위치와 보조장치 소비에 따라 실제 청구량이 달라집니다. 대기·연결 시간, 주차비·점유료·할인은 제외합니다.</p><div class="ev-detail-result"><dl><div><dt>배터리에 추가 저장할 에너지</dt><dd id="ev-net">—</dd></div><div><dt>손실 가정 반영 결제 전력량</dt><dd id="ev-billed">—</dd></div></dl></div><p class="ev-bottom-result" data-result-source="ev-charge-cost"></p></form></div>
+<div aria-labelledby="ev-tab-winter" hidden="" id="ev-panel-winter" role="tabpanel"><form id="ev-winter-form" novalidate=""><p class="ev-error" role="status"></p><button class="ev-fix-input" hidden="" type="button">입력 오류 수정하기</button><div aria-live="polite" class="ev-result"><p class="ev-note">현재 입력값으로 계산한 예상 결과 · 처음에는 예시값이 들어 있습니다</p><h2 id="ev-winter-range">—</h2></div>
+<p class="ev-note">겨울철 등 주행거리가 줄어드는 상황을 가정해 비교합니다. 실제 겨울 성능을 예측하는 기능은 아니며, 감소율은 내 차의 인증값이나 실측 기록을 참고해 입력하세요.</p><div class="ev-fields"><div class="ev-field"><label for="ev-range">기준 100% 충전 주행거리 (km)</label><input id="ev-range" inputmode="decimal" max="1500" min="0.1" name="range" required="" step="any" type="number" value="400"/></div><div class="ev-field"><label for="ev-drop">예상 주행거리 감소율 (%)</label><input id="ev-drop" inputmode="decimal" max="80" min="0" name="drop" required="" step="any" type="number" value="20"/></div><div class="ev-field"><label for="ev-wstart">출발 배터리 잔량 (%)</label><input id="ev-wstart" inputmode="decimal" max="100" min="0" name="wstart" required="" step="any" type="number" value="100"/></div><div class="ev-field"><label for="ev-reserve">도착 시 남겨둘 잔량 (%)</label><input id="ev-reserve" inputmode="decimal" max="100" min="0" name="reserve" required="" step="any" type="number" value="10"/></div></div><div aria-label="감소율 예시" class="ev-presets"><button data-drop="10" type="button">10% 감소 가정</button><button data-drop="20" type="button">20% 감소 가정</button><button data-drop="30" type="button">30% 감소 가정</button></div>
+<p class="ev-note">교통·고속주행·난방·경사·배터리 상태는 별도로 모델링하지 않습니다. 충전소 도달을 보장하는 값이 아니며, 실제 운행은 차량의 잔량·주행가능거리 안내를 함께 확인하세요.</p><div class="ev-detail-result"><label for="ev-range-gauge" id="ev-gauge-caption">기준 대비 예상 주행거리</label><meter id="ev-range-gauge" max="100" min="0" value="80">80%</meter><dl><div><dt>100% 배터리 전체 사용 시 계산값</dt><dd id="ev-full-range">—</dd></div></dl></div><p class="ev-bottom-result" data-result-source="ev-winter-range"></p></form></div>
+<button id="ev-reset" type="button">현재 탭만 예시값으로 초기화</button><noscript><p>계산기를 사용하려면 자바스크립트를 켜주세요.</p></noscript></section>
+<h2>구매 차액과 연료비는 나눠서 보세요</h2><p>새 차 비교에서는 두 차량의 최종 구매 견적 차이를 계산합니다. 타던 차를 바꾼다면 기존 차의 현재 매각액을 전기차 구매비에서 뺀 금액이 출발점입니다.</p><p>전기차 충전비가 더 많이 들면 추가 지출을 그대로 표시합니다. 구매비가 저렴해도 운행비가 높다면 시간이 지나 초기 가격 이점이 사라질 수 있습니다.</p>
+<h2>충전 속도는 충전기 숫자만으로 결정되지 않습니다</h2><p>차량의 충전 한도, 잔량, 배터리 온도와 충전 설비 상태에 따라 출력이 달라집니다. 이 도구는 입력한 평균 출력으로 시간을 나누어 계산하며 차종별 충전 곡선을 재현하지 않습니다.</p>
+<h2>겨울 주행거리는 가정을 확인하세요</h2><p>차종·구동방식·휠·난방 조건에 따라 겨울 주행거리 감소폭이 달라집니다. 히트펌프가 있다는 이유만으로 모든 차량에 같은 감소율을 적용할 수 없습니다.</p>
+<details class="ev-method"><summary>계산식과 참고 자료</summary><ul><li>연간 연료비 = 연간 주행거리 ÷ 연비 × 주유 단가</li><li>연간 충전비 = 연간 주행거리 ÷ 전비 × 충전량 비중을 반영한 평균 단가</li><li>차액 회수 개월 = 추가 지출 ÷ 연간 연료비 절감액 × 12 (절감액이 양수인 경우)</li><li>충전 에너지 = 사용 가능 배터리 용량 × 잔량 차이 ÷ 100</li><li>예상 충전 시간 = 저장할 에너지 ÷ 평균 저장 출력</li><li>겨울 예상 거리 = 기준 거리 × (1 − 감소율) × 사용 가능한 잔량 비율</li></ul>
+<p>숫자 기본값은 계산 예시입니다. 특정 사업자의 현재 요금, 차종별 실구매가 또는 인증값으로 제공하지 않습니다. 계산 방식 검토일: 2026-10-14.</p>
+<ul><li><a href="https://afdc.energy.gov/fuels/electricity-stations" rel="noopener noreferrer" target="_blank">미국 에너지부: 차량·설비에 따른 충전 시간 차이</a></li><li><a href="https://org-casper.hyundai.com/vehicles/electric/highlight" rel="noopener noreferrer" target="_blank">현대차: 캐스퍼 일렉트릭 충전 성능과 조건</a></li><li><a href="https://ev.or.kr/" rel="noopener noreferrer" target="_blank">무공해차 통합누리집: 차량·보조금·충전 정보 확인</a></li></ul></details>
+
+</div><section class="comment-section" id="commentSectionWrapper" style="margin-top:44px; padding-top:26px; border-top:1px solid #e2e8f0;">
+                        <div class="comment-header" style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px;">
+                            <h3 style="font-size:1.15rem; font-weight:800; color:#111827; margin:0;">독자 댓글 <span id="commentCountBadge" style="color:#0f172a; font-weight:750;">(0)</span></h3>
+                        </div>
+                        <form id="commentForm" onsubmit="handleCommentSubmit(event)" style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:12px; padding:18px 20px; margin-bottom:24px; width:100%; box-sizing:border-box;">
+    <div style="display:flex; flex-wrap:wrap; gap:10px; margin-bottom:12px; width:100%; box-sizing:border-box;">
+        <input type="text" id="commentAuthor" placeholder="작성자 닉네임" required style="flex:1 1 140px; min-width:0; width:100%; box-sizing:border-box; padding:10px 14px; border:1px solid #cbd5e1; border-radius:8px; font-size:0.88rem; background:#ffffff; outline:none;">
+        <input type="password" id="commentPassword" placeholder="비밀번호 (4자리)" required style="flex:1 1 140px; min-width:0; width:100%; box-sizing:border-box; padding:10px 14px; border:1px solid #cbd5e1; border-radius:8px; font-size:0.88rem; background:#ffffff; outline:none;">
+    </div>
+    <textarea id="commentContent" placeholder="계산기 사용 의견이나 궁금한 점을 남겨주세요." required style="width:100%; min-width:0; box-sizing:border-box; height:85px; padding:12px 14px; border:1px solid #cbd5e1; border-radius:8px; font-size:0.88rem; margin-bottom:14px; resize:none; background:#ffffff; outline:none; line-height:1.5;"></textarea>
+    <div style="display:flex; justify-content:flex-end; align-items:center; width:100%;">
+        <button type="submit" class="btn-comment-submit" style="background:#0f172a; color:#ffffff; font-weight:750; font-size:0.84rem; padding:8px 18px; border-radius:8px; border:none; cursor:pointer; transition:all 0.15s ease; box-shadow:0 1px 3px rgba(15,23,42,0.15);">등록하기</button>
+    </div>
+</form>
+                        <div id="commentList" style="display:flex; flex-direction:column; gap:12px;"></div>
+                    </section>
+</article></main>
+<!-- 우측 사이드바 (프로필 + 인기글 TOP 10) -->
+<aside class="article-sidebar">
+<!-- 1. Editor Profile Widget -->
+<div class="sidebar-profile-card">
+<div class="avatar-box">
+<img alt="차를 쓰다 에디터" src="images/logo.png?v=20260829_gold"/>
+</div>
+<div class="profile-name">차를 쓰다</div>
+<p class="profile-desc">
+                    빠른 신차 업데이트와 정직하고 정확한 자동차 전문 분석을 전합니다.
+                </p>
+<span class="profile-badge">✓ 자동차 칼럼니스트</span>
+</div>
+<!-- 2. Popular Posts TOP 10 Widget -->
+<div class="sidebar-widget" style="background:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:22px 20px; margin-bottom:20px; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
+<h3 class="widget-title" style="font-size:1.02rem; font-weight:800; color:#111827; margin-bottom:14px; padding-bottom:8px; border-bottom:1px solid #f1f5f9; display:flex; align-items:center; gap:6px;">
+<span>인기글 TOP 10</span>
+</h3>
+<ul class="popular-list" id="popularPostsWidgetList">
+<!-- JS 실시간 자동 렌더링 -->
+</ul>
+</div>
+</aside>
+</div>
+<!-- 📄 푸터 -->
+<footer class="clean-footer">
+<div class="footer-inner" style="max-width:1060px; margin:0 auto; padding:28px 20px 36px;">
+<!-- 상단 2단 분할: 좌측(발행·법적 정보) vs 우측(공식 채널/소통 뱃지) -->
+<div style="display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:20px; padding-bottom:18px; border-bottom:1px solid #f1f5f9; width:100%;">
+<!-- 좌측 정보 그룹 -->
+<div class="footer-info-group" style="flex:1; min-width:320px;">
+<p class="footer-copy" style="margin-bottom:6px;">© 2026 <strong>차를 쓰다</strong>. All rights reserved.</p>
+<p class="footer-meta-desktop" style="font-size:0.83rem; color:#64748b; line-height:1.6; margin-bottom:5px;">
+                    제호: 차를 쓰다 | 발행인: 임진현 | 수석에디터: 임진현 | 이메일: <a href="contact.html" style="color:inherit; text-decoration:underline; font-weight:700;" title="1:1 공식 문의하기">contact@chageul.com</a> | 주소: 대한민국 서울시 도봉구 해등로 231
+                </p>
+<div class="footer-meta-mobile" style="display:none;">
+<p>제호: 차를 쓰다 | 발행인: 임진현 | 수석에디터: 임진현</p>
+<p>이메일: <a href="contact.html" style="color:inherit; text-decoration:underline; font-weight:700;">contact@chageul.com</a> | 주소: 대한민국 서울시 도봉구 해등로 231</p>
+</div>
+<p class="footer-copyright-warning" style="font-size:0.78rem; color:#94a3b8; line-height:1.5; margin-bottom:3px;">
+                    차를 쓰다의 모든 콘텐츠(기사·화보·데이터)는 저작권법의 보호를 받으며, 사전 승인 없는 무단 전재, 복사, 배포 및 AI 무단 학습을 엄격히 금합니다.
+                </p>
+<p class="footer-disclaimer" style="font-size:0.77rem; color:#94a3b8; line-height:1.5; margin:0;">
+                    ※ 차를 쓰다의 신차 정보 및 견적 분석은 제조사 공시 자료를 바탕으로 작성되며, 실제 출고 시점의 정책 및 프로모션에 따라 변동될 수 있습니다.
+                </p>
+</div>
+<!-- 우측 공식 채널 & 소통 뱃지 세트 (모노크롬 다크그레이 톤) -->
+<div class="footer-social-group" style="display:flex; align-items:center; gap:10px; flex-shrink:0; padding-top:4px; margin-left:auto;">
+<!-- 1. 네이버 공식 채널 -->
+<a href="https://blog.naver.com/hyuni-insight" onmouseout="this.style.background='#475569'; this.style.transform='translateY(0)'" onmouseover="this.style.background='#1e293b'; this.style.transform='translateY(-2px)'" rel="noopener noreferrer" style="display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:#475569; color:#ffffff; font-size:0.92rem; font-weight:850; text-decoration:none; transition:background 0.15s, transform 0.15s;" target="_blank" title="네이버 공식 블로그">
+                    N
+                </a>
+<!-- 2. 공식 문의하기 -->
+<a href="contact.html" onmouseout="this.style.background='#475569'; this.style.transform='translateY(0)'" onmouseover="this.style.background='#1e293b'; this.style.transform='translateY(-2px)'" style="display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:#475569; color:#ffffff; text-decoration:none; transition:background 0.15s, transform 0.15s;" title="1:1 문의 및 의견 보내기">
+<svg fill="none" height="16" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+</a>
+<!-- 3. RSS 피드 구독 -->
+<a href="rss.xml" onmouseout="this.style.background='#475569'; this.style.transform='translateY(0)'" onmouseover="this.style.background='#1e293b'; this.style.transform='translateY(-2px)'" style="display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:#475569; color:#ffffff; text-decoration:none; transition:background 0.15s, transform 0.15s;" target="_blank" title="RSS 피드 구독">
+<svg fill="none" height="15" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" viewbox="0 0 24 24" width="15"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
+</a>
+<!-- 4. 맨 위로 가기 (TOP) -->
+<a href="#top" onclick="window.scrollTo({top:0, behavior:'smooth'}); return false;" onmouseout="this.style.background='#475569'; this.style.transform='translateY(0)'" onmouseover="this.style.background='#1e293b'; this.style.transform='translateY(-2px)'" style="display:flex; align-items:center; justify-content:center; width:36px; height:36px; border-radius:50%; background:#475569; color:#ffffff; text-decoration:none; transition:background 0.15s, transform 0.15s;" title="화면 맨 위로 이동">
+<svg fill="none" height="16" stroke="#ffffff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.3" viewbox="0 0 24 24" width="16"><path d="M18 15l-6-6-6 6"></path></svg>
+</a>
+</div>
+</div>
+<!-- 하단 행: 7대 정책 메뉴 링크 + 매거진 영문 서명 -->
+<div style="padding-top:14px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px; width:100%;">
+<ul class="footer-links" style="display:flex; flex-wrap:wrap; gap:14px; list-style:none; padding:0; margin:0;">
+<li><a href="about.html">매체소개</a></li>
+<li><a href="terms.html">이용약관</a></li>
+<li><a href="privacy.html">개인정보처리방침</a></li>
+<li><a href="youth-protection.html">청소년보호정책</a></li>
+<li><a href="copyright.html">저작권보호정책</a></li>
+<li><a href="email-rejection.html">이메일무단수집거부</a></li>
+<li><a href="contact.html">문의하기</a></li>
+</ul>
+<div class="footer-brand-tag" style="font-size:0.75rem; font-weight:700; color:#94a3b8; letter-spacing:0.5px;">
+                CHAGEUL AUTOMOTIVE MAGAZINE
+            </div>
+</div>
+</div>
+</footer>
+<!-- ⚡ 계산기 인터랙션 초경량 스크립트 -->
+<script defer="" src="js/features.js?v=20260829_car_v1"></script><script defer="" src="js/ev-calculator.js?v=20261014-final-flow"></script><script defer src="js/comments.js?v=20260826_kv3"></script>
+</body>
+</html>
