@@ -145,10 +145,49 @@
 
 
     <!-- 💰 Google AdSense -->
-
-
-
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4739687813221133" crossorigin="anonymous"></script>
+
+    <!-- 📜 공식 매체 구조화 데이터 (WebSite & Organization Schema) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://chageul.com/#organization",
+          "name": "차를 쓰다",
+          "alternateName": "CHAGEUL",
+          "url": "https://chageul.com/",
+          "logo": "https://chageul.com/images/logo.png",
+          "founder": {
+            "@type": "Person",
+            "name": "임진현",
+            "jobTitle": "발행인 겸 수석에디터",
+            "url": "https://chageul.com/about.html#editor-profile"
+          },
+          "publishingPrinciples": "https://chageul.com/about.html#editorial-policy",
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "editorial",
+            "email": "contact@chageul.com",
+            "url": "https://chageul.com/contact.html"
+          },
+          "sameAs": [
+            "https://www.youtube.com/@chageul",
+            "https://blog.naver.com/hyuni-insight"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://chageul.com/#website",
+          "url": "https://chageul.com/",
+          "name": "차를 쓰다",
+          "publisher": {"@id": "https://chageul.com/#organization"},
+          "inLanguage": "ko-KR"
+        }
+      ]
+    }
+    </script>
 
 
 
@@ -1916,7 +1955,7 @@
 
 
 
-    <script src="js/features.js?v=20261113_175000"></script>
+    <script src="js/features.js?v=20261114_074726"></script>
 
 
 
@@ -10546,11 +10585,11 @@
 
 
 
-    <script defer src="js/comments.js?v=20261113_175000"></script>
+    <script defer src="js/comments.js?v=20261114_074726"></script>
 
 
 
-    <script defer src="js/features.js?v=20261113_175000"></script>
+    <script defer src="js/features.js?v=20261114_074726"></script>
 
 
 
